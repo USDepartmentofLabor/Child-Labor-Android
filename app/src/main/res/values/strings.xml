@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Sweat &amp; Toil</string>
+    <string name="action_settings">About</string>
+    <string name="title_activity_country_list">Countries</string>
+    <string name="title_activity_goods_list">Goods</string>
+    <string name="title_activity_exploitation_type_list">Exploitation Types</string>
+    <string name="title_activity_tabbed_country_list">Countries</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_country_view">Country View</string>
+    <string name="title_activity_tabbed_goods_list">Goods</string>
+    <string name="title_activity_tabbed_good_list">Goods</string>
+    <string name="title_activity_good_view">Goods View</string>
+    <string name="title_activity_tabbed_exploitation_type_list">Exploitation Types</string>
+    <string name="title_activity_about">About This App</string>
+    <string name="title_activity_methodology">Methodology</string>
+    <string name="title_activity_factsheet">Factsheet</string>
+    <string name="title_activity_suggested_actions">Suggested Actions</string>
+    <string name="title_activity_statistics">Statistics</string>
+    <string name="title_activity_convention">International Conventions</string>
+    <string name="title_activity_legal_standard">Legal Standards</string>
+    <string name="title_activity_full_report">Full Report</string>
+</resources>

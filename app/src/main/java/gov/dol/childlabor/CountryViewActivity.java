@@ -1,0 +1,173 @@
+package gov.dol.childlabor;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.Arrays;
+
+public class CountryViewActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_country_view);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        final Country country = (Country) getIntent().getSerializableExtra("country");
+        setTitle(country.getName());
+
+        TextView nameTextView = (TextView) findViewById(R.id.nameTextView);
+        nameTextView.setText(country.getName());
+
+        TextView levelTextView = (TextView) findViewById(R.id.levelTextView);
+        levelTextView.setText(country.getLevel());
+
+        TextView descriptionTextView = (TextView) findViewById(R.id.descriptionTextView);
+        descriptionTextView.setText(country.getDescription());
+        descriptionTextView.post(new Runnable() {
+            @Override
+            public void run() {
+                TextView descriptionTextView = (TextView) findViewById(R.id.descriptionTextView);
+                if (descriptionTextView.getLineCount() > 5) {
+                    descriptionTextView.setMaxLines(5);
+                }
+                else {
+                    TextView expandTextView = (TextView) findViewById(R.id.descriptionExpandTextView);
+                    expandTextView.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        TextView goodLabelTextView = (TextView) findViewById(R.id.goodLabelTextView);
+        if (country.getGoods().length == 0) {
+            goodLabelTextView.setVisibility(View.GONE);
+        }
+        else if (country.getGoods().length == 1) {
+            goodLabelTextView.setText(country.getGoods().length + " GOOD PRODUCED WITH EXPLOITIVE LABOR");
+        }
+        else {
+            goodLabelTextView.setText(country.getGoods().length + " GOODS PRODUCED WITH EXPLOITIVE LABOR");
+        }
+
+        ImageView mapImageView = (ImageView) findViewById(R.id.mapImageView);
+        mapImageView.setImageDrawable(AppHelpers.getMapDrawable(this, country.getName()));
+
+        LinearLayout goodLinearLayout = (LinearLayout) findViewById(R.id.goodsLinearLayout);
+        LayoutInflater theInflater = LayoutInflater.from(this);
+        for (CountryGood good : country.getGoods()) {
+            View countryGoodWidget = theInflater.inflate(R.layout.country_good_widget, goodLinearLayout, false);
+
+            countryGoodWidget.setTag(good);
+
+            ImageView countryGoodImageView = (ImageView) countryGoodWidget.findViewById(R.id.countryGoodImageView);
+            countryGoodImageView.setImageDrawable(AppHelpers.getGoodDrawable(this, good.getGoodName()));
+
+            TextView countryGoodTextView = (TextView) countryGoodWidget.findViewById(R.id.countryGoodTextView);
+            countryGoodTextView.setText(good.getGoodName());
+
+            LinearLayout row;
+            if(good.hasForcedChildLabor()) {
+                row = (LinearLayout) countryGoodWidget.findViewById(R.id.forceChildLaborLinearLayout);
+                row.setVisibility(View.VISIBLE);
+            }
+            else if(good.hasChildLabor()) {
+                row = (LinearLayout) countryGoodWidget.findViewById(R.id.childLaborLinearLayout);
+                row.setVisibility(View.VISIBLE);
+            }
+            else {
+                row = (LinearLayout) countryGoodWidget.findViewById(R.id.childLaborLinearLayout);
+                row.setVisibility(View.INVISIBLE);
+            }
+
+            if(good.hasForcedLabor()) {
+                row = (LinearLayout) countryGoodWidget.findViewById(R.id.forcedLaborLinearLayout);
+                row.setVisibility(View.VISIBLE);
+            }
+
+            goodLinearLayout.addView(countryGoodWidget);
+        }
+
+
+        String[] items = {"Suggested Actions", "Statistics", "International Conventions", "Legal Standards", "Full Report"};
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
+
+        ListView listView = (ListView) findViewById(R.id.actionListView);
+        listView.setAdapter(itemsAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent;
+                switch (String.valueOf(parent.getItemAtPosition(position))) {
+                    case "Statistics":
+                        intent = new Intent(getApplicationContext(), StatisticsActivity.class);
+                        break;
+                    case "International Conventions":
+                        intent = new Intent(getApplicationContext(), ConventionActivity.class);
+                        break;
+                    case "Legal Standards":
+                        intent = new Intent(getApplicationContext(), LegalStandardActivity.class);
+                        break;
+                    case "Full Report":
+                        intent = new Intent(getApplicationContext(), FullReportActivity.class);
+                        break;
+                    case "Suggested Actions":
+                    default:
+                        intent = new Intent(getApplicationContext(), SuggestedActionsActivity.class);
+                }
+
+                intent.putExtra("country", country);
+                startActivity(intent);
+            }
+        });
+
+        String[] excludedCountries = {"Burma", "China", "Iran", "Malaysia", "Mexico", "North Korea", "Tajikistan",
+                "Turkmenistan", "Vietnam", "British Indian Ocean Territories", "Heard and McDonald Islands", "Pitcairn Islands"};
+
+        if (Arrays.asList(excludedCountries).contains(country.getName())) {
+            listView.setVisibility(View.GONE);
+        }
+
+        AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "Country Profile Screen");
+        AppHelpers.trackCountryEvent((AnalyticsApplication) getApplication(), "Viewed", country.getName());
+    }
+
+    public void selectGoodWidget(View v) {
+        CountryGood countryGood = (CountryGood) v.getTag();
+
+        Good selectedGood = new Good("Good");
+
+        GoodXmlParser parser = GoodXmlParser.fromContext(this);
+        Good[] goods = parser.getGoodList();
+        for(Good good : goods) {
+            if (good.getName().equals(countryGood.getGoodName())) {
+                selectedGood = good;
+            }
+        }
+
+        Intent intent = new Intent(this, GoodViewActivity.class);
+        intent.putExtra("good", selectedGood);
+        startActivity(intent);
+    }
+
+    public void expandDescription(View view) {
+        TextView descriptionTextView = (TextView) findViewById(R.id.descriptionTextView);
+        descriptionTextView.setEllipsize(null);
+        descriptionTextView.setMaxLines(Integer.MAX_VALUE);
+
+        TextView expandTextView = (TextView) findViewById(R.id.descriptionExpandTextView);
+        expandTextView.setVisibility(View.GONE);
+    }
+}

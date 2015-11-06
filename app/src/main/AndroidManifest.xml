@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gov.dol.childlabor" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".AnalyticsApplication">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TabbedCountryListActivity"
+            android:label="@string/title_activity_tabbed_country_list"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CountryViewActivity"
+            android:label="@string/title_activity_country_view"
+            android:launchMode="singleTop"
+            android:parentActivityName=".TabbedCountryListActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.TabbedCountryListActivity" />
+        </activity>
+        <activity
+            android:name=".TabbedGoodListActivity"
+            android:label="@string/title_activity_tabbed_good_list"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.MainActivity" />
+        </activity>
+        <activity
+            android:name=".GoodViewActivity"
+            android:label="@string/title_activity_good_view"
+            android:parentActivityName=".TabbedGoodListActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.TabbedGoodListActivity" />
+        </activity>
+        <activity
+            android:name=".TabbedExploitationTypeListActivity"
+            android:label="@string/title_activity_tabbed_exploitation_type_list"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.MainActivity" />
+        </activity>
+        <activity
+            android:name=".MethodologyActivity"
+            android:label="@string/title_activity_methodology"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.MainActivity" />
+        </activity>
+        <activity
+            android:name=".FactsheetActivity"
+            android:label="@string/title_activity_factsheet"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SuggestedActionsActivity"
+            android:label="@string/title_activity_suggested_actions"
+            android:parentActivityName=".CountryViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.CountryViewActivity" />
+        </activity>
+        <activity
+            android:name=".StatisticsActivity"
+            android:label="@string/title_activity_statistics"
+            android:parentActivityName=".CountryViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.CountryViewActivity" />
+        </activity>
+        <activity
+            android:name=".ConventionActivity"
+            android:label="@string/title_activity_convention"
+            android:parentActivityName=".CountryViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.CountryViewActivity" />
+        </activity>
+        <activity
+            android:name=".LegalStandardActivity"
+            android:label="@string/title_activity_legal_standard"
+            android:parentActivityName=".CountryViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.CountryViewActivity" />
+        </activity>
+        <activity
+            android:name=".FullReportActivity"
+            android:label="@string/title_activity_full_report"
+            android:parentActivityName=".CountryViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.CountryViewActivity" />
+        </activity>
+    </application>
+
+</manifest>

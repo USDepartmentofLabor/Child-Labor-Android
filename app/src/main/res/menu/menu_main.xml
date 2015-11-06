@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+    <!--<item android:id="@+id/ilab_logo" android:title="ILAB"-->
+        <!--android:orderInCategory="100" app:showAsAction="always"-->
+        <!--android:icon="@drawable/ilab_white" />-->
+
+    <!--<item android:id="@+id/dol_logo" android:title="Dept Of Labor"-->
+        <!--android:orderInCategory="100" app:showAsAction="always"-->
+        <!--android:icon="@drawable/dol_white" />-->
+
+    <item android:id="@+id/action_introduction" android:title="Introduction"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+    <item android:id="@+id/action_about" android:title="About This App"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+    <item android:id="@+id/action_methodology" android:title="Methodology"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+    <group>
+
+        <item android:id="@+id/action_reports_fact_sheet" android:title="Reports Fact Sheet"
+            android:orderInCategory="100" app:showAsAction="never" />
+
+        <item android:id="@+id/action_ocft_fact_sheet" android:title="OCFT Fact Sheet"
+            android:orderInCategory="100" app:showAsAction="never" />
+
+        <item android:id="@+id/action_programs_fact_sheet" android:title="Programs Fact Sheet"
+            android:orderInCategory="100" app:showAsAction="never" />
+
+    </group>
+
+</menu>
