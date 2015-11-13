@@ -131,7 +131,7 @@ public class GoodViewActivity extends AppCompatActivity {
 
         });
 
-        AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "Good List Screen");
+        AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "Good Profile Screen");
         AppHelpers.trackGoodEvent((AnalyticsApplication) getApplication(), "Viewed", good.getName());
     }
 
