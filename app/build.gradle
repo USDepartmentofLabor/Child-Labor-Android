@@ -28,4 +28,5 @@ dependencies {
     compile 'com.joanzapata.pdfview:android-pdfview:1.0.4@aar'
     compile 'se.emilsjolander:stickylistheaders:2.7.0'
     compile 'com.google.android.gms:play-services-analytics:8.1.0'
+    compile 'io.karim:materialtabs:2.0.2'
 }
