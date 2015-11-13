@@ -17,16 +17,6 @@
         android:divider="?android:attr/dividerHorizontal"
         android:showDividers="middle">
 
-        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            android:text="Ratifications"
-            android:background="#dadada" />
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"

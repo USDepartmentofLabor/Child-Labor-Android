@@ -226,7 +226,7 @@ public class CountryXmlParser {
                             break;
                         case "Government_Policies":
                         case "Policies":
-                            section = "Polices";
+                            section = "Policies";
                             actions = new ArrayList<>();
                             break;
                         case "Social_Programs":
