@@ -16,15 +16,19 @@
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/countryTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingRight="20dp"
+        android:singleLine="true"
+        android:ellipsize="end"
         android:textAppearance="?android:attr/textAppearanceListItemSmall"
         android:gravity="center_vertical|start"
         android:minHeight="?android:attr/listPreferredItemHeightSmall" />
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"

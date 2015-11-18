@@ -101,7 +101,7 @@ public class GoodXmlParser {
                     break;
                 case XmlPullParser.END_TAG:
                     name = parser.getName();
-                    if (name.equals("Good") && currentGood != null) {
+                    if (name.equals("Good") && currentGood != null && currentGood.getCountries().length > 0) {
                         goods.add(currentGood);
                     }
             }
