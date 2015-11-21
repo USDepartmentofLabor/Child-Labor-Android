@@ -4,9 +4,11 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
+import java.util.Arrays;
 
 public class StatisticsActivity extends AppCompatActivity {
 
@@ -28,6 +30,13 @@ public class StatisticsActivity extends AppCompatActivity {
         setStatisticText(R.id.educationTextView, statistics.educationPercent, statistics.educationAgeRange);
         setStatisticText(R.id.workAndEducationTextView, statistics.workAndEducationPercent, statistics.workAndEducationAgeRange);
         setStatisticText(R.id.completionRateTextView, statistics.primaryCompletionPercent);
+
+        String[] noHelpText = {"Christmas Island", "Cocos (Keeling) Islands", "Falkland Islands (Islas Malvinas)",
+                "Norfolk Island", "Saint Helena, Ascension, and Tristan da Cunha", "Tokelau", "Wallis and Futuna"};
+        if (Arrays.asList(noHelpText).contains(country.getName())) {
+            TextView helpTextView = (TextView) findViewById(R.id.statisticsHelpTextView);
+            helpTextView.setVisibility(View.GONE);
+        }
 
         AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "Statistics Screen");
     }
