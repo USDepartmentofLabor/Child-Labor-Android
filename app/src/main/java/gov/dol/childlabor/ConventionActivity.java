@@ -18,27 +18,29 @@ public class ConventionActivity extends AppCompatActivity {
 
         Country country = (Country) getIntent().getSerializableExtra("country");
         Country.MasterData data = country.data;
-        displayBooleanValue((TextView) findViewById(R.id.c138TextView), data.c138Ratified);
-        displayBooleanValue((TextView) findViewById(R.id.c182TextView), data.c182Ratified);
-        displayBooleanValue((TextView) findViewById(R.id.crcTextView), data.crcRatified);
-        displayBooleanValue((TextView) findViewById(R.id.crcArmedConflictTextView), data.crcArmedConflictRatified);
-        displayBooleanValue((TextView) findViewById(R.id.crcSexualExploitationTextView), data.crcSexualExploitationRatified);
-        displayBooleanValue((TextView) findViewById(R.id.palermoTextView), data.palermoRatified);
+        displayValue((TextView) findViewById(R.id.c138TextView), data.c138Ratified);
+        displayValue((TextView) findViewById(R.id.c182TextView), data.c182Ratified);
+        displayValue((TextView) findViewById(R.id.crcTextView), data.crcRatified);
+        displayValue((TextView) findViewById(R.id.crcArmedConflictTextView), data.crcArmedConflictRatified);
+        displayValue((TextView) findViewById(R.id.crcSexualExploitationTextView), data.crcSexualExploitationRatified);
+        displayValue((TextView) findViewById(R.id.palermoTextView), data.palermoRatified);
 
         AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "Conventions Screen");
     }
 
-    private void displayBooleanValue(TextView view, Boolean value) {
+    private void displayValue(TextView view, String value) {
         if (value == null) {
-            view.setText("Unavailable");
+            value = "Unavailable";
         }
-        else if (value == true) {
-            view.setText("Yes");
-            view.setTextColor(Color.parseColor("#54ba5b"));
+
+        switch (value) {
+            case "Yes":
+                view.setTextColor(Color.parseColor("#54ba5b"));
+                break;
+            case "No":
+                view.setTextColor(Color.RED);
+                break;
         }
-        else if (value == false) {
-            view.setText("No");
-            view.setTextColor(Color.RED);
-        }
+        view.setText(value);
     }
 }

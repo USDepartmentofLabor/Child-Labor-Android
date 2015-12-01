@@ -153,9 +153,9 @@ public class Country implements Serializable {
     }
 
     class MasterData implements Serializable {
-        public Boolean c138Ratified, c182Ratified, crcRatified, crcArmedConflictRatified, crcSexualExploitationRatified, palermoRatified;
         public Boolean minimumWork, minimumHazardWork, compulsoryEducation, freeEducation;
         public String minimumWorkAge, minimumHazardWorkAge, compulsoryEducationAge;
+        public String c138Ratified, c182Ratified, crcRatified, crcArmedConflictRatified, crcSexualExploitationRatified, palermoRatified;
     }
 
     class CountryStatistics implements Serializable {

@@ -226,7 +226,7 @@ public class CountryXmlParser {
                             break;
                         case "Government_Policies":
                         case "Policies":
-                            section = "Policies";
+                            section = "Government Policies";
                             actions = new ArrayList<>();
                             break;
                         case "Social_Programs":
@@ -261,22 +261,22 @@ public class CountryXmlParser {
                     name = parser.getName();
                     switch(name) {
                         case "C_138_Ratified":
-                            data.c138Ratified = parser.nextText().equals("Yes");
+                            data.c138Ratified = parser.nextText();
                             break;
                         case "C_182_Ratified":
-                            data.c182Ratified = parser.nextText().equals("Yes");
+                            data.c182Ratified = parser.nextText();
                             break;
                         case "Convention_on_the_Rights_of_the_Child_Ratified":
-                            data.crcRatified = parser.nextText().equals("Yes");
+                            data.crcRatified = parser.nextText();
                             break;
                         case "CRC_Commercial_Sexual_Exploitation_of_Children_Ratified":
-                            data.crcSexualExploitationRatified = parser.nextText().equals("Yes");
+                            data.crcSexualExploitationRatified = parser.nextText();
                             break;
                         case "CRC_Armed_Conflict_Ratified":
-                            data.crcArmedConflictRatified = parser.nextText().equals("Yes");
+                            data.crcArmedConflictRatified = parser.nextText();
                             break;
                         case "Palermo_Ratified":
-                            data.palermoRatified = parser.nextText().equals("Yes");
+                            data.palermoRatified = parser.nextText();
                             break;
                         case "Minimum_Age_for_Work_Estabslished":
                             data.minimumWork = parser.nextText().equals("Yes");
