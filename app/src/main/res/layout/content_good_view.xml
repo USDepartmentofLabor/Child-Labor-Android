@@ -22,14 +22,15 @@
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:focusableInTouchMode="true">
+            android:paddingBottom="8dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:id="@+id/relativeLayout2">
+                android:id="@+id/relativeLayout2"
+                android:nextFocusForward="@+id/countryExploitationSpinner"
+                android:accessibilityTraversalAfter="@+id/countryExploitationSpinner">
 
                 <ImageView
                     android:id="@+id/goodImageView"
@@ -71,6 +72,7 @@
                 android:layout_marginTop="16dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Exploitation Type"
+                android:contentDescription="Choose Exploitation Type"
                 android:id="@+id/spinnerLabelTextView" />
 
             <Spinner
@@ -78,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:id="@+id/countryExploitationSpinner"
+                android:nextFocusForward="@+id/countryLabelTextView"
                 android:layout_centerHorizontal="true" />
 
             <TextView
@@ -95,8 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:divider="?android:attr/dividerHorizontal"
-                android:showDividers="middle"
-                android:focusableInTouchMode="true" />
+                android:showDividers="middle" />
 
         </LinearLayout>
 
