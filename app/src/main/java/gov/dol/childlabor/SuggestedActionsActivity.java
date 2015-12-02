@@ -29,6 +29,7 @@ public class SuggestedActionsActivity extends AppCompatActivity {
         for(Country.SuggestedAction suggestedAction : country.getSuggestedActions()) {
             TextView header = (TextView) inflater.inflate(R.layout.suggested_actions_header, suggestedActionsLinearLayout, false);
             header.setText(suggestedAction.section);
+            header.setContentDescription(suggestedAction.section + ", heading");
             suggestedActionsLinearLayout.addView(header);
 
             for(String action : suggestedAction.actions) {

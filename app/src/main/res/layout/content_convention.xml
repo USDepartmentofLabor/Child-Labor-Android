@@ -25,7 +25,8 @@
             android:textStyle="bold"
             android:textAllCaps="true"
             android:text="Ratifications"
-            android:background="#dadada" />
+            android:background="#dadada"
+            android:contentDescription="Ratifications, heading" />
 
         <LinearLayout
             android:orientation="horizontal"

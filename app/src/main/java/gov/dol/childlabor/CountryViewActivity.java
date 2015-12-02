@@ -30,9 +30,11 @@ public class CountryViewActivity extends AppCompatActivity {
 
         TextView nameTextView = (TextView) findViewById(R.id.nameTextView);
         nameTextView.setText(country.getName());
+        nameTextView.setContentDescription(country.getName() + ", heading");
 
         TextView levelTextView = (TextView) findViewById(R.id.levelTextView);
         levelTextView.setText(country.getLevel());
+        levelTextView.setContentDescription(country.getLevel() + ", heading");
 
         TextView descriptionTextView = (TextView) findViewById(R.id.descriptionTextView);
         descriptionTextView.setText(country.getDescription());

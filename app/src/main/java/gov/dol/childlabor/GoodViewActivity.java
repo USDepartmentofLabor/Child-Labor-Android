@@ -33,9 +33,11 @@ public class GoodViewActivity extends AppCompatActivity {
 
         TextView nameTextView = (TextView) findViewById(R.id.nameTextView);
         nameTextView.setText(good.getName());
+        nameTextView.setContentDescription(good.getName() + ", heading");
 
         TextView levelTextView = (TextView) findViewById(R.id.sectorTextView);
         levelTextView.setText(good.getSector());
+        levelTextView.setContentDescription(good.getSector() + ", heading");
 
         ImageView goodImageView = (ImageView) findViewById(R.id.goodImageView);
         goodImageView.setImageDrawable(AppHelpers.getGoodDrawable(this, good.getName()));
