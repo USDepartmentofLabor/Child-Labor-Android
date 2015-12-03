@@ -24,7 +24,8 @@
             android:textStyle="bold"
             android:textAllCaps="true"
             android:text="Children"
-            android:background="#dadada" />
+            android:background="#dadada"
+            android:contentDescription="Children, heading" />
 
         <LinearLayout
             android:orientation="horizontal"
