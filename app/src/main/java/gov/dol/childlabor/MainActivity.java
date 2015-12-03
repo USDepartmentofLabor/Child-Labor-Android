@@ -30,22 +30,18 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // String item = "You selected " + String.valueOf(parent.getItemAtPosition(position));
-                // Toast.makeText(MainActivity.this, item, Toast.LENGTH_SHORT).show();
-
                 Intent intent;
                 switch (String.valueOf(parent.getItemAtPosition(position))) {
                     case "Countries":
-                        intent = new Intent(getApplicationContext(), TabbedCountryListActivity.class);
+                    default:
+                        intent = new Intent(getApplicationContext(), TabbedCountryListSpinnerActivity.class);
                         break;
                     case "Goods":
-                        intent = new Intent(getApplicationContext(), TabbedGoodListActivity.class);
+                        intent = new Intent(getApplicationContext(), TabbedGoodListSpinnerActivity.class);
                         break;
                     case "Exploitation Types":
-                        intent = new Intent(getApplicationContext(), TabbedExploitationTypeListActivity.class);
+                        intent = new Intent(getApplicationContext(), ExploitationTypeListSpinnerActivity.class);
                         break;
-                    default:
-                        intent = new Intent(getApplicationContext(), TabbedCountryListActivity.class);
                 }
 
                 startActivity(intent);

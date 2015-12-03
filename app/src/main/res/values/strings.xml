@@ -19,4 +19,7 @@
     <string name="title_activity_convention">International Conventions</string>
     <string name="title_activity_legal_standard">Legal Standards</string>
     <string name="title_activity_full_report">Full Report</string>
+    <string name="title_activity_exploitation_type_list_spinner">Exploitation Types</string>
+    <string name="title_activity_tabbed_good_list_spinner">Goods</string>
+    <string name="title_activity_tabbed_country_list_spinner">Countries</string>
 </resources>
