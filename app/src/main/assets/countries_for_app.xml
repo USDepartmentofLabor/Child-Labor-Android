@@ -2473,7 +2473,7 @@
 			</Children_Working_and_Studying_7-14_yrs_old>
 			<UNESCO_Primary_Completion_Rate>
 				<Year>2011.0</Year>
-				<Rate>92.9</Rate>
+				<Rate></Rate>
 			</UNESCO_Primary_Completion_Rate>
 		</Country_Statistics>
 		<Master_Data>
@@ -4362,7 +4362,7 @@
 			</Children_Working_and_Studying_7-14_yrs_old>
 			<UNESCO_Primary_Completion_Rate>
 				<Year>2012.0</Year>
-				<Rate>102.7</Rate>
+				<Rate></Rate>
 			</UNESCO_Primary_Completion_Rate>
 		</Country_Statistics>
 		<Master_Data>
@@ -10138,7 +10138,7 @@
 			</Children_Working_and_Studying_7-14_yrs_old>
 			<UNESCO_Primary_Completion_Rate>
 				<Year>2007.0</Year>
-				<Rate>68.9</Rate>
+				<Rate></Rate>
 			</UNESCO_Primary_Completion_Rate>
 		</Country_Statistics>
 		<Master_Data>

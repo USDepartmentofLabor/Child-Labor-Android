@@ -32,7 +32,8 @@ public class StatisticsActivity extends AppCompatActivity {
         setStatisticText(R.id.completionRateTextView, statistics.primaryCompletionPercent);
 
         String[] noHelpText = {"Christmas Island", "Cocos (Keeling) Islands", "Falkland Islands (Islas Malvinas)",
-                "Norfolk Island", "Saint Helena, Ascension, and Tristan da Cunha", "Tokelau", "Wallis and Futuna"};
+                "Norfolk Island", "Saint Helena, Ascension, and Tristan da Cunha", "Tokelau", "Wallis and Futuna",
+                "British Virgin Islands", "Cook Islands", "Montserrat", "Western Sahara"};
         if (Arrays.asList(noHelpText).contains(country.getName())) {
             TextView helpTextView = (TextView) findViewById(R.id.statisticsHelpTextView);
             helpTextView.setVisibility(View.GONE);
