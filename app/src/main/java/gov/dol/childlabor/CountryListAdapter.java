@@ -33,6 +33,7 @@ public class CountryListAdapter extends ArrayAdapter<Country> implements StickyL
 
         TextView countryTextView = (TextView) theView.findViewById(R.id.countryTextView);
         countryTextView.setText(country.getName());
+        countryTextView.setContentDescription(country.getName() + ", Button");
 
         ImageView countryFlagImageView = (ImageView) theView.findViewById(R.id.countryFlagImageView);
         Drawable flag = AppHelpers.getFlagDrawable(getContext(), country.getName());

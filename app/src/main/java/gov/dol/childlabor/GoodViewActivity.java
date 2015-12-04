@@ -2,12 +2,14 @@ package gov.dol.childlabor;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.accessibility.AccessibilityEvent;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -124,6 +126,11 @@ public class GoodViewActivity extends AppCompatActivity {
                 }
 
                 addCountries(countryGoods.toArray(new CountryGood[countryGoods.size()]));
+
+                if  (Build.VERSION.SDK_INT >= 16){
+                    countryLabelTextView.requestFocus();
+                    countryLabelTextView.announceForAccessibility(countryLabelTextView.getText());
+                }
             }
 
             @Override
@@ -144,7 +151,7 @@ public class GoodViewActivity extends AppCompatActivity {
         LayoutInflater theInflater = LayoutInflater.from(this);
         for (CountryGood country : goods) {
             View countryListWidget = theInflater.inflate(R.layout.good_country_widget, goodLinearLayout, false);
-
+            String contentDescription = country.getCountryName();
             countryListWidget.setTag(country);
 
             ImageView countryFlagImageView = (ImageView) countryListWidget.findViewById(R.id.countryFlagImageView);
@@ -163,10 +170,12 @@ public class GoodViewActivity extends AppCompatActivity {
             if(country.hasForcedChildLabor()) {
                 row = (LinearLayout) countryListWidget.findViewById(R.id.forceChildLaborLinearLayout);
                 row.setVisibility(View.VISIBLE);
+                contentDescription += ", Forced Child Labor";
             }
             else if(country.hasChildLabor()) {
                 row = (LinearLayout) countryListWidget.findViewById(R.id.childLaborLinearLayout);
                 row.setVisibility(View.VISIBLE);
+                contentDescription += ", Child Labor";
             }
             else {
                 row = (LinearLayout) countryListWidget.findViewById(R.id.childLaborLinearLayout);
@@ -176,8 +185,10 @@ public class GoodViewActivity extends AppCompatActivity {
             if(country.hasForcedLabor()) {
                 row = (LinearLayout) countryListWidget.findViewById(R.id.forcedLaborLinearLayout);
                 row.setVisibility(View.VISIBLE);
+                contentDescription += ", Forced Labor";
             }
 
+            countryListWidget.setContentDescription(contentDescription + ", button");
             goodLinearLayout.addView(countryListWidget);
         }
     }

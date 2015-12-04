@@ -34,6 +34,7 @@ public class GoodListAdapter extends ArrayAdapter<Good> implements StickyListHea
 
         TextView countryTextView = (TextView) theView.findViewById(R.id.goodTextView);
         countryTextView.setText(good.getName());
+        countryTextView.setContentDescription(good.getName() + ", Button");
 
         ImageView goodImageView = (ImageView) theView.findViewById(R.id.goodImageView);
         Drawable flag = AppHelpers.getGoodDrawable(getContext(), good.getName());

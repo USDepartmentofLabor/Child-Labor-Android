@@ -70,6 +70,7 @@ public class CountryViewActivity extends AppCompatActivity {
         LayoutInflater theInflater = LayoutInflater.from(this);
         for (CountryGood good : country.getGoods()) {
             View countryGoodWidget = theInflater.inflate(R.layout.country_good_widget, goodLinearLayout, false);
+            String contentDescription = good.getGoodName();
 
             countryGoodWidget.setTag(good);
 
@@ -83,10 +84,12 @@ public class CountryViewActivity extends AppCompatActivity {
             if(good.hasForcedChildLabor()) {
                 row = (LinearLayout) countryGoodWidget.findViewById(R.id.forceChildLaborLinearLayout);
                 row.setVisibility(View.VISIBLE);
+                contentDescription += ", Forced Child Labor";
             }
             else if(good.hasChildLabor()) {
                 row = (LinearLayout) countryGoodWidget.findViewById(R.id.childLaborLinearLayout);
                 row.setVisibility(View.VISIBLE);
+                contentDescription += ", Child Labor";
             }
             else {
                 row = (LinearLayout) countryGoodWidget.findViewById(R.id.childLaborLinearLayout);
@@ -96,8 +99,10 @@ public class CountryViewActivity extends AppCompatActivity {
             if(good.hasForcedLabor()) {
                 row = (LinearLayout) countryGoodWidget.findViewById(R.id.forcedLaborLinearLayout);
                 row.setVisibility(View.VISIBLE);
+                contentDescription += ", Forced Labor";
             }
 
+            countryGoodWidget.setContentDescription(contentDescription + ", button");
             goodLinearLayout.addView(countryGoodWidget);
         }
 

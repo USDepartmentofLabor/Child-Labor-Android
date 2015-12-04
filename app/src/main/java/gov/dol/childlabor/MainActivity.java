@@ -1,16 +1,28 @@
 package gov.dol.childlabor;
 
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,11 +34,21 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         String[] items = {"Countries", "Goods", "Exploitation Types"};
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items) {
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                String name = getItem(position);
+
+                TextView theView = (TextView) getLayoutInflater().inflate(android.R.layout.simple_list_item_1, parent, false);
+                theView.setText(name);
+                theView.setContentDescription(name + ", Button");
+
+                return theView;
+            }
+        };
 
         ListView listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(itemsAdapter);
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -64,16 +86,6 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        //        if(id == R.id.ilab_logo) {
-        //            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dol.gov/ilab"));
-        //            startActivity(browserIntent);
-        //        }
-        //        else if(id == R.id.dol_logo) {
-        //            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dol.gov"));
-        //            startActivity(browserIntent);
-        //        }
 
         if(id == R.id.action_about) {
             Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
