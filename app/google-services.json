@@ -1,1 +1,45 @@
-{"project_info":{"project_id":"sweat-toil","project_number":"814051856499","name":"Sweat Toil"},"client":[{"client_info":{"mobilesdk_app_id":"1:814051856499:android:073c1bf62cf4ef53","client_id":"android:gov.dol.childlabor","client_type":1,"android_client_info":{"package_name":"gov.dol.childlabor"}},"oauth_client":[],"api_key":[],"services":{"analytics_service":{"status":2,"analytics_property":{"tracking_id":"UA-42980855-2"}},"cloud_messaging_service":{"status":1,"apns_config":[]},"appinvite_service":{"status":1,"other_platform_oauth_client":[]},"google_signin_service":{"status":1},"ads_service":{"status":1}}}],"client_info":[],"ARTIFACT_VERSION":"1"}
+{
+  "project_info": {
+    "project_id": "sweat-and-toil",
+    "project_number": "734852718847",
+    "name": "Sweat and Toil"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734852718847:android:073c1bf62cf4ef53",
+        "client_id": "android:gov.dol.childlabor",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "gov.dol.childlabor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-61504244-3"
+          }
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 1
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}
