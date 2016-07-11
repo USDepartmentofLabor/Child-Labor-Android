@@ -9,6 +9,15 @@
     android:layout_marginTop="?attr/actionBarSize"
     tools:context="gov.dol.childlabor.TabbedCountryListSpinnerActivity$PlaceholderFragment">
 
+    <SearchView
+        android:id="@+id/searchFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:iconifiedByDefault="false"
+        android:inputType="textFilter"
+        android:queryHint="Filter Country" />
+
     <include layout="@layout/list_spinner_header" />
 
     <ListView

@@ -22,6 +22,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -139,7 +140,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_tabbed_country_list_spinner, container, false);
 
-            int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
+            final int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
             switch(sectionNumber) {
                 case 1:
                     Spinner spinner = (Spinner) rootView.findViewById(R.id.listViewSpinner);
@@ -166,6 +167,39 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
+
+            final SearchView searchFilter = (SearchView) rootView.findViewById(R.id.searchFilter);
+            searchFilter.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextChange(String query) {
+                    Country[] countries;
+                    String selection;
+                    switch (sectionNumber) {
+                        case 2:
+                            selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
+                            countries = getCountriesBySearch(query, getCountriesByLevel(selection));
+                            break;
+                        case 3:
+                            selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
+                            countries = getCountriesBySearch(query, getCountriesByRegion(selection));
+                            break;
+                        default:
+                            countries = getCountriesBySearch(query);
+                    }
+                    CountryListAdapter itemsAdapter = new CountryListAdapter(getActivity(), countries, 1);
+                    ListView listView = (ListView) getView().findViewById(R.id.listView);
+                    listView.setAdapter(itemsAdapter);
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+                    searchFilter.clearFocus();
+                    return false;
+                }
+
+            });
+
             return rootView;
         }
 
@@ -204,7 +238,11 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     String level = parent.getItemAtPosition(position).toString();
 
-                    CountryListAdapter itemsAdapter = new CountryListAdapter(getActivity(), getCountriesByLevel(level), 2);
+                    SearchView searchFilter = (SearchView) getView().findViewById(R.id.searchFilter);
+                    String query = searchFilter.getQuery().toString();
+                    Country [] countries = getCountriesBySearch(query, getCountriesByLevel(level));
+
+                    CountryListAdapter itemsAdapter = new CountryListAdapter(getActivity(), countries, 2);
                     ListView listView = (ListView) getView().findViewById(R.id.listView);
                     listView.setAdapter(itemsAdapter);
                 }
@@ -252,7 +290,11 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     String region = parent.getItemAtPosition(position).toString();
 
-                    CountryListAdapter itemsAdapter = new CountryListAdapter(getActivity(), getCountriesByRegion(region), 3);
+                    SearchView searchFilter = (SearchView) getView().findViewById(R.id.searchFilter);
+                    String query = searchFilter.getQuery().toString();
+                    Country [] countries = getCountriesBySearch(query, getCountriesByRegion(region));
+
+                    CountryListAdapter itemsAdapter = new CountryListAdapter(getActivity(), countries, 3);
                     ListView listView = (ListView) getView().findViewById(R.id.listView);
                     listView.setAdapter(itemsAdapter);
                 }
@@ -262,6 +304,23 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
 
                 }
             });
+        }
+
+        public Country[] getCountriesBySearch(String query) {
+            Country[] allCountries = CountryXmlParser.fromContext(getContext()).getCountryList();
+            return getCountriesBySearch(query, allCountries);
+        }
+
+        public Country[] getCountriesBySearch(String query, Country[] countries) {
+            if (query.equals("")) return countries;
+
+            ArrayList<Country> countryList = new ArrayList<>();
+            for(Country country : countries) {
+                String countryName = country.getName().replace("ô", "o").replace("ã", "a").replace("é", "e").replace("í", "i");
+                if (countryName.toLowerCase().startsWith(query.toLowerCase())) countryList.add(country);
+            }
+
+            return countryList.toArray(new Country[countryList.size()]);
         }
 
         public Country[] getCountriesByLevel(String level) {

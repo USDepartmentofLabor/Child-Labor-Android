@@ -23,6 +23,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -145,7 +146,7 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
             GoodXmlParser parser = GoodXmlParser.fromContext(getContext());
             Good[] goods;
 
-            int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
+            final int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
             switch(sectionNumber) {
                 case 2:
                     goods = parser.getGoodListBySector();
@@ -174,7 +175,52 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
+
+            final SearchView searchFilter = (SearchView) rootView.findViewById(R.id.searchFilter);
+            searchFilter.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextChange(String query) {
+                    Good[] goods;
+                    String selection;
+                    switch (sectionNumber) {
+                        case 2:
+                            selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
+                            goods = getGoodsBySearch(query, getGoodsBySector(selection));
+                            break;
+                        default:
+                            goods = getGoodsBySearch(query);
+                    }
+                    GoodListAdapter itemsAdapter = new GoodListAdapter(getActivity(), goods, 1);
+                    ListView listView = (ListView) getView().findViewById(R.id.listView);
+                    listView.setAdapter(itemsAdapter);
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+                    searchFilter.clearFocus();
+                    return false;
+                }
+
+            });
             return rootView;
+        }
+
+        public Good[] getGoodsBySearch(String query) {
+            Good[] allGoods = GoodXmlParser.fromContext(getContext()).getGoodList();
+            return getGoodsBySearch(query, allGoods);
+        }
+
+        public Good[] getGoodsBySearch(String query, Good[] goods) {
+            if (query.equals("")) return goods;
+
+            ArrayList<Good> goodList = new ArrayList<>();
+            for(Good good : goods) {
+                String goodName = good.getName().replace("ô", "o").replace("ã", "a").replace("é", "e").replace("í", "i");
+                if (goodName.toLowerCase().contains(query.toLowerCase())) goodList.add(good);
+            }
+
+            return goodList.toArray(new Good[goodList.size()]);
         }
 
         public Good[] getGoodsBySector(String sector) {
@@ -225,7 +271,11 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     String sector = parent.getItemAtPosition(position).toString();
 
-                    GoodListAdapter itemsAdapter = new GoodListAdapter(getActivity(), getGoodsBySector(sector), 2);
+                    SearchView searchFilter = (SearchView) getView().findViewById(R.id.searchFilter);
+                    String query = searchFilter.getQuery().toString();
+                    Good [] goods = getGoodsBySearch(query, getGoodsBySector(sector));
+
+                    GoodListAdapter itemsAdapter = new GoodListAdapter(getActivity(), goods, 2);
                     ListView listView = (ListView) getView().findViewById(R.id.listView);
                     listView.setAdapter(itemsAdapter);
                 }

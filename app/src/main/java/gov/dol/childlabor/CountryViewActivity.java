@@ -107,7 +107,7 @@ public class CountryViewActivity extends AppCompatActivity {
         }
 
 
-        String[] items = {"Suggested Actions", "Statistics", "International Conventions", "Legal Standards", "Report PDF"};
+        String[] items = {"Suggested Actions", "Statistics", "International Conventions", "Legal Standards", "Enforcement", "Other Mechanisms", "Report PDF"};
         ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
 
         ListView listView = (ListView) findViewById(R.id.actionListView);
