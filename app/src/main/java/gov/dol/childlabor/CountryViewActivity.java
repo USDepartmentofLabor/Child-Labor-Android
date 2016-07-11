@@ -125,7 +125,18 @@ public class CountryViewActivity extends AppCompatActivity {
                         intent = new Intent(getApplicationContext(), ConventionActivity.class);
                         break;
                     case "Legal Standards":
-                        intent = new Intent(getApplicationContext(), LegalStandardActivity.class);
+                        if (country.getName().equalsIgnoreCase("Philippines")) {
+                            intent = new Intent(getApplicationContext(), BetaLegalStandardActivity.class);
+
+                        }else {
+                            intent = new Intent(getApplicationContext(), LegalStandardActivity.class);
+                        }
+                        break;
+                    case "Enforcement":
+                        intent = new Intent(getApplicationContext(), TabbedEnforcementActivity.class);
+                        break;
+                    case "Other Mechanisms":
+                        intent = new Intent(getApplicationContext(), MechanismActivity.class);
                         break;
                     case "Report PDF":
                         intent = new Intent(getApplicationContext(), FullReportActivity.class);
