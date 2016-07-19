@@ -79,7 +79,7 @@ public class StatisticsActivity extends AppCompatActivity {
         DecimalFormat df = new DecimalFormat("#");
         df.setGroupingUsed(true);
         total = df.format(Float.parseFloat(total));
-        String text = percent + " (" + total + "; ages " + ageRange + ")";
+        String text = percent + " (" + ((!total.equals("0")) ? total + "; " : "") + "ages " + ageRange + ")";
 
         TextView view = (TextView) findViewById(textViewId);
         view.setText(text);

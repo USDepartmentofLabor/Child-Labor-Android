@@ -128,6 +128,10 @@ public class Country implements Serializable {
         return suggestedActions.toArray(new SuggestedAction[suggestedActions.size()]);
     }
 
+    public Boolean hasMultipleTerritories() {
+        return this.name.equals("Bosnia and Herzegovina");
+    }
+
     class SectionHeader implements Serializable {
 
         public int order;

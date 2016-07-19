@@ -79,15 +79,24 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView;
             final int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
+            Country country = (Country) getActivity().getIntent().getSerializableExtra("country");
+
+            View rootView;
+            int layout;
             switch(sectionNumber) {
                 case 1:
-                    rootView = inflater.inflate(R.layout.fragment_tabbed_enforcement_labor, container, false);
+                    layout = (country.hasMultipleTerritories()) ?
+                            R.layout.fragment_tabbed_enforcement_labor_multi :
+                            R.layout.fragment_tabbed_enforcement_labor;
+                    rootView = inflater.inflate(layout, container, false);
                     break;
                 case 2:
                 default:
-                    rootView = inflater.inflate(R.layout.fragment_tabbed_enforcement_criminal, container, false);
+                    layout = (country.hasMultipleTerritories()) ?
+                            R.layout.fragment_tabbed_enforcement_criminal_multi :
+                            R.layout.fragment_tabbed_enforcement_criminal;
+                    rootView = inflater.inflate(layout, container, false);
             }
 
             return rootView;

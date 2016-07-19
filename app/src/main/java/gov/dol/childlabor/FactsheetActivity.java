@@ -34,6 +34,10 @@ public class FactsheetActivity extends AppCompatActivity {
             title = "OCFT Fact Sheet";
             filename = "Fact Sheets-OCFT.pdf";
         }
+        else if(id == R.id.action_toolkit) {
+            title = "ILAB Toolkit Handout";
+            filename = "ILAB Toolkit Handout.pdf";
+        }
         else {
             title = "Programs Fact Sheet";
             filename = "Fact Sheets-Programming.pdf";

@@ -125,7 +125,8 @@ public class CountryViewActivity extends AppCompatActivity {
                         intent = new Intent(getApplicationContext(), ConventionActivity.class);
                         break;
                     case "Legal Standards":
-                        if (country.getName().equalsIgnoreCase("Philippines")) {
+                        String [] countries = {"Philippines", "Bosnia and Herzegovina"};
+                        if (Arrays.asList(countries).contains(country.getName())) {
                             intent = new Intent(getApplicationContext(), BetaLegalStandardActivity.class);
 
                         }else {

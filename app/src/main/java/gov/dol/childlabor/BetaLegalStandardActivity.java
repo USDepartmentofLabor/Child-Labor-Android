@@ -12,7 +12,17 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_beta_legal_standard);
+
+        Country country = (Country) getIntent().getSerializableExtra("country");
+        if (country.hasMultipleTerritories()) {
+            setContentView(R.layout.activity_beta_legal_standard_multi);
+
+        }else {
+            setContentView(R.layout.activity_beta_legal_standard);
+        }
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

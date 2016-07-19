@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -74,6 +75,12 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
         AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "Goods List Screen");
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_search, menu);
+        return true;
+    }
+
 
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
@@ -120,6 +127,8 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
 
+        private String searchQuery = "";
+
         /**
          * Returns a new instance of this fragment for the given section
          * number.
@@ -133,6 +142,55 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
         }
 
         public PlaceholderFragment() {
+        }
+
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setHasOptionsMenu(true);
+        }
+
+        @Override
+        public void onPrepareOptionsMenu(Menu menu) {
+            final int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
+
+            MenuItem searchItem = menu.findItem(R.id.search);
+
+            final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+            searchView.setQueryHint("Filter Goods");
+            searchView.clearFocus();
+            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextChange(String query) {
+                    searchQuery = query;
+
+                    Good[] goods;
+                    String selection;
+                    switch (sectionNumber) {
+                        case 2:
+                            selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
+                            goods = getGoodsBySearch(query, getGoodsBySector(selection));
+                            break;
+                        default:
+                            goods = getGoodsBySearch(query);
+                    }
+                    GoodListAdapter itemsAdapter = new GoodListAdapter(getActivity(), goods, 1);
+                    ListView listView = (ListView) getView().findViewById(R.id.listView);
+                    listView.setAdapter(itemsAdapter);
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+                    searchQuery = query;
+
+                    searchView.clearFocus();
+                    return false;
+                }
+
+            });
+
+            super.onPrepareOptionsMenu(menu);
         }
 
         @Override
@@ -176,33 +234,33 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                 }
             });
 
-            final SearchView searchFilter = (SearchView) rootView.findViewById(R.id.searchFilter);
-            searchFilter.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-                @Override
-                public boolean onQueryTextChange(String query) {
-                    Good[] goods;
-                    String selection;
-                    switch (sectionNumber) {
-                        case 2:
-                            selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
-                            goods = getGoodsBySearch(query, getGoodsBySector(selection));
-                            break;
-                        default:
-                            goods = getGoodsBySearch(query);
-                    }
-                    GoodListAdapter itemsAdapter = new GoodListAdapter(getActivity(), goods, 1);
-                    ListView listView = (ListView) getView().findViewById(R.id.listView);
-                    listView.setAdapter(itemsAdapter);
-                    return false;
-                }
-
-                @Override
-                public boolean onQueryTextSubmit(String query) {
-                    searchFilter.clearFocus();
-                    return false;
-                }
-
-            });
+//            final SearchView searchFilter = (SearchView) rootView.findViewById(R.id.searchFilter);
+//            searchFilter.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//                @Override
+//                public boolean onQueryTextChange(String query) {
+//                    Good[] goods;
+//                    String selection;
+//                    switch (sectionNumber) {
+//                        case 2:
+//                            selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
+//                            goods = getGoodsBySearch(query, getGoodsBySector(selection));
+//                            break;
+//                        default:
+//                            goods = getGoodsBySearch(query);
+//                    }
+//                    GoodListAdapter itemsAdapter = new GoodListAdapter(getActivity(), goods, 1);
+//                    ListView listView = (ListView) getView().findViewById(R.id.listView);
+//                    listView.setAdapter(itemsAdapter);
+//                    return false;
+//                }
+//
+//                @Override
+//                public boolean onQueryTextSubmit(String query) {
+//                    searchFilter.clearFocus();
+//                    return false;
+//                }
+//
+//            });
             return rootView;
         }
 
@@ -226,7 +284,7 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
         public Good[] getGoodsBySector(String sector) {
             Good[] allGoods = GoodXmlParser.fromContext(getContext()).getGoodList();
 
-            if (sector.equals("All")) return allGoods;
+            if (sector.equals("All Sectors")) return allGoods;
 
             ArrayList<Good> goodList = new ArrayList<>();
             for(Good good : allGoods) {
@@ -239,7 +297,7 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
         protected void getHeaderView(View rootView) {
 
             Spinner spinner = (Spinner) rootView.findViewById(R.id.listViewSpinner);
-            String[] items = {"All", "Agriculture", "Manufacturing", "Mining", "Other"};
+            String[] items = {"All Sectors", "Agriculture", "Manufacturing", "Mining", "Other"};
             spinner.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.good_view_exploitation_spinner_row, R.id.exploitationSpinnerTextView, items) {
                 @Override
                 public View getView(int position, View convertView, ViewGroup parent) {
@@ -270,10 +328,7 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     String sector = parent.getItemAtPosition(position).toString();
-
-                    SearchView searchFilter = (SearchView) getView().findViewById(R.id.searchFilter);
-                    String query = searchFilter.getQuery().toString();
-                    Good [] goods = getGoodsBySearch(query, getGoodsBySector(sector));
+                    Good [] goods = getGoodsBySearch(searchQuery, getGoodsBySector(sector));
 
                     GoodListAdapter itemsAdapter = new GoodListAdapter(getActivity(), goods, 2);
                     ListView listView = (ListView) getView().findViewById(R.id.listView);
