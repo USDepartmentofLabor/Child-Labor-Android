@@ -264,7 +264,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
         protected void getLevelHeaderView(View rootView) {
 
             Spinner spinner = (Spinner) rootView.findViewById(R.id.listViewSpinner);
-            String[] items = {"All Assessment Levels", "Significant Advancement", "Moderate Advancement", "Minimal Advancement", "No Advancement", "No Data"};
+            String[] items = {"All Assessment Levels", "Significant Advancement", "Moderate Advancement", "Minimal Advancement", "No Advancement", "No Assessment", "Not Covered in TDA Report"};
             spinner.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.good_view_exploitation_spinner_row, R.id.exploitationSpinnerTextView, items) {
                 @Override
                 public View getView(int position, View convertView, ViewGroup parent) {
@@ -313,7 +313,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
         protected void getRegionHeaderView(View rootView) {
 
             Spinner spinner = (Spinner) rootView.findViewById(R.id.listViewSpinner);
-            String[] items = {"All Regions", "Asia & Pacific", "Europe & Eurasia", "Latin America & Caribbean", "Middle East & North Africa", "Sub-Saharan Africa"};
+            String[] items = {"All Regions", "Asia & the Pacific", "Europe & Eurasia", "Latin America & the Caribbean", "Middle East & North Africa", "Sub-Saharan Africa"};
             spinner.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.good_view_exploitation_spinner_row, R.id.exploitationSpinnerTextView, items) {
                 @Override
                 public View getView(int position, View convertView, ViewGroup parent) {
@@ -368,7 +368,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
 
             ArrayList<Country> countryList = new ArrayList<>();
             for(Country country : countries) {
-                String countryName = country.getName().replace("ô", "o").replace("ã", "a").replace("é", "e").replace("í", "i");
+                String countryName = country.getName().replace("ô", "o").replace("ã", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("á", "a");
                 if (countryName.toLowerCase().startsWith(query.toLowerCase())) countryList.add(country);
             }
 

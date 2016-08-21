@@ -33,14 +33,14 @@
                 android:text="Labor Inspectorate Funding" />
 
             <TextView
+                android:id="@+id/laborFundingTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#000"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="$706,480" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -62,18 +62,19 @@
                 android:text="No. of Labor Inspectors" />
 
             <TextView
+                android:id="@+id/laborInspectorsTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#000"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="541" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/laborDedicatedInspectorsContainer"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,14 +92,14 @@
                 android:text="No. of Child Labor Dedicated Inspectors" />
 
             <TextView
+                android:id="@+id/laborDedicatedInspectorsTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#000"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="541" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -120,14 +121,112 @@
                 android:text="Inspectorate Authorized to Assess Penalties" />
 
             <TextView
+                android:id="@+id/laborAssessPenaltiesTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#F00"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="No" />
+                android:text="Unavailable" />
+
+        </LinearLayout>
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:text="Training for Labor Inspectors:"
+            android:background="#dadada"
+            android:contentDescription="Training for Labor Inspectors, heading" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000"
+                android:layout_weight="1"
+                android:text="Initial Training for New Employees" />
+
+            <TextView
+                android:id="@+id/laborInitialTrainingTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Unavailable" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000"
+                android:layout_weight="1"
+                android:text="Training on New Laws Related to Child Labor" />
+
+            <TextView
+                android:id="@+id/laborNewLawsTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Unavailable" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000"
+                android:layout_weight="1"
+                android:text="Refresher Courses Provided" />
+
+            <TextView
+                android:id="@+id/laborRefresherCoursesTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -160,14 +259,14 @@
                 android:text="No. of Inspections" />
 
             <TextView
+                android:id="@+id/laborInspectionsTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#000"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="44,524" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -189,6 +288,7 @@
                 android:text="No. Conducted at Worksite" />
 
             <TextView
+                android:id="@+id/laborWorksiteInspectionsTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -217,6 +317,7 @@
                 android:text="No. Conducted by Desk Reviews" />
 
             <TextView
+                android:id="@+id/laborDeskReviewsTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -256,6 +357,7 @@
                 android:text="No. of Violations Found" />
 
             <TextView
+                android:id="@+id/laborViolationsFoundTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -284,13 +386,14 @@
                 android:text="No. of Penalties Imposed" />
 
             <TextView
+                android:id="@+id/laborPenaltiesImposedTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="N/A" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -312,13 +415,14 @@
                 android:text="No. of Collected Penalties" />
 
             <TextView
+                android:id="@+id/laborCollectedPenaltiesTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="N/A" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -348,17 +452,17 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. Conducted" />
+                android:text="Conducted" />
 
             <TextView
+                android:id="@+id/laborConductedRoutineTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -377,17 +481,17 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. Targeted" />
+                android:text="Targeted" />
 
             <TextView
+                android:id="@+id/laborTargetedRoutineTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -417,17 +521,17 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. Premitted" />
+                android:text="Permitted" />
 
             <TextView
+                android:id="@+id/laborPermittedUnannouncedTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -446,114 +550,17 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. Conducted" />
+                android:text="Conducted" />
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
-
-        </LinearLayout>
-
-        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            android:text="Training for Labor Inspectors:"
-            android:background="#dadada"
-            android:contentDescription="Training for Labor Inspectors, heading" />
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#000"
-                android:layout_weight="1"
-                android:text="Initial Training for New Employees" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#000"
-                android:layout_weight="1"
-                android:text="Training on New Laws Related to Child Labor" />
-
-            <TextView
+                android:id="@+id/laborConductedUnannouncedTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="N/A" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#000"
-                android:layout_weight="1"
-                android:text="Refresher Courses Provided" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
+                android:text="Unannounced" />
 
         </LinearLayout>
 
@@ -585,12 +592,12 @@
                 android:text="Complaint Mechanism Exists" />
 
             <TextView
+                android:id="@+id/laborComplaintMechanismTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Yes" />
 
@@ -614,16 +621,25 @@
                 android:text="Referral Mechanism Exists btwn Authorities and Social Services" />
 
             <TextView
+                android:id="@+id/laborReferralMechanismTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
+                android:text="Unavailable" />
 
         </LinearLayout>
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/footerTextView"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="#dadada"
+            android:contentDescription="@null" />
 
     </LinearLayout>
 

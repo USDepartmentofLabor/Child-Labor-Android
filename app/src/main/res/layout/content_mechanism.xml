@@ -46,15 +46,14 @@
                 android:text="Mechanism to Coordinate" />
 
             <TextView
-                android:id="@+id/minimumWorkTextView"
+                android:id="@+id/coordinationTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -87,15 +86,14 @@
                 android:text="National Policy on WFCL Established" />
 
             <TextView
-                android:id="@+id/minimumHazardWorkTextView"
+                android:id="@+id/policyTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -128,15 +126,14 @@
                 android:text="National Program on WFCL Established" />
 
             <TextView
-                android:id="@+id/compulsoryEducationTextView"
+                android:id="@+id/programTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 

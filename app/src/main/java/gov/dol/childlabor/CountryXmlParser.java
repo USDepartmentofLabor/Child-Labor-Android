@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Hashtable;
 
 /**
  * Created by tru on 10/22/2015.
@@ -27,7 +28,7 @@ public class CountryXmlParser {
     public static CountryXmlParser fromContext(Context context) {
         InputStream stream = null;
         try {
-            stream = context.getAssets().open("countries_for_app.xml");
+            stream = context.getAssets().open("countries_2015.xml");
         }
         catch(IOException e) {
             e.printStackTrace();
@@ -119,6 +120,9 @@ public class CountryXmlParser {
                             case "Region":
                                 currentCountry.setRegion(parser.nextText());
                                 break;
+                            case "Multiple_Territories":
+                                currentCountry.hasMultipleTerritories = parser.nextText().equals("Yes");
+                                break;
                             case "Advancement_Level":
                                 currentCountry.setLevel(parser.nextText());
                                 break;
@@ -131,8 +135,27 @@ public class CountryXmlParser {
                             case "Country_Statistics":
                                 parseCountryStatistics(currentCountry.statistics, parser);
                                 break;
-                            case "Master_Data":
-                                parseMasterData(currentCountry.data, parser);
+                            case "Conventions":
+                                parseConventions(currentCountry.conventions, parser);
+                                break;
+                            case "Legal_Standards":
+                                if (!currentCountry.hasMultipleTerritories) {
+                                    parseStandards(currentCountry, parser);
+                                }
+                                else {
+                                    parseTerritoryStandards(currentCountry, parser);
+                                }
+                                break;
+                            case "Enforcements":
+                                if (!currentCountry.hasMultipleTerritories) {
+                                    parseEnforcements(currentCountry, parser);
+                                }
+                                else {
+                                    parseTerritoryEnforcements(currentCountry, parser);
+                                }
+                                break;
+                            case "Mechanisms":
+                                parseMechanisms(currentCountry, parser);
                                 break;
                             default:
                                 skip(parser);
@@ -213,7 +236,7 @@ public class CountryXmlParser {
                             break;
                         case "Legal_Framework":
                         case "Laws":
-                            section = "Laws";
+                            section = "Legal Standards";
                             actions = new ArrayList<>();
                             break;
                         case "Enforcement":
@@ -252,9 +275,9 @@ public class CountryXmlParser {
         }
     }
 
-    private void parseMasterData(Country.MasterData data, XmlPullParser parser) throws XmlPullParserException, IOException {
+    private void parseConventions(Country.Conventions data, XmlPullParser parser) throws XmlPullParserException, IOException {
         int eventType = parser.getEventType();
-        while(!(eventType == XmlPullParser.END_TAG && parser.getName().equals("Master_Data"))) {
+        while(!(eventType == XmlPullParser.END_TAG && parser.getName().equals("Conventions"))) {
             String name = null;
             switch(eventType) {
                 case XmlPullParser.START_TAG:
@@ -278,26 +301,47 @@ public class CountryXmlParser {
                         case "Palermo_Ratified":
                             data.palermoRatified = parser.nextText();
                             break;
-                        case "Minimum_Age_for_Work_Estabslished":
-                            data.minimumWork = parser.nextText().equals("Yes");
+                    }
+                    break;
+            }
+            eventType = parser.next();
+        }
+    }
+
+    private void parseStandards(Country country, XmlPullParser parser) throws XmlPullParserException, IOException {
+        String type = null;
+        Hashtable<String, String> standardHash = new Hashtable<String, String>();
+        ArrayList<Hashtable<String, String>> territories = new ArrayList<>();
+
+        int eventType = parser.getEventType();
+        while(!(eventType == XmlPullParser.END_TAG && parser.getName().equals("Legal_Standards"))) {
+            String name = null;
+            switch(eventType) {
+                case XmlPullParser.START_TAG:
+                    name = parser.getName();
+                    switch(name) {
+                        case "Standard":
+                        case "Age":
+                        case "Calculated_Age":
+                        case "Conforms_To_Intl_Standard":
+                            standardHash.put(name, parser.nextText());
                             break;
-                        case "Minimum_Age_for_Work":
-                            data.minimumWorkAge = parser.nextText();
+                        default:
+                            type = name;
+                            standardHash.put("Type", name);
                             break;
-                        case "Minimum_Age_for_Hazardous_Work_Estabslished":
-                            data.minimumHazardWork = parser.nextText().equals("Yes");
+                    }
+                    break;
+                case XmlPullParser.END_TAG:
+                    name = parser.getName();
+                    switch(name) {
+                        case "Standard":
+                        case "Age":
+                        case "Calculated_Age":
+                        case "Conforms_To_Intl_Standard":
                             break;
-                        case "Minimum_Age_for_Hazardous_Work":
-                            data.minimumHazardWorkAge = parser.nextText();
-                            break;
-                        case "Compulsory_Education_Age_Established":
-                            data.compulsoryEducation = parser.nextText().equals("Yes");
-                            break;
-                        case "Minimum_Age_for_Compulsory_Education":
-                            data.compulsoryEducationAge = parser.nextText();
-                            break;
-                        case "Free_Public_Education_Estabslished":
-                            data.freeEducation = parser.nextText().equals("Yes");
+                        default:
+                            country.addStandard(type, standardHash);
                             break;
                     }
                     break;
@@ -306,7 +350,148 @@ public class CountryXmlParser {
         }
     }
 
-    private void parseCountryStatistics(Country.CountryStatistics statistics, XmlPullParser parser) throws XmlPullParserException, IOException {
+    private void parseTerritoryStandards(Country country, XmlPullParser parser) throws XmlPullParserException, IOException {
+        String type = null;
+        Hashtable<String, String> standardHash = new Hashtable<String, String>();
+        ArrayList<Hashtable<String, String>> territories = new ArrayList<>();
+
+        int eventType = parser.getEventType();
+        while(!(eventType == XmlPullParser.END_TAG && parser.getName().equals("Legal_Standards"))) {
+            String name = null;
+            switch(eventType) {
+                case XmlPullParser.START_TAG:
+                    name = parser.getName();
+                    switch(name) {
+                        case "Standard":
+                        case "Age":
+                        case "Calculated_Age":
+                        case "Conforms_To_Intl_Standard":
+                        case "Territory_Name":
+                            standardHash.put(name, parser.nextText());
+                            break;
+                        case "Territory":
+                            break;
+                        default:
+                            type = name;
+                            standardHash.put("Type", name);
+                            break;
+                    }
+                    break;
+                case XmlPullParser.END_TAG:
+                    name = parser.getName();
+                    switch(name) {
+                        case "Standard":
+                        case "Age":
+                        case "Calculated_Age":
+                        case "Conforms_To_Intl_Standard":
+                        case "Territory_Name":
+                            break;
+                        case "Territory":
+                            territories.add((Hashtable<String, String>) standardHash.clone());
+                            standardHash = new Hashtable<String, String>();
+                            break;
+                        default:
+                            country.addTerritoryStandard(type, territories);
+                            territories.clear();
+                            break;
+                    }
+                    break;
+            }
+            eventType = parser.next();
+        }
+    }
+
+    private void parseEnforcements(Country country, XmlPullParser parser) throws XmlPullParserException, IOException {
+        int eventType = parser.getEventType();
+        while(!(eventType == XmlPullParser.END_TAG && parser.getName().equals("Enforcements"))) {
+            String name = null;
+            switch(eventType) {
+                case XmlPullParser.START_TAG:
+                    name = parser.getName();
+                    switch(name) {
+                        case "Enforcements":
+                            break;
+                        default:
+                            country.addEnforcement(name, parser.nextText());
+                            break;
+                    }
+                    break;
+            }
+            eventType = parser.next();
+        }
+    }
+
+    private void parseTerritoryEnforcements(Country country, XmlPullParser parser) throws XmlPullParserException, IOException {
+        String type = null;
+        Hashtable<String, String> standardHash = new Hashtable<String, String>();
+        ArrayList<Hashtable<String, String>> territories = new ArrayList<>();
+
+        int eventType = parser.getEventType();
+        while(!(eventType == XmlPullParser.END_TAG && parser.getName().equals("Enforcements"))) {
+            String name = null;
+            switch(eventType) {
+                case XmlPullParser.START_TAG:
+                    name = parser.getName();
+                    switch(name) {
+                        case "Enforcements":
+                        case "Territory":
+                            break;
+                        case "Enforcement":
+                        case "Territory_Name":
+                            standardHash.put(name, parser.nextText());
+                            break;
+                        default:
+                            type = name;
+                            standardHash.put("Type", name);
+                            break;
+                    }
+                    break;
+                case XmlPullParser.END_TAG:
+                    name = parser.getName();
+                    switch(name) {
+                        case "Enforcement":
+                        case "Territory_Name":
+                            break;
+                        case "Territory":
+                            territories.add((Hashtable<String, String>) standardHash.clone());
+                            standardHash = new Hashtable<String, String>();
+                            break;
+                        default:
+                            country.addTerritoryEnforcement(type, territories);
+                            territories.clear();
+                            break;
+                    }
+                    break;
+            }
+            eventType = parser.next();
+        }
+    }
+
+    private void parseMechanisms(Country country, XmlPullParser parser) throws XmlPullParserException, IOException {
+        int eventType = parser.getEventType();
+        while(!(eventType == XmlPullParser.END_TAG && parser.getName().equals("Mechanisms"))) {
+            String name = null;
+            switch(eventType) {
+                case XmlPullParser.START_TAG:
+                    name = parser.getName();
+                    switch(name) {
+                        case "Coordination":
+                            country.coordinationMechanism = parser.nextText();
+                            break;
+                        case "Policy":
+                            country.policyMechanism = parser.nextText();
+                            break;
+                        case "Program":
+                            country.programMechanism = parser.nextText();
+                            break;
+                    }
+                    break;
+            }
+            eventType = parser.next();
+        }
+    }
+
+    private void parseCountryStatistics(Country.Statistics statistics, XmlPullParser parser) throws XmlPullParserException, IOException {
         int eventType = parser.getEventType();
         String section = null;
         while(!(eventType == XmlPullParser.END_TAG && parser.getName().equals("Country_Statistics"))) {

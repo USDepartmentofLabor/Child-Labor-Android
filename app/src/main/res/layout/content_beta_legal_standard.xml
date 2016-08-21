@@ -46,14 +46,14 @@
                 android:text="Work" />
 
             <TextView
+                android:id="@+id/minimumWorkTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes (15)" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -75,14 +75,14 @@
                 android:text="Hazardous Work" />
 
             <TextView
+                android:id="@+id/minimumHazardWorkTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes (18)" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -104,14 +104,14 @@
                 android:text="Compulsory Military Recruitment" />
 
             <TextView
+                android:id="@+id/compulsoryMilitaryTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes (18)" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -133,14 +133,14 @@
                 android:text="Voluntary Military Service" />
 
             <TextView
+                android:id="@+id/voluntaryMilitaryTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes (18)" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -173,14 +173,14 @@
                 android:text="Types of Hazardous Work" />
 
             <TextView
+                android:id="@+id/typesHazardousWorkTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -210,46 +210,17 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="Hazardous Occupations for Children" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#000"
-                android:layout_weight="1"
                 android:text="Forced Labor" />
 
             <TextView
+                android:id="@+id/prohibitionForcedLaborTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -271,14 +242,14 @@
                 android:text="Child Trafficking" />
 
             <TextView
+                android:id="@+id/prohibitionChildTraffickingTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -300,14 +271,14 @@
                 android:text="CSEC" />
 
             <TextView
+                android:id="@+id/prohibitionCSECTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -329,14 +300,14 @@
                 android:text="Using Children in Illicit Activities" />
 
             <TextView
+                android:id="@+id/prohibitionIllicitActivitiesTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -369,14 +340,14 @@
                 android:text="Compulsory Education Age" />
 
             <TextView
+                android:id="@+id/compulsoryEducationTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes (18)" />
+                android:text="Unavailable" />
 
         </LinearLayout>
 
@@ -398,16 +369,25 @@
                 android:text="Free Public Education" />
 
             <TextView
+                android:id="@+id/freeEducationTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Yes" />
+                android:text="Unavailable" />
 
         </LinearLayout>
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/footerTextView"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="#dadada"
+            android:contentDescription="@null" />
 
     </LinearLayout>
 

@@ -89,13 +89,13 @@ public class CountryListAdapter extends ArrayAdapter<Country> implements StickyL
     private long getHeaderIdByRegion(int position) {
         long headerId;
         switch(getItem(position).getRegionHeader()) {
-            case "Asia & Pacific":
+            case "Asia & the Pacific":
                 headerId = 1;
                 break;
             case "Europe & Eurasia":
                 headerId = 2;
                 break;
-            case "Latin America & Caribbean":
+            case "Latin America & the Caribbean":
                 headerId = 3;
                 break;
             case "Middle East & North Africa":

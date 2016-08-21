@@ -1,6 +1,8 @@
 package gov.dol.childlabor;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,24 +30,31 @@ public class GoodListAdapter extends ArrayAdapter<Good> implements StickyListHea
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater theInflater = LayoutInflater.from(getContext());
-        View theView = theInflater.inflate(R.layout.good_list_row, parent, false);
+        GoodViewHolder holder;
+        if (convertView == null) {
+            holder = new GoodViewHolder();
+            convertView = theInflater.inflate(R.layout.good_list_row, parent, false);
+            holder.text = (TextView) convertView.findViewById(R.id.goodTextView);
+            holder.image = (ImageView) convertView.findViewById(R.id.goodImageView);
+            convertView.setTag(holder);
+        } else {
+            holder = (GoodViewHolder) convertView.getTag();
+        }
 
         Good good = getItem(position);
+        holder.text.setText(good.getName());
+        holder.text.setContentDescription(good.getName() + ", Button");
 
-        TextView countryTextView = (TextView) theView.findViewById(R.id.goodTextView);
-        countryTextView.setText(good.getName());
-        countryTextView.setContentDescription(good.getName() + ", Button");
-
-        ImageView goodImageView = (ImageView) theView.findViewById(R.id.goodImageView);
         Drawable flag = AppHelpers.getGoodDrawable(getContext(), good.getName());
         if (flag != null) {
-            goodImageView.setImageDrawable(flag);
+            holder.image.setImageDrawable(flag);
+            holder.image.setVisibility(View.VISIBLE);
         }
         else {
-            goodImageView.setVisibility(View.GONE);
+            holder.image.setVisibility(View.GONE);
         }
 
-        return theView;
+        return convertView;
     }
 
     @Override
@@ -112,6 +121,11 @@ public class GoodListAdapter extends ArrayAdapter<Good> implements StickyListHea
         }
 
         return headerText;
+    }
+
+    class GoodViewHolder {
+        TextView text;
+        ImageView image;
     }
 
     class HeaderViewHolder {

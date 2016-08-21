@@ -22,7 +22,7 @@ public class FullReportActivity extends AppCompatActivity {
 
         Country country = (Country) getIntent().getSerializableExtra("country");
 
-        filename = country.getName().replace("ô", "o").replace("ã", "a").replace("é", "e").replace("í", "i")
+        filename = country.getName().replace("ô", "o").replace("ã", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("á", "a")
                 .replace(".", "") + ".pdf";
 
         setTitle(country.getName());

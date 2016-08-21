@@ -4,11 +4,18 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
+import java.util.Arrays;
+import java.util.Hashtable;
 
 public class LegalStandardActivity extends AppCompatActivity {
+
+    private Boolean hasStandardsFooter = false;
+    private Boolean hasAgeFooter = false;
+    private Boolean hasCombatFooter = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,17 +26,63 @@ public class LegalStandardActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Country country = (Country) getIntent().getSerializableExtra("country");
-        Country.MasterData data = country.data;
-        displayBooleanValue((TextView) findViewById(R.id.minimumWorkTextView), data.minimumWork, data.minimumWorkAge);
-        displayBooleanValue((TextView) findViewById(R.id.minimumHazardWorkTextView), data.minimumHazardWork, data.minimumHazardWorkAge);
-        displayBooleanValue((TextView) findViewById(R.id.compulsoryEducationTextView), data.compulsoryEducation, data.compulsoryEducationAge);
-        displayBooleanValue((TextView) findViewById(R.id.freeEducationTextView), data.freeEducation);
+        Hashtable<String, Country.Standard> standards = country.standards;
+        displayBooleanValue((TextView) findViewById(R.id.minimumWorkTextView), standards.get("Minimum_Work"));
+        displayBooleanValue((TextView) findViewById(R.id.minimumHazardWorkTextView), standards.get("Minimum_Hazardous_Work"));
+        displayBooleanValue((TextView) findViewById(R.id.compulsoryEducationTextView), standards.get("Compulsory_Education"));
+        displayBooleanValue((TextView) findViewById(R.id.freeEducationTextView), standards.get("Free_Public_Education"));
 
         AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "Laws Screen");
     }
 
     private void displayBooleanValue(TextView view, Boolean value) {
         displayBooleanValue(view, value, null);
+    }
+
+    private void displayBooleanValue(TextView view, Country.Standard standard) {
+        String ageText = null;
+        Boolean calculatedAge = standard.calculatedAge.equals("Yes");
+        Boolean conformsStandard = standard.conformsStandard.equals("Yes");
+
+        String labelText = null;
+
+        if (!standard.value.isEmpty()) {
+            labelText = standard.value;
+            if (labelText.startsWith("Yes") && !conformsStandard) {
+                this.hasStandardsFooter = true;
+                labelText += "*";
+            }
+
+            if(!standard.age.isEmpty()) {
+                labelText += "(" + standard.age;
+                if (calculatedAge) {
+                    this.hasAgeFooter = true;
+                    labelText += "<sup><small>‡</small></sup>";
+                }
+                labelText += ")";
+                String [] combatTypes = {"Minimum_Compulsory_Military", "Minumum_Voluntary_Military"};
+                if (standard.age.contains("/") && Arrays.asList(combatTypes).contains(standard.type)) {
+                    this.hasCombatFooter = true;
+                    labelText += "<sup><small>Φ</small></sup>";
+                }
+            }
+        }
+
+        if (!labelText.isEmpty()) {
+            view.setText(Html.fromHtml(labelText));
+            if (labelText.startsWith("Yes") && conformsStandard) {
+                view.setTextColor(Color.parseColor("#54ba5b"));
+            }
+            else if (labelText.startsWith("Yes") && !conformsStandard) {
+                view.setTextColor(Color.RED);
+            }
+            else if (labelText.startsWith("No") || labelText.startsWith("Unknown")) {
+                view.setTextColor(Color.RED);
+            }
+            else if (!labelText.startsWith("N/A") && !labelText.startsWith("Unavailable")) {
+                view.setTextColor(Color.BLACK);
+            }
+        }
     }
 
     private void displayBooleanValue(TextView view, Boolean value, String age) {

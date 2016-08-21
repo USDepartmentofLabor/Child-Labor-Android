@@ -1,7 +1,9 @@
 package gov.dol.childlabor;
 
 import java.io.Serializable;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 /**
  * Created by trjohnson on 10/21/2015.
@@ -10,13 +12,20 @@ public class Country implements Serializable {
     private String name, description, region, level;
     private CountryGood[] goods;
     private ArrayList<SuggestedAction> suggestedActions = new ArrayList<SuggestedAction>();
-    public MasterData data;
-    public CountryStatistics statistics;
+
+    public Statistics statistics;
+    public Boolean hasMultipleTerritories = false;
+    public Conventions conventions;
+    public Hashtable<String, Standard> standards = new Hashtable<String, Standard>();
+    public Hashtable<String, TerritoryStandard> territoryStandards = new Hashtable<String, TerritoryStandard>();
+    public Hashtable<String, Enforcement> enforcements = new Hashtable<String, Enforcement>();
+    public Hashtable<String, TerritoryEnforcement> territoryEnforcements = new Hashtable<String, TerritoryEnforcement>();
+    public String coordinationMechanism, policyMechanism, programMechanism;
 
     public Country(String name) {
         this.name = name;
-        this.data = new MasterData();
-        this.statistics = new CountryStatistics();
+        this.conventions = new Conventions();
+        this.statistics = new Statistics();
     }
 
     public String getName() {
@@ -36,8 +45,8 @@ public class Country implements Serializable {
     }
 
     public String getRegion() {
-        if (region.equalsIgnoreCase("Asia & the Pacific")) {
-            return "Asia & Pacific";
+        if (region.equalsIgnoreCase("Asia & Pacific")) {
+            return "Asia & the Pacific";
         }
         return region;
     }
@@ -46,7 +55,7 @@ public class Country implements Serializable {
 
     public String getLevel() {
         if (level.isEmpty()) {
-            return "No Assessment Level Data";
+            return "Not Covered in TDA Report";
         }
         else {
             return level;
@@ -91,26 +100,23 @@ public class Country implements Serializable {
 
     public SectionHeader getLevelHeader() {
         SectionHeader header;
-        switch(getLevel()) {
-            case "Significant Advancement":
-                header = new SectionHeader(0, "Significant Advancement");
-                break;
-            case "Moderate Advancement":
-                header = new SectionHeader(1, "Moderate Advancement");
-                break;
-            case "Minimal Advancement":
-                header = new SectionHeader(2, "Minimal Advancement");
-                break;
-            case "No Advancement":
-            case "No Advancement - Efforts Made But Complicit":
-                header = new SectionHeader(3, "No Advancement");
-                break;
-            case "No Data":
-            case "No Assessment Level Data":
-            case "No Assessment":
-            default:
-                header = new SectionHeader(4, "No Data");
-                break;
+        if (getLevel().startsWith("Significant Advancement")) {
+            header = new SectionHeader(0, "Significant Advancement");
+        }
+        else if (getLevel().startsWith("Moderate Advancement")) {
+            header = new SectionHeader(1, "Moderate Advancement");
+        }
+        else if (getLevel().startsWith("Minimal Advancement")) {
+            header = new SectionHeader(2, "Minimal Advancement");
+        }
+        else if (getLevel().startsWith("No Advancement")) {
+            header = new SectionHeader(3, "No Advancement");
+        }
+        else if (getLevel().startsWith("No Assessment")) {
+            header = new SectionHeader(4, "No Assessment");
+        }
+        else {
+            header = new SectionHeader(5, "Not Covered in TDA Report");
         }
 
         return header;
@@ -124,16 +130,40 @@ public class Country implements Serializable {
         suggestedActions.add(new SuggestedAction(section, actions));
     }
 
+    public void addEnforcement(String type, String value) {
+        enforcements.put(type, new Enforcement(type, value));
+    }
+
+    public void addTerritoryEnforcement(String type, ArrayList<Hashtable<String, String>> territories) {
+        ArrayList<TerritoryValue> values = new ArrayList<>(); // Testing
+        for (Hashtable<String, String> territory : territories) {
+            TerritoryValue value =  new TerritoryValue(territory.get("Territory_Name"), territory.get("Enforcement"));
+            values.add(value);
+        }
+        TerritoryEnforcement enforcement = new TerritoryEnforcement(type, values);
+        territoryEnforcements.put(type, enforcement);
+    }
+
+    public void addStandard(String type, Hashtable<String, String> standardHash) {
+        Standard standard = new Standard(type, standardHash.get("Standard"), standardHash.get("Age"), standardHash.get("Calculated_Age"), standardHash.get("Conforms_To_Intl_Standard"));
+        standards.put(type, standard);
+    }
+
+    public void addTerritoryStandard(String type, ArrayList<Hashtable<String, String>> territories) {
+        ArrayList<TerritoryValue> values = new ArrayList<>();
+        for (Hashtable<String, String> territory : territories) {
+            TerritoryValue value =  new TerritoryValue(territory.get("Territory_Name"), territory.get("Standard"), territory.get("Age"), territory.get("Calculated_Age"), territory.get("Conforms_To_Intl_Standard"));
+            values.add(value);
+        }
+        TerritoryStandard standard = new TerritoryStandard(type, values);
+        territoryStandards.put(type, standard);
+    }
+
     public SuggestedAction[] getSuggestedActions() {
         return suggestedActions.toArray(new SuggestedAction[suggestedActions.size()]);
     }
 
-    public Boolean hasMultipleTerritories() {
-        return this.name.equals("Bosnia and Herzegovina");
-    }
-
     class SectionHeader implements Serializable {
-
         public int order;
         public String header;
 
@@ -141,13 +171,11 @@ public class Country implements Serializable {
             this.order = order;
             this.header = header;
         }
-
     }
 
     class SuggestedAction implements Serializable {
         public String section;
         public String[] actions;
-
         public String[] laws, enforcement, coordination, policies, programs;
 
         public SuggestedAction(String section, String[] actions) {
@@ -156,15 +184,81 @@ public class Country implements Serializable {
         }
     }
 
-    class MasterData implements Serializable {
-        public Boolean minimumWork, minimumHazardWork, compulsoryEducation, freeEducation;
-        public String minimumWorkAge, minimumHazardWorkAge, compulsoryEducationAge;
+    class Conventions implements Serializable {
+        // public Boolean minimumWork, minimumHazardWork, compulsoryEducation, freeEducation;
+        // public String minimumWorkAge, minimumHazardWorkAge, compulsoryEducationAge;
         public String c138Ratified, c182Ratified, crcRatified, crcArmedConflictRatified, crcSexualExploitationRatified, palermoRatified;
     }
 
-    class CountryStatistics implements Serializable {
+    class Statistics implements Serializable {
         public String workAgeRange, workPercent, workTotal, agriculturePercent, servicesPercent, industryPercent;
         public String educationAgeRange, educationPercent, workAndEducationAgeRange, workAndEducationPercent, primaryCompletionPercent;
     }
 
+    class Standard implements Serializable {
+        String type;
+        String value;
+        String age;
+        String calculatedAge;
+        String conformsStandard;
+
+        public Standard(String type, String value, String age, String calculatedAge, String conformsStandard) {
+            this.type = type;
+            this.value = value;
+            this.age = age;
+            this.calculatedAge = calculatedAge;
+            this.conformsStandard = conformsStandard;
+        }
+    }
+
+    class TerritoryStandard implements Serializable {
+        String type;
+        ArrayList<TerritoryValue> territories = new ArrayList<TerritoryValue>();
+
+        public TerritoryStandard(String type, ArrayList<TerritoryValue> territories) {
+            this.type = type;
+            this.territories = territories;
+        }
+    }
+
+    class TerritoryValue implements Serializable {
+        String territory;
+        String value;
+        String age;
+        String calculatedAge;
+        String conformsStandard;
+
+        public TerritoryValue(String territory, String value, String age, String calculatedAge, String conformsStandard) {
+            this.territory = territory;
+            this.value = value;
+            this.age = age;
+            this.calculatedAge = calculatedAge;
+            this.conformsStandard = conformsStandard;
+        }
+
+        public TerritoryValue(String territory, String value) {
+            this.territory = territory;
+            this.value = value;
+        }
+    }
+
+    class Enforcement implements Serializable {
+        String type;
+        String value;
+
+        public Enforcement(String type, String value) {
+            this.type = type;
+            this.value = value;
+        }
+    }
+
+    class TerritoryEnforcement implements Serializable {
+        String type;
+        ArrayList<TerritoryValue> territories = new ArrayList<TerritoryValue>();
+
+        public TerritoryEnforcement(String type, ArrayList<TerritoryValue> territories) {
+            this.type = type;
+            this.territories = territories;
+        }
+    }
 }

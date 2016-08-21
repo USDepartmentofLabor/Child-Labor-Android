@@ -65,7 +65,7 @@ public class AppHelpers {
     }
 
     public static String getFormattedString(String string) {
-        return string.replace(" ", "_").replace("-", "_").replace("/", "_").replace("ô", "o").replace("ã", "a").replace("é", "e").replace("í", "i")
+        return string.replace(" ", "_").replace("-", "_").replace("/", "_").replace("ô", "o").replace("ã", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("á", "a")
                 .replace("(", "").replace(")", "").replace(",", "").replace("'", "").replace("`", "").replace(".", "").toLowerCase();
     }
 

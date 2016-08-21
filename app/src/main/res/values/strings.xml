@@ -23,6 +23,6 @@
     <string name="title_activity_tabbed_good_list_spinner">Goods</string>
     <string name="title_activity_tabbed_country_list_spinner">Countries</string>
     <string name="title_activity_mechanism">Other Mechanisms</string>
-    <string name="title_activity_beta_legal_standard">Legal Standards (Beta)</string>
+    <string name="title_activity_beta_legal_standard">Legal Standards</string>
     <string name="title_activity_tabbed_enforcement">Enforcement</string>
 </resources>

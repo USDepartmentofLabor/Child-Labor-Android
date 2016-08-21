@@ -96,10 +96,10 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_weight="1"
-                android:text="Services" />
+                android:text="Industry" />
 
             <TextView
-                android:id="@+id/servicesTextView"
+                android:id="@+id/industryTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -123,10 +123,10 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_weight="1"
-                android:text="Industry" />
+                android:text="Services" />
 
             <TextView
-                android:id="@+id/industryTextView"
+                android:id="@+id/servicesTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

@@ -17,7 +17,7 @@ public class ConventionActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Country country = (Country) getIntent().getSerializableExtra("country");
-        Country.MasterData data = country.data;
+        Country.Conventions data = country.conventions;
         displayValue((TextView) findViewById(R.id.c138TextView), data.c138Ratified);
         displayValue((TextView) findViewById(R.id.c182TextView), data.c182Ratified);
         displayValue((TextView) findViewById(R.id.crcTextView), data.crcRatified);

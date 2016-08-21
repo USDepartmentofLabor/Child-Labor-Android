@@ -21,7 +21,7 @@ public class StatisticsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Country country = (Country) getIntent().getSerializableExtra("country");
-        Country.CountryStatistics statistics = country.statistics;
+        Country.Statistics statistics = country.statistics;
 
         setStatisticText(R.id.workTextView, statistics.workPercent, statistics.workAgeRange, statistics.workTotal);
         setStatisticText(R.id.agricultureTextView, statistics.agriculturePercent);
@@ -56,12 +56,17 @@ public class StatisticsActivity extends AppCompatActivity {
 
     private void setStatisticText(int textViewId, String percent, String ageRange) {
         if (!(percent != null && !percent.isEmpty())
-                || !(ageRange != null && !ageRange.isEmpty())) {
+                && !(ageRange != null && !ageRange.isEmpty())) {
             return;
         }
 
-        percent = new DecimalFormat("#.#").format(Float.parseFloat(percent)) + "%";
-        String text = percent + " (ages " + ageRange + ")";
+        if (percent != null && !percent.isEmpty()) {
+            percent = new DecimalFormat("#.#").format(Float.parseFloat(percent)) + "%";
+        }
+        String text = percent;
+        if (ageRange != null && !ageRange.isEmpty()) {
+            text += " (ages " + ageRange + ")";
+        }
 
         TextView view = (TextView) findViewById(textViewId);
         view.setText(text);
@@ -70,16 +75,28 @@ public class StatisticsActivity extends AppCompatActivity {
 
     private void setStatisticText(int textViewId, String percent, String ageRange, String total) {
         if (!(percent != null && !percent.isEmpty())
-            || !(ageRange != null && !ageRange.isEmpty())
-            || !(total != null && !total.isEmpty())) {
+            && !(ageRange != null && !ageRange.isEmpty())
+            && !(total != null && !total.isEmpty())) {
             return;
         }
 
-        percent = new DecimalFormat("#.#").format(Float.parseFloat(percent)) + "%";
-        DecimalFormat df = new DecimalFormat("#");
-        df.setGroupingUsed(true);
-        total = df.format(Float.parseFloat(total));
-        String text = percent + " (" + ((!total.equals("0")) ? total + "; " : "") + "ages " + ageRange + ")";
+        if (percent != null && !percent.isEmpty()) {
+            percent = new DecimalFormat("#.#").format(Float.parseFloat(percent)) + "%";
+        }
+
+        if (total != null && !total.isEmpty()) {
+            DecimalFormat df = new DecimalFormat("#");
+            df.setGroupingUsed(true);
+            total = df.format(Float.parseFloat(total));
+        }
+
+        String text = percent;
+        if ((total != null && !total.isEmpty()) || (ageRange != null && !ageRange.isEmpty())) {
+            text += " (";
+            if (total != null && !total.isEmpty() && !total.equals("0")) text += total + "; ";
+            if (ageRange != null && !ageRange.isEmpty()) text += "ages " + ageRange;
+            text += ")";
+        }
 
         TextView view = (TextView) findViewById(textViewId);
         view.setText(text);

@@ -132,6 +132,7 @@ public class CountryViewActivity extends AppCompatActivity {
                         }else {
                             intent = new Intent(getApplicationContext(), LegalStandardActivity.class);
                         }
+                        intent = new Intent(getApplicationContext(), BetaLegalStandardActivity.class);
                         break;
                     case "Enforcement":
                         intent = new Intent(getApplicationContext(), TabbedEnforcementActivity.class);
@@ -152,11 +153,16 @@ public class CountryViewActivity extends AppCompatActivity {
             }
         });
 
-        String[] excludedCountries = {"Burma", "China", "Iran", "Malaysia", "Mexico", "North Korea", "Tajikistan",
-                "Turkmenistan", "Vietnam", "British Indian Ocean Territories", "Heard and McDonald Islands", "Pitcairn Islands"};
+//        String[] excludedCountries = {"Burma", "China", "Iran", "Malaysia", "Mexico", "North Korea", "Tajikistan",
+//                "Turkmenistan", "Vietnam", "British Indian Ocean Territories", "Heard and McDonald Islands", "Pitcairn Islands"};
+//
+//        if (Arrays.asList(excludedCountries).contains(country.getName())) {
+//            listView.setVisibility(View.GONE);
+//        }
 
-        if (Arrays.asList(excludedCountries).contains(country.getName())) {
+        if (country.getLevel().equals("Not Covered in TDA Report")) {
             listView.setVisibility(View.GONE);
+            mapImageView.setVisibility(View.GONE);
         }
 
         AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "Country Profile Screen");
