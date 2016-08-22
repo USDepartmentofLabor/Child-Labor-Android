@@ -80,7 +80,7 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
         if (this.hasStandardsFooter || this.hasAgeFooter || this.hasCombatFooter) {
             String footerText = "";
             if (this.hasStandardsFooter) {
-                footerText += "* The asterisk connotes gaps in the legal framework, as articulated in the chapter report";
+                footerText += "* Note: There are gaps in the legal framework, as articulated in the chapter report";
             }
             if (this.hasAgeFooter) {
                 if (this.hasStandardsFooter) footerText += "\n";

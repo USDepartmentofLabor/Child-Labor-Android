@@ -45,16 +45,6 @@
                 android:layout_weight="1"
                 android:text="Work" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -87,16 +77,6 @@
                 android:textColor="#000"
                 android:layout_weight="1"
                 android:text="Hazardous Work" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
 
         </LinearLayout>
 
@@ -131,16 +111,6 @@
                 android:layout_weight="1"
                 android:text="Compulsory Military Recruitment" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -173,16 +143,6 @@
                 android:textColor="#000"
                 android:layout_weight="1"
                 android:text="Voluntary Military Service" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
 
         </LinearLayout>
 
@@ -223,16 +183,6 @@
                 android:layout_weight="1"
                 android:text="Types of Hazardous Work" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -272,16 +222,6 @@
                 android:layout_weight="1"
                 android:text="Forced Labor" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -314,16 +254,6 @@
                 android:textColor="#000"
                 android:layout_weight="1"
                 android:text="Child Trafficking" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
 
         </LinearLayout>
 
@@ -358,16 +288,6 @@
                 android:layout_weight="1"
                 android:text="CSEC" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -400,16 +320,6 @@
                 android:textColor="#000"
                 android:layout_weight="1"
                 android:text="Using Children in Illicit Activities" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
 
         </LinearLayout>
 
@@ -450,16 +360,6 @@
                 android:layout_weight="1"
                 android:text="Compulsory Education Age" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -492,16 +392,6 @@
                 android:textColor="#000"
                 android:layout_weight="1"
                 android:text="Free Public Education" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#54ba5b"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
 
         </LinearLayout>
 

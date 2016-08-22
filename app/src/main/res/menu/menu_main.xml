@@ -32,7 +32,7 @@
 
     </group>
 
-    <item android:id="@+id/action_toolkit" android:title="ILAB Toolkit Handout"
+    <item android:id="@+id/action_toolkit" android:title="Toolkit"
         android:orderInCategory="100" app:showAsAction="never" />
 
 </menu>

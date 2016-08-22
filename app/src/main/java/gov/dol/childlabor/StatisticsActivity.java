@@ -55,8 +55,7 @@ public class StatisticsActivity extends AppCompatActivity {
     }
 
     private void setStatisticText(int textViewId, String percent, String ageRange) {
-        if (!(percent != null && !percent.isEmpty())
-                && !(ageRange != null && !ageRange.isEmpty())) {
+        if (!(percent != null && !percent.isEmpty())) {
             return;
         }
 
@@ -75,7 +74,6 @@ public class StatisticsActivity extends AppCompatActivity {
 
     private void setStatisticText(int textViewId, String percent, String ageRange, String total) {
         if (!(percent != null && !percent.isEmpty())
-            && !(ageRange != null && !ageRange.isEmpty())
             && !(total != null && !total.isEmpty())) {
             return;
         }

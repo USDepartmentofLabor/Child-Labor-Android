@@ -44,16 +44,6 @@
                 android:layout_weight="1"
                 android:text="Initial Training for New Employees" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#000"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -87,16 +77,6 @@
                 android:layout_weight="1"
                 android:text="Training on New Laws Related to WFCL" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#000"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -129,16 +109,6 @@
                 android:textColor="#000"
                 android:layout_weight="1"
                 android:text="Refresher Courses Provided" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#000"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
 
         </LinearLayout>
 
@@ -179,16 +149,6 @@
                 android:layout_weight="1"
                 android:text="No. of Investigations" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#000"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -221,16 +181,6 @@
                 android:textColor="#000"
                 android:layout_weight="1"
                 android:text="No. of Violations Found" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#000"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
 
         </LinearLayout>
 
@@ -265,16 +215,6 @@
                 android:layout_weight="1"
                 android:text="No. of Prosecutions Initiated" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#000"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -308,16 +248,6 @@
                 android:layout_weight="1"
                 android:text="No. of Convictions" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#000"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -350,16 +280,6 @@
                 android:textColor="#000"
                 android:layout_weight="1"
                 android:text="Referral Mechanism Exists btwn Authorities and Social Services" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textColor="#000"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="" />
 
         </LinearLayout>
 

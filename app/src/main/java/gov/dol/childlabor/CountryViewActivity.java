@@ -153,12 +153,12 @@ public class CountryViewActivity extends AppCompatActivity {
             }
         });
 
-//        String[] excludedCountries = {"Burma", "China", "Iran", "Malaysia", "Mexico", "North Korea", "Tajikistan",
-//                "Turkmenistan", "Vietnam", "British Indian Ocean Territories", "Heard and McDonald Islands", "Pitcairn Islands"};
-//
-//        if (Arrays.asList(excludedCountries).contains(country.getName())) {
-//            listView.setVisibility(View.GONE);
-//        }
+        String[] excludedCountries = {"Burma", "China", "Iran", "Malaysia", "Mexico", "North Korea", "Tajikistan",
+                "Turkmenistan", "Vietnam", "British Indian Ocean Territories", "Heard and McDonald Islands", "Pitcairn Islands"};
+
+        if (Arrays.asList(excludedCountries).contains(country.getName())) {
+            listView.setVisibility(View.GONE);
+        }
 
         if (country.getLevel().equals("Not Covered in TDA Report")) {
             listView.setVisibility(View.GONE);
