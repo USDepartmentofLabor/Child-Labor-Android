@@ -94,6 +94,7 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
             TextView footerTextView = (TextView) findViewById(R.id.footerTextView);
             footerTextView.setVisibility(View.VISIBLE);
             footerTextView.setText(footerText);
+            footerTextView.setContentDescription(" ");
         }
     }
 
@@ -103,7 +104,8 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
             LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
             TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView.setText(value.territory);
+            territoryNameTextView.setText(value.displayName);
+            territoryNameTextView.setContentDescription(value.territory);
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             displayValue(territoryValueTextView, standard.type, value.value, value.age, value.calculatedAge, value.conformsStandard);
@@ -133,31 +135,38 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
         Boolean conformsStandard = conformsStandardString.equals("Yes");
 
         String labelText = null;
+        String accessibleText = null;
 
         if (!standard.isEmpty()) {
             labelText = standard;
+            accessibleText = standard.replace("*", "");
             if (labelText.startsWith("Yes") && !conformsStandard) {
                 this.hasStandardsFooter = true;
                 labelText += "*";
+                accessibleText += ", note there are gaps in the legal framework as articulated in the chapter report ";
             }
 
             if(!age.isEmpty()) {
                 labelText += " (" + age;
+                accessibleText += ", " + age;
                 if (calculatedAge) {
                     this.hasAgeFooter = true;
                     labelText += "<sup><small>‡</small></sup>";
+                    accessibleText += ", age calculated based on available information ";
                 }
                 labelText += ")";
                 String [] combatTypes = {"Minimum_Compulsory_Military", "Minumum_Voluntary_Military"};
                 if (age.contains("/") && Arrays.asList(combatTypes).contains(type)) {
                     this.hasCombatFooter = true;
                     labelText += "<sup><small>Φ</small></sup>";
+                    accessibleText += ", ages denoted are combat/non-combat ";
                 }
             }
         }
 
         if (!labelText.isEmpty()) {
             view.setText(Html.fromHtml(labelText));
+            view.setContentDescription((accessibleText.startsWith("N/A")) ? "Not Available" : accessibleText);
             if (labelText.startsWith("Yes") && conformsStandard) {
                 view.setTextColor(Color.parseColor("#54ba5b"));
             }

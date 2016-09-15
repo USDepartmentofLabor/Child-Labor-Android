@@ -64,7 +64,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. of Labor Inspectors" />
+                android:text="No. of Labor Inspectors"
+                android:contentDescription="Number of Labor Inspectors"/>
 
         </LinearLayout>
 
@@ -103,7 +104,8 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="#000"
                     android:layout_weight="1"
-                    android:text="No. of Child Labor Dedicated Inspectors" />
+                    android:text="No. of Child Labor Dedicated Inspectors"
+                    android:contentDescription="Number of Child Labor Dedicated Inspectors"/>
 
             </LinearLayout>
 
@@ -283,7 +285,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. of Inspections" />
+                android:text="No. of Inspections"
+                android:contentDescription="Number of Inspections"/>
 
         </LinearLayout>
 
@@ -316,7 +319,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. Conducted at Worksite" />
+                android:text="No. Conducted at Worksite"
+                android:contentDescription="Number Conducted at Worksite"/>
 
         </LinearLayout>
 
@@ -349,7 +353,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. Conducted by Desk Reviews" />
+                android:text="No. Conducted by Desk Reviews"
+                android:contentDescription="Number Conducted by Desk Reviews"/>
 
         </LinearLayout>
 
@@ -388,7 +393,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. of Violations Found" />
+                android:text="No. of Violations Found"
+                android:contentDescription="Number of Violations Found"/>
 
         </LinearLayout>
 
@@ -421,7 +427,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. of Penalties Imposed" />
+                android:text="No. of Penalties Imposed"
+                android:contentDescription="Number of Penalties Imposed"/>
 
         </LinearLayout>
 
@@ -454,7 +461,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. of Collected Penalties" />
+                android:text="No. of Collected Penalties"
+                android:contentDescription="Number of Collected Penalties"/>
 
         </LinearLayout>
 
@@ -670,7 +678,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="Referral Mechanism Exists btwn Authorities and Social Services" />
+                android:text="Referral Mechanism Exists btwn Authorities and Social Services"
+                android:contentDescription="Referral Mechanism Exists between Authorities and Social Services"/>
 
         </LinearLayout>
 
@@ -690,7 +699,7 @@
             android:layout_height="wrap_content"
             android:padding="20dp"
             android:background="#dadada"
-            android:contentDescription="@null" />
+            android:importantForAccessibility="no"/>
 
     </LinearLayout>
 

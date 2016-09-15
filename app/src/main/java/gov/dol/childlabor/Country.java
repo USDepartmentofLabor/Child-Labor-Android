@@ -137,7 +137,7 @@ public class Country implements Serializable {
     public void addTerritoryEnforcement(String type, ArrayList<Hashtable<String, String>> territories) {
         ArrayList<TerritoryValue> values = new ArrayList<>(); // Testing
         for (Hashtable<String, String> territory : territories) {
-            TerritoryValue value =  new TerritoryValue(territory.get("Territory_Name"), territory.get("Enforcement"));
+            TerritoryValue value =  new TerritoryValue(territory.get("Territory_Name"), territory.get("Territory_Display_Name"), territory.get("Enforcement"));
             values.add(value);
         }
         TerritoryEnforcement enforcement = new TerritoryEnforcement(type, values);
@@ -152,7 +152,7 @@ public class Country implements Serializable {
     public void addTerritoryStandard(String type, ArrayList<Hashtable<String, String>> territories) {
         ArrayList<TerritoryValue> values = new ArrayList<>();
         for (Hashtable<String, String> territory : territories) {
-            TerritoryValue value =  new TerritoryValue(territory.get("Territory_Name"), territory.get("Standard"), territory.get("Age"), territory.get("Calculated_Age"), territory.get("Conforms_To_Intl_Standard"));
+            TerritoryValue value =  new TerritoryValue(territory.get("Territory_Name"), territory.get("Territory_Display_Name"), territory.get("Standard"), territory.get("Age"), territory.get("Calculated_Age"), territory.get("Conforms_To_Intl_Standard"));
             values.add(value);
         }
         TerritoryStandard standard = new TerritoryStandard(type, values);
@@ -223,21 +223,24 @@ public class Country implements Serializable {
 
     class TerritoryValue implements Serializable {
         String territory;
+        String displayName;
         String value;
         String age;
         String calculatedAge;
         String conformsStandard;
 
-        public TerritoryValue(String territory, String value, String age, String calculatedAge, String conformsStandard) {
+        public TerritoryValue(String territory, String displayName, String value, String age, String calculatedAge, String conformsStandard) {
             this.territory = territory;
+            this.displayName = displayName;
             this.value = value;
             this.age = age;
             this.calculatedAge = calculatedAge;
             this.conformsStandard = conformsStandard;
         }
 
-        public TerritoryValue(String territory, String value) {
+        public TerritoryValue(String territory, String displayName, String value) {
             this.territory = territory;
+            this.displayName = displayName;
             this.value = value;
         }
     }

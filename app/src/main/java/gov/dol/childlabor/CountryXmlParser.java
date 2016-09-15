@@ -367,6 +367,7 @@ public class CountryXmlParser {
                         case "Calculated_Age":
                         case "Conforms_To_Intl_Standard":
                         case "Territory_Name":
+                        case "Territory_Display_Name":
                             standardHash.put(name, parser.nextText());
                             break;
                         case "Territory":
@@ -385,6 +386,7 @@ public class CountryXmlParser {
                         case "Calculated_Age":
                         case "Conforms_To_Intl_Standard":
                         case "Territory_Name":
+                        case "Territory_Display_Name":
                             break;
                         case "Territory":
                             territories.add((Hashtable<String, String>) standardHash.clone());
@@ -438,6 +440,7 @@ public class CountryXmlParser {
                             break;
                         case "Enforcement":
                         case "Territory_Name":
+                        case "Territory_Display_Name":
                             standardHash.put(name, parser.nextText());
                             break;
                         default:
@@ -451,6 +454,7 @@ public class CountryXmlParser {
                     switch(name) {
                         case "Enforcement":
                         case "Territory_Name":
+                        case "Territory_Display_Name":
                             break;
                         case "Territory":
                             territories.add((Hashtable<String, String>) standardHash.clone());

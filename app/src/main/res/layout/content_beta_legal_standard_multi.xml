@@ -411,7 +411,7 @@
             android:layout_height="wrap_content"
             android:padding="20dp"
             android:background="#dadada"
-            android:contentDescription="@null" />
+            android:importantForAccessibility="no" />
 
     </LinearLayout>
 

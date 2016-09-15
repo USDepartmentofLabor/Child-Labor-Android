@@ -208,7 +208,8 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 LinearLayout territoryRow = (LinearLayout) this.inflater.inflate(R.layout.territory_row, layout, false);
 
                 TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-                territoryNameTextView.setText(value.territory);
+                territoryNameTextView.setText(value.displayName);
+                territoryNameTextView.setContentDescription(value.territory);
 
                 TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
                 displayValue(territoryValueTextView, enforcement.type, value.value);
@@ -255,7 +256,10 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 }
                 catch (NumberFormatException ex) {}
 
+                String accessibleText = (!labelText.contains("*")) ? labelText : (labelText.replace("*", "") + ", the Government does not make this information publicly available");
+
                 view.setText(Html.fromHtml(labelText));
+                view.setContentDescription((labelText.startsWith("N/A")) ? "Not Available" : accessibleText);
                 if (!labelText.startsWith("N/A") && !labelText.startsWith("Unavailable") && !labelText.startsWith("Unknown")) {
                     view.setTextColor(Color.BLACK);
                 }

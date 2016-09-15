@@ -140,7 +140,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. of Investigations" />
+                android:text="No. of Investigations"
+                android:contentDescription="Number of Investigations"/>
 
             <TextView
                 android:id="@+id/criminalInvestigationsTextView"
@@ -169,7 +170,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. of Violations Found" />
+                android:text="No. of Violations Found"
+                android:contentDescription="Number of Violations Found"/>
 
             <TextView
                 android:id="@+id/criminalViolationsFoundTextView"
@@ -198,7 +200,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. of Prosecutions Initiated" />
+                android:text="No. of Prosecutions Initiated"
+                android:contentDescription="Number of Prosecutions Initiated"/>
 
             <TextView
                 android:id="@+id/criminalProsecutionsInitiatedTextView"
@@ -227,7 +230,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. of Convictions" />
+                android:text="No. of Convictions"
+                android:contentDescription="Number of Convictions"/>
 
             <TextView
                 android:id="@+id/criminalConvictionsTextView"
@@ -256,7 +260,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="Referral Mechanism Exists btwn Authorities and Social Services" />
+                android:text="Referral Mechanism Exists btwn Authorities and Social Services"
+                android:contentDescription="Referral Mechanism Exists between Authorities and Social Services"/>
 
             <TextView
                 android:id="@+id/criminalReferralMechanismTextView"
@@ -277,7 +282,7 @@
             android:layout_height="wrap_content"
             android:padding="20dp"
             android:background="#dadada"
-            android:contentDescription="@null" />
+            android:importantForAccessibility="no" />
 
     </LinearLayout>
 
