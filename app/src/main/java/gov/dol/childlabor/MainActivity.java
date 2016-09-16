@@ -87,19 +87,21 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if(id == R.id.action_about) {
-            Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
-            startActivity(intent);
-        }
-        else if(id == R.id.action_methodology) {
-            Intent intent = new Intent(getApplicationContext(), MethodologyActivity.class);
-            startActivity(intent);
-        }
-        else {
-            Intent intent = new Intent(getApplicationContext(), FactsheetActivity.class);
-            intent.putExtra("id", id);
-            startActivity(intent);
-        }
+//        if(id == R.id.action_about) {
+//            Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
+//            startActivity(intent);
+//        }
+//        else if(id == R.id.action_methodology) {
+//            Intent intent = new Intent(getApplicationContext(), MethodologyActivity.class);
+//            startActivity(intent);
+//        }
+//        else {
+//            Intent intent = new Intent(getApplicationContext(), FactsheetActivity.class);
+//            intent.putExtra("id", id);
+//            startActivity(intent);
+//        }
+
+        if (id == R.id.action_more_info) startActivity(new Intent(getApplicationContext(), MoreInfoActivity.class));
 
         return super.onOptionsItemSelected(item);
     }

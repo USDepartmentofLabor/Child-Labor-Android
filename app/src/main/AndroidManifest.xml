@@ -72,29 +72,29 @@
         <activity
             android:name=".AboutActivity"
             android:label="@string/title_activity_about"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".MoreInfoActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="gov.dol.childlabor.MainActivity" />
+                android:value="gov.dol.childlabor.MoreInfoActivity" />
         </activity>
         <activity
             android:name=".MethodologyActivity"
             android:label="@string/title_activity_methodology"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".MoreInfoActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="gov.dol.childlabor.MainActivity" />
+                android:value="gov.dol.childlabor.MoreInfoActivity" />
         </activity>
         <activity
             android:name=".FactsheetActivity"
             android:label="@string/title_activity_factsheet"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".MoreInfoActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="gov.dol.childlabor.MainActivity" />
+                android:value="gov.dol.childlabor.MoreInfoActivity" />
         </activity>
         <activity
             android:name=".SuggestedActionsActivity"
@@ -194,6 +194,15 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="gov.dol.childlabor.CountryViewActivity" />
+        </activity>
+        <activity
+            android:name=".MoreInfoActivity"
+            android:label="@string/title_activity_more_info"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.MainActivity" />
         </activity>
     </application>
 

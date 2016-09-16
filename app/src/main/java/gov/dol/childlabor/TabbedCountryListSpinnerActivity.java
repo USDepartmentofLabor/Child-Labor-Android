@@ -1,5 +1,6 @@
 package gov.dol.childlabor;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.MenuItemCompat;
@@ -23,7 +24,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Spinner;
+import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -215,7 +218,6 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             Country[] countries = CountryXmlParser.fromContext(getContext()).getCountryList();
             ListView listView = (ListView) rootView.findViewById(R.id.listView);
             listView.setAdapter(new CountryListAdapter(getActivity(), countries, sectionNumber));
-
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

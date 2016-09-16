@@ -20,27 +20,36 @@ public class FactsheetActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        String title;
-        int id = getIntent().getIntExtra("id", R.id.action_introduction);
-        if(id == R.id.action_introduction) {
-            title = "Introduction";
-            filename = "2014 Findings on the Worst Forms of Child Labor_app.pdf";
-        }
-        else if(id == R.id.action_reports_fact_sheet) {
-            title = "Reports Fact Sheet";
-            filename = "Fact Sheets-Reports.pdf";
-        }
-        else if(id == R.id.action_ocft_fact_sheet) {
-            title = "OCFT Fact Sheet";
-            filename = "Fact Sheets-OCFT.pdf";
-        }
-        else if(id == R.id.action_toolkit) {
-            title = "Toolkit";
-            filename = "Business Toolkit.pdf";
-        }
-        else {
-            title = "Programs Fact Sheet";
-            filename = "Fact Sheets-Programming.pdf";
+        String title = getIntent().getStringExtra("title");
+        switch (title) {
+            case "Reports Fact Sheet":
+                filename = "Fact Sheet-Reports-lo.pdf";
+                break;
+            case "OCFT Fact Sheet":
+                filename = "Fact Sheet-OFCT-2016-lo.pdf";
+                break;
+            case "Programs Fact Sheet":
+                filename = "Fact Sheet-Programming-2016-lo.pdf";
+                break;
+            case "Regional Efforts Fact Sheet":
+                filename = "Fact Sheet-Regional-2016-lo.pdf";
+                break;
+            case "TDA FAQs":
+                filename = "FAQs-TDA.pdf";
+                break;
+            case "TVPRA FAQs":
+                filename = "FAQs-TVPRA.pdf";
+                break;
+            case "EO FAQs":
+                filename = "FAQs-EO.pdf";
+                break;
+            case "Combo FAQs":
+                filename = "FAQs- Combo.pdf";
+                break;
+            case "Toolkit for Businesses":
+            default:
+                filename = "ToolkitForResponsibleBusinesses-lo.pdf";
+                break;
         }
 
         setTitle(title);
