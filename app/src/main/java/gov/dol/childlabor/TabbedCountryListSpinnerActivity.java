@@ -144,6 +144,15 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
         }
 
         @Override
+        public void onResume(){
+            super.onResume();
+
+            CountryListAdapter itemsAdapter = new CountryListAdapter(getActivity(), getCountriesBySearch(""), 1);
+            ListView list = (ListView) getView().findViewById(R.id.listView);
+            list.setAdapter(itemsAdapter);
+        }
+
+        @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setHasOptionsMenu(true);

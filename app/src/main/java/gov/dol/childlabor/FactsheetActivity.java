@@ -34,15 +34,6 @@ public class FactsheetActivity extends AppCompatActivity {
             case "Regional Efforts Fact Sheet":
                 filename = "Fact Sheet-Regional-2016-lo.pdf";
                 break;
-            case "TDA FAQs":
-                filename = "FAQs-TDA.pdf";
-                break;
-            case "TVPRA FAQs":
-                filename = "FAQs-TVPRA.pdf";
-                break;
-            case "EO FAQs":
-                filename = "FAQs-EO.pdf";
-                break;
             case "Combo FAQs":
                 filename = "FAQs- Combo.pdf";
                 break;

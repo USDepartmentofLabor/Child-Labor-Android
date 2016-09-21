@@ -10,32 +10,32 @@
         <!--android:orderInCategory="100" app:showAsAction="always"-->
         <!--android:icon="@drawable/dol_white" />-->
 
-    <item android:id="@+id/action_more_info" android:title="More Information"
-        android:orderInCategory="100" app:showAsAction="never" />
+    <!--<item android:id="@+id/action_more_info" android:title="More Information"-->
+        <!--android:orderInCategory="100" app:showAsAction="never" />-->
 
     <!--<item android:id="@+id/action_introduction" android:title="Introduction"-->
         <!--android:orderInCategory="100" app:showAsAction="never" />-->
 
-    <!--<item android:id="@+id/action_about" android:title="About This App"-->
-        <!--android:orderInCategory="100" app:showAsAction="never" />-->
+    <item android:id="@+id/action_about" android:title="About This App"
+        android:orderInCategory="100" app:showAsAction="never" />
 
-    <!--<item android:id="@+id/action_methodology" android:title="Methodology"-->
-        <!--android:orderInCategory="100" app:showAsAction="never" />-->
+    <item android:id="@+id/action_methodology" android:title="Methodology"
+        android:orderInCategory="100" app:showAsAction="never" />
 
-    <!--<group>-->
+    <group>
 
-        <!--<item android:id="@+id/action_reports_fact_sheet" android:title="Reports Fact Sheet"-->
-            <!--android:orderInCategory="100" app:showAsAction="never" />-->
+        <item android:id="@+id/action_reports" android:title="Reports"
+            android:orderInCategory="100" app:showAsAction="never" />
 
-        <!--<item android:id="@+id/action_ocft_fact_sheet" android:title="OCFT Fact Sheet"-->
-            <!--android:orderInCategory="100" app:showAsAction="never" />-->
+        <item android:id="@+id/action_fact_sheets" android:title="Fact Sheets"
+            android:orderInCategory="100" app:showAsAction="never" />
 
-        <!--<item android:id="@+id/action_programs_fact_sheet" android:title="Programs Fact Sheet"-->
-            <!--android:orderInCategory="100" app:showAsAction="never" />-->
+        <item android:id="@+id/action_faqs" android:title="FAQs"
+            android:orderInCategory="100" app:showAsAction="never" />
 
-    <!--</group>-->
+    </group>
 
-    <!--<item android:id="@+id/action_toolkit" android:title="Toolkit"-->
-        <!--android:orderInCategory="100" app:showAsAction="never" />-->
+    <item android:id="@+id/action_toolkit" android:title="Toolkit for Businesses"
+        android:orderInCategory="100" app:showAsAction="never" />
 
 </menu>

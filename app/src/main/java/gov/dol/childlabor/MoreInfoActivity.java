@@ -22,20 +22,29 @@ public class MoreInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_more_info);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        })
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        String[] items = {"About this App", "Methodology", "Child Labor Report", "Child and Forced Labor List of Goods",
-                "Forced Child Labor List of Products", "Reports Fact Sheet", "OCFT Fact Sheet", "Programs Fact Sheet",
-                "Regional Efforts Fact Sheet", "TDA FAQs", "TVPRA FAQs", "EO FAQs", "Combo FAQs", "Toolkit for Businesses"};
+//        String[] items = {"About this App", "Methodology", "Child Labor Report", "Child and Forced Labor List of Goods",
+//                "Forced Child Labor List of Products", "Reports Fact Sheet", "OCFT Fact Sheet", "Programs Fact Sheet",
+//                "Regional Efforts Fact Sheet", "TDA FAQs", "TVPRA FAQs", "EO FAQs", "Combo FAQs", "Toolkit for Businesses"};
+
+        String[] items;
+        Integer id = getIntent().getIntExtra("id", R.id.action_reports);
+        switch (id) {
+            default:
+            case R.id.action_reports:
+                setTitle("Reports");
+                items = new String[]{"Child Labor Report", "Child and Forced Labor List of Goods", "Forced Child Labor List of Products"};
+                break;
+            case R.id.action_fact_sheets:
+                setTitle("Fact Sheets");
+                items = new String[]{"Reports Fact Sheet", "OCFT Fact Sheet", "Programs Fact Sheet", "Regional Efforts Fact Sheet"};
+                break;
+            case R.id.action_faqs:
+                setTitle("FAQs");
+                items = new String[]{"TDA FAQs", "TVPRA FAQs", "EO FAQs", "Combo FAQs"};
+        }
+
         ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
@@ -64,15 +73,23 @@ public class MoreInfoActivity extends AppCompatActivity {
                         intent = new Intent(getApplicationContext(), MethodologyActivity.class);
                         break;
                     case "Child Labor Report":
-                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dol.gov"));
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/2015TDAMagazine.pdf"));
                         break;
                     case "Child and Forced Labor List of Goods":
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/TVPRA_Report2016.pdf"));
+                        break;
                     case "Forced Child Labor List of Products":
-                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dol.gov"));
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/EO_Report_2014.pdf"));
                         break;
                     case "TDA FAQs":
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/TDA2015_FAQs.pdf"));
+                        break;
                     case "TVPRA FAQs":
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/TVPRA_FAQs2016.pdf"));
+                        break;
                     case "EO FAQs":
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/EOFAQS_2016.pdf"));
+                        break;
                     case "Reports Fact Sheet":
                     case "OCFT Fact Sheet":
                     case "Programs Fact Sheet":

@@ -199,7 +199,8 @@
             android:name=".MoreInfoActivity"
             android:label="@string/title_activity_more_info"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTop">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="gov.dol.childlabor.MainActivity" />

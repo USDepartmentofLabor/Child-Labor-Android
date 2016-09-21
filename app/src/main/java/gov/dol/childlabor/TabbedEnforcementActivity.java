@@ -244,7 +244,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                     }
                 }
 
-                if (type.equals("Dedicated_Labor_Inspectors") && !labelText.equals("N/A")) this.showDedicatedInspectors = true;
+                if (type.equals("Dedicated_Labor_Inspectors") && !labelText.equals("N/A") && !labelText.equals("0")) this.showDedicatedInspectors = true;
             }
 
             if (!labelText.isEmpty()) {
