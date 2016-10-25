@@ -17,8 +17,9 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Hashtable;
+import java.util.Locale;
 
 public class TabbedEnforcementActivity extends AppCompatActivity {
 
@@ -249,9 +250,9 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
 
             if (!labelText.isEmpty()) {
                 try {
-                    DecimalFormat df = new DecimalFormat("#");
-                    df.setGroupingUsed(true);
-                    labelText = df.format(Float.parseFloat(labelText));
+                    NumberFormat nf = NumberFormat.getInstance(Locale.getDefault());
+                    double d = Float.parseFloat(labelText);
+                    labelText = nf.format(d);
                     if (type.equals("Labor_Funding")) labelText = "$" + labelText;
                 }
                 catch (NumberFormatException ex) {}

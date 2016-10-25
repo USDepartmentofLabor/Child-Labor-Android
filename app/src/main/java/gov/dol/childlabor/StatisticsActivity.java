@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Arrays;
+import java.util.Locale;
 
 public class StatisticsActivity extends AppCompatActivity {
 
@@ -83,9 +85,12 @@ public class StatisticsActivity extends AppCompatActivity {
         }
 
         if (total != null && !total.isEmpty()) {
-            DecimalFormat df = new DecimalFormat("#");
-            df.setGroupingUsed(true);
-            total = df.format(Float.parseFloat(total));
+            try {
+                NumberFormat nf = NumberFormat.getInstance(Locale.getDefault());
+                double d = Float.parseFloat(total);
+                total = nf.format(d);
+            }
+            catch (NumberFormatException nfe) {}
         }
 
         String text = percent;
