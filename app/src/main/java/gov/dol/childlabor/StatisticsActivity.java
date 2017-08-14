@@ -48,9 +48,10 @@ public class StatisticsActivity extends AppCompatActivity {
         if (!(percent != null && !percent.isEmpty())) {
             return;
         }
-
-        percent = new DecimalFormat("#.#").format(Float.parseFloat(percent)) + "%";
-
+        try {
+            percent = new DecimalFormat("#.#").format(Float.parseFloat(percent)) + "%";
+        }
+        catch (Exception nfe) {}
         TextView view = (TextView) findViewById(textViewId);
         view.setText(percent);
         view.setTextColor(Color.BLACK);
@@ -62,10 +63,13 @@ public class StatisticsActivity extends AppCompatActivity {
         }
 
         if (percent != null && !percent.isEmpty()) {
-            percent = new DecimalFormat("#.#").format(Float.parseFloat(percent)) + "%";
+            try {
+                percent = new DecimalFormat("#.#").format(Float.parseFloat(percent)) + "%";
+            }
+            catch (Exception nfe) {}
         }
         String text = percent;
-        if (ageRange != null && !ageRange.isEmpty()) {
+        if (ageRange != null && !ageRange.isEmpty() && !text.equals("Unavailable") && !text.equals("N/A") && !text.equals("Unknown")) {
             text += " (ages " + ageRange + ")";
         }
 
@@ -81,7 +85,12 @@ public class StatisticsActivity extends AppCompatActivity {
         }
 
         if (percent != null && !percent.isEmpty()) {
-            percent = new DecimalFormat("#.#").format(Float.parseFloat(percent)) + "%";
+            try {
+                percent = new DecimalFormat("#.#").format(Float.parseFloat(percent)) + "%";
+            }
+            catch (NumberFormatException ex) {
+            }
+
         }
 
         if (total != null && !total.isEmpty()) {
@@ -95,10 +104,14 @@ public class StatisticsActivity extends AppCompatActivity {
 
         String text = percent;
         if ((total != null && !total.isEmpty()) || (ageRange != null && !ageRange.isEmpty())) {
-            text += " (";
-            if (total != null && !total.isEmpty() && !total.equals("0")) text += total + "; ";
-            if (ageRange != null && !ageRange.isEmpty()) text += "ages " + ageRange;
-            text += ")";
+            if (!text.equals("Unavailable") && !text.equals("N/A") && !text.equals("Unknown")) {
+                text += " (";
+                if (total != null && !total.isEmpty() && !total.equals("0")) text += total + "; ";
+                if (ageRange != null && !ageRange.isEmpty()) text += "ages " + ageRange;
+                text += ")";
+            }
+
+
         }
 
         TextView view = (TextView) findViewById(textViewId);

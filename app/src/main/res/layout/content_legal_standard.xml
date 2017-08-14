@@ -137,7 +137,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="20dp"
-            android:text="* Does not meet International Standards\n‡ Age calculated based on available information"
+            android:text="‡ Age calculated based on available information"
             android:background="#dadada" />
 
 

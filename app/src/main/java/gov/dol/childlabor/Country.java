@@ -15,6 +15,7 @@ public class Country implements Serializable {
 
     public Statistics statistics;
     public Boolean hasMultipleTerritories = false;
+    public String automaticdowngrade = "";
     public Conventions conventions;
     public Hashtable<String, Standard> standards = new Hashtable<String, Standard>();
     public Hashtable<String, TerritoryStandard> territoryStandards = new Hashtable<String, TerritoryStandard>();

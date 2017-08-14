@@ -53,6 +53,7 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
         displayTerritories((LinearLayout) findViewById(R.id.minimumHazardWorkLinearLayout), territoryStandards.get("Minimum_Hazardous_Work"));
         displayTerritories((LinearLayout) findViewById(R.id.compulsoryMilitaryLinearLayout), territoryStandards.get("Minimum_Compulsory_Military"));
         displayTerritories((LinearLayout) findViewById(R.id.voluntaryMilitaryLinearLayout), territoryStandards.get("Minumum_Voluntary_Military"));
+        displayTerritories((LinearLayout) findViewById(R.id.nsCompulsoryMilitaryLinearLayout), territoryStandards.get("Minumum_Non_State_Military"));
         displayTerritories((LinearLayout) findViewById(R.id.typesHazardousWorkLinearLayout), territoryStandards.get("Types_Hazardous_Work"));
         displayTerritories((LinearLayout) findViewById(R.id.prohibitionForcedLaborLinearLayout), territoryStandards.get("Prohibition_Forced_Labor"));
         displayTerritories((LinearLayout) findViewById(R.id.prohibitionChildTraffickingLinearLayout), territoryStandards.get("Prohibition_Child_Trafficking"));
@@ -67,6 +68,7 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
         displayStandard((TextView) findViewById(R.id.minimumHazardWorkTextView), standards.get("Minimum_Hazardous_Work"));
         displayStandard((TextView) findViewById(R.id.compulsoryMilitaryTextView), standards.get("Minimum_Compulsory_Military"));
         displayStandard((TextView) findViewById(R.id.voluntaryMilitaryTextView), standards.get("Minumum_Voluntary_Military"));
+        displayStandard((TextView) findViewById(R.id.nsCompulsoryMilitaryTextView), standards.get("Minumum_Non_State_Military"));
         displayStandard((TextView) findViewById(R.id.typesHazardousWorkTextView), standards.get("Types_Hazardous_Work"));
         displayStandard((TextView) findViewById(R.id.prohibitionForcedLaborTextView), standards.get("Prohibition_Forced_Labor"));
         displayStandard((TextView) findViewById(R.id.prohibitionChildTraffickingTextView), standards.get("Prohibition_Child_Trafficking"));
@@ -77,25 +79,21 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
     }
 
     private void setFooter() {
-        if (this.hasStandardsFooter || this.hasAgeFooter || this.hasCombatFooter) {
-            String footerText = "";
-            if (this.hasStandardsFooter) {
-                footerText += "* Note: There are gaps in the legal framework, as articulated in the chapter report";
-            }
+        String footerText = "*: Please note the change from last year. Last year a yes referred to the existence of relevant laws. This year the yes refers to meeting international standards. \n\nPlease see the text for more information regarding gaps in legal framework and suggested actions";
+
+
+
             if (this.hasAgeFooter) {
                 if (this.hasStandardsFooter) footerText += "\n";
-                footerText += "‡ Age calculated based on available information";
+                footerText += "\n‡ Age calculated based on available information";
             }
-            if (this.hasCombatFooter) {
-                if (this.hasStandardsFooter || this.hasAgeFooter) footerText += "\n";
-                footerText += "Φ Ages denoted are combat/non-combat";
-            }
+
 
             TextView footerTextView = (TextView) findViewById(R.id.footerTextView);
             footerTextView.setVisibility(View.VISIBLE);
             footerTextView.setText(footerText);
             footerTextView.setContentDescription(" ");
-        }
+
     }
 
     private void displayTerritories(LinearLayout layout, Country.TerritoryStandard standard) {
@@ -142,21 +140,21 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
             accessibleText = standard.replace("*", "");
             if (labelText.startsWith("Yes") && !conformsStandard) {
                 this.hasStandardsFooter = true;
-                labelText += "*";
-                accessibleText += ", note there are gaps in the legal framework as articulated in the chapter report ";
+                labelText += "";
+                accessibleText += "";
             }
 
-            if(!age.isEmpty()) {
-                labelText += " (" + age;
-                accessibleText += ", " + age;
+            if(!age.isEmpty() ) {
+                labelText += " (" + age.toUpperCase();
+                accessibleText += ", " + age.toUpperCase();
                 if (calculatedAge) {
                     this.hasAgeFooter = true;
                     labelText += "<sup><small>‡</small></sup>";
                     accessibleText += ", age calculated based on available information ";
                 }
                 labelText += ")";
-                String [] combatTypes = {"Minimum_Compulsory_Military", "Minumum_Voluntary_Military"};
-                if (age.contains("/") && Arrays.asList(combatTypes).contains(type)) {
+                String [] combatTypes = {"Minimum_Compulsory_Military", "Minumum_Voluntary_Military","Minumum_Non_State_Military" };
+                if (age.contains("/") && Arrays.asList(combatTypes).contains(type) && !age.contains("n/a") && !age.contains("N/A")) {
                     this.hasCombatFooter = true;
                     labelText += "<sup><small>Φ</small></sup>";
                     accessibleText += ", ages denoted are combat/non-combat ";
@@ -168,10 +166,13 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
             view.setText(Html.fromHtml(labelText));
             view.setContentDescription((accessibleText.startsWith("N/A")) ? "Not Available" : accessibleText);
             if (labelText.startsWith("Yes") && conformsStandard) {
-                view.setTextColor(Color.parseColor("#54ba5b"));
+                view.setTextColor(Color.parseColor("#007E17"));
             }
             else if (labelText.startsWith("Yes") && !conformsStandard) {
                 view.setTextColor(Color.RED);
+            }
+            else if (labelText.startsWith("Yes") && type.equals("Free_Public_Education")) {
+                view.setTextColor(Color.parseColor("#007E17"));
             }
             else if (labelText.startsWith("No") || labelText.startsWith("Unknown")) {
                 view.setTextColor(Color.RED);

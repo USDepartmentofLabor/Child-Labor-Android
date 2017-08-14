@@ -34,7 +34,7 @@ public class MechanismActivity extends AppCompatActivity {
 
         switch (value) {
             case "Yes":
-                view.setTextColor(Color.parseColor("#54ba5b"));
+                view.setTextColor(Color.parseColor("#007E17"));
                 break;
             case "No":
                 view.setTextColor(Color.RED);

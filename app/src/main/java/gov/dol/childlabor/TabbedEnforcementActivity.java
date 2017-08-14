@@ -141,6 +141,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborRefresherCoursesTextView), enforcements.get("Labor_Refresher_Courses"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborInspectionsTextView), enforcements.get("Labor_Inspections"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborWorksiteInspectionsTextView), enforcements.get("Labor_Worksite_Inspections"));
+                displayEnforcement((TextView) rootView.findViewById(R.id.laborInspectorsMeetILOTextView), enforcements.get("Labor_Inspectors_Intl_Standards"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborDeskReviewsTextView), enforcements.get("Labor_Desk_Review_Inspections"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborViolationsFoundTextView), enforcements.get("Labor_Violations"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborPenaltiesImposedTextView), enforcements.get("Labor_Penalties_Imposed"));
@@ -175,6 +176,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborRefresherCoursesLinearLayout), enforcements.get("Labor_Refresher_Courses"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborInspectionsLinearLayout), enforcements.get("Labor_Inspections"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborWorksiteInspectionsLinearLayout), enforcements.get("Labor_Worksite_Inspections"));
+                displayTerritories((LinearLayout) rootView.findViewById(R.id.laborInspectorsMeetILOLinearLayout), enforcements.get("Labor_Inspectors_Intl_Standards"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborDeskReviewsLinearLayout), enforcements.get("Labor_Desk_Review_Inspections"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborViolationsFoundLinearLayout), enforcements.get("Labor_Violations"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborPenaltiesImposedLinearLayout), enforcements.get("Labor_Penalties_Imposed"));
@@ -245,7 +247,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                     }
                 }
 
-                if (type.equals("Dedicated_Labor_Inspectors") && !labelText.equals("N/A") && !labelText.equals("0")) this.showDedicatedInspectors = true;
+                if (type.equals("Dedicated_Labor_Inspectors") && !labelText.equals("N/A") && !labelText.contains("Unknown")) this.showDedicatedInspectors = true;
             }
 
             if (!labelText.isEmpty()) {
@@ -255,7 +257,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                     labelText = nf.format(d);
                     if (type.equals("Labor_Funding")) labelText = "$" + labelText;
                 }
-                catch (NumberFormatException ex) {}
+                catch (Exception ex) {}
 
                 String accessibleText = (!labelText.contains("*")) ? labelText : (labelText.replace("*", "") + ", the Government does not make this information publicly available");
 

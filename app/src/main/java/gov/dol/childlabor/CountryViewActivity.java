@@ -107,7 +107,7 @@ public class CountryViewActivity extends AppCompatActivity {
         }
 
 
-        String[] items = {"Suggested Actions", "Statistics", "International Conventions", "Legal Standards", "Enforcement", "Other Mechanisms", "Report PDF"};
+        String[] items = {"Suggested Actions", "Statistics", "International Conventions", "Legal Standards", "Enforcement", "Coordinating Mechanisms", "Report PDF"};
         ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
 
         ListView listView = (ListView) findViewById(R.id.actionListView);
@@ -137,7 +137,7 @@ public class CountryViewActivity extends AppCompatActivity {
                     case "Enforcement":
                         intent = new Intent(getApplicationContext(), TabbedEnforcementActivity.class);
                         break;
-                    case "Other Mechanisms":
+                    case "Coordinating Mechanisms":
                         intent = new Intent(getApplicationContext(), MechanismActivity.class);
                         break;
                     case "Report PDF":

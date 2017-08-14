@@ -50,20 +50,20 @@ public class LegalStandardActivity extends AppCompatActivity {
             labelText = standard.value;
             if (labelText.startsWith("Yes") && !conformsStandard) {
                 this.hasStandardsFooter = true;
-                labelText += "*";
+                labelText += "";
             }
 
             if(!standard.age.isEmpty()) {
-                labelText += "(" + standard.age;
+                labelText += "(" + standard.age.toUpperCase();
                 if (calculatedAge) {
                     this.hasAgeFooter = true;
                     labelText += "<sup><small>‡</small></sup>";
                 }
                 labelText += ")";
-                String [] combatTypes = {"Minimum_Compulsory_Military", "Minumum_Voluntary_Military"};
-                if (standard.age.contains("/") && Arrays.asList(combatTypes).contains(standard.type)) {
+                String [] combatTypes = {"Minimum_Compulsory_Military", "Minumum_Voluntary_Military","Minumum_Non_State_Military"};
+                if (standard.age.contains("/") && Arrays.asList(combatTypes).contains(standard.type)  && !standard.age.contains("n/a") && !standard.age.contains("N/A")) {
                     this.hasCombatFooter = true;
-                    labelText += "<sup><small>Φ</small></sup>";
+                    labelText += "";
                 }
             }
         }
@@ -71,7 +71,7 @@ public class LegalStandardActivity extends AppCompatActivity {
         if (!labelText.isEmpty()) {
             view.setText(Html.fromHtml(labelText));
             if (labelText.startsWith("Yes") && conformsStandard) {
-                view.setTextColor(Color.parseColor("#54ba5b"));
+                view.setTextColor(Color.parseColor("#007E17"));
             }
             else if (labelText.startsWith("Yes") && !conformsStandard) {
                 view.setTextColor(Color.RED);
@@ -102,7 +102,7 @@ public class LegalStandardActivity extends AppCompatActivity {
         else if (value == true) {
             String text = (ageText == null) ? "Yes" : "Yes (" + ageText + ")";
             view.setText(text);
-            view.setTextColor(Color.parseColor("#54ba5b"));
+            view.setTextColor(Color.parseColor("#007E17"));
         }
         else if (value == false) {
             view.setText("No");

@@ -28,7 +28,7 @@ public class CountryXmlParser {
     public static CountryXmlParser fromContext(Context context) {
         InputStream stream = null;
         try {
-            stream = context.getAssets().open("countries_2015.xml");
+            stream = context.getAssets().open("countries_2016.xml");
         }
         catch(IOException e) {
             e.printStackTrace();
@@ -123,8 +123,20 @@ public class CountryXmlParser {
                             case "Multiple_Territories":
                                 currentCountry.hasMultipleTerritories = parser.nextText().equals("Yes");
                                 break;
+
                             case "Advancement_Level":
-                                currentCountry.setLevel(parser.nextText());
+                                if (currentCountry.automaticdowngrade != "") {
+                                    currentCountry.setLevel(currentCountry.automaticdowngrade);
+                                }
+                                else {
+                                    currentCountry.setLevel(parser.nextText());
+                                }
+                                break;
+                            case "Automatic_Downgrade":
+                                currentCountry.automaticdowngrade = parser.nextText();
+                                if (currentCountry.automaticdowngrade != "") {
+                                    currentCountry.setLevel(currentCountry.automaticdowngrade);
+                                }
                                 break;
                             case "Goods":
                                 currentCountry.setGoods(parseGoods(parser, currentCountry.getName()));

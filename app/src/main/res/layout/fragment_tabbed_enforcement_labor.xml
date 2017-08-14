@@ -105,6 +105,38 @@
 
         </LinearLayout>
 
+
+        <LinearLayout
+            android:id="@+id/laborInspectorsMeetILOContainer"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000"
+                android:layout_weight="1"
+                android:text="No of Labor Inspectors meets ILO Rec"
+                android:contentDescription="Number of Labor Inspectors meets ILO Rec"/>
+
+            <TextView
+                android:id="@+id/laborInspectorsMeetILOTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Unavailable" />
+
+        </LinearLayout>
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
