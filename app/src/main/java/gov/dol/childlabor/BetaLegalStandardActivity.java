@@ -168,11 +168,11 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
             if (labelText.startsWith("Yes") && conformsStandard) {
                 view.setTextColor(Color.parseColor("#007E17"));
             }
-            else if (labelText.startsWith("Yes") && !conformsStandard) {
-                view.setTextColor(Color.RED);
-            }
             else if (labelText.startsWith("Yes") && type.equals("Free_Public_Education")) {
                 view.setTextColor(Color.parseColor("#007E17"));
+            }
+            else if (labelText.startsWith("Yes") && !conformsStandard) {
+                view.setTextColor(Color.RED);
             }
             else if (labelText.startsWith("No") || labelText.startsWith("Unknown")) {
                 view.setTextColor(Color.RED);

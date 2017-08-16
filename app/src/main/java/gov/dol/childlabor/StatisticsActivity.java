@@ -88,7 +88,7 @@ public class StatisticsActivity extends AppCompatActivity {
             try {
                 percent = new DecimalFormat("#.#").format(Float.parseFloat(percent)) + "%";
             }
-            catch (NumberFormatException ex) {
+            catch (Exception ex) {
             }
 
         }
@@ -99,7 +99,7 @@ public class StatisticsActivity extends AppCompatActivity {
                 double d = Float.parseFloat(total);
                 total = nf.format(d);
             }
-            catch (NumberFormatException nfe) {}
+            catch (Exception nfe) {}
         }
 
         String text = percent;

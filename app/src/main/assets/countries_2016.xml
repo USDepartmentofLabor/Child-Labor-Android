@@ -35,7 +35,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.075</Total_Percentage_of_Working_Children>
         <Total_Working_Population>673949</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -43,11 +43,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.418</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.046</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -133,7 +133,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -147,7 +147,7 @@
       <Criminal_Referral_Mechanism>Yes</Criminal_Referral_Mechanism>
       <Labor_Funding>Unknown</Labor_Funding>
       <Labor_Inspectors>32</Labor_Inspectors>
-      <Dedicated_Labor_Inspectors>0</Dedicated_Labor_Inspectors>
+      <Dedicated_Labor_Inspectors>Unknown</Dedicated_Labor_Inspectors>
       <Labor_Inspectors_Intl_Standards>No</Labor_Inspectors_Intl_Standards>
       <Authorized_Access_Penalties>No</Authorized_Access_Penalties>
       <Labor_New_Employee_Training>No</Labor_New_Employee_Training>
@@ -247,7 +247,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.046</Total_Percentage_of_Working_Children>
         <Total_Working_Population>23665</Total_Working_Population>
         <Agriculture>0.875</Agriculture>
@@ -255,11 +255,11 @@
         <Industry>0.029</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.925</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.052</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -345,7 +345,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -434,7 +434,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.067</Total_Percentage_of_Working_Children>
         <Total_Working_Population>413729</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -442,11 +442,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.923</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.072</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -532,7 +532,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -629,7 +629,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.257</Total_Percentage_of_Working_Children>
         <Total_Working_Population>694458</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -637,11 +637,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.654</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.221</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -727,7 +727,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -815,7 +815,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -823,11 +823,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -913,7 +913,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -1043,7 +1043,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.042</Total_Percentage_of_Working_Children>
         <Total_Working_Population>258286</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -1051,11 +1051,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.985</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.048</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -1141,7 +1141,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -1233,7 +1233,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.07</Total_Percentage_of_Working_Children>
         <Total_Working_Population>24602</Total_Working_Population>
         <Agriculture>0.939</Agriculture>
@@ -1241,11 +1241,11 @@
         <Industry>0.005</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.954</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.086</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -1331,7 +1331,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -1441,7 +1441,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.045</Total_Percentage_of_Working_Children>
         <Total_Working_Population>70034</Total_Working_Population>
         <Agriculture>0.919</Agriculture>
@@ -1453,7 +1453,7 @@
         <Percentage>0.943</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.049</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -1539,7 +1539,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -1638,7 +1638,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -1646,11 +1646,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -1736,7 +1736,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -1908,7 +1908,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.043</Total_Percentage_of_Working_Children>
         <Total_Working_Population>1326411</Total_Working_Population>
         <Agriculture>0.397</Agriculture>
@@ -1916,11 +1916,11 @@
         <Industry>0.294</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.894</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.019</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -2006,7 +2006,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -2142,7 +2142,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.016</Total_Percentage_of_Working_Children>
         <Total_Working_Population>1405</Total_Working_Population>
         <Agriculture>0.246</Agriculture>
@@ -2150,11 +2150,11 @@
         <Industry>0.105</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.945</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.012</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -2240,7 +2240,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -2347,7 +2347,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.209</Total_Percentage_of_Working_Children>
         <Total_Working_Population>680004</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -2355,11 +2355,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.71</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.163</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -2445,7 +2445,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -2541,7 +2541,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.038</Total_Percentage_of_Working_Children>
         <Total_Working_Population>6338</Total_Working_Population>
         <Agriculture>N/A</Agriculture>
@@ -2549,11 +2549,11 @@
         <Industry>N/A</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.847</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.033</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -2639,7 +2639,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -2795,11 +2795,11 @@
         <Industry>0.074</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.937</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.187</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -2885,7 +2885,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -3018,7 +3018,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.089</Total_Percentage_of_Working_Children>
         <Total_Working_Population>44017</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -3026,11 +3026,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.837</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.106</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -3427,7 +3427,7 @@
           <Standard>Yes</Standard>
           <Age></Age>
           <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+          <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
         </Territory>
         <Territory>
           <Territory_Name>Republika Srpska</Territory_Name>
@@ -3435,7 +3435,7 @@
           <Standard>Yes</Standard>
           <Age></Age>
           <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+          <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
         </Territory>
         <Territory>
           <Territory_Name>Brčko District</Territory_Name>
@@ -3443,7 +3443,7 @@
           <Standard>Yes</Standard>
           <Age></Age>
           <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+          <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
         </Territory>
         <Territory>
           <Territory_Name>Bosnia and Herzegovina</Territory_Name>
@@ -3451,7 +3451,7 @@
           <Standard>Yes</Standard>
           <Age></Age>
           <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+          <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
         </Territory>
       </Free_Public_Education>
     </Legal_Standards>
@@ -4161,7 +4161,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -4169,11 +4169,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -4259,7 +4259,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -4440,7 +4440,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.029</Total_Percentage_of_Working_Children>
         <Total_Working_Population>897018</Total_Working_Population>
         <Agriculture>0.556</Agriculture>
@@ -4448,11 +4448,11 @@
         <Industry>0.104</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.978</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.034</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -4538,7 +4538,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -4631,7 +4631,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -4639,11 +4639,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -4729,7 +4729,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -4811,7 +4811,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.421</Total_Percentage_of_Working_Children>
         <Total_Working_Population>2116752</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -4819,11 +4819,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.419</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.217</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -4909,7 +4909,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -5103,7 +5103,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>N/A</Agriculture>
@@ -5111,11 +5111,11 @@
         <Industry>N/A</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -5201,7 +5201,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -5324,7 +5324,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.272</Total_Percentage_of_Working_Children>
         <Total_Working_Population>633126</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -5332,11 +5332,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.609</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.26</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -5422,7 +5422,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -5525,7 +5525,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.032</Total_Percentage_of_Working_Children>
         <Total_Working_Population>2392</Total_Working_Population>
         <Agriculture>0.792</Agriculture>
@@ -5533,11 +5533,11 @@
         <Industry>0.072</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.901</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total>0.017</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -5623,7 +5623,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -5770,7 +5770,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.094</Total_Percentage_of_Working_Children>
         <Total_Working_Population>276583</Total_Working_Population>
         <Agriculture>0.621</Agriculture>
@@ -5778,11 +5778,11 @@
         <Industry>0.157</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.854</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.091</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -5868,7 +5868,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -5977,7 +5977,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.562</Total_Percentage_of_Working_Children>
         <Total_Working_Population></Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -5985,11 +5985,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.797</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.527</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -6075,7 +6075,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -6203,7 +6203,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.31</Total_Percentage_of_Working_Children>
         <Total_Working_Population>373742</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -6211,11 +6211,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.631</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.28</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -6301,7 +6301,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -6417,7 +6417,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.488</Total_Percentage_of_Working_Children>
         <Total_Working_Population></Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -6425,11 +6425,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.495</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.284</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -6515,7 +6515,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -6621,7 +6621,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.038</Total_Percentage_of_Working_Children>
         <Total_Working_Population>94025</Total_Working_Population>
         <Agriculture>0.293</Agriculture>
@@ -6629,11 +6629,11 @@
         <Industry>0.103</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.995</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.045</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -6719,7 +6719,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -6900,7 +6900,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -7070,7 +7070,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -7191,7 +7191,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.046</Total_Percentage_of_Working_Children>
         <Total_Working_Population>392515</Total_Working_Population>
         <Agriculture>0.436</Agriculture>
@@ -7199,11 +7199,11 @@
         <Industry>0.154</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.947</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.048</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -7289,7 +7289,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -7387,7 +7387,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.23</Total_Percentage_of_Working_Children>
         <Total_Working_Population>42145</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -7395,11 +7395,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.815</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.208</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -7485,7 +7485,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -7631,7 +7631,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.358</Total_Percentage_of_Working_Children>
         <Total_Working_Population></Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -7639,11 +7639,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.773</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.371</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -7729,7 +7729,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -7841,7 +7841,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.279</Total_Percentage_of_Working_Children>
         <Total_Working_Population>286137</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -7849,11 +7849,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.902</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.299</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -7939,7 +7939,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -8054,7 +8054,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -8062,11 +8062,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -8152,7 +8152,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -8238,7 +8238,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.044</Total_Percentage_of_Working_Children>
         <Total_Working_Population>34494</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -8246,11 +8246,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.922</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.042</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -8336,7 +8336,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -8442,7 +8442,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.315</Total_Percentage_of_Working_Children>
         <Total_Working_Population>1682754</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -8450,11 +8450,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.635</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.215</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -8540,7 +8540,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -8636,7 +8636,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.123</Total_Percentage_of_Working_Children>
         <Total_Working_Population>23693</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -8644,11 +8644,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.674</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.102</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -8734,7 +8734,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -8831,7 +8831,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -8839,11 +8839,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -8929,7 +8929,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -9057,7 +9057,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.021</Total_Percentage_of_Working_Children>
         <Total_Working_Population>21968</Total_Working_Population>
         <Agriculture>0.281</Agriculture>
@@ -9065,11 +9065,11 @@
         <Industry>0.086</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Percentage>0.984</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total>0.02</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -9155,7 +9155,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -9296,7 +9296,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.035</Total_Percentage_of_Working_Children>
         <Total_Working_Population>115930</Total_Working_Population>
         <Agriculture>0.823</Agriculture>
@@ -9304,11 +9304,11 @@
         <Industry>0.032</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.975</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.038</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -9394,7 +9394,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -9500,7 +9500,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.029</Total_Percentage_of_Working_Children>
         <Total_Working_Population>246179</Total_Working_Population>
         <Agriculture>0.532</Agriculture>
@@ -9508,11 +9508,11 @@
         <Industry>0.165</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Percentage>0.938</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total>0.013</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -9598,7 +9598,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -9697,7 +9697,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.059</Total_Percentage_of_Working_Children>
         <Total_Working_Population>68431</Total_Working_Population>
         <Agriculture>0.475</Agriculture>
@@ -9705,11 +9705,11 @@
         <Industry>0.142</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.923</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.061</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -9795,7 +9795,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -9893,7 +9893,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -9901,11 +9901,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -9991,7 +9991,7 @@
         <Standard>No</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -10116,7 +10116,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.22</Total_Percentage_of_Working_Children>
         <Total_Working_Population>5545319</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -10124,11 +10124,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.54</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.17</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -10214,7 +10214,7 @@
         <Standard>No</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -10418,7 +10418,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -10490,7 +10490,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -10498,11 +10498,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -10588,7 +10588,7 @@
         <Standard>No</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -10676,7 +10676,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.223</Total_Percentage_of_Working_Children>
         <Total_Working_Population>83073</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -10684,11 +10684,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.944</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.233</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -10774,7 +10774,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -10889,7 +10889,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.364</Total_Percentage_of_Working_Children>
         <Total_Working_Population>180954</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -10897,11 +10897,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.657</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.296</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -10987,7 +10987,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -11087,7 +11087,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.029</Total_Percentage_of_Working_Children>
         <Total_Working_Population>13547</Total_Working_Population>
         <Agriculture>0.955</Agriculture>
@@ -11095,11 +11095,11 @@
         <Industry>0.023</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.969</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.037</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -11185,7 +11185,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -11297,7 +11297,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.247</Total_Percentage_of_Working_Children>
         <Total_Working_Population>1721914</Total_Working_Population>
         <Agriculture>0.787</Agriculture>
@@ -11305,11 +11305,11 @@
         <Industry>0.037</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.917</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.253</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -11395,7 +11395,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -11614,7 +11614,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -11755,11 +11755,11 @@
         <Industry>0.093</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Percentage>0.899</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.035</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -11845,7 +11845,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -11959,7 +11959,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.574</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -11967,11 +11967,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.681</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.484</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -12057,7 +12057,7 @@
         <Standard>No</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -12188,7 +12188,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.323</Total_Percentage_of_Working_Children>
         <Total_Working_Population>1152064</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -12196,11 +12196,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.496</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.192</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -12286,7 +12286,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -12395,7 +12395,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.201</Total_Percentage_of_Working_Children>
         <Total_Working_Population></Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -12403,11 +12403,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.971</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.221</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -12493,7 +12493,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -12605,7 +12605,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.344</Total_Percentage_of_Working_Children>
         <Total_Working_Population>815993</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -12613,11 +12613,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.924</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.349</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -12703,7 +12703,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -12829,7 +12829,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.086</Total_Percentage_of_Working_Children>
         <Total_Working_Population>158891</Total_Working_Population>
         <Agriculture>0.575</Agriculture>
@@ -12837,11 +12837,11 @@
         <Industry>0.103</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.877</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.061</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -12927,7 +12927,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -13170,7 +13170,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.014</Total_Percentage_of_Working_Children>
         <Total_Working_Population>3253202</Total_Working_Population>
         <Agriculture>0.564</Agriculture>
@@ -13178,11 +13178,11 @@
         <Industry>0.331</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.907</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.003</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -13268,7 +13268,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -13392,7 +13392,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.037</Total_Percentage_of_Working_Children>
         <Total_Working_Population>816363</Total_Working_Population>
         <Agriculture>0.616</Agriculture>
@@ -13400,11 +13400,11 @@
         <Industry>0.12</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Percentage>0.924</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total>0.021</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -13490,7 +13490,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -13580,7 +13580,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.053</Total_Percentage_of_Working_Children>
         <Total_Working_Population>454330</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -13588,11 +13588,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.75</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.042</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -13813,7 +13813,7 @@
           <Standard>Yes</Standard>
           <Age></Age>
           <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+          <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
         </Territory>
         <Territory>
           <Territory_Name>Kurdistan Region</Territory_Name>
@@ -13821,7 +13821,7 @@
           <Standard>Yes</Standard>
           <Age></Age>
           <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+          <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
         </Territory>
       </Free_Public_Education>
     </Legal_Standards>
@@ -14244,7 +14244,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.054</Total_Percentage_of_Working_Children>
         <Total_Working_Population>28298</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -14252,11 +14252,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.994</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.062</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -14342,7 +14342,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -14429,7 +14429,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.008</Total_Percentage_of_Working_Children>
         <Total_Working_Population>11255</Total_Working_Population>
         <Agriculture>0.405</Agriculture>
@@ -14437,11 +14437,11 @@
         <Industry>0.112</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.949</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.007</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -14527,7 +14527,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -14610,7 +14610,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.032</Total_Percentage_of_Working_Children>
         <Total_Working_Population>76690</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -14618,11 +14618,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.907</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.036</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -14708,7 +14708,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -14840,7 +14840,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.356</Total_Percentage_of_Working_Children>
         <Total_Working_Population>3736030</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -14848,11 +14848,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.858</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.23</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -14938,7 +14938,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -15038,7 +15038,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>N/A</Agriculture>
@@ -15046,11 +15046,11 @@
         <Industry>N/A</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -15136,7 +15136,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -15221,7 +15221,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.117</Total_Percentage_of_Working_Children>
         <Total_Working_Population>324764</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -15229,11 +15229,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.954</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.131</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -15319,7 +15319,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -15426,7 +15426,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.339</Total_Percentage_of_Working_Children>
         <Total_Working_Population>397407</Total_Working_Population>
         <Agriculture>0.99</Agriculture>
@@ -15434,11 +15434,11 @@
         <Industry>0.003</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.865</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.41</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -15524,7 +15524,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -15630,7 +15630,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -15638,11 +15638,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -15728,7 +15728,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -15824,7 +15824,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.281</Total_Percentage_of_Working_Children>
         <Total_Working_Population>124632</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -15832,11 +15832,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.807</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.253</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -15922,7 +15922,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -16012,7 +16012,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.166</Total_Percentage_of_Working_Children>
         <Total_Working_Population>136340</Total_Working_Population>
         <Agriculture>0.784</Agriculture>
@@ -16020,11 +16020,11 @@
         <Industry>0.042</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.759</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.14</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -16110,7 +16110,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -16203,7 +16203,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.183</Total_Percentage_of_Working_Children>
         <Total_Working_Population>44161</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -16211,11 +16211,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.868</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.195</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -16301,7 +16301,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -16422,7 +16422,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.221</Total_Percentage_of_Working_Children>
         <Total_Working_Population>1206992</Total_Working_Population>
         <Agriculture>0.874</Agriculture>
@@ -16430,11 +16430,11 @@
         <Industry>0.042</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.691</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.154</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -16520,7 +16520,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -16620,7 +16620,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.34</Total_Percentage_of_Working_Children>
         <Total_Working_Population></Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -16628,11 +16628,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.896</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.391</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -16718,7 +16718,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -16820,7 +16820,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.039</Total_Percentage_of_Working_Children>
         <Total_Working_Population>2364</Total_Working_Population>
         <Agriculture>N/A</Agriculture>
@@ -16828,11 +16828,11 @@
         <Industry>N/A</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.795</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.04</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -16918,7 +16918,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -17040,7 +17040,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.251</Total_Percentage_of_Working_Children>
         <Total_Working_Population>1216300</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -17048,11 +17048,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.46</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.134</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -17138,7 +17138,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -17269,7 +17269,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.125</Total_Percentage_of_Working_Children>
         <Total_Working_Population>131552</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -17277,11 +17277,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.535</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.082</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -17367,7 +17367,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -17484,7 +17484,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -17492,11 +17492,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -17582,7 +17582,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -17669,7 +17669,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.243</Total_Percentage_of_Working_Children>
         <Total_Working_Population>102105</Total_Working_Population>
         <Agriculture>0.973</Agriculture>
@@ -17677,11 +17677,11 @@
         <Industry>0.006</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.921</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.29</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -17767,7 +17767,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -17888,7 +17888,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.132</Total_Percentage_of_Working_Children>
         <Total_Working_Population>532882</Total_Working_Population>
         <Agriculture>0.858</Agriculture>
@@ -17896,11 +17896,11 @@
         <Industry>0.025</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.963</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.141</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -17986,7 +17986,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -18078,7 +18078,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.183</Total_Percentage_of_Working_Children>
         <Total_Working_Population>77591</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -18086,11 +18086,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.916</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.199</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -18176,7 +18176,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -18263,7 +18263,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -18271,11 +18271,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -18361,7 +18361,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -18421,7 +18421,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.045</Total_Percentage_of_Working_Children>
         <Total_Working_Population>150178</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -18433,7 +18433,7 @@
         <Percentage>0.829</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total>0.007</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -18519,7 +18519,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -18622,7 +18622,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.225</Total_Percentage_of_Working_Children>
         <Total_Working_Population>1526560</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -18630,11 +18630,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.695</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.224</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -18720,7 +18720,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -18830,7 +18830,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -18838,11 +18838,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -18928,7 +18928,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -19055,7 +19055,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.372</Total_Percentage_of_Working_Children>
         <Total_Working_Population>6755852</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -19063,11 +19063,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.917</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.391</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -19153,7 +19153,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -19308,7 +19308,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.477</Total_Percentage_of_Working_Children>
         <Total_Working_Population>342076</Total_Working_Population>
         <Agriculture>0.535</Agriculture>
@@ -19316,11 +19316,11 @@
         <Industry>0.087</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Percentage>0.883</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total>0.403</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -19406,7 +19406,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -19548,7 +19548,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.429</Total_Percentage_of_Working_Children>
         <Total_Working_Population>2516191</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -19556,11 +19556,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Percentage>0.48</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.221</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -19646,7 +19646,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -19795,7 +19795,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.311</Total_Percentage_of_Working_Children>
         <Total_Working_Population>13924739</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -19803,11 +19803,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.762</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.268</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -19893,7 +19893,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -19998,7 +19998,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -20006,11 +20006,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -20096,7 +20096,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -20266,7 +20266,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -20341,7 +20341,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -20349,11 +20349,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -20439,7 +20439,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -20578,7 +20578,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.13</Total_Percentage_of_Working_Children>
         <Total_Working_Population>2449480</Total_Working_Population>
         <Agriculture>0.76</Agriculture>
@@ -20586,11 +20586,11 @@
         <Industry>0.093</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.723</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total>0.016</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -21075,7 +21075,7 @@
           <Standard>Yes</Standard>
           <Age></Age>
           <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+          <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
         </Territory>
         <Territory>
           <Territory_Name>Punjab</Territory_Name>
@@ -21083,7 +21083,7 @@
           <Standard>Yes</Standard>
           <Age></Age>
           <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+          <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
         </Territory>
         <Territory>
           <Territory_Name>Khyber Pakhtunkhwa</Territory_Name>
@@ -21091,7 +21091,7 @@
           <Standard>No</Standard>
           <Age></Age>
           <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+          <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
         </Territory>
         <Territory>
           <Territory_Name>Sindh</Territory_Name>
@@ -21099,7 +21099,7 @@
           <Standard>Yes</Standard>
           <Age></Age>
           <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+          <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
         </Territory>
         <Territory>
           <Territory_Name>Balochistan</Territory_Name>
@@ -21107,7 +21107,7 @@
           <Standard>Yes</Standard>
           <Age></Age>
           <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+          <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
         </Territory>
       </Free_Public_Education>
     </Legal_Standards>
@@ -21978,7 +21978,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.047</Total_Percentage_of_Working_Children>
         <Total_Working_Population>32858</Total_Working_Population>
         <Agriculture>0.686</Agriculture>
@@ -21986,11 +21986,11 @@
         <Industry>0.054</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.949</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.049</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -22076,7 +22076,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -22164,7 +22164,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -22172,11 +22172,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -22262,7 +22262,7 @@
         <Standard>No</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -22411,7 +22411,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.104</Total_Percentage_of_Working_Children>
         <Total_Working_Population>72036</Total_Working_Population>
         <Agriculture>0.55</Agriculture>
@@ -22419,11 +22419,11 @@
         <Industry>0.104</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.942</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total>0.095</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -22509,7 +22509,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -22647,7 +22647,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.218</Total_Percentage_of_Working_Children>
         <Total_Working_Population>1261484</Total_Working_Population>
         <Agriculture>0.638</Agriculture>
@@ -22655,11 +22655,11 @@
         <Industry>0.061</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.976</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.25</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -22745,7 +22745,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -22921,7 +22921,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.075</Total_Percentage_of_Working_Children>
         <Total_Working_Population>1549677</Total_Working_Population>
         <Agriculture>0.541</Agriculture>
@@ -22929,11 +22929,11 @@
         <Industry>0.053</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.937</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.078</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -23019,7 +23019,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -23119,7 +23119,7 @@
         <Percentage>0.886</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.046</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -23205,7 +23205,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -23383,7 +23383,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -23452,7 +23452,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.075</Total_Percentage_of_Working_Children>
         <Total_Working_Population>2017</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -23460,11 +23460,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.997</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.082</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -23550,7 +23550,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -23643,7 +23643,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -23651,11 +23651,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -23741,7 +23741,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -23824,7 +23824,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.226</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -23832,11 +23832,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.892</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.249</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -23922,7 +23922,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -24009,7 +24009,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -24017,11 +24017,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -24107,7 +24107,7 @@
         <Standard>No</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -24211,7 +24211,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.223</Total_Percentage_of_Working_Children>
         <Total_Working_Population>4255365</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -24219,11 +24219,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.53</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.139</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -24309,7 +24309,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -24415,7 +24415,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.151</Total_Percentage_of_Working_Children>
         <Total_Working_Population>725227</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -24423,11 +24423,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.977</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.174</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -24513,7 +24513,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -24618,7 +24618,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -24626,11 +24626,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -24716,7 +24716,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -24847,7 +24847,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.513</Total_Percentage_of_Working_Children>
         <Total_Working_Population>897142</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -24855,11 +24855,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.67</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.433</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -24945,7 +24945,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -25054,7 +25054,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -25062,11 +25062,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -25152,7 +25152,7 @@
         <Standard>No</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -25252,7 +25252,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -25260,11 +25260,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -25350,7 +25350,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
       <Minimum_Work>
         <Standard>Yes</Standard>
@@ -25422,7 +25422,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
       <Minimum_Work>
         <Standard>N/A</Standard>
@@ -25494,7 +25494,7 @@
         <Standard>N/A</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
       <Minimum_Work>
         <Standard>N/A</Standard>
@@ -25566,7 +25566,7 @@
         <Standard>N/A</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -25776,11 +25776,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -25866,7 +25866,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -25959,7 +25959,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.456</Total_Percentage_of_Working_Children>
         <Total_Working_Population>463624</Total_Working_Population>
         <Agriculture>0.602</Agriculture>
@@ -25971,7 +25971,7 @@
         <Percentage>0.315</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total>0.109</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -26057,7 +26057,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -26187,7 +26187,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.092</Total_Percentage_of_Working_Children>
         <Total_Working_Population>302865</Total_Working_Population>
         <Agriculture>0.67</Agriculture>
@@ -26195,11 +26195,11 @@
         <Industry>0.16</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.978</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.104</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -26285,7 +26285,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -26375,7 +26375,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.064</Total_Percentage_of_Working_Children>
         <Total_Working_Population>6671</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -26383,11 +26383,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.958</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.066</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -26473,7 +26473,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -26570,7 +26570,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.117</Total_Percentage_of_Working_Children>
         <Total_Working_Population>35368</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -26578,11 +26578,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.925</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.13</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -26668,7 +26668,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -26829,7 +26829,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.293</Total_Percentage_of_Working_Children>
         <Total_Working_Population>3573467</Total_Working_Population>
         <Agriculture>0.941</Agriculture>
@@ -26837,11 +26837,11 @@
         <Industry>0.01</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.743</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.246</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -26994,7 +26994,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.13</Total_Percentage_of_Working_Children>
         <Total_Working_Population>1302267</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -27002,11 +27002,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.963</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.144</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -27092,7 +27092,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -27189,7 +27189,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.199</Total_Percentage_of_Working_Children>
         <Total_Working_Population>26268</Total_Working_Population>
         <Agriculture>0.976</Agriculture>
@@ -27197,11 +27197,11 @@
         <Industry>0.014</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Percentage>0.697</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total>0.126</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -27287,7 +27287,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -27376,7 +27376,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.296</Total_Percentage_of_Working_Children>
         <Total_Working_Population>N/A</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -27384,11 +27384,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.861</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.295</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -27474,7 +27474,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -27564,7 +27564,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -27572,11 +27572,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -27662,7 +27662,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -27734,7 +27734,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -27742,11 +27742,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -27832,7 +27832,7 @@
         <Standard>No</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -27941,7 +27941,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.03</Total_Percentage_of_Working_Children>
         <Total_Working_Population>50364</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -27949,11 +27949,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.942</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.028</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -28039,7 +28039,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -28271,7 +28271,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -28361,7 +28361,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -28369,11 +28369,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -28459,7 +28459,7 @@
         <Standard>No</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -28635,7 +28635,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.309</Total_Percentage_of_Working_Children>
         <Total_Working_Population>3034126</Total_Working_Population>
         <Agriculture>0.954</Agriculture>
@@ -28643,11 +28643,11 @@
         <Industry>0.015</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.887</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.344</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -28733,7 +28733,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -28839,7 +28839,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.044</Total_Percentage_of_Working_Children>
         <Total_Working_Population>182714</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -28847,11 +28847,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.965</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.05</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -28937,7 +28937,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -29036,7 +29036,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.061</Total_Percentage_of_Working_Children>
         <Total_Working_Population>31955</Total_Working_Population>
         <Agriculture>0.284</Agriculture>
@@ -29044,11 +29044,11 @@
         <Industry>0.125</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.978</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.065</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -29134,7 +29134,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -29246,7 +29246,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.043</Total_Percentage_of_Working_Children>
         <Total_Working_Population>244095</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -29254,11 +29254,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.841</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.05</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -29344,7 +29344,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -29456,7 +29456,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -29464,11 +29464,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -29554,7 +29554,7 @@
         <Standard>No</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -29681,7 +29681,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.039</Total_Percentage_of_Working_Children>
         <Total_Working_Population>108124</Total_Working_Population>
         <Agriculture>0.309</Agriculture>
@@ -29689,11 +29689,11 @@
         <Industry>0.118</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Percentage>0.962</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>10-14</Age_Range>
+        <Age_Range>10 - 14</Age_Range>
         <Total>0.027</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -29779,7 +29779,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -29983,7 +29983,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -30039,7 +30039,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -30047,11 +30047,11 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>Unavailable</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -30137,7 +30137,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -30322,7 +30322,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -30400,7 +30400,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.136</Total_Percentage_of_Working_Children>
         <Total_Working_Population>834866</Total_Working_Population>
         <Agriculture>0.7</Agriculture>
@@ -30408,11 +30408,11 @@
         <Industry>0.022</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.68</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.103</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -30498,7 +30498,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -30625,7 +30625,7 @@
     </Goods>
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>0.281</Total_Percentage_of_Working_Children>
         <Total_Working_Population>992722</Total_Working_Population>
         <Agriculture>0.918</Agriculture>
@@ -30633,11 +30633,11 @@
         <Industry>0.012</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>0.652</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
-        <Age_Range>7-14</Age_Range>
+        <Age_Range>7 - 14</Age_Range>
         <Total>0.276</Total>
       </Children_Working_and_Studying_7-14_yrs_old>
       <UNESCO_Primary_Completion_Rate>
@@ -30723,7 +30723,7 @@
         <Standard>Yes</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
@@ -30829,7 +30829,7 @@
     <Goods />
     <Country_Statistics>
       <Children_Work_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Total_Percentage_of_Working_Children>Unavailable</Total_Percentage_of_Working_Children>
         <Total_Working_Population>Unavailable</Total_Working_Population>
         <Agriculture>Unavailable</Agriculture>
@@ -30837,7 +30837,7 @@
         <Industry>Unavailable</Industry>
       </Children_Work_Statistics>
       <Education_Statistics_Attendance_Statistics>
-        <Age_Range>5-14</Age_Range>
+        <Age_Range>5 - 14</Age_Range>
         <Percentage>Unavailable</Percentage>
       </Education_Statistics_Attendance_Statistics>
       <Children_Working_and_Studying_7-14_yrs_old>
@@ -30927,7 +30927,7 @@
         <Standard>No</Standard>
         <Age></Age>
         <Calculated_Age>No</Calculated_Age>
-        <Conforms_To_Intl_Standard>1</Conforms_To_Intl_Standard>
+        <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
       </Free_Public_Education>
     </Legal_Standards>
     <Enforcements>
