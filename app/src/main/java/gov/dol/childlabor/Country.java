@@ -22,6 +22,7 @@ public class Country implements Serializable {
     public Hashtable<String, Enforcement> enforcements = new Hashtable<String, Enforcement>();
     public Hashtable<String, TerritoryEnforcement> territoryEnforcements = new Hashtable<String, TerritoryEnforcement>();
     public String coordinationMechanism, policyMechanism, programMechanism;
+   // public Hashtable<String, TerritoryStatistics> TerritoryStatistics = new Hashtable<String, TerritoryStatistics>();
 
     public Country(String name) {
         this.name = name;
@@ -145,6 +146,16 @@ public class Country implements Serializable {
         territoryEnforcements.put(type, enforcement);
     }
 
+/*    public void addTerritoryStatistics(String type, ArrayList<Hashtable<String, String>> territories) {
+        ArrayList<TerritoryValue> values = new ArrayList<>(); // Testing
+        for (Hashtable<String, String> territory : territories) {
+            TerritoryValue value =  new TerritoryValue(territory.get("Territory_Name"), territory.get("Territory_Display_Name"), territory.get("Enforcement"));
+            values.add(value);
+        }
+        TerritoryStatistics statistics = new TerritoryStatistics(type, values);
+        TerritoryStatistics.put(type, statistics);
+    }*/
+
     public void addStandard(String type, Hashtable<String, String> standardHash) {
         Standard standard = new Standard(type, standardHash.get("Standard"), standardHash.get("Age"), standardHash.get("Calculated_Age"), standardHash.get("Conforms_To_Intl_Standard"));
         standards.put(type, standard);
@@ -265,4 +276,38 @@ public class Country implements Serializable {
             this.territories = territories;
         }
     }
+
+/*    class TerritoryStatistics implements Serializable {
+        String type;
+        ArrayList<TerritoryValue> territories = new ArrayList<TerritoryValue>();
+
+        public TerritoryStatistics(String type, ArrayList<TerritoryValue> territories) {
+            this.type = type;
+            this.territories = territories;
+        }
+    }*/
+
+/*    class TerritoryStatisticsValue implements Serializable {
+        String territory;
+        String displayName;
+        String value;
+        String age;
+        String calculatedAge;
+        String conformsStandard;
+
+        public TerritoryStatisticsValue(String territory, String displayName, String value, String age, String calculatedAge, String conformsStandard) {
+            this.territory = territory;
+            this.displayName = displayName;
+            this.value = value;
+            this.age = age;
+            this.calculatedAge = calculatedAge;
+            this.conformsStandard = conformsStandard;
+        }
+
+        public TerritoryStatisticsValue(String territory, String displayName, String value) {
+            this.territory = territory;
+            this.displayName = displayName;
+            this.value = value;
+        }
+    }*/
 }

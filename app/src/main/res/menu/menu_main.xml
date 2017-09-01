@@ -35,7 +35,10 @@
 
     </group>
 
-    <item android:id="@+id/action_toolkit" android:title="Toolkit for Businesses"
-        android:orderInCategory="100" app:showAsAction="never" />
+    <item
+        android:id="@+id/action_toolkit"
+        android:orderInCategory="100"
+        android:title="NEW: Toolkit for Businesses"
+        app:showAsAction="never" />
 
 </menu>

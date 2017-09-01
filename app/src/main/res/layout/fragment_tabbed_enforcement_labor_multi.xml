@@ -670,13 +670,13 @@
         <TextView xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="0dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            android:text=""
             android:background="#dadada"
-            android:contentDescription="" />
+            android:contentDescription=""
+            android:padding="20dp"
+            android:text="Referral Mechanisms "
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:orientation="horizontal"

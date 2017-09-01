@@ -53,7 +53,7 @@ public class LegalStandardActivity extends AppCompatActivity {
                 labelText += "";
             }
 
-            if(!standard.age.isEmpty()) {
+            if(!standard.age.isEmpty() && !standard.age.contains("N/A" ) && !standard.age.contains("n/a") && !standard.age.contains("No")) {
                 labelText += "(" + standard.age.toUpperCase();
                 if (calculatedAge) {
                     this.hasAgeFooter = true;

@@ -207,6 +207,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="gov.dol.childlabor.MainActivity" />
         </activity>
+        <activity
+            android:name=".ToolKitActivity"
+            android:label="Tool Kit"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

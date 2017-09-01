@@ -48,7 +48,10 @@ public class GoodViewActivity extends AppCompatActivity {
         String[] items = {"All", "Child Labor", "Forced Labor", "Forced Child Labor"};
         spinner.setAdapter(new ArrayAdapter<String>(this, R.layout.good_view_exploitation_spinner_row, R.id.exploitationSpinnerTextView, items) {
             @Override
+
             public View getView(int position, View convertView, ViewGroup parent) {
+
+
                 LayoutInflater theInflater = LayoutInflater.from(getContext());
                 View theView = theInflater.inflate(R.layout.good_view_exploitation_spinner_row, parent, false);
 
@@ -60,24 +63,32 @@ public class GoodViewActivity extends AppCompatActivity {
                 ImageView forcedChildLaborImageView = (ImageView) theView.findViewById(R.id.exploitationSpinnerForcedChildLaborImageView);
 
                 RelativeLayout.LayoutParams params;
-                switch(getItem(position)) {
-                    case "Child Labor":
-                        params = (RelativeLayout.LayoutParams) childLaborImageView.getLayoutParams();
-                        params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-                        forcedLaborImageView.setVisibility(View.GONE);
-                        forcedChildLaborImageView.setVisibility(View.GONE);
-                        break;
-                    case "Forced Labor":
-                        params = (RelativeLayout.LayoutParams) forcedLaborImageView.getLayoutParams();
-                        params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-                        childLaborImageView.setVisibility(View.GONE);
-                        forcedChildLaborImageView.setVisibility(View.GONE);
-                        break;
-                    case "Forced Child Labor":
-                        childLaborImageView.setVisibility(View.GONE);
-                        forcedLaborImageView.setVisibility(View.GONE);
+                try {
+                    switch(getItem(position)) {
+                        case "Child Labor":
+                            params = (RelativeLayout.LayoutParams) childLaborImageView.getLayoutParams();
+                            params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+                            forcedLaborImageView.setVisibility(View.GONE);
+                            forcedChildLaborImageView.setVisibility(View.GONE);
+                            break;
+                        case "Forced Labor":
+                            params = (RelativeLayout.LayoutParams) forcedLaborImageView.getLayoutParams();
+                            params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+                            childLaborImageView.setVisibility(View.GONE);
+                            forcedChildLaborImageView.setVisibility(View.GONE);
+                            break;
+                        case "Forced Child Labor":
+                            childLaborImageView.setVisibility(View.GONE);
+                            forcedLaborImageView.setVisibility(View.GONE);
+                    }
                 }
-                return theView;
+                catch(Exception ex)
+                {
+
+                }
+
+               return theView;
+
             }
 
             @Override
@@ -89,48 +100,57 @@ public class GoodViewActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                ArrayList<CountryGood> countryGoods = new ArrayList<CountryGood>();
 
-                for (CountryGood countryGood : good.getCountries()) {
-                    if (position == 0) {
-                        countryGoods.add(countryGood);
-                    } else if (position == 1 && countryGood.hasChildLabor()) {
-                        countryGoods.add(countryGood);
-                    } else if (position == 2 && countryGood.hasForcedLabor()) {
-                        countryGoods.add(countryGood);
-                    } else if (position == 3 && countryGood.hasForcedChildLabor()) {
-                        countryGoods.add(countryGood);
+                    try {
+                        ArrayList<CountryGood> countryGoods = new ArrayList<CountryGood>();
+                        for (CountryGood countryGood : good.getCountries()) {
+                            if (position == 0) {
+                                countryGoods.add(countryGood);
+                            } else if (position == 1 && countryGood.hasChildLabor()) {
+                                countryGoods.add(countryGood);
+                            } else if (position == 2 && countryGood.hasForcedLabor()) {
+                                countryGoods.add(countryGood);
+                            } else if (position == 3 && countryGood.hasForcedChildLabor()) {
+                                countryGoods.add(countryGood);
+                            }
+                            else {
+                                countryGoods.add(countryGood);
+                            }
+                        }
+
+                        String exploitationType;
+                        switch (position) {
+                            case 1:
+                                exploitationType = "CHILD LABOR";
+                                break;
+                            case 2:
+                                exploitationType = "FORCED LABOR";
+                                break;
+                            case 3:
+                                exploitationType = "FORCED CHILD LABOR";
+                                break;
+                            default:
+                                exploitationType = "EXPLOITIVE LABOR";
+                        }
+
+                        TextView countryLabelTextView = (TextView) findViewById(R.id.countryLabelTextView);
+                        if (countryGoods.size() == 1) {
+                            countryLabelTextView.setText("PRODUCED WITH " + exploitationType + " IN 1 COUNTRY");
+                        } else {
+                            countryLabelTextView.setText("PRODUCED WITH " + exploitationType + " IN " + countryGoods.size() + " COUNTRIES");
+                        }
+
+                        addCountries(countryGoods.toArray(new CountryGood[countryGoods.size()]));
+
+                        if  (Build.VERSION.SDK_INT >= 16){
+                            countryLabelTextView.requestFocus();
+                            countryLabelTextView.announceForAccessibility(countryLabelTextView.getText());
+                        }
                     }
-                }
+                    catch (Exception ex) {
+                    }
 
-                String exploitationType;
-                switch (position) {
-                    case 1:
-                        exploitationType = "CHILD LABOR";
-                        break;
-                    case 2:
-                        exploitationType = "FORCED LABOR";
-                        break;
-                    case 3:
-                        exploitationType = "FORCED CHILD LABOR";
-                        break;
-                    default:
-                        exploitationType = "EXPLOITIVE LABOR";
-                }
 
-                TextView countryLabelTextView = (TextView) findViewById(R.id.countryLabelTextView);
-                if (countryGoods.size() == 1) {
-                    countryLabelTextView.setText("PRODUCED WITH " + exploitationType + " IN 1 COUNTRY");
-                } else {
-                    countryLabelTextView.setText("PRODUCED WITH " + exploitationType + " IN " + countryGoods.size() + " COUNTRIES");
-                }
-
-                addCountries(countryGoods.toArray(new CountryGood[countryGoods.size()]));
-
-                if  (Build.VERSION.SDK_INT >= 16){
-                    countryLabelTextView.requestFocus();
-                    countryLabelTextView.announceForAccessibility(countryLabelTextView.getText());
-                }
             }
 
             @Override

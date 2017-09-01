@@ -31,8 +31,13 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#dadada"
             android:gravity="right"
-            android:text="*Meets International Standards"
+            android:minLines="3"
+            android:paddingRight="10dp"
+            android:text="*Meets\nInternational\nStandards"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
 

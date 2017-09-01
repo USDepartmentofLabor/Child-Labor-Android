@@ -79,7 +79,7 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
     }
 
     private void setFooter() {
-        String footerText = "*: Please note the change from last year. Last year a yes referred to the existence of relevant laws. This year the yes refers to meeting international standards. \n\nPlease see the text for more information regarding gaps in legal framework and suggested actions";
+        String footerText = "*: Please note the change from last year. Last year, a yes referred to the existence of relevant laws. This year the yes refers to meeting international standards. \n\nPlease see the chapter text for more information regarding gaps in legal framework and suggested actions";
 
 
 
@@ -144,7 +144,7 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
                 accessibleText += "";
             }
 
-            if(!age.isEmpty() ) {
+            if(!age.isEmpty() && !age.contains("N/A" ) && !age.contains("n/a") && !age.contains("No") ) {
                 labelText += " (" + age.toUpperCase();
                 accessibleText += ", " + age.toUpperCase();
                 if (calculatedAge) {

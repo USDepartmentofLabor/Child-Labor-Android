@@ -1,5 +1,7 @@
 package gov.dol.childlabor;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -25,6 +27,12 @@ public class FactsheetActivity extends AppCompatActivity {
             case "Reports Fact Sheet":
                 filename = "Fact Sheet-Reports-lo.pdf";
                 break;
+            case "Secretary’s Forward":
+                filename = "Fact Sheet-OFCT-2016-lo.pdf";
+                break;
+            case "An Introduction to OCFT":
+                filename = "Fact Sheet-OFCT-2016-lo.pdf";
+                break;
             case "OCFT Fact Sheet":
                 filename = "Fact Sheet-OFCT-2016-lo.pdf";
                 break;
@@ -35,17 +43,34 @@ public class FactsheetActivity extends AppCompatActivity {
                 filename = "Fact Sheet-Regional-2016-lo.pdf";
                 break;
             case "Combo FAQs":
-                filename = "FAQs- Combo.pdf";
+                filename = "FAQs-COMBO.pdf";
+                break;
+            case "TDA FAQs":
+                filename = "FAQs-TDA.pdf";
+                break;
+            case "TVPRA FAQs":
+                filename = "FAQs-TVPRA.pdf";
+                break;
+            case "EO FAQs":
+                filename = "FAQs-EO.pdf";
                 break;
             case "Toolkit for Businesses":
+                Intent intent = new Intent(getApplicationContext(), ToolKitActivity.class);
+                intent.putExtra("title", "Toolkit for Businesses");
+                startActivity(intent);
+                break;
             default:
                 filename = "ToolkitForResponsibleBusinesses-lo.pdf";
                 break;
         }
+        if (title.contains("Toolkit") ) {
+        }
+        else {
+            setTitle(title);
+            PDFView pdfView = (PDFView) findViewById(R.id.pdfview);
+            pdfView.fromAsset(filename).load();
+        }
 
-        setTitle(title);
-        PDFView pdfView = (PDFView) findViewById(R.id.pdfview);
-        pdfView.fromAsset(filename).load();
 
         AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), title + " Screen");
     }

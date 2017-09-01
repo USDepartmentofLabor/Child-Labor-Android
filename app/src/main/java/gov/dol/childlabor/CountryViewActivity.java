@@ -153,7 +153,7 @@ public class CountryViewActivity extends AppCompatActivity {
             }
         });
 
-        String[] excludedCountries = {"Burma", "China", "Iran", "Malaysia", "Mexico", "North Korea", "Tajikistan",
+        String[] excludedCountries = {"China", "Iran", "Malaysia", "Mexico", "North Korea", "Tajikistan",
                 "Turkmenistan", "Vietnam", "British Indian Ocean Territories", "Heard and McDonald Islands", "Pitcairn Islands"};
 
         if (Arrays.asList(excludedCountries).contains(country.getName())) {
