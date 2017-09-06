@@ -25,22 +25,22 @@ public class FactsheetActivity extends AppCompatActivity {
         String title = getIntent().getStringExtra("title");
         switch (title) {
             case "Reports Fact Sheet":
-                filename = "Fact Sheet-Reports-lo.pdf";
+                filename = "Intro to OCFT.pdf";
                 break;
-            case "Secretary’s Forward":
-                filename = "Fact Sheet-OFCT-2016-lo.pdf";
+            case "Secretary’s Foreward":
+                filename = "Intro to OCFT.pdf";
                 break;
-            case "An Introduction to OCFT":
-                filename = "Fact Sheet-OFCT-2016-lo.pdf";
+            case "An Intro to OCFT":
+                filename = "Intro to OCFT.pdf";
                 break;
             case "OCFT Fact Sheet":
-                filename = "Fact Sheet-OFCT-2016-lo.pdf";
+                filename = "Intro to OCFT.pdf";
                 break;
             case "Programs Fact Sheet":
-                filename = "Fact Sheet-Programming-2016-lo.pdf";
+                filename = "Intro to OCFT.pdf";
                 break;
             case "Regional Efforts Fact Sheet":
-                filename = "Fact Sheet-Regional-2016-lo.pdf";
+                filename = "Intro to OCFT.pdf";
                 break;
             case "Combo FAQs":
                 filename = "FAQs-COMBO.pdf";
@@ -55,8 +55,10 @@ public class FactsheetActivity extends AppCompatActivity {
                 filename = "FAQs-EO.pdf";
                 break;
             case "Toolkit for Businesses":
-                Intent intent = new Intent(getApplicationContext(), ToolKitActivity.class);
+/*                Intent intent = new Intent(getApplicationContext(), ToolKitActivity.class);
                 intent.putExtra("title", "Toolkit for Businesses");
+                startActivity(intent);*/
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/ComplyChain"));
                 startActivity(intent);
                 break;
             default:

@@ -95,6 +95,11 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), MethodologyActivity.class);
             startActivity(intent);
         }
+        else if(id == R.id.action_fact_sheets) {
+            Intent intent = new Intent(getApplicationContext(), FactsheetActivity.class);
+            intent.putExtra("title", "An Intro to OCFT");
+            startActivity(intent);
+        }
         else if(id == R.id.action_toolkit) {
             Intent intent = new Intent(getApplicationContext(), FactsheetActivity.class);
             intent.putExtra("title", "Toolkit for Businesses");

@@ -13,7 +13,8 @@
     <string name="title_activity_tabbed_exploitation_type_list">Exploitation Types</string>
     <string name="title_activity_about">About This App</string>
     <string name="title_activity_methodology">Methodology</string>
-    <string name="title_activity_factsheet">Factsheet</string>
+    <!--<string name="title_activity_factsheet">Factsheet</string>-->
+    <string name="title_activity_factsheet">An Intro to OCFT</string>
     <string name="title_activity_suggested_actions">Suggested Actions</string>
     <string name="title_activity_statistics">Statistics</string>
     <string name="title_activity_convention">International Conventions</string>
