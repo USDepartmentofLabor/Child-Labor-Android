@@ -89,9 +89,11 @@
 
         </LinearLayout>
 
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="horizontal"
             android:paddingBottom="10dp"
             android:paddingLeft="20dp"
@@ -102,12 +104,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="State Compulsory Military Recruitment"
+                android:text="State Voluntary Military Recruitment"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000" />
 
             <TextView
-                android:id="@+id/compulsoryMilitaryTextView"
+                android:id="@+id/voluntaryMilitaryTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -117,7 +119,6 @@
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
         </LinearLayout>
-
 
         <TextView xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
@@ -286,6 +287,7 @@
 
         </LinearLayout>
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -299,12 +301,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="State Voluntary Military Recruitment"
+                android:text="State Compulsory Military Recruitment"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000" />
 
             <TextView
-                android:id="@+id/voluntaryMilitaryTextView"
+                android:id="@+id/compulsoryMilitaryTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -314,7 +316,6 @@
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"

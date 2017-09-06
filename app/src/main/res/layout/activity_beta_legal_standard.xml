@@ -37,7 +37,7 @@
             android:gravity="right"
             android:minLines="3"
             android:paddingRight="10dp"
-            android:text="* Meets\nInternational\nStandards"
+            android:text="Meets\nInternational\nStandards*"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
 
