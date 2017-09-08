@@ -92,11 +92,11 @@
         <activity
             android:name=".FactsheetActivity"
             android:label="@string/title_activity_factsheet"
-            android:parentActivityName=".MoreInfoActivity"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="gov.dol.childlabor.MoreInfoActivity" />
+                android:value="gov.dol.childlabor.MainActivity" />
         </activity>
         <activity
             android:name=".SuggestedActionsActivity"
@@ -209,7 +209,7 @@
         </activity>
         <activity
             android:name=".ToolKitActivity"
-            android:label="Tool Kit"
+            android:label="NEW: Tool Kit Businesses"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:launchMode="singleTop">

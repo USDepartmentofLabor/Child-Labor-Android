@@ -75,7 +75,7 @@ public class MoreInfoActivity extends AppCompatActivity {
                         intent = new Intent(getApplicationContext(), MethodologyActivity.class);
                         break;
                     case "Child Labor Report":
-                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/2015TDAMagazine.pdf"));
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/TDAMagazine.pdf"));
                         break;
                     case "Child and Forced Labor List of Goods":
                         intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/TVPRA_Report2016.pdf"));
@@ -89,7 +89,6 @@ public class MoreInfoActivity extends AppCompatActivity {
                     case "Secretary’s Foreward":
                     case "An Intro to OCFT":
                     case "Reports Fact Sheet":
-                    case "OCFT Fact Sheet":
                     case "Programs Fact Sheet":
                     case "Regional Efforts Fact Sheet":
                     case "Combo FAQs":

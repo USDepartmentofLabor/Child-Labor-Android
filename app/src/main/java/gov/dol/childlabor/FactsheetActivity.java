@@ -28,10 +28,11 @@ public class FactsheetActivity extends AppCompatActivity {
                 filename = "Intro to OCFT.pdf";
                 break;
             case "Secretary’s Foreward":
-                filename = "Intro to OCFT.pdf";
+                filename = "TDA-foreword-2017.pdf";
                 break;
             case "An Intro to OCFT":
-                filename = "Intro to OCFT.pdf";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/OCFTBooklet.pdf"));
+                startActivity(intent);
                 break;
             case "OCFT Fact Sheet":
                 filename = "Intro to OCFT.pdf";
@@ -55,17 +56,20 @@ public class FactsheetActivity extends AppCompatActivity {
                 filename = "FAQs-EO.pdf";
                 break;
             case "Toolkit for Businesses":
-/*                Intent intent = new Intent(getApplicationContext(), ToolKitActivity.class);
+                intent = new Intent(getApplicationContext(), ToolKitActivity.class);
                 intent.putExtra("title", "Toolkit for Businesses");
-                startActivity(intent);*/
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/ComplyChain"));
                 startActivity(intent);
+/*                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/ComplyChain"));
+                startActivity(intent);*/
                 break;
             default:
                 filename = "ToolkitForResponsibleBusinesses-lo.pdf";
                 break;
         }
         if (title.contains("Toolkit") ) {
+        }
+        else if(title.contains("An Intro to OCFT") ) {
+
         }
         else {
             setTitle(title);

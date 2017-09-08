@@ -41,9 +41,12 @@ public class ToolKitActivity extends AppCompatActivity {
         final Button button = (Button) findViewById(R.id.btnInstall);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
+/*                Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("market://details?id=gov.dol.childlabor"));
+                startActivity(intent);*/
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/ComplyChain"));
                 startActivity(intent);
+                AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "Comply Chain Screen");
             }
         });
 
