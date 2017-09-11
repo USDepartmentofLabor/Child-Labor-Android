@@ -113,9 +113,9 @@ public class GoodViewActivity extends AppCompatActivity {
                             } else if (position == 3 && countryGood.hasForcedChildLabor()) {
                                 countryGoods.add(countryGood);
                             }
-                            else {
+/*                            else {
                                 countryGoods.add(countryGood);
-                            }
+                            }*/
                         }
 
                         String exploitationType;
