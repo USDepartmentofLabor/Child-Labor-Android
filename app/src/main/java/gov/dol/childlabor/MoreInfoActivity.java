@@ -35,7 +35,7 @@ public class MoreInfoActivity extends AppCompatActivity {
             default:
             case R.id.action_reports:
                 setTitle("Reports");
-                items = new String[]{"Secretary’s Foreward", "Child Labor Report", "Child and Forced Labor List of Goods", "Forced Child Labor List of Products"};
+                items = new String[]{"Secretary’s Foreword", "Child Labor Report", "Child and Forced Labor List of Goods", "Forced Child Labor List of Products"};
                 break;
 /*            case R.id.action_fact_sheets:
                 setTitle("Fact Sheets");
