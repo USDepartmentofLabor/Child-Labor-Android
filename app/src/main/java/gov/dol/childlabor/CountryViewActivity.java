@@ -161,7 +161,7 @@ public class CountryViewActivity extends AppCompatActivity {
         });
 
         String[] excludedCountries = {"China", "Iran", "Malaysia", "Mexico", "North Korea", "Tajikistan",
-                "Turkmenistan", "Vietnam", "British Indian Ocean Territories", "Heard and McDonald Islands", "Pitcairn Islands"};
+                "Turkmenistan", "Vietnam", "British Indian Ocean Territories", "Heard and McDonald Islands", "Pitcairn Islands", "Sudan", "Russia"};
 
         if (Arrays.asList(excludedCountries).contains(country.getName())) {
             listView.setVisibility(View.GONE);
