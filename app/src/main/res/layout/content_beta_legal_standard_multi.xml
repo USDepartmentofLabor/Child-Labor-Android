@@ -254,7 +254,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="CSEC" />
+                android:text="Commercial Sexual Exploitation of Children" />
 
         </LinearLayout>
 
