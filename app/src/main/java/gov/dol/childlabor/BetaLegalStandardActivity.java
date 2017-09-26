@@ -79,7 +79,7 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
     }
 
     private void setFooter() {
-        String footerText = "*: Please note that this year, a “yes” indicates that the legal framework meets the international standard.  Last year, a “yes” indicated that the country had laws relevant to the international standard, even if they did not fully meet the standard. \n\nPlease see the chapter text for more information regarding gaps in legal framework and suggested actions";
+        String footerText = "* Please note that this year, a “yes” indicates that the legal framework meets the international standard.  Last year, a “yes” indicated that the country had laws relevant to the international standard, even if they did not fully meet the standard. \n\nPlease see the chapter text for more information regarding gaps in legal framework and suggested actions";
 
 
 

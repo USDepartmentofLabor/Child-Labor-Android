@@ -114,6 +114,9 @@ public class CountryXmlParser {
                             case "Name":
                                 currentCountry.setName(parser.nextText());
                                 break;
+                            case "Webpage":
+                                currentCountry.setURL(parser.nextText());
+                                break;
                             case "Description":
                                 currentCountry.setDescription(parser.nextText());
                                 break;

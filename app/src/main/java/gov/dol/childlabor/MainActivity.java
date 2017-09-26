@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else if(id == R.id.action_toolkit) {
             Intent intent = new Intent(getApplicationContext(), FactsheetActivity.class);
-            intent.putExtra("title", "Toolkit for Businesses");
+            intent.putExtra("title", "NEW: Comply Chain app");
             startActivity(intent);
         }
         else {

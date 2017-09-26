@@ -86,13 +86,13 @@ public class MoreInfoActivity extends AppCompatActivity {
                     case "TDA FAQs":
                     case "TVPRA FAQs":
                     case "EO FAQs":
-                    case "Secretary’s Foreward":
+                    case "Secretary’s Foreword":
                     case "An Intro to OCFT":
                     case "Reports Fact Sheet":
                     case "Programs Fact Sheet":
                     case "Regional Efforts Fact Sheet":
                     case "Combo FAQs":
-                    case "Toolkit for Businesses":
+                    case "NEW: Comply Chain app":
                        intent = new Intent(getApplicationContext(), FactsheetActivity.class);
                         intent.putExtra("title", item);
                         break;

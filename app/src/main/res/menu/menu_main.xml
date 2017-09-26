@@ -38,7 +38,7 @@
     <item
         android:id="@+id/action_toolkit"
         android:orderInCategory="100"
-        android:title="NEW: Toolkit for Businesses"
+        android:title="NEW: Comply Chain app"
         app:showAsAction="never" />
 
 </menu>

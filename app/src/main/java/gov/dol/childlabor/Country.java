@@ -9,7 +9,7 @@ import java.util.Hashtable;
  * Created by trjohnson on 10/21/2015.
  */
 public class Country implements Serializable {
-    private String name, description, region, level;
+    private String name, url, description, region, level;
     private CountryGood[] goods;
     private ArrayList<SuggestedAction> suggestedActions = new ArrayList<SuggestedAction>();
 
@@ -36,6 +36,14 @@ public class Country implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getURL() {
+        return url;
+    }
+
+    public void setURL(String url) {
+        this.url = url;
     }
 
     public String getDescription() {

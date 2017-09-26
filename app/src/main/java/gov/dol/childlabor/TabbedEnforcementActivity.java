@@ -259,7 +259,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 }
                 catch (Exception ex) {}
 
-                String accessibleText = (!labelText.contains("*")) ? labelText : (labelText.replace("*", "") + ", the Government does not make this information publicly available");
+                String accessibleText = (!labelText.contains("*")) ? labelText : (labelText.replace("*", "") + ", the Government does not publish this information");
 
                 view.setText(Html.fromHtml(labelText));
                 view.setContentDescription((labelText.startsWith("N/A")) ? "Not Available" : accessibleText);
@@ -273,7 +273,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
             if ((this.sectionNumber == 1 && this.laborFooter) || (this.sectionNumber == 2 && this.criminalFooter)) {
                 TextView footerTextView = (TextView) rootView.findViewById(R.id.footerTextView);
                 footerTextView.setVisibility(View.VISIBLE);
-                footerTextView.setText("* The Government does not make this information publicly available");
+                footerTextView.setText("* The Government does not publish this information");
             }
         }
     }

@@ -55,9 +55,9 @@ public class FactsheetActivity extends AppCompatActivity {
             case "EO FAQs":
                 filename = "FAQs-EO.pdf";
                 break;
-            case "Toolkit for Businesses":
+            case "NEW: Comply Chain app":
                 intent = new Intent(getApplicationContext(), ToolKitActivity.class);
-                intent.putExtra("title", "Toolkit for Businesses");
+                intent.putExtra("title", "NEW: Comply Chain app");
                 startActivity(intent);
 /*                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/ComplyChain"));
                 startActivity(intent);*/
@@ -66,7 +66,7 @@ public class FactsheetActivity extends AppCompatActivity {
                 filename = "ToolkitForResponsibleBusinesses-lo.pdf";
                 break;
         }
-        if (title.contains("Toolkit") ) {
+        if (title.contains("Comply Chain app") ) {
         }
         else if(title.contains("An Intro to OCFT") ) {
 
