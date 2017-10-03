@@ -128,7 +128,7 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         private String searchQuery = "";
-
+        public Integer goodcount;
         /**
          * Returns a new instance of this fragment for the given section
          * number.
@@ -163,16 +163,32 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                 @Override
                 public boolean onQueryTextChange(String query) {
                     searchQuery = query;
-
+                    TextView goodcountTextView = (TextView) getView().findViewById(R.id.goodcounttextview);
                     Good[] goods;
                     String selection;
                     switch (sectionNumber) {
                         case 2:
                             selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
                             goods = getGoodsBySearch(query, getGoodsBySector(selection));
+                            if (goodcount != null) {
+                                goodcountTextView.setVisibility(View.VISIBLE);
+                                goodcountTextView.setText(String.valueOf(goodcount) + " results found for " + query);
+                            }
+                            else
+                            {
+                                goodcountTextView.setVisibility(View.GONE);
+                            }
                             break;
                         default:
                             goods = getGoodsBySearch(query);
+                            if (goodcount != null) {
+                                goodcountTextView.setVisibility(View.VISIBLE);
+                                goodcountTextView.setText(String.valueOf(goodcount) + " results found for " + query);
+                            }
+                            else
+                            {
+                                goodcountTextView.setVisibility(View.GONE);
+                            }
                     }
                     GoodListAdapter itemsAdapter = new GoodListAdapter(getActivity(), goods, 1);
                     ListView listView = (ListView) getView().findViewById(R.id.listView);
@@ -198,9 +214,9 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
 
             View rootView = inflater.inflate(R.layout.fragment_tabbed_good_list_spinner, container, false);
-
+            TextView goodcountTextView = (TextView) rootView.findViewById(R.id.goodcounttextview);
             getHeaderView(rootView);
-
+            goodcountTextView.setVisibility(View.GONE);
             GoodXmlParser parser = GoodXmlParser.fromContext(getContext());
             Good[] goods;
 
@@ -270,12 +286,22 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
         }
 
         public Good[] getGoodsBySearch(String query, Good[] goods) {
-            if (query.equals("")) return goods;
 
+            if (query.equals("")) {
+                goodcount = null;
+                return goods;
+            }
+            else
+            {
+                goodcount = 0;
+            }
             ArrayList<Good> goodList = new ArrayList<>();
             for(Good good : goods) {
                 String goodName = good.getName().replace("ô", "o").replace("ã", "a").replace("é", "e").replace("í", "i");
-                if (goodName.toLowerCase().contains(query.toLowerCase())) goodList.add(good);
+                if (goodName.toLowerCase().contains(query.toLowerCase())) {
+                    goodcount = goodcount + 1;
+                    goodList.add(good);
+                }
             }
 
             return goodList.toArray(new Good[goodList.size()]);
@@ -329,10 +355,18 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     String sector = parent.getItemAtPosition(position).toString();
                     Good [] goods = getGoodsBySearch(searchQuery, getGoodsBySector(sector));
-
+                    TextView goodcountTextView = (TextView) getView().findViewById(R.id.goodcounttextview);
                     GoodListAdapter itemsAdapter = new GoodListAdapter(getActivity(), goods, 2);
                     ListView listView = (ListView) getView().findViewById(R.id.listView);
                     listView.setAdapter(itemsAdapter);
+                    if (goodcount != null) {
+                        goodcountTextView.setVisibility(View.VISIBLE);
+                        goodcountTextView.setText(String.valueOf(goodcount) + " results found for " + searchQuery);
+                    }
+                    else
+                    {
+                        goodcountTextView.setVisibility(View.GONE);
+                    }
                 }
 
                 @Override
