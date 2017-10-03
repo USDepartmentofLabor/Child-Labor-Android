@@ -18,6 +18,12 @@
         <!--android:inputType="textFilter"-->
         <!--android:queryHint="Filter Country" />-->
 
+    <TextView
+        android:id="@+id/countrycounttextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
     <include layout="@layout/list_spinner_header" />
 
     <ListView

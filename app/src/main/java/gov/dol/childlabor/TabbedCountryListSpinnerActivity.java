@@ -127,7 +127,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         private String searchQuery = "";
-
+        public Integer countrycount;
         /**
          * Returns a new instance of this fragment for the given section
          * number.
@@ -171,20 +171,45 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 @Override
                 public boolean onQueryTextChange(String query) {
                     searchQuery = query;
-
+                    TextView countrycountTextView = (TextView) getView().findViewById(R.id.countrycounttextview);
                     Country[] countries;
                     String selection;
                     switch (sectionNumber) {
                         case 2:
                             selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
                             countries = getCountriesBySearch(query, getCountriesByLevel(selection));
+                            if (countrycount != null) {
+                                countrycountTextView.setVisibility(View.VISIBLE);
+                                countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + query);
+                            }
+                            else
+                            {
+                                countrycountTextView.setVisibility(View.GONE);
+                            }
                             break;
                         case 3:
                             selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
                             countries = getCountriesBySearch(query, getCountriesByRegion(selection));
+                            if (countrycount != null) {
+                                countrycountTextView.setVisibility(View.VISIBLE);
+                                countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + query);
+                            }
+                            else
+                            {
+                                countrycountTextView.setVisibility(View.GONE);
+                            }
                             break;
                         default:
                             countries = getCountriesBySearch(query);
+
+                           if (countrycount != null) {
+                               countrycountTextView.setVisibility(View.VISIBLE);
+                                countrycountTextView.setText(String.valueOf(countrycount) + " results found for " + query);
+                           }
+                           else
+                            {
+                              countrycountTextView.setVisibility(View.GONE);
+                           }
                     }
                     CountryListAdapter itemsAdapter = new CountryListAdapter(getActivity(), countries, 1);
                     ListView listView = (ListView) getView().findViewById(R.id.listView);
@@ -209,6 +234,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_tabbed_country_list_spinner, container, false);
+
 
             final int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
             switch(sectionNumber) {
@@ -236,7 +262,8 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-
+            TextView countrycountTextView = (TextView) rootView.findViewById(R.id.countrycounttextview);
+            countrycountTextView.setVisibility(View.GONE);
 //            final SearchView searchFilter = (SearchView) rootView.findViewById(R.id.searchFilter);
 //            searchFilter.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 //                @Override
@@ -305,12 +332,21 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    TextView countrycountTextView = (TextView) getView().findViewById(R.id.countrycounttextview);
                     String level = parent.getItemAtPosition(position).toString();
                     Country [] countries = getCountriesBySearch(searchQuery, getCountriesByLevel(level));
 
                     CountryListAdapter itemsAdapter = new CountryListAdapter(getActivity(), countries, 2);
                     ListView listView = (ListView) getView().findViewById(R.id.listView);
                     listView.setAdapter(itemsAdapter);
+                    if (countrycount != null) {
+                        countrycountTextView.setVisibility(View.VISIBLE);
+                        countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + searchQuery);
+                    }
+                    else
+                    {
+                        countrycountTextView.setVisibility(View.GONE);
+                    }
                 }
 
                 @Override
@@ -354,12 +390,21 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    TextView countrycountTextView = (TextView) getView().findViewById(R.id.countrycounttextview);
                     String region = parent.getItemAtPosition(position).toString();
                     Country [] countries = getCountriesBySearch(searchQuery, getCountriesByRegion(region));
 
                     CountryListAdapter itemsAdapter = new CountryListAdapter(getActivity(), countries, 3);
                     ListView listView = (ListView) getView().findViewById(R.id.listView);
                     listView.setAdapter(itemsAdapter);
+                    if (countrycount != null) {
+                        countrycountTextView.setVisibility(View.VISIBLE);
+                        countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + searchQuery);
+                    }
+                    else
+                    {
+                        countrycountTextView.setVisibility(View.GONE);
+                    }
                 }
 
                 @Override
@@ -375,12 +420,23 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
         }
 
         public Country[] getCountriesBySearch(String query, Country[] countries) {
-            if (query.equals("")) return countries;
+
+            if (query.equals("")) {
+                countrycount = null;
+                return countries;
+            }
+            else
+            {
+                countrycount = 0;
+            }
 
             ArrayList<Country> countryList = new ArrayList<>();
             for(Country country : countries) {
                 String countryName = country.getName().replace("ô", "o").replace("ã", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("á", "a");
-                if (countryName.toLowerCase().startsWith(query.toLowerCase())) countryList.add(country);
+                if (countryName.toLowerCase().startsWith(query.toLowerCase())) {
+                    countrycount = countrycount + 1;
+                    countryList.add(country);
+                }
             }
 
             return countryList.toArray(new Country[countryList.size()]);
@@ -402,11 +458,15 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
         public Country[] getCountriesByRegion(String region) {
             Country[] allCountries = CountryXmlParser.fromContext(getContext()).getCountryList();
 
-            if (region.equals("All Regions")) return allCountries;
+            if (region.equals("All Regions")) {
+                return allCountries;
+            }
 
             ArrayList<Country> countryList = new ArrayList<>();
             for(Country country : allCountries) {
-                if (region.equals(country.getRegionHeader())) countryList.add(country);
+                if (region.equals(country.getRegionHeader())) {
+                    countryList.add(country);
+                }
             }
 
             return countryList.toArray(new Country[countryList.size()]);
