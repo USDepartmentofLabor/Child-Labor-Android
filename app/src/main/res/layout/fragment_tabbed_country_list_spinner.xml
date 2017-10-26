@@ -27,9 +27,11 @@
     <include layout="@layout/list_spinner_header" />
 
     <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
-        android:id="@+id/listView" />
+        android:divider="#3d3d3d"
+        android:dividerHeight="1dp" />
 
 </LinearLayout>
