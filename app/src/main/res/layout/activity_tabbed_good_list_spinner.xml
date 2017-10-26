@@ -24,9 +24,9 @@
             style="@style/MyCustomTabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabIndicatorColor="#999999"
+            app:tabIndicatorColor="#cccccc"
             app:tabIndicatorHeight="8dp"
-            app:tabSelectedTextColor="#999999"
+            app:tabSelectedTextColor="#cccccc"
             app:tabTextColor="@color/white_opaque" />
 
     </android.support.design.widget.AppBarLayout>
