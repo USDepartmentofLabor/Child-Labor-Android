@@ -72,6 +72,41 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
             tabLayout.getTabAt(i).setContentDescription(tabLayout.getTabAt(i).getText() + ", Button");
         }
 
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                mViewPager.setOffscreenPageLimit(0);
+                mViewPager.setAdapter(null);
+
+                mSectionsPagerAdapter.notifyDataSetChanged();
+                mViewPager.setAdapter(mSectionsPagerAdapter);
+
+                int position = tab.getPosition();
+                switch (position) {
+                    case 0:
+                        mViewPager.setCurrentItem(0);
+                        break;
+                    case 1:
+                        mViewPager.setCurrentItem(1);
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+                mViewPager.setAdapter(null);
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+
+
+            }
+        });
+
+
         AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "Goods List Screen");
     }
 
