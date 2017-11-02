@@ -114,10 +114,12 @@
                     android:id="@+id/descriptionExpandTextView" />
 
                 <ListView
-                    android:layout_marginTop="10dp"
+                    android:id="@+id/actionListView"
                     android:layout_width="match_parent"
                     android:layout_height="380dp"
-                    android:id="@+id/actionListView" />
+                    android:layout_marginTop="10dp"
+                    android:divider="#3d3d3d"
+                    android:dividerHeight="1dp" />
 
             </LinearLayout>
 
