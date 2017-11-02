@@ -105,8 +105,6 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
 
             }
         });
-
-
         AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "Goods List Screen");
     }
 
@@ -164,6 +162,7 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
 
         private String searchQuery = "";
         public Integer goodcount;
+
         /**
          * Returns a new instance of this fragment for the given section
          * number.
@@ -195,6 +194,7 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
             searchView.setQueryHint("Filter Goods");
             searchView.clearFocus();
             searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
                 @Override
                 public boolean onQueryTextChange(String query) {
                     searchQuery = query;
@@ -203,6 +203,7 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                     String selection;
                     switch (sectionNumber) {
                         case 2:
+
                             selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
                             goods = getGoodsBySearch(query, getGoodsBySector(selection));
                             if (goodcount != null) {
@@ -260,7 +261,6 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                 case 2:
                     goods = parser.getGoodListBySector();
                     Spinner spinner = (Spinner) rootView.findViewById(R.id.listViewSpinner);
-
                     break;
                 default:
                     goods = parser.getGoodList();
@@ -343,22 +343,94 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
         }
 
         public Good[] getGoodsBySector(String sector) {
+            String Sectorfilter;
+            Sectorfilter = "";
             Good[] allGoods = GoodXmlParser.fromContext(getContext()).getGoodList();
 
-            if (sector.equals("All Sectors")) return allGoods;
+            if (sector.contains("All Sectors")) return allGoods;
+
+            if (sector.contains("Manufacturing"))
+            {
+                Sectorfilter = "Manufacturing";
+            }
+
+            if (sector.contains("Agriculture"))
+            {
+                Sectorfilter = "Agriculture";
+            }
+
+            if (sector.contains("Mining"))
+            {
+                Sectorfilter = "Mining";
+            }
+
+            if (sector.contains("Other"))
+            {
+                Sectorfilter = "Other";
+            }
 
             ArrayList<Good> goodList = new ArrayList<>();
             for(Good good : allGoods) {
-                if (sector.equals(good.getSectorHeader())) goodList.add(good);
+                if (Sectorfilter.equals(good.getSectorHeader())) goodList.add(good);
             }
 
             return goodList.toArray(new Good[goodList.size()]);
         }
 
         protected void getHeaderView(View rootView) {
+            String Manufacturinggoods;
+            String AllSectorgoods;
+            String Agriculturegoods;
+            String Mininggoods;
+            String Othergoods;
+
+            Integer countgood;
+            countgood = 0;
+            Good[] allGoods = GoodXmlParser.fromContext(getContext()).getGoodList();
+            for(Good good : allGoods) {
+                countgood = countgood + 1;
+            }
+            AllSectorgoods = "All Sectors" + " (" + countgood + " goods total)";
+
+            countgood = 0;
+            for(Good good : allGoods) {
+                if ("Manufacturing".equals(good.getSectorHeader()))
+                {countgood = countgood + 1;}
+
+            }
+            Manufacturinggoods = "Manufacturing" + " (" + countgood + " goods total)";
+
+
+            countgood = 0;
+            for(Good good : allGoods) {
+                if ("Agriculture".equals(good.getSectorHeader()))
+                {countgood = countgood + 1;}
+
+            }
+            Agriculturegoods = "Agriculture" + " (" + countgood + " goods total)";
+
+
+            countgood = 0;
+            for(Good good : allGoods) {
+                if ("Other".equals(good.getSectorHeader()))
+                {countgood = countgood + 1;}
+
+            }
+            Othergoods = "Other" + " (" + countgood + " goods total)";
+
+
+            countgood = 0;
+            for(Good good : allGoods) {
+                if ("Mining".equals(good.getSectorHeader()))
+                {countgood = countgood + 1;}
+
+            }
+            Mininggoods = "Mining" + " (" + countgood + " goods total)";
+
+
 
             Spinner spinner = (Spinner) rootView.findViewById(R.id.listViewSpinner);
-            String[] items = {"All Sectors", "Agriculture", "Manufacturing", "Mining", "Other"};
+            String[] items = {AllSectorgoods, Agriculturegoods, Manufacturinggoods, Mininggoods, Othergoods };
             spinner.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.good_view_exploitation_spinner_row, R.id.exploitationSpinnerTextView, items) {
                 @Override
                 public View getView(int position, View convertView, ViewGroup parent) {
