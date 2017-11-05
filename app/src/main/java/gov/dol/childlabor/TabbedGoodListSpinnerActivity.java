@@ -55,7 +55,7 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabbed_good_list_spinner);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // Create the adapter that will return a fragment for each of the three
@@ -85,9 +85,11 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                 switch (position) {
                     case 0:
                         mViewPager.setCurrentItem(0);
+                        toolbar.setVisibility(View.VISIBLE);
                         break;
                     case 1:
                         mViewPager.setCurrentItem(1);
+                        toolbar.setVisibility(View.GONE);
                         break;
                 }
             }
