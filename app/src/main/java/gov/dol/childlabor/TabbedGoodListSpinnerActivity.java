@@ -335,12 +335,14 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
             ArrayList<Good> goodList = new ArrayList<>();
             for(Good good : goods) {
                 String goodName = good.getName().replace("ô", "o").replace("ã", "a").replace("é", "e").replace("í", "i");
-                if (goodName.toLowerCase().contains(query.toLowerCase())) {
+                if (goodName.toLowerCase().contains(query.trim().toLowerCase())) {
                     goodcount = goodcount + 1;
                     goodList.add(good);
                 }
             }
-
+            if (query.trim().equals("")){
+                goodcount = null;
+            }
             return goodList.toArray(new Good[goodList.size()]);
         }
 

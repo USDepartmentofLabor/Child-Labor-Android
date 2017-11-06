@@ -471,12 +471,15 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             ArrayList<Country> countryList = new ArrayList<>();
             for(Country country : countries) {
                 String countryName = country.getName().replace("ô", "o").replace("ã", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("á", "a");
-                if (countryName.toLowerCase().startsWith(query.toLowerCase())) {
+                if (countryName.toLowerCase().startsWith(query.trim().toLowerCase())) {
                     countrycount = countrycount + 1;
                     countryList.add(country);
                 }
             }
-
+            if (query.trim().equals("")){
+                countrycount = null;
+                return countries;
+            }
             return countryList.toArray(new Country[countryList.size()]);
         }
 
