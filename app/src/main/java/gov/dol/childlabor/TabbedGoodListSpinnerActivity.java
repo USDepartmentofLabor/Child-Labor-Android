@@ -72,7 +72,7 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
             tabLayout.getTabAt(i).setContentDescription(tabLayout.getTabAt(i).getText() + ", Button");
         }
 
-        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+/*        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 mViewPager.setOffscreenPageLimit(0);
@@ -106,7 +106,7 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
 
 
             }
-        });
+        });*/
         AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "Goods List Screen");
     }
 
@@ -164,6 +164,7 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
 
         private String searchQuery = "";
         public Integer goodcount;
+        public String searchstring = "";
 
         /**
          * Returns a new instance of this fragment for the given section
@@ -193,7 +194,16 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
             MenuItem searchItem = menu.findItem(R.id.search);
 
             final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-            searchView.setQueryHint("Filter Goods");
+
+            if( searchstring.trim().equals("")) {
+                searchstring = "Filter Goods";
+                searchView.clearFocus();
+            }
+
+
+            searchView.setQueryHint(searchstring);
+            //searchView.setQueryHint("Filter Goods");
+            searchView.setIconified(false);
             searchView.clearFocus();
             searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
@@ -205,7 +215,11 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                     String selection;
                     switch (sectionNumber) {
                         case 2:
-
+                            searchstring = query.trim();
+                            if( searchstring.trim().equals("")) {
+                                searchstring = "Filter Goods";
+                                searchView.setQueryHint(searchstring);
+                            }
                             selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
                             goods = getGoodsBySearch(query, getGoodsBySector(selection));
                             if (goodcount != null) {
@@ -218,6 +232,7 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                             }
                             break;
                         default:
+                            searchstring = query.trim();
                             goods = getGoodsBySearch(query);
                             if (goodcount != null) {
                                 goodcountTextView.setVisibility(View.VISIBLE);
@@ -236,8 +251,8 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
 
                 @Override
                 public boolean onQueryTextSubmit(String query) {
-                    searchQuery = query;
-
+                    searchQuery = query.trim();
+                    searchView.setIconified(false);
                     searchView.clearFocus();
                     return false;
                 }

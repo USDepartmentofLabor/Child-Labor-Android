@@ -69,8 +69,8 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             tabLayout.getTabAt(i).setContentDescription(tabLayout.getTabAt(i).getText() + ", Button");
         }
 
-
-        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        mViewPager.setOffscreenPageLimit(3);
+/*        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 mViewPager.setOffscreenPageLimit(0);
@@ -105,7 +105,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
 
 
             }
-        });
+        });*/
 
         AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "Countries List Screen");
     }
@@ -166,6 +166,8 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
 
         private String searchQuery = "";
         public Integer countrycount;
+        public String searchstring = "";
+
         /**
          * Returns a new instance of this fragment for the given section
          * number.
@@ -203,7 +205,15 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             MenuItem searchItem = menu.findItem(R.id.search);
 
             final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-            searchView.setQueryHint("Filter Countries");
+
+            if( searchstring.trim().equals("")) {
+                searchstring = "Filter Countries";
+                searchView.clearFocus();
+            }
+
+
+            searchView.setQueryHint(searchstring);
+            searchView.setIconified(false);
             searchView.clearFocus();
             searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                 @Override
@@ -214,6 +224,11 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                     String selection;
                     switch (sectionNumber) {
                         case 2:
+                            searchstring = query.trim();
+                            if( searchstring.trim().equals("")) {
+                                searchstring = "Filter Countries";
+                                searchView.setQueryHint(searchstring);
+                            }
                             selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
                             countries = getCountriesBySearch(query, getCountriesByLevel(selection));
                             if (countrycount != null) {
@@ -226,6 +241,11 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                             }
                             break;
                         case 3:
+                            searchstring = query.trim();
+                            if( searchstring.trim().equals("")) {
+                                searchstring = "Filter Countries";
+                                searchView.setQueryHint(searchstring);
+                            }
                             selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
                             countries = getCountriesBySearch(query, getCountriesByRegion(selection));
                             if (countrycount != null) {
@@ -238,6 +258,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                             }
                             break;
                         default:
+                            searchstring = query.trim();
                             countries = getCountriesBySearch(query);
 
                            if (countrycount != null) {
@@ -258,7 +279,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 @Override
                 public boolean onQueryTextSubmit(String query) {
                     searchQuery = query;
-
+                    searchView.setIconified(false);
                     searchView.clearFocus();
                     return false;
                 }
