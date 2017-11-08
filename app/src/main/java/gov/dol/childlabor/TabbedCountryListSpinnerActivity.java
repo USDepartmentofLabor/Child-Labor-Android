@@ -699,7 +699,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             String regionfilter;
             regionfilter = "";
 
-            if (region.equals("All Regions")) {
+            if (region.contains("All Regions")) {
                 return allCountries;
             }
 
