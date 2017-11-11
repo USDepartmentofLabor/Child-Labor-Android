@@ -233,8 +233,8 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                             countries = getCountriesBySearch(query, getCountriesByLevel(selection));
                             if (countrycount != null) {
                                 countrycountTextView.setVisibility(View.VISIBLE);
-                                countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + query);
-                                countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + searchQuery);
+                                countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + query.trim());
+                                countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + query.trim());
                                 countrycountTextView.setFocusable(true);
                                 countrycountTextView.setFocusableInTouchMode(true);
                             }
@@ -253,8 +253,8 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                             countries = getCountriesBySearch(query, getCountriesByRegion(selection));
                             if (countrycount != null) {
                                 countrycountTextView.setVisibility(View.VISIBLE);
-                                countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + query);
-                                countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + searchQuery);
+                                countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + query.trim());
+                                countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + query.trim());
                                 countrycountTextView.setFocusable(true);
                                 countrycountTextView.setFocusableInTouchMode(true);
                             }
@@ -269,7 +269,10 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
 
                            if (countrycount != null) {
                                countrycountTextView.setVisibility(View.VISIBLE);
-                                countrycountTextView.setText(String.valueOf(countrycount) + " results found for " + query);
+                                countrycountTextView.setText(String.valueOf(countrycount) + " results found for " + query.trim());
+                               countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + query.trim());
+                               countrycountTextView.setFocusable(true);
+                               countrycountTextView.setFocusableInTouchMode(true);
                            }
                            else
                             {
@@ -475,8 +478,8 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                     listView.setAdapter(itemsAdapter);
                     if (countrycount != null) {
                         countrycountTextView.setVisibility(View.VISIBLE);
-                        countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + searchQuery);
-                        countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + searchQuery);
+                        countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + searchQuery.trim());
+                        countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + searchQuery.trim());
                         countrycountTextView.setFocusable(true);
                         countrycountTextView.setFocusableInTouchMode(true);
                     }
@@ -597,8 +600,8 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                     listView.setAdapter(itemsAdapter);
                     if (countrycount != null) {
                         countrycountTextView.setVisibility(View.VISIBLE);
-                        countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + searchQuery);
-                        countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + searchQuery);
+                        countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + searchQuery.trim());
+                        countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + searchQuery.trim());
                         countrycountTextView.setFocusable(true);
                         countrycountTextView.setFocusableInTouchMode(true);
                     }

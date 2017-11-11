@@ -224,7 +224,7 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                             goods = getGoodsBySearch(query, getGoodsBySector(selection));
                             if (goodcount != null) {
                                 goodcountTextView.setVisibility(View.VISIBLE);
-                                goodcountTextView.setText(String.valueOf(goodcount) + " results found for " + query);
+                                goodcountTextView.setText(String.valueOf(goodcount) + " results found for " + query.trim());
                             }
                             else
                             {
@@ -236,7 +236,7 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                             goods = getGoodsBySearch(query);
                             if (goodcount != null) {
                                 goodcountTextView.setVisibility(View.VISIBLE);
-                                goodcountTextView.setText(String.valueOf(goodcount) + " results found for " + query);
+                                goodcountTextView.setText(String.valueOf(goodcount) + " results found for " + query.trim());
                             }
                             else
                             {
@@ -487,7 +487,7 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                     listView.setAdapter(itemsAdapter);
                     if (goodcount != null) {
                         goodcountTextView.setVisibility(View.VISIBLE);
-                        goodcountTextView.setText(String.valueOf(goodcount) + " results found for " + searchQuery);
+                        goodcountTextView.setText(String.valueOf(goodcount) + " results found for " + searchQuery.trim());
                     }
                     else
                     {
