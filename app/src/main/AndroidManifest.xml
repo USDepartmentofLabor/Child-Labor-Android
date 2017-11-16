@@ -92,7 +92,7 @@
         <activity
             android:name=".FactsheetActivity"
             android:label="@string/title_activity_factsheet"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".MoreInfoActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -210,13 +210,23 @@
         <activity
             android:name=".ToolKitActivity"
             android:label="NEW: Tool Kit Businesses"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".MoreInfoActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:launchMode="singleTop">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="gov.dol.childlabor.MainActivity" />
         </activity>
+        <activity
+            android:name=".MenuMain"
+            android:label="More Info"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.MainActivity" />
+        </activity>		
     </application>
 
 </manifest>
