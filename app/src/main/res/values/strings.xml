@@ -13,7 +13,8 @@
     <string name="title_activity_tabbed_exploitation_type_list">Exploitation Types</string>
     <string name="title_activity_about">About This App</string>
     <string name="title_activity_methodology">Methodology</string>
-    <string name="title_activity_factsheet">Factsheet</string>
+    <!--<string name="title_activity_factsheet">Factsheet</string>-->
+    <string name="title_activity_factsheet">An Intro to OCFT</string>
     <string name="title_activity_suggested_actions">Suggested Actions</string>
     <string name="title_activity_statistics">Statistics</string>
     <string name="title_activity_convention">International Conventions</string>
@@ -22,7 +23,7 @@
     <string name="title_activity_exploitation_type_list_spinner">Exploitation Types</string>
     <string name="title_activity_tabbed_good_list_spinner">Goods</string>
     <string name="title_activity_tabbed_country_list_spinner">Countries</string>
-    <string name="title_activity_mechanism">Other Mechanisms</string>
+    <string name="title_activity_mechanism">Coordinating Mechanisms</string>
     <string name="title_activity_beta_legal_standard">Legal Standards</string>
     <string name="title_activity_tabbed_enforcement">Enforcement</string>
     <string name="title_activity_more_info">More Information</string>

@@ -28,7 +28,7 @@ public class CountryXmlParser {
     public static CountryXmlParser fromContext(Context context) {
         InputStream stream = null;
         try {
-            stream = context.getAssets().open("countries_2015.xml");
+            stream = context.getAssets().open("countries_2016.xml");
         }
         catch(IOException e) {
             e.printStackTrace();
@@ -114,6 +114,9 @@ public class CountryXmlParser {
                             case "Name":
                                 currentCountry.setName(parser.nextText());
                                 break;
+                            case "Webpage":
+                                currentCountry.setURL(parser.nextText());
+                                break;
                             case "Description":
                                 currentCountry.setDescription(parser.nextText());
                                 break;
@@ -123,8 +126,20 @@ public class CountryXmlParser {
                             case "Multiple_Territories":
                                 currentCountry.hasMultipleTerritories = parser.nextText().equals("Yes");
                                 break;
+
                             case "Advancement_Level":
-                                currentCountry.setLevel(parser.nextText());
+                                if (currentCountry.automaticdowngrade != "") {
+                                    currentCountry.setLevel(currentCountry.automaticdowngrade);
+                                }
+                                else {
+                                    currentCountry.setLevel(parser.nextText());
+                                }
+                                break;
+                            case "Automatic_Downgrade":
+                                currentCountry.automaticdowngrade = parser.nextText();
+                                if (currentCountry.automaticdowngrade != "") {
+                                    currentCountry.setLevel(currentCountry.automaticdowngrade);
+                                }
                                 break;
                             case "Goods":
                                 currentCountry.setGoods(parseGoods(parser, currentCountry.getName()));
@@ -235,8 +250,12 @@ public class CountryXmlParser {
                             actions.add(parser.nextText());
                             break;
                         case "Legal_Framework":
+                            section = "Legal Framework";
+                            actions = new ArrayList<>();
+                            break;
                         case "Laws":
-                            section = "Legal Standards";
+                            //section = "Legal Standards";
+                            section = "Legal Framework";
                             actions = new ArrayList<>();
                             break;
                         case "Enforcement":
@@ -545,6 +564,84 @@ public class CountryXmlParser {
                                     statistics.workAndEducationAgeRange = parser.nextText();
                                     break;
                             }
+                            break;
+                    }
+                    break;
+            }
+            eventType = parser.next();
+        }
+    }
+
+    private void parseTerritoryCountryStatistics(Country country, Country.Statistics statistics, XmlPullParser parser) throws XmlPullParserException, IOException {
+        String type = null;
+        Hashtable<String, String> standardHash = new Hashtable<String, String>();
+        ArrayList<Hashtable<String, String>> territories = new ArrayList<>();
+
+        int eventType = parser.getEventType();
+        String section = null;
+        while(!(eventType == XmlPullParser.END_TAG && parser.getName().equals("Country_Statistics"))) {
+            String name = null;
+            switch(eventType) {
+                case XmlPullParser.START_TAG:
+                    name = parser.getName();
+                    switch(name) {
+                        case "Children_Work_Statistics":
+                        case "Education_Statistics_Attendance_Statistics":
+                        case "Children_Working_and_Studying_7-14_yrs_old":
+                        case "Total_Percentage_of_Working_Children":
+                        case "Total_Working_Population":
+                        case "Agriculture":
+                        case "Services":
+                        case "Industry":
+                        case "Percentage":
+                        case "Total":
+                        case "Rate":
+                        case "Territory_Name":
+                        case "Territory_Display_Name":
+                            standardHash.put(name, parser.nextText());
+                            break;
+                        case "Age_Range":
+                            switch (section) {
+                                case "Children_Work_Statistics":
+                                case "Education_Statistics_Attendance_Statistics":
+                                case "Children_Working_and_Studying_7-14_yrs_old":
+                                    standardHash.put(name, parser.nextText());
+                                    break;
+                            }
+                        case "Territory":
+                            break;
+                        default:
+                            type = name;
+                            standardHash.put("Type", name);
+                            break;
+
+                    }
+                    break;
+                case XmlPullParser.END_TAG:
+                    name = parser.getName();
+                    switch(name) {
+                        case "Children_Work_Statistics":
+                        case "Education_Statistics_Attendance_Statistics":
+                        case "Children_Working_and_Studying_7-14_yrs_old":
+                        case "Total_Percentage_of_Working_Children":
+                        case "Total_Working_Population":
+                        case "Agriculture":
+                        case "Services":
+                        case "Industry":
+                        case "Percentage":
+                        case "Total":
+                        case "Rate":
+                        case "Age_Range":
+                        case "Territory_Name":
+                        case "Territory_Display_Name":
+                            break;
+                        case "Territory":
+                            territories.add((Hashtable<String, String>) standardHash.clone());
+                            standardHash = new Hashtable<String, String>();
+                            break;
+                        default:
+                            country.addTerritoryStandard(type, territories);
+                            territories.clear();
                             break;
                     }
                     break;

@@ -8,6 +8,8 @@
 
     <application
         android:name=".AnalyticsApplication"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
         android:allowBackup="true"
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
@@ -94,7 +96,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="gov.dol.childlabor.MoreInfoActivity" />
+                android:value="gov.dol.childlabor.MainActivity" />
         </activity>
         <activity
             android:name=".SuggestedActionsActivity"
@@ -205,6 +207,26 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="gov.dol.childlabor.MainActivity" />
         </activity>
+        <activity
+            android:name=".ToolKitActivity"
+            android:label="NEW: Tool Kit Businesses"
+            android:parentActivityName=".MoreInfoActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.MainActivity" />
+        </activity>
+        <activity
+            android:name=".MenuMain"
+            android:label="More Info"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.MainActivity" />
+        </activity>		
     </application>
 
 </manifest>

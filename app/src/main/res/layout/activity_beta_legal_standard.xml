@@ -21,6 +21,30 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_beta_legal_standard" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#dadada"
+            android:gravity="right"
+            android:minLines="3"
+            android:paddingRight="10dp"
+            android:text="Meets\nInternational\nStandards*"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <include
+            layout="@layout/content_beta_legal_standard"
+            android:layout_width="match_parent" />
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

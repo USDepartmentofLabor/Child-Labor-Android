@@ -13,9 +13,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import com.joanzapata.pdfview.PDFView;
 
 public class MoreInfoActivity extends AppCompatActivity {
-
+    String filename;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,12 +35,13 @@ public class MoreInfoActivity extends AppCompatActivity {
             default:
             case R.id.action_reports:
                 setTitle("Reports");
-                items = new String[]{"Child Labor Report", "Child and Forced Labor List of Goods", "Forced Child Labor List of Products"};
+                items = new String[]{"Secretary’s Foreword", "Child Labor Report", "Child and Forced Labor List of Goods", "Forced Child Labor List of Products"};
                 break;
-            case R.id.action_fact_sheets:
+/*            case R.id.action_fact_sheets:
                 setTitle("Fact Sheets");
-                items = new String[]{"Reports Fact Sheet", "OCFT Fact Sheet", "Programs Fact Sheet", "Regional Efforts Fact Sheet"};
-                break;
+                items = new String[]{"An Intro to OCFT",};
+                //items = new String[]{"Reports Fact Sheet", "OCFT Fact Sheet", "Programs Fact Sheet", "Regional Efforts Fact Sheet"};
+                break;*/
             case R.id.action_faqs:
                 setTitle("FAQs");
                 items = new String[]{"TDA FAQs", "TVPRA FAQs", "EO FAQs", "Combo FAQs"};
@@ -73,7 +75,7 @@ public class MoreInfoActivity extends AppCompatActivity {
                         intent = new Intent(getApplicationContext(), MethodologyActivity.class);
                         break;
                     case "Child Labor Report":
-                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/2015TDAMagazine.pdf"));
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/TDAMagazine.pdf"));
                         break;
                     case "Child and Forced Labor List of Goods":
                         intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/TVPRA_Report2016.pdf"));
@@ -82,26 +84,22 @@ public class MoreInfoActivity extends AppCompatActivity {
                         intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/EO_Report_2014.pdf"));
                         break;
                     case "TDA FAQs":
-                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/TDA2015_FAQs.pdf"));
-                        break;
                     case "TVPRA FAQs":
-                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/TVPRA_FAQs2016.pdf"));
-                        break;
                     case "EO FAQs":
-                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/EOFAQS_2016.pdf"));
-                        break;
+                    case "Secretary’s Foreword":
+                    case "An Intro to OCFT":
                     case "Reports Fact Sheet":
-                    case "OCFT Fact Sheet":
                     case "Programs Fact Sheet":
                     case "Regional Efforts Fact Sheet":
                     case "Combo FAQs":
-                    case "Toolkit for Businesses":
-                        intent = new Intent(getApplicationContext(), FactsheetActivity.class);
+                    case "NEW: Comply Chain app":
+                       intent = new Intent(getApplicationContext(), FactsheetActivity.class);
                         intent.putExtra("title", item);
                         break;
                 }
 
                 if (intent != null) startActivity(intent);
+
             }
         });
 

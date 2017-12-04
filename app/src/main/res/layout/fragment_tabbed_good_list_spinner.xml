@@ -18,12 +18,18 @@
         <!--android:padding="2dp"-->
         <!--android:queryHint="Filter Goods" />-->
 
+    <TextView
+        android:id="@+id/goodcounttextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
     <include layout="@layout/list_spinner_header" />
 
     <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:id="@+id/listView" />
+        android:layout_marginTop="10dp" />
 
 </LinearLayout>

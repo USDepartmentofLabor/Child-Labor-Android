@@ -83,7 +83,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="National Policy on WFCL Established" />
+                android:text="National Policy on Child Labor Established" />
 
             <TextView
                 android:id="@+id/policyTextView"
@@ -123,7 +123,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="National Program on WFCL Established" />
+                android:text="National Program on Child Labor Established" />
 
             <TextView
                 android:id="@+id/programTextView"

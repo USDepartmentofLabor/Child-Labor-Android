@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="gov.dol.childlabor.ToolKitActivity"
+    tools:showIn="@layout/activity_toolkit">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="96dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:src="@drawable/complychainapp120" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Comply Chain"
+                android:textColor="@color/colorPrimary" />
+
+            <Button
+                android:id="@+id/btnInstall"
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:text="Install"
+                android:textAllCaps="false"
+                android:textColor="#008000" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

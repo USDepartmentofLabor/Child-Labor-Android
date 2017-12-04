@@ -110,14 +110,15 @@
                     android:textColor="#0079d8"
                     android:textStyle="bold"
                     android:clickable="true"
+                    android:importantForAccessibility="no"
                     android:onClick="expandDescription"
                     android:id="@+id/descriptionExpandTextView" />
 
                 <ListView
-                    android:layout_marginTop="10dp"
+                    android:id="@+id/actionListView"
                     android:layout_width="match_parent"
-                    android:layout_height="350dp"
-                    android:id="@+id/actionListView" />
+                    android:layout_height="380dp"
+                    android:layout_marginTop="10dp" />
 
             </LinearLayout>
 

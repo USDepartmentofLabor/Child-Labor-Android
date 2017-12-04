@@ -69,6 +69,44 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             tabLayout.getTabAt(i).setContentDescription(tabLayout.getTabAt(i).getText() + ", Button");
         }
 
+        mViewPager.setOffscreenPageLimit(3);
+/*        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                mViewPager.setOffscreenPageLimit(0);
+                mViewPager.setAdapter(null);
+
+                mSectionsPagerAdapter.notifyDataSetChanged();
+                mViewPager.setAdapter(mSectionsPagerAdapter);
+
+                int position = tab.getPosition();
+                switch (position) {
+                    case 0:
+                        mViewPager.setCurrentItem(0);
+                        break;
+                    case 1:
+                        mViewPager.setCurrentItem(1);
+                        break;
+                    case 2:
+                        mViewPager.setCurrentItem(2);
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+                mViewPager.setAdapter(null);
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+
+
+            }
+        });*/
+
         AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "Countries List Screen");
     }
 
@@ -127,6 +165,8 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         private String searchQuery = "";
+        public Integer countrycount;
+        public String searchstring = "";
 
         /**
          * Returns a new instance of this fragment for the given section
@@ -165,26 +205,79 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             MenuItem searchItem = menu.findItem(R.id.search);
 
             final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-            searchView.setQueryHint("Filter Countries");
+
+            if( searchstring.trim().equals("")) {
+                searchstring = "Filter Countries";
+                searchView.clearFocus();
+            }
+
+
+            searchView.setQueryHint(searchstring);
+            searchView.setIconified(false);
             searchView.clearFocus();
             searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                 @Override
                 public boolean onQueryTextChange(String query) {
                     searchQuery = query;
-
+                    TextView countrycountTextView = (TextView) getView().findViewById(R.id.countrycounttextview);
                     Country[] countries;
                     String selection;
                     switch (sectionNumber) {
                         case 2:
+                            searchstring = query.trim();
+                            if( searchstring.trim().equals("")) {
+                                searchstring = "Filter Countries";
+                                searchView.setQueryHint(searchstring);
+                            }
                             selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
                             countries = getCountriesBySearch(query, getCountriesByLevel(selection));
+                            if (countrycount != null) {
+                                countrycountTextView.setVisibility(View.VISIBLE);
+                                countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + query.trim());
+                                countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + query.trim());
+                                countrycountTextView.setFocusable(true);
+                                countrycountTextView.setFocusableInTouchMode(true);
+                            }
+                            else
+                            {
+                                countrycountTextView.setVisibility(View.GONE);
+                            }
                             break;
                         case 3:
+                            searchstring = query.trim();
+                            if( searchstring.trim().equals("")) {
+                                searchstring = "Filter Countries";
+                                searchView.setQueryHint(searchstring);
+                            }
                             selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
                             countries = getCountriesBySearch(query, getCountriesByRegion(selection));
+                            if (countrycount != null) {
+                                countrycountTextView.setVisibility(View.VISIBLE);
+                                countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + query.trim());
+                                countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + query.trim());
+                                countrycountTextView.setFocusable(true);
+                                countrycountTextView.setFocusableInTouchMode(true);
+                            }
+                            else
+                            {
+                                countrycountTextView.setVisibility(View.GONE);
+                            }
                             break;
                         default:
+                            searchstring = query.trim();
                             countries = getCountriesBySearch(query);
+
+                           if (countrycount != null) {
+                               countrycountTextView.setVisibility(View.VISIBLE);
+                                countrycountTextView.setText(String.valueOf(countrycount) + " results found for " + query.trim());
+                               countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + query.trim());
+                               countrycountTextView.setFocusable(true);
+                               countrycountTextView.setFocusableInTouchMode(true);
+                           }
+                           else
+                            {
+                              countrycountTextView.setVisibility(View.GONE);
+                           }
                     }
                     CountryListAdapter itemsAdapter = new CountryListAdapter(getActivity(), countries, 1);
                     ListView listView = (ListView) getView().findViewById(R.id.listView);
@@ -195,7 +288,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 @Override
                 public boolean onQueryTextSubmit(String query) {
                     searchQuery = query;
-
+                    searchView.setIconified(false);
                     searchView.clearFocus();
                     return false;
                 }
@@ -209,6 +302,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_tabbed_country_list_spinner, container, false);
+
 
             final int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
             switch(sectionNumber) {
@@ -236,7 +330,8 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-
+            TextView countrycountTextView = (TextView) rootView.findViewById(R.id.countrycounttextview);
+            countrycountTextView.setVisibility(View.GONE);
 //            final SearchView searchFilter = (SearchView) rootView.findViewById(R.id.searchFilter);
 //            searchFilter.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 //                @Override
@@ -274,8 +369,77 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
 
         protected void getLevelHeaderView(View rootView) {
 
+            String All;
+            String Significant;
+            String Moderate;
+            String Minimal;
+            String NoAdvancement;
+            String NoAssessment;
+            String NotCovered;
+
+            Integer countCountries;
+            countCountries = 0;
+            Country[] allCountries = CountryXmlParser.fromContext(getContext()).getCountryList();
+            for(Country country : allCountries) {
+                countCountries = countCountries + 1;
+            }
+            All = "All Assessment Levels" + " (" + countCountries + " countries total)";
+
+            countCountries = 0;
+            for(Country country : allCountries) {
+                if ("Significant Advancement".equals(country.getLevelHeader().header))
+                {countCountries = countCountries + 1;}
+
+            }
+            Significant = "Significant Advancement" + " (" + countCountries + " countries total)";
+
+
+            countCountries = 0;
+            for(Country country : allCountries) {
+                if ("Moderate Advancement".equals(country.getLevelHeader().header))
+                {countCountries = countCountries + 1;}
+
+            }
+            Moderate = "Moderate Advancement" + " (" + countCountries + " countries total)";
+
+
+            countCountries = 0;
+            for(Country country : allCountries) {
+                if ("Minimal Advancement".equals(country.getLevelHeader().header))
+                {countCountries = countCountries + 1;}
+
+            }
+            Minimal = "Minimal Advancement" + " (" + countCountries + " countries total)";
+
+
+            countCountries = 0;
+            for(Country country : allCountries) {
+                if ("No Advancement".equals(country.getLevelHeader().header))
+                {countCountries = countCountries + 1;}
+
+            }
+            NoAdvancement = "No Advancement" + " (" + countCountries + " countries total)";
+
+            countCountries = 0;
+            for(Country country : allCountries) {
+                if ("No Assessment".equals(country.getLevelHeader().header))
+                {countCountries = countCountries + 1;}
+
+            }
+            NoAssessment = "No Assessment" + " (" + countCountries + " countries total)";
+
+            countCountries = 0;
+            for(Country country : allCountries) {
+                if ("Not Covered in TDA Report".equals(country.getLevelHeader().header))
+                {countCountries = countCountries + 1;}
+
+            }
+            NotCovered = "Not Covered in TDA Report" + " (" + countCountries + " countries total)";
+
             Spinner spinner = (Spinner) rootView.findViewById(R.id.listViewSpinner);
-            String[] items = {"All Assessment Levels", "Significant Advancement", "Moderate Advancement", "Minimal Advancement", "No Advancement", "No Assessment", "Not Covered in TDA Report"};
+            //String[] items = {"All Assessment Levels", "Significant Advancement", "Moderate Advancement", "Minimal Advancement", "No Advancement", "No Assessment", "Not Covered in TDA Report"};
+
+            String[] items = {All, Significant, Moderate, Minimal, NoAdvancement, NoAssessment, NotCovered};
             spinner.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.good_view_exploitation_spinner_row, R.id.exploitationSpinnerTextView, items) {
                 @Override
                 public View getView(int position, View convertView, ViewGroup parent) {
@@ -305,12 +469,24 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    TextView countrycountTextView = (TextView) getView().findViewById(R.id.countrycounttextview);
                     String level = parent.getItemAtPosition(position).toString();
                     Country [] countries = getCountriesBySearch(searchQuery, getCountriesByLevel(level));
 
                     CountryListAdapter itemsAdapter = new CountryListAdapter(getActivity(), countries, 2);
                     ListView listView = (ListView) getView().findViewById(R.id.listView);
                     listView.setAdapter(itemsAdapter);
+                    if (countrycount != null) {
+                        countrycountTextView.setVisibility(View.VISIBLE);
+                        countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + searchQuery.trim());
+                        countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + searchQuery.trim());
+                        countrycountTextView.setFocusable(true);
+                        countrycountTextView.setFocusableInTouchMode(true);
+                    }
+                    else
+                    {
+                        countrycountTextView.setVisibility(View.GONE);
+                    }
                 }
 
                 @Override
@@ -323,8 +499,69 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
 
         protected void getRegionHeaderView(View rootView) {
 
+            String AllRegions;
+            String Asia;
+            String Europe;
+            String Latin;
+            String Middle;
+            String Africa;
+
+
+            Integer countCountries;
+            countCountries = 0;
+            Country[] allCountries = CountryXmlParser.fromContext(getContext()).getCountryList();
+            for(Country country : allCountries) {
+                countCountries = countCountries + 1;
+            }
+            AllRegions = "All Regions" + " (" + countCountries + " countries total)";
+
+            countCountries = 0;
+            for(Country country : allCountries) {
+                if ("Asia & the Pacific".equals(country.getRegionHeader()))
+                {countCountries = countCountries + 1;}
+
+            }
+            Asia = "Asia & the Pacific" + " (" + countCountries + " countries total)";
+
+
+            countCountries = 0;
+            for(Country country : allCountries) {
+                if ("Europe & Eurasia".equals(country.getRegionHeader()))
+                {countCountries = countCountries + 1;}
+
+            }
+            Europe = "Europe & Eurasia" + " (" + countCountries + " countries total)";
+
+
+            countCountries = 0;
+            for(Country country : allCountries) {
+                if ("Latin America & the Caribbean".equals(country.getRegionHeader()))
+                {countCountries = countCountries + 1;}
+
+            }
+            Latin = "Latin America & the Caribbean" + " (" + countCountries + " countries total)";
+
+
+            countCountries = 0;
+            for(Country country : allCountries) {
+                if ("Middle East & North Africa".equals(country.getRegionHeader()))
+                {countCountries = countCountries + 1;}
+
+            }
+            Middle = "Middle East & North Africa" + " (" + countCountries + " countries total)";
+
+            countCountries = 0;
+            for(Country country : allCountries) {
+                if ("Sub-Saharan Africa".equals(country.getRegionHeader()))
+                {countCountries = countCountries + 1;}
+
+            }
+            Africa = "Sub-Saharan Africa" + " (" + countCountries + " countries total)";
+
             Spinner spinner = (Spinner) rootView.findViewById(R.id.listViewSpinner);
-            String[] items = {"All Regions", "Asia & the Pacific", "Europe & Eurasia", "Latin America & the Caribbean", "Middle East & North Africa", "Sub-Saharan Africa"};
+            //String[] items = {"All Regions", "Asia & the Pacific", "Europe & Eurasia", "Latin America & the Caribbean", "Middle East & North Africa", "Sub-Saharan Africa"};
+
+            String[] items = {AllRegions, Asia, Europe, Latin, Middle, Africa};
             spinner.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.good_view_exploitation_spinner_row, R.id.exploitationSpinnerTextView, items) {
                 @Override
                 public View getView(int position, View convertView, ViewGroup parent) {
@@ -354,12 +591,24 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    TextView countrycountTextView = (TextView) getView().findViewById(R.id.countrycounttextview);
                     String region = parent.getItemAtPosition(position).toString();
                     Country [] countries = getCountriesBySearch(searchQuery, getCountriesByRegion(region));
 
                     CountryListAdapter itemsAdapter = new CountryListAdapter(getActivity(), countries, 3);
                     ListView listView = (ListView) getView().findViewById(R.id.listView);
                     listView.setAdapter(itemsAdapter);
+                    if (countrycount != null) {
+                        countrycountTextView.setVisibility(View.VISIBLE);
+                        countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + searchQuery.trim());
+                        countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + searchQuery.trim());
+                        countrycountTextView.setFocusable(true);
+                        countrycountTextView.setFocusableInTouchMode(true);
+                    }
+                    else
+                    {
+                        countrycountTextView.setVisibility(View.GONE);
+                    }
                 }
 
                 @Override
@@ -375,25 +624,73 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
         }
 
         public Country[] getCountriesBySearch(String query, Country[] countries) {
-            if (query.equals("")) return countries;
+
+            if (query.equals("")) {
+                countrycount = null;
+                return countries;
+            }
+            else
+            {
+                countrycount = 0;
+            }
 
             ArrayList<Country> countryList = new ArrayList<>();
             for(Country country : countries) {
                 String countryName = country.getName().replace("ô", "o").replace("ã", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("á", "a");
-                if (countryName.toLowerCase().startsWith(query.toLowerCase())) countryList.add(country);
+                if (countryName.toLowerCase().startsWith(query.trim().toLowerCase())) {
+                    countrycount = countrycount + 1;
+                    countryList.add(country);
+                }
             }
-
+            if (query.trim().equals("")){
+                countrycount = null;
+                return countries;
+            }
             return countryList.toArray(new Country[countryList.size()]);
         }
 
         public Country[] getCountriesByLevel(String level) {
             Country[] allCountries = CountryXmlParser.fromContext(getContext()).getCountryList();
+            String Levelfilter;
+            Levelfilter = "";
 
-            if (level.equals("All Assessment Levels")) return allCountries;
+            if (level.contains("All Assessment Levels")) return allCountries;
+
+            if (level.contains("Significant Advancement"))
+            {
+                Levelfilter = "Significant Advancement";
+            }
+
+            if (level.contains("Moderate Advancement"))
+            {
+                Levelfilter = "Moderate Advancement";
+            }
+
+            if (level.contains("Minimal Advancement"))
+            {
+                Levelfilter = "Minimal Advancement";
+            }
+
+            if (level.contains("No Advancement"))
+            {
+                Levelfilter = "No Advancement";
+            }
+
+            if (level.contains("No Assessment"))
+            {
+                Levelfilter = "No Assessment";
+            }
+
+            if (level.contains("Not Covered in TDA Report"))
+            {
+                Levelfilter = "Not Covered in TDA Report";
+            }
+
+
 
             ArrayList<Country> countryList = new ArrayList<>();
             for(Country country : allCountries) {
-                if (level.equals(country.getLevelHeader().header)) countryList.add(country);
+                if (Levelfilter.equals(country.getLevelHeader().header)) countryList.add(country);
             }
 
             return countryList.toArray(new Country[countryList.size()]);
@@ -402,11 +699,45 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
         public Country[] getCountriesByRegion(String region) {
             Country[] allCountries = CountryXmlParser.fromContext(getContext()).getCountryList();
 
-            if (region.equals("All Regions")) return allCountries;
+            String regionfilter;
+            regionfilter = "";
+
+            if (region.contains("All Regions")) {
+                return allCountries;
+            }
+
+            if (region.contains("Asia"))
+            {
+                regionfilter = "Asia & the Pacific";
+            }
+
+            if (region.contains("Latin"))
+            {
+                regionfilter = "Latin America & the Caribbean";
+            }
+
+            if (region.contains("Europe"))
+            {
+                regionfilter = "Europe & Eurasia";
+            }
+
+            if (region.contains("Middle"))
+            {
+                regionfilter = "Middle East & North Africa";
+            }
+
+            if (region.contains("Saharan"))
+            {
+                regionfilter = "Sub-Saharan Africa";
+            }
+
+
 
             ArrayList<Country> countryList = new ArrayList<>();
             for(Country country : allCountries) {
-                if (region.equals(country.getRegionHeader())) countryList.add(country);
+                if (regionfilter.equals(country.getRegionHeader())) {
+                    countryList.add(country);
+                }
             }
 
             return countryList.toArray(new Country[countryList.size()]);

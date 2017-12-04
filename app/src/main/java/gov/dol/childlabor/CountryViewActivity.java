@@ -1,6 +1,7 @@
 package gov.dol.childlabor;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -19,6 +20,7 @@ public class CountryViewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final String urlname;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_country_view);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -27,7 +29,7 @@ public class CountryViewActivity extends AppCompatActivity {
 
         final Country country = (Country) getIntent().getSerializableExtra("country");
         setTitle(country.getName());
-
+        urlname = country.getURL();
         TextView nameTextView = (TextView) findViewById(R.id.nameTextView);
         nameTextView.setText(country.getName());
         nameTextView.setContentDescription(country.getName() + ", heading");
@@ -107,7 +109,7 @@ public class CountryViewActivity extends AppCompatActivity {
         }
 
 
-        String[] items = {"Suggested Actions", "Statistics", "International Conventions", "Legal Standards", "Enforcement", "Other Mechanisms", "Report PDF"};
+        String[] items = {"Suggested Actions", "Statistics", "International Conventions", "Legal Standards", "Enforcement", "Coordinating Mechanisms", "Report PDF", "Country Webpage"};
         ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
 
         ListView listView = (ListView) findViewById(R.id.actionListView);
@@ -137,24 +139,29 @@ public class CountryViewActivity extends AppCompatActivity {
                     case "Enforcement":
                         intent = new Intent(getApplicationContext(), TabbedEnforcementActivity.class);
                         break;
-                    case "Other Mechanisms":
+                    case "Coordinating Mechanisms":
                         intent = new Intent(getApplicationContext(), MechanismActivity.class);
                         break;
                     case "Report PDF":
                         intent = new Intent(getApplicationContext(), FullReportActivity.class);
                         break;
+                    case "Country Webpage":
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse(urlname));
+                        startActivity(intent);
+                        break;
                     case "Suggested Actions":
                     default:
                         intent = new Intent(getApplicationContext(), SuggestedActionsActivity.class);
                 }
-
-                intent.putExtra("country", country);
-                startActivity(intent);
+                if(!String.valueOf(parent.getItemAtPosition(position)).contains("Country Webpage")) {
+                    intent.putExtra("country", country);
+                    startActivity(intent);
+                }
             }
         });
 
-        String[] excludedCountries = {"Burma", "China", "Iran", "Malaysia", "Mexico", "North Korea", "Tajikistan",
-                "Turkmenistan", "Vietnam", "British Indian Ocean Territories", "Heard and McDonald Islands", "Pitcairn Islands"};
+        String[] excludedCountries = {"China", "Iran", "Malaysia", "Mexico", "North Korea", "Tajikistan",
+                "Turkmenistan", "Vietnam", "British Indian Ocean Territories", "Heard and McDonald Islands", "Pitcairn Islands", "Sudan", "Russia"};
 
         if (Arrays.asList(excludedCountries).contains(country.getName())) {
             listView.setVisibility(View.GONE);

@@ -19,9 +19,15 @@
 
         </android.support.v7.widget.Toolbar>
 
-        <android.support.design.widget.TabLayout android:id="@+id/tabs"
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
             style="@style/MyCustomTabLayout"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="#cccccc"
+            app:tabIndicatorHeight="8dp"
+            app:tabSelectedTextColor="#cccccc"
+            app:tabTextColor="@color/white_opaque" />
 
     </android.support.design.widget.AppBarLayout>
 

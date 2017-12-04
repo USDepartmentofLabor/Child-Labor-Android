@@ -22,12 +22,12 @@
     <item android:id="@+id/action_methodology" android:title="Methodology"
         android:orderInCategory="100" app:showAsAction="never" />
 
+    <item android:id="@+id/action_fact_sheets" android:title="An Intro to OCFT"
+        android:orderInCategory="100" app:showAsAction="never" />
+
     <group>
 
         <item android:id="@+id/action_reports" android:title="Reports"
-            android:orderInCategory="100" app:showAsAction="never" />
-
-        <item android:id="@+id/action_fact_sheets" android:title="Fact Sheets"
             android:orderInCategory="100" app:showAsAction="never" />
 
         <item android:id="@+id/action_faqs" android:title="FAQs"
@@ -35,7 +35,10 @@
 
     </group>
 
-    <item android:id="@+id/action_toolkit" android:title="Toolkit for Businesses"
-        android:orderInCategory="100" app:showAsAction="never" />
+    <item
+        android:id="@+id/action_toolkit"
+        android:orderInCategory="100"
+        android:title="NEW: Comply Chain app"
+        app:showAsAction="never" />
 
 </menu>

@@ -1,5 +1,7 @@
 package gov.dol.childlabor;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -23,29 +25,58 @@ public class FactsheetActivity extends AppCompatActivity {
         String title = getIntent().getStringExtra("title");
         switch (title) {
             case "Reports Fact Sheet":
-                filename = "Fact Sheet-Reports-lo.pdf";
+                filename = "Intro to OCFT.pdf";
+                break;
+            case "Secretary’s Foreword":
+                filename = "TDA-foreword-2017.pdf";
+                break;
+            case "An Intro to OCFT":
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/OCFTBooklet.pdf"));
+                startActivity(intent);
                 break;
             case "OCFT Fact Sheet":
-                filename = "Fact Sheet-OFCT-2016-lo.pdf";
+                filename = "Intro to OCFT.pdf";
                 break;
             case "Programs Fact Sheet":
-                filename = "Fact Sheet-Programming-2016-lo.pdf";
+                filename = "Intro to OCFT.pdf";
                 break;
             case "Regional Efforts Fact Sheet":
-                filename = "Fact Sheet-Regional-2016-lo.pdf";
+                filename = "Intro to OCFT.pdf";
                 break;
             case "Combo FAQs":
-                filename = "FAQs- Combo.pdf";
+                filename = "FAQs-COMBO.pdf";
                 break;
-            case "Toolkit for Businesses":
+            case "TDA FAQs":
+                filename = "FAQs-TDA.pdf";
+                break;
+            case "TVPRA FAQs":
+                filename = "FAQs-TVPRA.pdf";
+                break;
+            case "EO FAQs":
+                filename = "FAQs-EO.pdf";
+                break;
+            case "NEW: Comply Chain app":
+                intent = new Intent(getApplicationContext(), ToolKitActivity.class);
+                intent.putExtra("title", "NEW: Comply Chain app");
+                startActivity(intent);
+/*                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/ComplyChain"));
+                startActivity(intent);*/
+                break;
             default:
                 filename = "ToolkitForResponsibleBusinesses-lo.pdf";
                 break;
         }
+        if (title.contains("Comply Chain app") ) {
+        }
+        else if(title.contains("An Intro to OCFT") ) {
 
-        setTitle(title);
-        PDFView pdfView = (PDFView) findViewById(R.id.pdfview);
-        pdfView.fromAsset(filename).load();
+        }
+        else {
+            setTitle(title);
+            PDFView pdfView = (PDFView) findViewById(R.id.pdfview);
+            pdfView.fromAsset(filename).load();
+        }
+
 
         AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), title + " Screen");
     }

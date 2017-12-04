@@ -17,7 +17,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -46,6 +47,15 @@ public class MainActivity extends AppCompatActivity {
                 return theView;
             }
         };
+
+        Button button = (Button) findViewById(R.id.menubutton);
+
+        button.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MenuMain.class);
+                startActivity(intent);
+            }
+        });
 
         ListView listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(itemsAdapter);
@@ -76,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+       // getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -95,9 +105,14 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), MethodologyActivity.class);
             startActivity(intent);
         }
+        else if(id == R.id.action_fact_sheets) {
+            Intent intent = new Intent(getApplicationContext(), FactsheetActivity.class);
+            intent.putExtra("title", "An Intro to OCFT");
+            startActivity(intent);
+        }
         else if(id == R.id.action_toolkit) {
             Intent intent = new Intent(getApplicationContext(), FactsheetActivity.class);
-            intent.putExtra("title", "Toolkit for Businesses");
+            intent.putExtra("title", "NEW: Comply Chain app");
             startActivity(intent);
         }
         else {
@@ -123,4 +138,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
     }
+
 }

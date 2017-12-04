@@ -9,18 +9,20 @@ import java.util.Hashtable;
  * Created by trjohnson on 10/21/2015.
  */
 public class Country implements Serializable {
-    private String name, description, region, level;
+    private String name, url, description, region, level;
     private CountryGood[] goods;
     private ArrayList<SuggestedAction> suggestedActions = new ArrayList<SuggestedAction>();
 
     public Statistics statistics;
     public Boolean hasMultipleTerritories = false;
+    public String automaticdowngrade = "";
     public Conventions conventions;
     public Hashtable<String, Standard> standards = new Hashtable<String, Standard>();
     public Hashtable<String, TerritoryStandard> territoryStandards = new Hashtable<String, TerritoryStandard>();
     public Hashtable<String, Enforcement> enforcements = new Hashtable<String, Enforcement>();
     public Hashtable<String, TerritoryEnforcement> territoryEnforcements = new Hashtable<String, TerritoryEnforcement>();
     public String coordinationMechanism, policyMechanism, programMechanism;
+   // public Hashtable<String, TerritoryStatistics> TerritoryStatistics = new Hashtable<String, TerritoryStatistics>();
 
     public Country(String name) {
         this.name = name;
@@ -34,6 +36,14 @@ public class Country implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getURL() {
+        return url;
+    }
+
+    public void setURL(String url) {
+        this.url = url;
     }
 
     public String getDescription() {
@@ -143,6 +153,16 @@ public class Country implements Serializable {
         TerritoryEnforcement enforcement = new TerritoryEnforcement(type, values);
         territoryEnforcements.put(type, enforcement);
     }
+
+/*    public void addTerritoryStatistics(String type, ArrayList<Hashtable<String, String>> territories) {
+        ArrayList<TerritoryValue> values = new ArrayList<>(); // Testing
+        for (Hashtable<String, String> territory : territories) {
+            TerritoryValue value =  new TerritoryValue(territory.get("Territory_Name"), territory.get("Territory_Display_Name"), territory.get("Enforcement"));
+            values.add(value);
+        }
+        TerritoryStatistics statistics = new TerritoryStatistics(type, values);
+        TerritoryStatistics.put(type, statistics);
+    }*/
 
     public void addStandard(String type, Hashtable<String, String> standardHash) {
         Standard standard = new Standard(type, standardHash.get("Standard"), standardHash.get("Age"), standardHash.get("Calculated_Age"), standardHash.get("Conforms_To_Intl_Standard"));
@@ -264,4 +284,38 @@ public class Country implements Serializable {
             this.territories = territories;
         }
     }
+
+/*    class TerritoryStatistics implements Serializable {
+        String type;
+        ArrayList<TerritoryValue> territories = new ArrayList<TerritoryValue>();
+
+        public TerritoryStatistics(String type, ArrayList<TerritoryValue> territories) {
+            this.type = type;
+            this.territories = territories;
+        }
+    }*/
+
+/*    class TerritoryStatisticsValue implements Serializable {
+        String territory;
+        String displayName;
+        String value;
+        String age;
+        String calculatedAge;
+        String conformsStandard;
+
+        public TerritoryStatisticsValue(String territory, String displayName, String value, String age, String calculatedAge, String conformsStandard) {
+            this.territory = territory;
+            this.displayName = displayName;
+            this.value = value;
+            this.age = age;
+            this.calculatedAge = calculatedAge;
+            this.conformsStandard = conformsStandard;
+        }
+
+        public TerritoryStatisticsValue(String territory, String displayName, String value) {
+            this.territory = territory;
+            this.displayName = displayName;
+            this.value = value;
+        }
+    }*/
 }

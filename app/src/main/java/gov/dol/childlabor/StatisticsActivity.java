@@ -4,12 +4,15 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Arrays;
+import java.util.Hashtable;
 import java.util.Locale;
 
 public class StatisticsActivity extends AppCompatActivity {
@@ -17,22 +20,38 @@ public class StatisticsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Country country = (Country) getIntent().getSerializableExtra("country");
+        String[] MultiText = {"Somalia"};
+
         setContentView(R.layout.activity_statistics);
+
+        if (Arrays.asList(MultiText).contains(country.getName())) {
+            setContentView(R.layout.activity_statistics_multi);
+        }
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Country country = (Country) getIntent().getSerializableExtra("country");
+
         Country.Statistics statistics = country.statistics;
 
-        setStatisticText(R.id.workTextView, statistics.workPercent, statistics.workAgeRange, statistics.workTotal);
-        setStatisticText(R.id.agricultureTextView, statistics.agriculturePercent);
-        setStatisticText(R.id.servicesTextView, statistics.servicesPercent);
-        setStatisticText(R.id.industryTextView, statistics.industryPercent);
-        setStatisticText(R.id.educationTextView, statistics.educationPercent, statistics.educationAgeRange);
-        setStatisticText(R.id.workAndEducationTextView, statistics.workAndEducationPercent, statistics.workAndEducationAgeRange);
-        setStatisticText(R.id.completionRateTextView, statistics.primaryCompletionPercent);
-
+        if (Arrays.asList(MultiText).contains(country.getName())) {
+            displayTerritoriesworking((LinearLayout) findViewById(R.id.workinglinearlayout));
+            displayTerritoriesworkingAgriculture((LinearLayout) findViewById(R.id.agriculturelinearlayout));
+            displayTerritoriesworkingIndustry((LinearLayout) findViewById(R.id.industrylinearlayout));
+            displayTerritoriesworkingServices((LinearLayout) findViewById(R.id.serviceslinearlayout));
+            displayTerritoriesattendingschool((LinearLayout) findViewById(R.id.attendingschoollinearlayout));
+            displayTerritoriescombiningws((LinearLayout) findViewById(R.id.combiningwslinearlayout));
+            displayTerritoriesprimary((LinearLayout) findViewById(R.id.primarylinearlayout));
+        } else {
+            setStatisticText(R.id.workTextView, statistics.workPercent, statistics.workAgeRange, statistics.workTotal);
+            setStatisticText(R.id.agricultureTextView, statistics.agriculturePercent);
+            setStatisticText(R.id.servicesTextView, statistics.servicesPercent);
+            setStatisticText(R.id.industryTextView, statistics.industryPercent);
+            setStatisticText(R.id.educationTextView, statistics.educationPercent, statistics.educationAgeRange);
+            setStatisticText(R.id.workAndEducationTextView, statistics.workAndEducationPercent, statistics.workAndEducationAgeRange);
+            setStatisticText(R.id.completionRateTextView, statistics.primaryCompletionPercent);
+        }
         String[] noHelpText = {"Christmas Island", "Cocos (Keeling) Islands", "Falkland Islands (Islas Malvinas)",
                 "Norfolk Island", "Saint Helena, Ascension, and Tristan da Cunha", "Tokelau", "Wallis and Futuna",
                 "British Virgin Islands", "Cook Islands", "Montserrat", "Western Sahara"};
@@ -44,13 +63,321 @@ public class StatisticsActivity extends AppCompatActivity {
         AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "Statistics Screen");
     }
 
-    private void setStatisticText(int textViewId, String percent) {
+
+    //For somalia multi territory
+    private void displayTerritoriesworking(LinearLayout layout) {
+
+
+        LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+        TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView.setText("Federal");
+        territoryNameTextView.setContentDescription("Federal");
+
+        TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMultiworking(territoryValueTextView, "Unknown", "5-14", "UnKnown");
+
+        layout.addView(territoryRow);
+
+        LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+        TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView1.setText("Puntland");
+        territoryNameTextView1.setContentDescription("Puntland");
+
+        TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMultiworking(territoryValueTextView1, ".095", "5-14", "UnKnown");
+
+        layout.addView(territoryRow1);
+
+        LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+        TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView2.setText("Somaliland");
+        territoryNameTextView2.setContentDescription("Somaliland");
+
+        TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMultiworking(territoryValueTextView2, ".132", "5-14", "UnKnown");
+
+        layout.addView(territoryRow2);
+
+    }
+
+    private void displayTerritoriesworkingAgriculture(LinearLayout layout) {
+        LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+        TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView.setText("Federal");
+        territoryNameTextView.setContentDescription("Federal");
+
+        TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView, "");
+
+        layout.addView(territoryRow);
+
+        LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+        TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView1.setText("Puntland");
+        territoryNameTextView1.setContentDescription("Puntland");
+
+        TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView1, "");
+
+        layout.addView(territoryRow1);
+
+        LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+        TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView2.setText("Somaliland");
+        territoryNameTextView2.setContentDescription("Somaliland");
+
+        TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView2, "");
+
+        layout.addView(territoryRow2);
+    }
+
+    private void displayTerritoriesworkingIndustry(LinearLayout layout) {
+        LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+        TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView.setText("Federal");
+        territoryNameTextView.setContentDescription("Federal");
+
+        TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView, "");
+
+        layout.addView(territoryRow);
+
+        LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+        TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView1.setText("Puntland");
+        territoryNameTextView1.setContentDescription("Puntland");
+
+        TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView1, "");
+
+        layout.addView(territoryRow1);
+
+        LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+        TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView2.setText("Somaliland");
+        territoryNameTextView2.setContentDescription("Somaliland");
+
+        TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView2, "");
+
+        layout.addView(territoryRow2);
+    }
+
+    private void displayTerritoriesworkingServices(LinearLayout layout) {
+        LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+        TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView.setText("Federal");
+        territoryNameTextView.setContentDescription("Federal");
+
+        TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView, "");
+
+        layout.addView(territoryRow);
+
+        LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+        TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView1.setText("Puntland");
+        territoryNameTextView1.setContentDescription("Puntland");
+
+        TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView1, "");
+
+        layout.addView(territoryRow1);
+
+        LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+        TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView2.setText("Somaliland");
+        territoryNameTextView2.setContentDescription("Somaliland");
+
+        TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView2, "");
+
+        layout.addView(territoryRow2);
+    }
+
+    private void displayTerritoriesattendingschool(LinearLayout layout) {
+        LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+        TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView.setText("Federal");
+        territoryNameTextView.setContentDescription("Federal");
+
+        TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView, "", "5-14");
+
+        layout.addView(territoryRow);
+
+        LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+        TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView1.setText("Puntland");
+        territoryNameTextView1.setContentDescription("Puntland");
+
+        TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView1, ".383", "5-14");
+
+        layout.addView(territoryRow1);
+
+        LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+        TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView2.setText("Somaliland");
+        territoryNameTextView2.setContentDescription("Somaliland");
+
+        TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView2, ".442", "5-14");
+
+        layout.addView(territoryRow2);
+    }
+
+    private void displayTerritoriescombiningws(LinearLayout layout) {
+        LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+        TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView.setText("Federal");
+        territoryNameTextView.setContentDescription("Federal");
+
+        TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView, "", "7-14");
+
+        layout.addView(territoryRow);
+
+        LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+        TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView1.setText("Puntland");
+        territoryNameTextView1.setContentDescription("Puntland");
+
+        TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView1, ".047", "7-14");
+
+        layout.addView(territoryRow1);
+
+        LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+        TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView2.setText("Somaliland");
+        territoryNameTextView2.setContentDescription("Somaliland");
+
+        TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView2, ".066", "7-14");
+
+        layout.addView(territoryRow2);
+    }
+
+    private void displayTerritoriesprimary(LinearLayout layout) {
+        LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+        TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView.setText("Federal");
+        territoryNameTextView.setContentDescription("Federal");
+
+        TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView, "");
+
+        layout.addView(territoryRow);
+
+        LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+        TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView1.setText("Puntland");
+        territoryNameTextView1.setContentDescription("Puntland");
+
+        TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView1, "");
+
+        layout.addView(territoryRow1);
+
+        LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+        TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+        territoryNameTextView2.setText("Somaliland");
+        territoryNameTextView2.setContentDescription("Somaliland");
+
+        TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+        setStatisticTextMulti(territoryValueTextView2, "");
+
+        layout.addView(territoryRow2);
+    }
+
+    private void setStatisticTextMultiworking(TextView view, String percent, String ageRange, String total) {
+        if (!(percent != null && !percent.isEmpty())
+                && !(total != null && !total.isEmpty())) {
+            return;
+        }
+
+        if (percent != null && !percent.isEmpty()) {
+            try {
+                percent = new DecimalFormat("#.#").format(Float.parseFloat(percent) * 100) + "%";
+            } catch (Exception ex) {
+            }
+
+        }
+
+        if (total != null && !total.isEmpty()) {
+            try {
+                NumberFormat nf = NumberFormat.getInstance(Locale.getDefault());
+                double d = Float.parseFloat(total);
+                total = nf.format(d);
+            } catch (Exception nfe) {
+            }
+        }
+
+        String text = percent;
+        if ((total != null && !total.isEmpty()) || (ageRange != null && !ageRange.isEmpty())) {
+            if (!text.equals("Unavailable") && !text.equals("N/A") && !text.equals("Unknown")) {
+                text += " (";
+                if (total != null && !total.isEmpty() && !total.equals("0")) text += total + "; ";
+                if (ageRange != null && !ageRange.isEmpty()) text += "ages " + ageRange;
+                text += ")";
+            }
+        }
+
+        view.setText(text);
+        view.setTextColor(Color.BLACK);
+    }
+
+    private void setStatisticTextMulti(TextView view, String percent) {
+        if (!(percent != null && !percent.isEmpty())) {
+            return;
+        }
+        try {
+            percent = new DecimalFormat("#.#").format(Float.parseFloat(percent) * 100) + "%";
+        } catch (Exception nfe) {
+        }
+
+        view.setText(percent);
+        view.setTextColor(Color.BLACK);
+    }
+
+    private void setStatisticTextMulti(TextView view, String percent, String ageRange) {
         if (!(percent != null && !percent.isEmpty())) {
             return;
         }
 
-        percent = new DecimalFormat("#.#").format(Float.parseFloat(percent)) + "%";
+        if (percent != null && !percent.isEmpty()) {
+            try {
+                percent = new DecimalFormat("#.#").format(Float.parseFloat(percent) * 100) + "%";
+            } catch (Exception nfe) {
+            }
+        }
+        String text = percent;
+        if (ageRange != null && !ageRange.isEmpty() && !text.equals("Unavailable") && !text.equals("N/A") && !text.equals("Unknown")) {
+            text += " (ages " + ageRange + ")";
+        }
 
+        view.setText(text);
+        view.setTextColor(Color.BLACK);
+    }
+
+    //-----------------------------------------------------------------------------
+    private void setStatisticText(int textViewId, String percent) {
+        if (!(percent != null && !percent.isEmpty())) {
+            return;
+        }
+        try {
+            percent = new DecimalFormat("#.#").format(Float.parseFloat(percent) * 100) + "%";
+        } catch (Exception nfe) {
+        }
         TextView view = (TextView) findViewById(textViewId);
         view.setText(percent);
         view.setTextColor(Color.BLACK);
@@ -62,10 +389,13 @@ public class StatisticsActivity extends AppCompatActivity {
         }
 
         if (percent != null && !percent.isEmpty()) {
-            percent = new DecimalFormat("#.#").format(Float.parseFloat(percent)) + "%";
+            try {
+                percent = new DecimalFormat("#.#").format(Float.parseFloat(percent) * 100) + "%";
+            } catch (Exception nfe) {
+            }
         }
         String text = percent;
-        if (ageRange != null && !ageRange.isEmpty()) {
+        if (ageRange != null && !ageRange.isEmpty() && !text.equals("Unavailable") && !text.equals("N/A") && !text.equals("Unknown")) {
             text += " (ages " + ageRange + ")";
         }
 
@@ -76,12 +406,16 @@ public class StatisticsActivity extends AppCompatActivity {
 
     private void setStatisticText(int textViewId, String percent, String ageRange, String total) {
         if (!(percent != null && !percent.isEmpty())
-            && !(total != null && !total.isEmpty())) {
+                && !(total != null && !total.isEmpty())) {
             return;
         }
 
         if (percent != null && !percent.isEmpty()) {
-            percent = new DecimalFormat("#.#").format(Float.parseFloat(percent)) + "%";
+            try {
+                percent = new DecimalFormat("#.#").format(Float.parseFloat(percent) * 100) + "%";
+            } catch (Exception ex) {
+            }
+
         }
 
         if (total != null && !total.isEmpty()) {
@@ -89,21 +423,26 @@ public class StatisticsActivity extends AppCompatActivity {
                 NumberFormat nf = NumberFormat.getInstance(Locale.getDefault());
                 double d = Float.parseFloat(total);
                 total = nf.format(d);
+            } catch (Exception nfe) {
             }
-            catch (NumberFormatException nfe) {}
         }
 
         String text = percent;
         if ((total != null && !total.isEmpty()) || (ageRange != null && !ageRange.isEmpty())) {
-            text += " (";
-            if (total != null && !total.isEmpty() && !total.equals("0")) text += total + "; ";
-            if (ageRange != null && !ageRange.isEmpty()) text += "ages " + ageRange;
-            text += ")";
+            if (!text.equals("Unavailable") && !text.equals("N/A") && !text.equals("Unknown")) {
+                text += " (";
+                if (total != null && !total.isEmpty() && !total.equals("0")) text += total + "; ";
+                if (ageRange != null && !ageRange.isEmpty()) text += "ages " + ageRange;
+                text += ")";
+            }
+
+
         }
 
         TextView view = (TextView) findViewById(textViewId);
         view.setText(text);
         view.setTextColor(Color.BLACK);
     }
+
 
 }
