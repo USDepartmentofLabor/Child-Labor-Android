@@ -28,7 +28,7 @@ public class CountryXmlParser {
     public static CountryXmlParser fromContext(Context context) {
         InputStream stream = null;
         try {
-            stream = context.getAssets().open("countries_2016.xml");
+            stream = context.getAssets().open("countries_2017.xml");
         }
         catch(IOException e) {
             e.printStackTrace();
