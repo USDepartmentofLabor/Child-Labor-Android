@@ -43,7 +43,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="Mechanism to Coordinate" />
+                android:text="Mechanism to Coordinate on Child Labor" />
 
             <TextView
                 android:id="@+id/coordinationTextView"

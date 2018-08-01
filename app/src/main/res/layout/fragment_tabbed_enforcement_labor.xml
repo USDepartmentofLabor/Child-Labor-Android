@@ -344,25 +344,6 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#000"
-                android:layout_weight="1"
-                android:text="No. Conducted by Desk Reviews"
-                android:contentDescription="Number Conducted by Desk Reviews"/>
-
-            <TextView
-                android:id="@+id/laborDeskReviewsTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Unavailable" />
-
         </LinearLayout>
 
         <TextView xmlns:android="http://schemas.android.com/apk/res/android"
