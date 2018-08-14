@@ -108,51 +108,51 @@ public class MenuMain extends AppCompatActivity {
 
 
 
-        TextView TDA = (TextView) findViewById(R.id.TDA);
+//        TextView TDA = (TextView) findViewById(R.id.TDA);
 
-        TDA.setOnClickListener(new View.OnClickListener() {
+/*        TDA.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), FactsheetActivity.class);
                 intent.putExtra("title", "TDA FAQs");
                 startActivity(intent);
 
             }
-        });
+        });*/
 
 
-        TextView TVPRA = (TextView) findViewById(R.id.TVPRA);
+//        TextView TVPRA = (TextView) findViewById(R.id.TVPRA);
 
-        TVPRA.setOnClickListener(new View.OnClickListener() {
+/*        TVPRA.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), FactsheetActivity.class);
                 intent.putExtra("title", "TVPRA FAQs");
                 startActivity(intent);
 
             }
-        });
+        });*/
 
 
-        TextView EO = (TextView) findViewById(R.id.EO);
+//        TextView EO = (TextView) findViewById(R.id.EO);
 
-        EO.setOnClickListener(new View.OnClickListener() {
+/*        EO.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), FactsheetActivity.class);
                 intent.putExtra("title", "EO FAQs");
                 startActivity(intent);
 
             }
-        });
+        });*/
 
 
-        TextView Combo = (TextView) findViewById(R.id.Combo);
+//        TextView Combo = (TextView) findViewById(R.id.Combo);
 
-        Combo.setOnClickListener(new View.OnClickListener() {
+/*        Combo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), FactsheetActivity.class);
                 intent.putExtra("title", "Combo FAQs");
                 startActivity(intent);
 
             }
-        });
+        });*/
     }
 }

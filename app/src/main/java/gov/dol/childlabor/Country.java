@@ -65,7 +65,7 @@ public class Country implements Serializable {
 
     public String getLevel() {
         if (level.isEmpty()) {
-            return "Not Covered in TDA Report";
+            return ""; /*Not Covered in TDA Report*/
         }
         else {
             return level;
