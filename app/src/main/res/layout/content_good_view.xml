@@ -87,7 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="PRODUCED WITH EXPLOITIVE LABOR IN 1 COUNTRY"
+                android:text="PRODUCED WITH EXPLOITATIVE LABOR IN 1 COUNTRY"
                 android:id="@+id/countryLabelTextView"
                 android:focusable="true"
                 android:focusableInTouchMode="true"

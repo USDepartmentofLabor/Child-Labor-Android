@@ -130,7 +130,7 @@ public class GoodViewActivity extends AppCompatActivity {
                                 exploitationType = "FORCED CHILD LABOR";
                                 break;
                             default:
-                                exploitationType = "EXPLOITIVE LABOR";
+                                exploitationType = "EXPLOITATIVE LABOR";
                         }
 
                         TextView countryLabelTextView = (TextView) findViewById(R.id.countryLabelTextView);

@@ -59,10 +59,10 @@ public class CountryViewActivity extends AppCompatActivity {
             goodLabelTextView.setVisibility(View.GONE);
         }
         else if (country.getGoods().length == 1) {
-            goodLabelTextView.setText(country.getGoods().length + " GOOD PRODUCED WITH EXPLOITIVE LABOR");
+            goodLabelTextView.setText(country.getGoods().length + " GOOD PRODUCED WITH EXPLOITATIVE LABOR");
         }
         else {
-            goodLabelTextView.setText(country.getGoods().length + " GOODS PRODUCED WITH EXPLOITIVE LABOR");
+            goodLabelTextView.setText(country.getGoods().length + " GOODS PRODUCED WITH EXPLOITATIVE LABOR");
         }
 
         ImageView mapImageView = (ImageView) findViewById(R.id.mapImageView);
@@ -160,14 +160,21 @@ public class CountryViewActivity extends AppCompatActivity {
             }
         });
 
-        String[] excludedCountries = {"China", "Iran", "Malaysia", "Mexico", "North Korea", "Tajikistan",
-                "Turkmenistan", "Vietnam", "British Indian Ocean Territories", "Heard and McDonald Islands", "Pitcairn Islands", "Sudan", "Russia"};
+       /* String[] excludedCountries = {"China", "Iran", "Malaysia", "Mexico", "North Korea", "Tajikistan",
+                "Turkmenistan", "Vietnam", "British Indian Ocean Territories", "Heard and McDonald Islands", "Pitcairn Islands", "Sudan", "Russia"};*/
+
+        String[] excludedCountries = {"British Indian Ocean Territories", "Heard and McDonald Islands", "Pitcairn Islands", "Sudan", "Russia"};
 
         if (Arrays.asList(excludedCountries).contains(country.getName())) {
             listView.setVisibility(View.GONE);
         }
 
         if (country.getLevel().equals("Not Covered in TDA Report")) {
+            listView.setVisibility(View.GONE);
+            mapImageView.setVisibility(View.GONE);
+        }
+
+        if (country.getLevel().equals("")) {
             listView.setVisibility(View.GONE);
             mapImageView.setVisibility(View.GONE);
         }
