@@ -367,8 +367,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. Conducted at Worksite"
-                android:contentDescription="Number Conducted at Worksite"/>
+                android:text="No. Conducted at Worksites"
+                android:contentDescription="Number Conducted at Worksites"/>
 
         </LinearLayout>
 
@@ -386,7 +386,7 @@
             android:layout_height="1dp"
             android:background="#dadada" />
 
-        <LinearLayout
+<!--        <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -404,7 +404,7 @@
                 android:text="No. Conducted by Desk Reviews"
                 android:contentDescription="Number Conducted by Desk Reviews"/>
 
-        </LinearLayout>
+        </LinearLayout>-->
 
         <LinearLayout
             android:id="@+id/laborDeskReviewsLinearLayout"

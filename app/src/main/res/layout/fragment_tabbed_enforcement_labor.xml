@@ -320,8 +320,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="No. Conducted at Worksite"
-                android:contentDescription="Number Conducted at Worksite"/>
+                android:text="No. Conducted at Worksites"
+                android:contentDescription="Number Conducted at Worksites"/>
 
             <TextView
                 android:id="@+id/laborWorksiteInspectionsTextView"

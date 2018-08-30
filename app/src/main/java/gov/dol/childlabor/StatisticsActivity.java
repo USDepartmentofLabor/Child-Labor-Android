@@ -16,12 +16,12 @@ import java.util.Hashtable;
 import java.util.Locale;
 
 public class StatisticsActivity extends AppCompatActivity {
-
+    String cname;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Country country = (Country) getIntent().getSerializableExtra("country");
-        String[] MultiText = {"Somalia"};
+        String[] MultiText = {"Somalia", "Pakistan","Tanzania"};
 
         setContentView(R.layout.activity_statistics);
 
@@ -36,6 +36,7 @@ public class StatisticsActivity extends AppCompatActivity {
         Country.Statistics statistics = country.statistics;
 
         if (Arrays.asList(MultiText).contains(country.getName())) {
+            cname = country.getName();
             displayTerritoriesworking((LinearLayout) findViewById(R.id.workinglinearlayout));
             displayTerritoriesworkingAgriculture((LinearLayout) findViewById(R.id.agriculturelinearlayout));
             displayTerritoriesworkingIndustry((LinearLayout) findViewById(R.id.industrylinearlayout));
@@ -67,7 +68,8 @@ public class StatisticsActivity extends AppCompatActivity {
     //For somalia multi territory
     private void displayTerritoriesworking(LinearLayout layout) {
 
-
+       if (cname.contains("Somalia"))
+       {
         LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
         TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
@@ -98,205 +100,768 @@ public class StatisticsActivity extends AppCompatActivity {
         setStatisticTextMultiworking(territoryValueTextView2, ".132", "5-14", "UnKnown");
 
         layout.addView(territoryRow2);
+       }
+        if (cname.contains("Tanzania"))
+        {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Mainland");
+            territoryNameTextView.setContentDescription("Mainland");
+
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMultiworking(territoryValueTextView, ".293", "5-14", "3573467");
+
+            layout.addView(territoryRow);
+
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Zanzibar");
+            territoryNameTextView1.setContentDescription("Zanzibar");
+
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMultiworking(territoryValueTextView1, "Unavailable", "Unavailable", "Unavailable");
+
+            layout.addView(territoryRow1);
+
+        }
+        if (cname.contains("Pakistan"))
+        {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Federal");
+            territoryNameTextView.setContentDescription("Federal");
+
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMultiworking(territoryValueTextView, "Unknown", "5-14", "UnKnown");
+
+            layout.addView(territoryRow);
+
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Punjab");
+            territoryNameTextView1.setContentDescription("Balochistan");
+
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMultiworking(territoryValueTextView1, ".124", "5-14", "UnKnown");
+
+            layout.addView(territoryRow1);
+
+            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView2.setText("Khyber Pakhtunkhwa");
+            territoryNameTextView2.setContentDescription("Khyber Pakhtunkhwa");
+
+            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMultiworking(territoryValueTextView2, "Unknown", "Unknown", "UnKnown");
+
+            layout.addView(territoryRow2);
+
+            LinearLayout territoryRow3 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView3.setText("Sindh");
+            territoryNameTextView3.setContentDescription("Sindh");
+
+            TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMultiworking(territoryValueTextView3, ".215", "5-14", "UnKnown");
+
+            layout.addView(territoryRow3);
+
+            LinearLayout territoryRow4 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView4 = (TextView) territoryRow4.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView4.setText("Balochistan");
+            territoryNameTextView4.setContentDescription("Balochistan");
+
+            TextView territoryValueTextView4 = (TextView) territoryRow4.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMultiworking(territoryValueTextView4, "UnKnown", "UnKnown", "UnKnown");
+
+            layout.addView(territoryRow4);
+        }
     }
 
     private void displayTerritoriesworkingAgriculture(LinearLayout layout) {
-        LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
-        TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView.setText("Federal");
-        territoryNameTextView.setContentDescription("Federal");
+        if (cname.contains("Somalia")) {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
-        TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView, "");
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Federal");
+            territoryNameTextView.setContentDescription("Federal");
 
-        layout.addView(territoryRow);
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, "");
 
-        LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-        TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView1.setText("Puntland");
-        territoryNameTextView1.setContentDescription("Puntland");
+            layout.addView(territoryRow);
 
-        TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView1, "");
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Puntland");
+            territoryNameTextView1.setContentDescription("Puntland");
 
-        layout.addView(territoryRow1);
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, "");
 
-        LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-        TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView2.setText("Somaliland");
-        territoryNameTextView2.setContentDescription("Somaliland");
+            layout.addView(territoryRow1);
 
-        TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView2, "");
+            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView2.setText("Somaliland");
+            territoryNameTextView2.setContentDescription("Somaliland");
 
-        layout.addView(territoryRow2);
+            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView2, "");
+
+            layout.addView(territoryRow2);
+        }
+
+        if (cname.contains("Tanzania")) {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Mainland");
+            territoryNameTextView.setContentDescription("Mainland");
+
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, ".941");
+
+            layout.addView(territoryRow);
+
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Zanzibar");
+            territoryNameTextView1.setContentDescription("Zanzibar");
+
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, "Unavailable");
+
+            layout.addView(territoryRow1);
+        }
+
+        if (cname.contains("Pakistan")) {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Federal");
+            territoryNameTextView.setContentDescription("Federal");
+
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, "");
+
+            layout.addView(territoryRow);
+
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Punjab");
+            territoryNameTextView1.setContentDescription("Punjab");
+
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, "");
+
+            layout.addView(territoryRow1);
+
+            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView2.setText("Khyber Pakhtunkhwa");
+            territoryNameTextView2.setContentDescription("Khyber Pakhtunkhwa");
+
+            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView2, "");
+
+            layout.addView(territoryRow2);
+
+
+            LinearLayout territoryRow3 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView3.setText("Sindh");
+            territoryNameTextView3.setContentDescription("Sindh");
+
+            TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView3, "");
+
+            layout.addView(territoryRow3);
+
+            LinearLayout territoryRow4 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView4 = (TextView) territoryRow4.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView4.setText("Balochistan");
+            territoryNameTextView4.setContentDescription("Balochistan");
+
+            TextView territoryValueTextView4 = (TextView) territoryRow4.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView4, "");
+
+            layout.addView(territoryRow4);
+        }
     }
 
     private void displayTerritoriesworkingIndustry(LinearLayout layout) {
-        LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
-        TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView.setText("Federal");
-        territoryNameTextView.setContentDescription("Federal");
+        if(cname.contains("Somalia")) {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
-        TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView, "");
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Federal");
+            territoryNameTextView.setContentDescription("Federal");
 
-        layout.addView(territoryRow);
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, "");
 
-        LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-        TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView1.setText("Puntland");
-        territoryNameTextView1.setContentDescription("Puntland");
+            layout.addView(territoryRow);
 
-        TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView1, "");
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Puntland");
+            territoryNameTextView1.setContentDescription("Puntland");
 
-        layout.addView(territoryRow1);
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, "");
 
-        LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-        TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView2.setText("Somaliland");
-        territoryNameTextView2.setContentDescription("Somaliland");
+            layout.addView(territoryRow1);
 
-        TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView2, "");
+            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView2.setText("Somaliland");
+            territoryNameTextView2.setContentDescription("Somaliland");
 
-        layout.addView(territoryRow2);
+            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView2, "");
+
+            layout.addView(territoryRow2);
+        }
+
+        if(cname.contains("Tanzania")) {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Mainland");
+            territoryNameTextView.setContentDescription("Mainland");
+
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, ".01");
+
+            layout.addView(territoryRow);
+
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Zanzibar");
+            territoryNameTextView1.setContentDescription("Zanzibar");
+
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, "Unavailable");
+
+            layout.addView(territoryRow1);
+
+        }
+
+        if(cname.contains("Pakistan")) {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Federal");
+            territoryNameTextView.setContentDescription("Federal");
+
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, "");
+
+            layout.addView(territoryRow);
+
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Punjab");
+            territoryNameTextView1.setContentDescription("Punjab");
+
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, "");
+
+            layout.addView(territoryRow1);
+
+            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView2.setText("Khyber Pakhtunkhwa");
+            territoryNameTextView2.setContentDescription("Khyber Pakhtunkhwa");
+
+            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView2, "");
+
+            layout.addView(territoryRow2);
+
+            LinearLayout territoryRow3 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView3.setText("Sindh");
+            territoryNameTextView3.setContentDescription("Sindh");
+
+            TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView3, "");
+
+            layout.addView(territoryRow3);
+
+
+            LinearLayout territoryRow4 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView4 = (TextView) territoryRow4.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView4.setText("Balochistan");
+            territoryNameTextView4.setContentDescription("Balochistan");
+
+            TextView territoryValueTextView4 = (TextView) territoryRow4.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView4, "");
+
+            layout.addView(territoryRow4);
+        }
     }
 
     private void displayTerritoriesworkingServices(LinearLayout layout) {
-        LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+        if (cname.contains("Somalia"))
+        {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
-        TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView.setText("Federal");
-        territoryNameTextView.setContentDescription("Federal");
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Federal");
+            territoryNameTextView.setContentDescription("Federal");
 
-        TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView, "");
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, "");
 
-        layout.addView(territoryRow);
+            layout.addView(territoryRow);
 
-        LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-        TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView1.setText("Puntland");
-        territoryNameTextView1.setContentDescription("Puntland");
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Puntland");
+            territoryNameTextView1.setContentDescription("Puntland");
 
-        TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView1, "");
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, "");
 
-        layout.addView(territoryRow1);
+            layout.addView(territoryRow1);
 
-        LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-        TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView2.setText("Somaliland");
-        territoryNameTextView2.setContentDescription("Somaliland");
+            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView2.setText("Somaliland");
+            territoryNameTextView2.setContentDescription("Somaliland");
 
-        TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView2, "");
+            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView2, "");
 
-        layout.addView(territoryRow2);
+            layout.addView(territoryRow2);
+        }
+
+        if (cname.contains("Tanzania"))
+        {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Mainland");
+            territoryNameTextView.setContentDescription("Mainland");
+
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, ".49");
+
+            layout.addView(territoryRow);
+
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Zanzibar");
+            territoryNameTextView1.setContentDescription("Zanzibar");
+
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, "Unavailable");
+
+            layout.addView(territoryRow1);
+
+        }
+
+        if (cname.contains("Pakistan"))
+        {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Federal");
+            territoryNameTextView.setContentDescription("Federal");
+
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, "");
+
+            layout.addView(territoryRow);
+
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Punjab");
+            territoryNameTextView1.setContentDescription("Punjab");
+
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, "");
+
+            layout.addView(territoryRow1);
+
+            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView2.setText("Khyber Pakhtunkhwa");
+            territoryNameTextView2.setContentDescription("Khyber Pakhtunkhwa");
+
+            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView2, "");
+
+            layout.addView(territoryRow2);
+
+            LinearLayout territoryRow3 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView3.setText("Sindh");
+            territoryNameTextView3.setContentDescription("Sindh");
+
+            TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView3, "");
+
+            layout.addView(territoryRow3);
+
+            LinearLayout territoryRow4 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView4 = (TextView) territoryRow4.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView4.setText("Balochistan");
+            territoryNameTextView4.setContentDescription("Balochistan");
+
+            TextView territoryValueTextView4 = (TextView) territoryRow4.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView4, "");
+
+            layout.addView(territoryRow4);
+        }
     }
 
     private void displayTerritoriesattendingschool(LinearLayout layout) {
-        LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
-        TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView.setText("Federal");
-        territoryNameTextView.setContentDescription("Federal");
+        if (cname.contains("Somalia")) {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
-        TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView, "", "5-14");
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Federal");
+            territoryNameTextView.setContentDescription("Federal");
 
-        layout.addView(territoryRow);
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, "", "5-14");
 
-        LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-        TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView1.setText("Puntland");
-        territoryNameTextView1.setContentDescription("Puntland");
+            layout.addView(territoryRow);
 
-        TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView1, ".383", "5-14");
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Puntland");
+            territoryNameTextView1.setContentDescription("Puntland");
 
-        layout.addView(territoryRow1);
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, ".383", "5-14");
 
-        LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-        TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView2.setText("Somaliland");
-        territoryNameTextView2.setContentDescription("Somaliland");
+            layout.addView(territoryRow1);
 
-        TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView2, ".442", "5-14");
+            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView2.setText("Somaliland");
+            territoryNameTextView2.setContentDescription("Somaliland");
 
-        layout.addView(territoryRow2);
+            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView2, ".442", "5-14");
+
+            layout.addView(territoryRow2);
+        }
+
+        if (cname.contains("Tanzania")) {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Mainland");
+            territoryNameTextView.setContentDescription("Mainland");
+
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, ".743", "5-14");
+
+            layout.addView(territoryRow);
+
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Zanzibar");
+            territoryNameTextView1.setContentDescription("Zanzibar");
+
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, "Unavailable", "Unavailable");
+
+            layout.addView(territoryRow1);
+
+        }
+
+        if (cname.contains("Pakistan")) {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Federal");
+            territoryNameTextView.setContentDescription("Federal");
+
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, "", "5-14");
+
+            layout.addView(territoryRow);
+
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Punjab");
+            territoryNameTextView1.setContentDescription("Punjab");
+
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, ".771", "5-14");
+
+            layout.addView(territoryRow1);
+
+            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView2.setText("Khyber Pakhtunkhwa");
+            territoryNameTextView2.setContentDescription("Khyber Pakhtunkhwa");
+
+            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView2, "", "");
+
+            layout.addView(territoryRow2);
+
+            LinearLayout territoryRow3 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView3.setText("Sindh");
+            territoryNameTextView3.setContentDescription("Sindh");
+
+            TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView3, ".606", "5-14");
+
+            layout.addView(territoryRow3);
+
+            LinearLayout territoryRow4 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView4 = (TextView) territoryRow4.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView4.setText("Balochistan");
+            territoryNameTextView4.setContentDescription("Balochistan");
+
+            TextView territoryValueTextView4 = (TextView) territoryRow4.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView4, "", "");
+
+            layout.addView(territoryRow4);
+        }
     }
 
     private void displayTerritoriescombiningws(LinearLayout layout) {
-        LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
-        TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView.setText("Federal");
-        territoryNameTextView.setContentDescription("Federal");
+        if (cname.contains("Somalia"))
+        {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
-        TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView, "", "7-14");
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Federal");
+            territoryNameTextView.setContentDescription("Federal");
 
-        layout.addView(territoryRow);
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, "", "7-14");
 
-        LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-        TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView1.setText("Puntland");
-        territoryNameTextView1.setContentDescription("Puntland");
+            layout.addView(territoryRow);
 
-        TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView1, ".047", "7-14");
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Puntland");
+            territoryNameTextView1.setContentDescription("Puntland");
 
-        layout.addView(territoryRow1);
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, ".047", "7-14");
 
-        LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-        TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView2.setText("Somaliland");
-        territoryNameTextView2.setContentDescription("Somaliland");
+            layout.addView(territoryRow1);
 
-        TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView2, ".066", "7-14");
+            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView2.setText("Somaliland");
+            territoryNameTextView2.setContentDescription("Somaliland");
 
-        layout.addView(territoryRow2);
+            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView2, ".066", "7-14");
+
+            layout.addView(territoryRow2);
+        }
+
+        if (cname.contains("Tanzania"))
+        {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Mainland");
+            territoryNameTextView.setContentDescription("Mainland");
+
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, ".246", "7-14");
+
+            layout.addView(territoryRow);
+
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Zanzibar");
+            territoryNameTextView1.setContentDescription("Zanzibar");
+
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, "", "");
+
+            layout.addView(territoryRow1);
+
+        }
+
+        if (cname.contains("Pakistan"))
+        {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Federal");
+            territoryNameTextView.setContentDescription("Federal");
+
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, "", "7-14");
+
+            layout.addView(territoryRow);
+
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Punjab");
+            territoryNameTextView1.setContentDescription("Punjab");
+
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, ".082", "7-14");
+
+            layout.addView(territoryRow1);
+
+            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView2.setText("Khyber Pakhtunkhwa");
+            territoryNameTextView2.setContentDescription("Khyber Pakhtunkhwa");
+
+            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView2, "", "");
+
+            layout.addView(territoryRow2);
+
+            LinearLayout territoryRow3 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView3.setText("Sindh");
+            territoryNameTextView3.setContentDescription("Sindh");
+
+            TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView3, ".116", "7-14");
+
+            layout.addView(territoryRow3);
+
+            LinearLayout territoryRow4 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView4 = (TextView) territoryRow4.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView4.setText("Balochistan");
+            territoryNameTextView4.setContentDescription("Balochistan");
+
+            TextView territoryValueTextView4 = (TextView) territoryRow4.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView4, "", "");
+
+            layout.addView(territoryRow4);
+        }
     }
 
     private void displayTerritoriesprimary(LinearLayout layout) {
-        LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
-        TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView.setText("Federal");
-        territoryNameTextView.setContentDescription("Federal");
+        if (cname.contains("Somalia")) {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
-        TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView, "");
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Federal");
+            territoryNameTextView.setContentDescription("Federal");
 
-        layout.addView(territoryRow);
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, "");
 
-        LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-        TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView1.setText("Puntland");
-        territoryNameTextView1.setContentDescription("Puntland");
+            layout.addView(territoryRow);
 
-        TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView1, "");
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Puntland");
+            territoryNameTextView1.setContentDescription("Puntland");
 
-        layout.addView(territoryRow1);
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, "");
 
-        LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-        TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView2.setText("Somaliland");
-        territoryNameTextView2.setContentDescription("Somaliland");
+            layout.addView(territoryRow1);
 
-        TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMulti(territoryValueTextView2, "");
+            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView2.setText("Somaliland");
+            territoryNameTextView2.setContentDescription("Somaliland");
 
-        layout.addView(territoryRow2);
+            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView2, "");
+
+            layout.addView(territoryRow2);
+        }
+
+        if (cname.contains("Tanzania")) {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Mainland");
+            territoryNameTextView.setContentDescription("Mainland");
+
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, ".724");
+
+            layout.addView(territoryRow);
+
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Zanzibar");
+            territoryNameTextView1.setContentDescription("Zanzibar");
+
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, "");
+
+            layout.addView(territoryRow1);
+
+        }
+
+        if (cname.contains("Pakistan")) {
+            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+
+            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView.setText("Federal");
+            territoryNameTextView.setContentDescription("Federal");
+
+            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView, ".737");
+
+            layout.addView(territoryRow);
+
+            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView1.setText("Punjab");
+            territoryNameTextView1.setContentDescription("Punjab");
+
+            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView1, "");
+
+            layout.addView(territoryRow1);
+
+            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView2.setText("Khyber Pakhtunkhwa");
+            territoryNameTextView2.setContentDescription("Khyber Pakhtunkhwa");
+
+            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView2, "");
+
+            layout.addView(territoryRow2);
+
+            LinearLayout territoryRow3 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView3.setText("Sindh");
+            territoryNameTextView3.setContentDescription("Sindh");
+
+            TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView3, "");
+
+            layout.addView(territoryRow3);
+
+            LinearLayout territoryRow4 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+            TextView territoryNameTextView4 = (TextView) territoryRow4.findViewById(R.id.territoryNameTextView);
+            territoryNameTextView4.setText("Balochistan");
+            territoryNameTextView4.setContentDescription("Balochistan");
+
+            TextView territoryValueTextView4 = (TextView) territoryRow4.findViewById(R.id.territoryValueTextView);
+            setStatisticTextMulti(territoryValueTextView4, "");
+
+            layout.addView(territoryRow4);
+        }
     }
 
     private void setStatisticTextMultiworking(TextView view, String percent, String ageRange, String total) {

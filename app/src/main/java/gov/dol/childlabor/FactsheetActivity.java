@@ -27,7 +27,7 @@ public class FactsheetActivity extends AppCompatActivity {
             case "Reports Fact Sheet":
                 filename = "Intro to OCFT.pdf";
                 break;
-            case "Secretary’s Foreword":
+            case "Foreword":
                 filename = "TDA-foreword-2017.pdf";
                 break;
             case "An Intro to OCFT":

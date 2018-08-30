@@ -134,7 +134,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
             if (this.sectionNumber == 1) {
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborFundingTextView), enforcements.get("Labor_Funding"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborInspectorsTextView), enforcements.get("Labor_Inspectors"));
-                displayEnforcement((TextView) rootView.findViewById(R.id.laborDedicatedInspectorsTextView), enforcements.get("Dedicated_Labor_Inspectors"));
+               // displayEnforcement((TextView) rootView.findViewById(R.id.laborDedicatedInspectorsTextView), enforcements.get("Dedicated_Labor_Inspectors"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborAssessPenaltiesTextView), enforcements.get("Authorized_Access_Penalties"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborInitialTrainingTextView), enforcements.get("Labor_New_Employee_Training"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborNewLawsTextView), enforcements.get("Labor_New_Law_Training"));
@@ -142,7 +142,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborInspectionsTextView), enforcements.get("Labor_Inspections"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborWorksiteInspectionsTextView), enforcements.get("Labor_Worksite_Inspections"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborInspectorsMeetILOTextView), enforcements.get("Labor_Inspectors_Intl_Standards"));
-                displayEnforcement((TextView) rootView.findViewById(R.id.laborDeskReviewsTextView), enforcements.get("Labor_Desk_Review_Inspections"));
+                // displayEnforcement((TextView) rootView.findViewById(R.id.laborDeskReviewsTextView), enforcements.get("Labor_Desk_Review_Inspections"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborViolationsFoundTextView), enforcements.get("Labor_Violations"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborPenaltiesImposedTextView), enforcements.get("Labor_Penalties_Imposed"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborCollectedPenaltiesTextView), enforcements.get("Labor_Penalties_Collected"));
@@ -169,7 +169,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
             if (this.sectionNumber == 1) {
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborFundingLinearLayout), enforcements.get("Labor_Funding"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborInspectorsLinearLayout), enforcements.get("Labor_Inspectors"));
-                displayTerritories((LinearLayout) rootView.findViewById(R.id.laborDedicatedInspectorsLinearLayout), enforcements.get("Dedicated_Labor_Inspectors"));
+               // displayTerritories((LinearLayout) rootView.findViewById(R.id.laborDedicatedInspectorsLinearLayout), enforcements.get("Dedicated_Labor_Inspectors"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborAssessPenaltiesLinearLayout), enforcements.get("Authorized_Access_Penalties"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborInitialTrainingLinearLayout), enforcements.get("Labor_New_Employee_Training"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborNewLawsLinearLayout), enforcements.get("Labor_New_Law_Training"));
@@ -177,7 +177,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborInspectionsLinearLayout), enforcements.get("Labor_Inspections"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborWorksiteInspectionsLinearLayout), enforcements.get("Labor_Worksite_Inspections"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborInspectorsMeetILOLinearLayout), enforcements.get("Labor_Inspectors_Intl_Standards"));
-                displayTerritories((LinearLayout) rootView.findViewById(R.id.laborDeskReviewsLinearLayout), enforcements.get("Labor_Desk_Review_Inspections"));
+                //displayTerritories((LinearLayout) rootView.findViewById(R.id.laborDeskReviewsLinearLayout), enforcements.get("Labor_Desk_Review_Inspections"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborViolationsFoundLinearLayout), enforcements.get("Labor_Violations"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborPenaltiesImposedLinearLayout), enforcements.get("Labor_Penalties_Imposed"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborCollectedPenaltiesLinearLayout), enforcements.get("Labor_Penalties_Collected"));
@@ -259,7 +259,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 }
                 catch (Exception ex) {}
 
-                String accessibleText = (!labelText.contains("*")) ? labelText : (labelText.replace("*", "") + ", the Government does not publish this information");
+                String accessibleText = (!labelText.contains("*")) ? labelText : (labelText.replace("*", "") + ", the government does not publish this information");
 
                 view.setText(Html.fromHtml(labelText));
                 view.setContentDescription((labelText.startsWith("N/A")) ? "Not Available" : accessibleText);
@@ -273,7 +273,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
             if ((this.sectionNumber == 1 && this.laborFooter) || (this.sectionNumber == 2 && this.criminalFooter)) {
                 TextView footerTextView = (TextView) rootView.findViewById(R.id.footerTextView);
                 footerTextView.setVisibility(View.VISIBLE);
-                footerTextView.setText("* The Government does not publish this information");
+                footerTextView.setText("* The government does not publish this information");
             }
         }
     }

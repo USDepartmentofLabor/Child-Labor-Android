@@ -35,7 +35,7 @@ public class MoreInfoActivity extends AppCompatActivity {
             default:
             case R.id.action_reports:
                 setTitle("Reports");
-                items = new String[]{"Secretary’s Foreword", "Child Labor Report", "Child and Forced Labor List of Goods", "Forced Child Labor List of Products"};
+                items = new String[]{"Foreword", "Child Labor Report", "Child and Forced Labor List of Goods", "Forced Child Labor List of Products"};
                 break;
 /*            case R.id.action_fact_sheets:
                 setTitle("Fact Sheets");
@@ -86,7 +86,7 @@ public class MoreInfoActivity extends AppCompatActivity {
                     case "TDA FAQs":
                     case "TVPRA FAQs":
                     case "EO FAQs":
-                    case "Secretary’s Foreword":
+                    case "Foreword":
                     case "An Intro to OCFT":
                     case "Reports Fact Sheet":
                     case "Programs Fact Sheet":

@@ -52,7 +52,7 @@ public class MenuMain extends AppCompatActivity {
         });
 
 
-        TextView action_fact_sheets = (TextView) findViewById(R.id.action_fact_sheets);
+/*        TextView action_fact_sheets = (TextView) findViewById(R.id.action_fact_sheets);
 
         action_fact_sheets.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -60,7 +60,7 @@ public class MenuMain extends AppCompatActivity {
                 startActivity(intent);
                 AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "More Information Screen");
             }
-        });
+        });*/
 
 
         TextView ChildLaborReport = (TextView) findViewById(R.id.ChildLaborReport);
@@ -89,7 +89,7 @@ public class MenuMain extends AppCompatActivity {
         SecretaryForeword.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), FactsheetActivity.class);
-                intent.putExtra("title", "Secretary’s Foreword");
+                intent.putExtra("title", "Foreword");
                 startActivity(intent);
 
             }
