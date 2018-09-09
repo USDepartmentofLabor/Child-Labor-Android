@@ -22111,14 +22111,62 @@
           <Enforcement>No</Enforcement>
         </Territory>
       </Labor_Referral_Mechanism>
-      <Criminal_New_Employee_Training />
-      <Criminal_New_Law_Training />
-      <Criminal_Refresher_Courses />
-      <Criminal_Investigations />
-      <Criminal_Violations />
-      <Criminal_Prosecutions />
-      <Criminal_Convictions />
-      <Criminal_Referral_Mechanism />
+      <Criminal_New_Employee_Training>
+        <Territory>
+          <Territory_Name>All Territories</Territory_Name>
+          <Territory_Display_Name>All Territories</Territory_Display_Name>
+          <Enforcement>Yes</Enforcement>
+        </Territory>	  
+	  </Criminal_New_Employee_Training>
+      <Criminal_New_Law_Training>
+        <Territory>
+          <Territory_Name>All Territories</Territory_Name>
+          <Territory_Display_Name>All Territories</Territory_Display_Name>
+          <Enforcement>Unknown</Enforcement>
+        </Territory>
+	  </Criminal_New_Law_Training>
+      <Criminal_Refresher_Courses>
+        <Territory>
+          <Territory_Name>All Territories</Territory_Name>
+          <Territory_Display_Name>All Territories</Territory_Display_Name>
+          <Enforcement>Unknown</Enforcement>
+        </Territory>	  
+	  </Criminal_Refresher_Courses>
+      <Criminal_Investigations>
+        <Territory>
+          <Territory_Name>All Territories</Territory_Name>
+          <Territory_Display_Name>All Territories</Territory_Display_Name>
+          <Enforcement>Unknown</Enforcement>
+        </Territory>	  
+	  </Criminal_Investigations>
+      <Criminal_Violations>
+        <Territory>
+          <Territory_Name>All Territories</Territory_Name>
+          <Territory_Display_Name>All Territories</Territory_Display_Name>
+          <Enforcement>Unknown</Enforcement>
+        </Territory>	  
+	  </Criminal_Violations>
+      <Criminal_Prosecutions>
+        <Territory>
+          <Territory_Name>All Territories</Territory_Name>
+          <Territory_Display_Name>All Territories</Territory_Display_Name>
+          <Enforcement>Unknown</Enforcement>
+        </Territory>	  
+	  </Criminal_Prosecutions>
+      <Criminal_Convictions>
+        <Territory>
+          <Territory_Name>All Territories</Territory_Name>
+          <Territory_Display_Name>All Territories</Territory_Display_Name>
+          <Enforcement>Unknown</Enforcement>
+        </Territory>	  
+	  </Criminal_Convictions>
+      <Criminal_Referral_Mechanism>
+        <Territory>
+          <Territory_Name>All Territories</Territory_Name>
+          <Territory_Display_Name>All Territories</Territory_Display_Name>
+          <Enforcement>Yes</Enforcement>
+        </Territory>	  
+	  </Criminal_Referral_Mechanism>
     </Enforcements>
     <Suggested_Actions>
       <Legal_Framework>
@@ -27137,6 +27185,14 @@
     <Legal_Standards>
       <Minimum_Work>
         <Territory>
+          <Territory_Name>Mainland</Territory_Name>
+          <Territory_Display_Name>Mainland</Territory_Display_Name>
+          <Standard>No</Standard>
+          <Age>14</Age>
+          <Calculated_Age>No</Calculated_Age>
+          <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
+        </Territory>	  
+        <Territory>
           <Territory_Name>Zanzibar</Territory_Name>
           <Territory_Display_Name>Zanzibar</Territory_Display_Name>
           <Standard>No</Standard>
@@ -27144,27 +27200,19 @@
           <Calculated_Age>No</Calculated_Age>
           <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
         </Territory>
-        <Territory>
-          <Territory_Name>Mainland</Territory_Name>
-          <Territory_Display_Name>Mainland</Territory_Display_Name>
-          <Standard>No</Standard>
-          <Age>14</Age>
-          <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
-        </Territory>
       </Minimum_Work>
       <Minimum_Hazardous_Work>
         <Territory>
-          <Territory_Name>Zanzibar</Territory_Name>
-          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
+          <Territory_Name>Mainland</Territory_Name>
+          <Territory_Display_Name>Mainland</Territory_Display_Name>
           <Standard>Yes</Standard>
           <Age>18</Age>
           <Calculated_Age>No</Calculated_Age>
           <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
-        </Territory>
+        </Territory>	  
         <Territory>
-          <Territory_Name>Mainland</Territory_Name>
-          <Territory_Display_Name>Mainland</Territory_Display_Name>
+          <Territory_Name>Zanzibar</Territory_Name>
+          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
           <Standard>Yes</Standard>
           <Age>18</Age>
           <Calculated_Age>No</Calculated_Age>
@@ -27173,16 +27221,16 @@
       </Minimum_Hazardous_Work>
       <Minimum_Compulsory_Military>
         <Territory>
-          <Territory_Name>Zanzibar</Territory_Name>
-          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
+          <Territory_Name>Mainland</Territory_Name>
+          <Territory_Display_Name>Mainland</Territory_Display_Name>
           <Standard>N/A*</Standard>
           <Age>N/A</Age>
           <Calculated_Age>No</Calculated_Age>
           <Conforms_To_Intl_Standard>N/A*</Conforms_To_Intl_Standard>
-        </Territory>
+        </Territory>	  
         <Territory>
-          <Territory_Name>Mainland</Territory_Name>
-          <Territory_Display_Name>Mainland</Territory_Display_Name>
+          <Territory_Name>Zanzibar</Territory_Name>
+          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
           <Standard>N/A*</Standard>
           <Age>N/A</Age>
           <Calculated_Age>No</Calculated_Age>
@@ -27191,14 +27239,6 @@
       </Minimum_Compulsory_Military>
       <Minumum_Voluntary_Military>
         <Territory>
-          <Territory_Name>Zanzibar</Territory_Name>
-          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
-          <Standard>Yes</Standard>
-          <Age>18</Age>
-          <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
-        </Territory>
-        <Territory>
           <Territory_Name>Mainland</Territory_Name>
           <Territory_Display_Name>Mainland</Territory_Display_Name>
           <Standard>Yes</Standard>
@@ -27206,17 +27246,17 @@
           <Calculated_Age>No</Calculated_Age>
           <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
         </Territory>
+        <Territory>
+          <Territory_Name>Zanzibar</Territory_Name>
+          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
+          <Standard>Yes</Standard>
+          <Age>18</Age>
+          <Calculated_Age>No</Calculated_Age>
+          <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+        </Territory>		
       </Minumum_Voluntary_Military>
       <Minumum_Non_State_Military>
         <Territory>
-          <Territory_Name>Zanzibar</Territory_Name>
-          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
-          <Standard>No</Standard>
-          <Age>N/A</Age>
-          <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
-        </Territory>
-        <Territory>
           <Territory_Name>Mainland</Territory_Name>
           <Territory_Display_Name>Mainland</Territory_Display_Name>
           <Standard>No</Standard>
@@ -27224,17 +27264,17 @@
           <Calculated_Age>No</Calculated_Age>
           <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
         </Territory>
+        <Territory>
+          <Territory_Name>Zanzibar</Territory_Name>
+          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
+          <Standard>No</Standard>
+          <Age>N/A</Age>
+          <Calculated_Age>No</Calculated_Age>
+          <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
+        </Territory>		
       </Minumum_Non_State_Military>
       <Types_Hazardous_Work>
         <Territory>
-          <Territory_Name>Zanzibar</Territory_Name>
-          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
-          <Standard>Yes</Standard>
-          <Age></Age>
-          <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
-        </Territory>
-        <Territory>
           <Territory_Name>Mainland</Territory_Name>
           <Territory_Display_Name>Mainland</Territory_Display_Name>
           <Standard>Yes</Standard>
@@ -27242,17 +27282,17 @@
           <Calculated_Age>No</Calculated_Age>
           <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
         </Territory>
+        <Territory>
+          <Territory_Name>Zanzibar</Territory_Name>
+          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
+          <Standard>Yes</Standard>
+          <Age></Age>
+          <Calculated_Age>No</Calculated_Age>
+          <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+        </Territory>		
       </Types_Hazardous_Work>
       <Prohibition_Forced_Labor>
         <Territory>
-          <Territory_Name>Zanzibar</Territory_Name>
-          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
-          <Standard>Yes</Standard>
-          <Age></Age>
-          <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
-        </Territory>
-        <Territory>
           <Territory_Name>Mainland</Territory_Name>
           <Territory_Display_Name>Mainland</Territory_Display_Name>
           <Standard>Yes</Standard>
@@ -27260,17 +27300,17 @@
           <Calculated_Age>No</Calculated_Age>
           <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
         </Territory>
+        <Territory>
+          <Territory_Name>Zanzibar</Territory_Name>
+          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
+          <Standard>Yes</Standard>
+          <Age></Age>
+          <Calculated_Age>No</Calculated_Age>
+          <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+        </Territory>		
       </Prohibition_Forced_Labor>
       <Prohibition_Child_Trafficking>
         <Territory>
-          <Territory_Name>Zanzibar</Territory_Name>
-          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
-          <Standard>Yes</Standard>
-          <Age></Age>
-          <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
-        </Territory>
-        <Territory>
           <Territory_Name>Mainland</Territory_Name>
           <Territory_Display_Name>Mainland</Territory_Display_Name>
           <Standard>Yes</Standard>
@@ -27278,17 +27318,17 @@
           <Calculated_Age>No</Calculated_Age>
           <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
         </Territory>
+        <Territory>
+          <Territory_Name>Zanzibar</Territory_Name>
+          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
+          <Standard>Yes</Standard>
+          <Age></Age>
+          <Calculated_Age>No</Calculated_Age>
+          <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+        </Territory>		
       </Prohibition_Child_Trafficking>
       <Prohibition_CSEC>
         <Territory>
-          <Territory_Name>Zanzibar</Territory_Name>
-          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
-          <Standard>Yes</Standard>
-          <Age></Age>
-          <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
-        </Territory>
-        <Territory>
           <Territory_Name>Mainland</Territory_Name>
           <Territory_Display_Name>Mainland</Territory_Display_Name>
           <Standard>Yes</Standard>
@@ -27296,17 +27336,17 @@
           <Calculated_Age>No</Calculated_Age>
           <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
         </Territory>
+        <Territory>
+          <Territory_Name>Zanzibar</Territory_Name>
+          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
+          <Standard>Yes</Standard>
+          <Age></Age>
+          <Calculated_Age>No</Calculated_Age>
+          <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+        </Territory>		
       </Prohibition_CSEC>
       <Prohibition_Illicit_Activities>
         <Territory>
-          <Territory_Name>Zanzibar</Territory_Name>
-          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
-          <Standard>Yes</Standard>
-          <Age></Age>
-          <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
-        </Territory>
-        <Territory>
           <Territory_Name>Mainland</Territory_Name>
           <Territory_Display_Name>Mainland</Territory_Display_Name>
           <Standard>No</Standard>
@@ -27314,16 +27354,16 @@
           <Calculated_Age>No</Calculated_Age>
           <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
         </Territory>
-      </Prohibition_Illicit_Activities>
-      <Compulsory_Education>
         <Territory>
           <Territory_Name>Zanzibar</Territory_Name>
           <Territory_Display_Name>Zanzibar</Territory_Display_Name>
-          <Standard>No</Standard>
-          <Age>13</Age>
+          <Standard>Yes</Standard>
+          <Age></Age>
           <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
-        </Territory>
+          <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+        </Territory>		
+      </Prohibition_Illicit_Activities>
+      <Compulsory_Education>
         <Territory>
           <Territory_Name>Mainland</Territory_Name>
           <Territory_Display_Name>Mainland</Territory_Display_Name>
@@ -27332,19 +27372,27 @@
           <Calculated_Age>Yes</Calculated_Age>
           <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
         </Territory>
-      </Compulsory_Education>
-      <Free_Public_Education>
         <Territory>
           <Territory_Name>Zanzibar</Territory_Name>
           <Territory_Display_Name>Zanzibar</Territory_Display_Name>
           <Standard>No</Standard>
-          <Age></Age>
+          <Age>13</Age>
           <Calculated_Age>No</Calculated_Age>
-          <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
-        </Territory>
+          <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
+        </Territory>		
+      </Compulsory_Education>
+      <Free_Public_Education>
         <Territory>
           <Territory_Name>Mainland</Territory_Name>
           <Territory_Display_Name>Mainland</Territory_Display_Name>
+          <Standard>No</Standard>
+          <Age></Age>
+          <Calculated_Age>No</Calculated_Age>
+          <Conforms_To_Intl_Standard>N/A</Conforms_To_Intl_Standard>
+        </Territory>	  
+        <Territory>
+          <Territory_Name>Zanzibar</Territory_Name>
+          <Territory_Display_Name>Zanzibar</Territory_Display_Name>
           <Standard>No</Standard>
           <Age></Age>
           <Calculated_Age>No</Calculated_Age>
@@ -29872,7 +29920,7 @@
     <Multiple_Territories>No</Multiple_Territories>
     <Advancement_Level>Moderate Advancement</Advancement_Level>
     <Automatic_Downgrade></Automatic_Downgrade>
-    <Description>In 2017, Uzbekistan made moderate efforts to eliminate the worst forms of child labor. Uzbekistan is receiving an assessment of moderate advancement because, in contrast to previous years, ILO monitoring, government monitoring, and monitoring by independent human rights activists each found that the systematic mobilization of children for the cotton harvest had ended. In 2017, President Shavkat Mirziyoyev expressed the government’s commitment to eradicating all forms of forced labor in cooperation with the international community. The Prime Minister subsequently issued an order to recall educational and medical sector employees from cotton fields throughout Uzbekistan.  ILO and government monitoring identified fewer than 40 children in child labor in the cotton harvest and found no evidence of forced child labor. Independent human rights activists reported only two cases of forced child labor, which the Ministry of Employment and Labor Relations publicly acknowledged and investigated. In addition, the government established a Parliamentary Commission to monitor implementation of prohibitions on both child labor and forced labor, and adopted two new national policies that incorporated the goal of eliminating child labor. However, the government maintained a quota system, which holds regional government authorities responsible for mobilizing sufficient labor to meet production targets in multiple sectors, including cotton and silk, and led to the mobilization of adults for forced labor in 2017. Although enforcement of prohibitions on child labor in the cotton harvest was strong, the pressures on regional government authorities imposed by the continued use of the quota system may have created an ongoing risk of the use of child labor. There remain several gaps in the system to enforce labor laws, including a lack of public awareness and low usage of the Feedback Mechanisms for reporting violations during the cotton harvest, and an insufficient number of labor inspectors to cover the workforce adequately. Moreover, a 2016 Presidential Decree prohibiting unscheduled inspections in private businesses remained in effect, which inhibited the ability of the Labor Inspectorate to detect child labor violations in the private sector.</Description>
+    <Description>In 2017, Uzbekistan made moderate efforts to eliminate the worst forms of child labor. Uzbekistan is receiving an assessment of moderate advancement because, in contrast with previous years, the government took active measures to address the use of forced child labor in cotton harvest, and ILO monitoring, government monitoring, and monitoring by independent human rights activists each found that the systematic mobilization of children for the cotton harvest had ended. In 2017, President Shavkat Mirziyoyev expressed the government’s commitment to eradicating all forms of forced labor in cooperation with the international community. The Prime Minister subsequently issued an order removing the requirement that teachers and certain other employees must work in cotton fields during the 2017 harvest. ILO and government monitoring identified cases of child labor in the cotton harvest but found no evidence of forced child labor. Independent human rights activists and private citizens reported only a small number of cases of forced child labor, at least some of which the Ministry of Employment and Labor Relations publicly acknowledged, investigated, and remediated. In addition, the government established a Parliamentary Commission to monitor implementation of prohibitions on both child labor and forced labor, and adopted two new national policies that incorporated the goal of eliminating child labor. However, the government maintained a quota system, which holds regional government authorities responsible for mobilizing sufficient labor to meet production targets in multiple sectors, including cotton and silk, and led to the mobilization of adults for forced labor in 2017. Although enforcement of prohibitions on child labor in the cotton harvest was strong, the pressures on regional government authorities imposed by the continued use of the quota system may have created an ongoing risk of the use of child labor. There remain several gaps in labor law enforcement, including a lack of public awareness and low usage of the Feedback Mechanisms for reporting violations during the cotton harvest and an insufficient number of labor inspectors to cover the workforce adequately. Moreover, a Presidential Decree prohibiting unscheduled inspections in private businesses came into effect in 2017, which inhibited the ability of the Labor Inspectorate to detect child labor violations in the private sector.</Description>
     <Goods>
       <Good>
         <Good_Name>Cotton</Good_Name>
@@ -29991,32 +30039,32 @@
       </Prohibition_Child_Trafficking>
     </Legal_Standards>
     <Enforcements>
-      <Labor_Worksite_Inspections>4141</Labor_Worksite_Inspections>
+      <Labor_New_Employee_Training>Yes</Labor_New_Employee_Training>
+      <Labor_Routine_Inspections_Conducted>Yes</Labor_Routine_Inspections_Conducted>
+      <Criminal_Refresher_Courses>Unknown</Criminal_Refresher_Courses>
+      <Labor_New_Law_Training>Yes</Labor_New_Law_Training>
+      <Labor_Routine_Inspections_Targeted>Yes</Labor_Routine_Inspections_Targeted>
+      <Criminal_Investigations>Unknown</Criminal_Investigations>
+      <Labor_Refresher_Courses>Yes</Labor_Refresher_Courses>
       <Labor_Unannounced_Inspections_Premitted>No</Labor_Unannounced_Inspections_Premitted>
-      <Criminal_Convictions>Unknown</Criminal_Convictions>
-      <Labor_Violations>18</Labor_Violations>
+      <Criminal_Violations>Unknown</Criminal_Violations>
+      <Labor_Inspections>4141</Labor_Inspections>
+      <Criminal_Prosecutions>Unknown</Criminal_Prosecutions>
       <Labor_Unannounced_Inspections_Conducted>No</Labor_Unannounced_Inspections_Conducted>
-      <Criminal_Referral_Mechanism>Yes</Criminal_Referral_Mechanism>
-      <Labor_Penalties_Imposed>Unknown</Labor_Penalties_Imposed>
+      <Labor_Worksite_Inspections>4141</Labor_Worksite_Inspections>
+      <Criminal_Convictions>Unknown</Criminal_Convictions>
       <Labor_Complaint_Mechanism>Yes</Labor_Complaint_Mechanism>
+      <Labor_Violations>18</Labor_Violations>
+      <Criminal_Referral_Mechanism>Yes</Criminal_Referral_Mechanism>
+      <Labor_Referral_Mechanism>Yes</Labor_Referral_Mechanism>
+      <Labor_Penalties_Imposed>Unknown</Labor_Penalties_Imposed>
       <Labor_Funding>Unknown</Labor_Funding>
       <Labor_Penalties_Collected>Unknown</Labor_Penalties_Collected>
-      <Labor_Referral_Mechanism>Yes</Labor_Referral_Mechanism>
       <Labor_Inspectors>168</Labor_Inspectors>
       <Labor_Inspectors_Intl_Standards>No</Labor_Inspectors_Intl_Standards>
       <Criminal_New_Employee_Training>Unknown</Criminal_New_Employee_Training>
       <Authorized_Access_Penalties>Yes</Authorized_Access_Penalties>
       <Criminal_New_Law_Training>Unknown</Criminal_New_Law_Training>
-      <Labor_New_Employee_Training>Yes</Labor_New_Employee_Training>
-      <Criminal_Refresher_Courses>Unknown</Criminal_Refresher_Courses>
-      <Labor_New_Law_Training>Yes</Labor_New_Law_Training>
-      <Criminal_Investigations>Unknown</Criminal_Investigations>
-      <Labor_Refresher_Courses>Yes</Labor_Refresher_Courses>
-      <Labor_Routine_Inspections_Conducted>Yes</Labor_Routine_Inspections_Conducted>
-      <Criminal_Violations>Unknown</Criminal_Violations>
-      <Labor_Inspections>4141</Labor_Inspections>
-      <Labor_Routine_Inspections_Targeted>Yes</Labor_Routine_Inspections_Targeted>
-      <Criminal_Prosecutions>Unknown</Criminal_Prosecutions>
     </Enforcements>
     <Suggested_Actions>
       <Legal_Framework>
@@ -30029,13 +30077,13 @@
       </Legal_Framework>
       <Enforcement>
         <Action>
-          <Name>Continue to allow independent observers unrestricted access to monitor labor conditions during the cotton harvest through unannounced site visits, and punish officials who threaten or detain observers.</Name>
+          <Name>Continue to allow independent observers unrestricted access to monitor labor conditions during the cotton harvest through unannounced site visits. Punish officials who threaten or detain observers or require children to bring cotton to school.</Name>
         </Action>
         <Action>
           <Name>Publish information about the Labor Inspectorate’s funding, number of child labor violations for which penalties were imposed, and number of penalties imposed that were collected.</Name>
         </Action>
         <Action>
-          <Name>Continue to build public trust in the FBM and other mechanisms for receiving child labor complaints, especially by ensuring individuals who use these mechanisms do not experience retaliation.</Name>
+          <Name>Continue to build public trust in the FBM hotlines and other mechanisms for receiving child labor complaints, especially by ensuring individuals who use these mechanisms do not experience retaliation.</Name>
         </Action>
         <Action>
           <Name>Increase the number of labor inspectors to meet the ILO’s technical advice.</Name>
