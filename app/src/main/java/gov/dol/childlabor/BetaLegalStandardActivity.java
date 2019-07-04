@@ -135,7 +135,7 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
         String labelText = null;
         String accessibleText = null;
 
-        if (!standard.isEmpty()) {
+        if (standard != null && !standard.isEmpty()) {
             labelText = standard;
             accessibleText = standard.replace("*", "");
             if (labelText.startsWith("Yes") && !conformsStandard) {
@@ -162,7 +162,7 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
             }
         }
 
-        if (!labelText.isEmpty()) {
+        if (labelText != null && !labelText.isEmpty()) {
             view.setText(Html.fromHtml(labelText));
             view.setContentDescription((accessibleText.startsWith("N/A")) ? "Not Available" : accessibleText);
             if (labelText.startsWith("Yes") && conformsStandard) {
