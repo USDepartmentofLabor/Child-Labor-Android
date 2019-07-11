@@ -86,7 +86,7 @@ public class CountryXmlParser {
         ArrayList<Country> countries = new ArrayList<Country>();
 
         for (Country country : getCountryList()) {
-            if (country.getGoods().length > 0) {
+            if (country.getGoods() != null && country.getGoods().length > 0) {
                 countries.add(country);
             }
         }
