@@ -28,7 +28,7 @@ public class CountryXmlParser {
     public static CountryXmlParser fromContext(Context context) {
         InputStream stream = null;
         try {
-            stream = context.getAssets().open("countries_2017.xml");
+            stream = context.getAssets().open("countries_2018.xml");
         }
         catch(IOException e) {
             e.printStackTrace();
@@ -86,7 +86,7 @@ public class CountryXmlParser {
         ArrayList<Country> countries = new ArrayList<Country>();
 
         for (Country country : getCountryList()) {
-            if (country.getGoods().length > 0) {
+            if (country.getGoods() != null && country.getGoods().length > 0) {
                 countries.add(country);
             }
         }
