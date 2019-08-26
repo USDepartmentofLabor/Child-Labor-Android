@@ -204,7 +204,11 @@
       <Country>
         <Country_Name>Eswatini</Country_Name>
         <Country_Region>Sub-Saharan Africa</Country_Region>
+<<<<<<< HEAD
         <Child_Labor>No</Child_Labor>
+=======
+        <Child_Labor>Yes</Child_Labor>
+>>>>>>> 5eb10796ff23393e4580f9f4800a53b2bb9c16d4
         <Forced_Labor>No</Forced_Labor>
         <Forced_Child_Labor>No</Forced_Child_Labor>
       </Country>
@@ -793,7 +797,11 @@
       <Country>
         <Country_Name>Congo, Democratic Republic of the</Country_Name>
         <Country_Region>Sub-Saharan Africa</Country_Region>
+<<<<<<< HEAD
         <Child_Labor>No</Child_Labor>
+=======
+        <Child_Labor>Yes</Child_Labor>
+>>>>>>> 5eb10796ff23393e4580f9f4800a53b2bb9c16d4
         <Forced_Labor>No</Forced_Labor>
         <Forced_Child_Labor>No</Forced_Child_Labor>
       </Country>
@@ -838,7 +846,11 @@
         <Forced_Child_Labor>No</Forced_Child_Labor>
       </Country>
       <Country>
+<<<<<<< HEAD
         <Country_Name>C&#244;te d'Ivoire</Country_Name>
+=======
+        <Country_Name>C&#244;te d&#8217;Ivoire</Country_Name>
+>>>>>>> 5eb10796ff23393e4580f9f4800a53b2bb9c16d4
         <Country_Region>Sub-Saharan Africa</Country_Region>
         <Child_Labor>No</Child_Labor>
         <Forced_Labor>No</Forced_Labor>
@@ -913,7 +925,11 @@
         <Forced_Child_Labor>No</Forced_Child_Labor>
       </Country>
       <Country>
+<<<<<<< HEAD
         <Country_Name>C&#244;te d'Ivoire</Country_Name>
+=======
+        <Country_Name>C&#244;te d&#8217;Ivoire</Country_Name>
+>>>>>>> 5eb10796ff23393e4580f9f4800a53b2bb9c16d4
         <Country_Region>Sub-Saharan Africa</Country_Region>
         <Child_Labor>No</Child_Labor>
         <Forced_Labor>No</Forced_Labor>
@@ -1019,7 +1035,11 @@
       <Country>
         <Country_Name>Congo, Democratic Republic of the</Country_Name>
         <Country_Region>Sub-Saharan Africa</Country_Region>
+<<<<<<< HEAD
         <Child_Labor>No</Child_Labor>
+=======
+        <Child_Labor>Yes</Child_Labor>
+>>>>>>> 5eb10796ff23393e4580f9f4800a53b2bb9c16d4
         <Forced_Labor>No</Forced_Labor>
         <Forced_Child_Labor>No</Forced_Child_Labor>
       </Country>
@@ -1251,7 +1271,11 @@
       <Country>
         <Country_Name>Congo, Democratic Republic of the</Country_Name>
         <Country_Region>Sub-Saharan Africa</Country_Region>
+<<<<<<< HEAD
         <Child_Labor>No</Child_Labor>
+=======
+        <Child_Labor>Yes</Child_Labor>
+>>>>>>> 5eb10796ff23393e4580f9f4800a53b2bb9c16d4
         <Forced_Labor>No</Forced_Labor>
         <Forced_Child_Labor>No</Forced_Child_Labor>
       </Country>
@@ -1653,6 +1677,13 @@
         <Forced_Child_Labor>No</Forced_Child_Labor>
       </Country>
       <Country>
+        <Country_Name>Bangladesh</Country_Name>
+        <Country_Region>Asia &amp; the Pacific</Country_Region>
+        <Child_Labor>Yes</Child_Labor>
+        <Forced_Labor>No</Forced_Labor>
+        <Forced_Child_Labor>No</Forced_Child_Labor>
+      </Country>
+      <Country>
         <Country_Name>Brazil</Country_Name>
         <Country_Region>Latin America &amp; the Caribbean</Country_Region>
         <Child_Labor>No</Child_Labor>
@@ -1704,9 +1735,15 @@
       <Country>
         <Country_Name>Vietnam</Country_Name>
         <Country_Region />
+<<<<<<< HEAD
         <Child_Labor>No</Child_Labor>
         <Forced_Labor>No</Forced_Labor>
         <Forced_Child_Labor>No</Forced_Child_Labor>
+=======
+        <Child_Labor>Yes</Child_Labor>
+        <Forced_Labor>Yes</Forced_Labor>
+        <Forced_Child_Labor>Yes</Forced_Child_Labor>
+>>>>>>> 5eb10796ff23393e4580f9f4800a53b2bb9c16d4
       </Country>
     </Countries>
   </Good>
@@ -1811,9 +1848,15 @@
       <Country>
         <Country_Name>Congo, Democratic Republic of the</Country_Name>
         <Country_Region>Sub-Saharan Africa</Country_Region>
+<<<<<<< HEAD
         <Child_Labor>No</Child_Labor>
         <Forced_Labor>No</Forced_Labor>
         <Forced_Child_Labor>No</Forced_Child_Labor>
+=======
+        <Child_Labor>Yes</Child_Labor>
+        <Forced_Labor>Yes</Forced_Labor>
+        <Forced_Child_Labor>Yes</Forced_Child_Labor>
+>>>>>>> 5eb10796ff23393e4580f9f4800a53b2bb9c16d4
       </Country>
       <Country>
         <Country_Name>Ecuador</Country_Name>
@@ -3308,9 +3351,15 @@
       <Country>
         <Country_Name>Congo, Democratic Republic of the</Country_Name>
         <Country_Region>Sub-Saharan Africa</Country_Region>
+<<<<<<< HEAD
         <Child_Labor>No</Child_Labor>
         <Forced_Labor>No</Forced_Labor>
         <Forced_Child_Labor>No</Forced_Child_Labor>
+=======
+        <Child_Labor>Yes</Child_Labor>
+        <Forced_Labor>Yes</Forced_Labor>
+        <Forced_Child_Labor>Yes</Forced_Child_Labor>
+>>>>>>> 5eb10796ff23393e4580f9f4800a53b2bb9c16d4
       </Country>
     </Countries>
   </Good>
@@ -3556,9 +3605,15 @@
       <Country>
         <Country_Name>Congo, Democratic Republic of the</Country_Name>
         <Country_Region>Sub-Saharan Africa</Country_Region>
+<<<<<<< HEAD
         <Child_Labor>No</Child_Labor>
         <Forced_Labor>No</Forced_Labor>
         <Forced_Child_Labor>No</Forced_Child_Labor>
+=======
+        <Child_Labor>Yes</Child_Labor>
+        <Forced_Labor>Yes</Forced_Labor>
+        <Forced_Child_Labor>Yes</Forced_Child_Labor>
+>>>>>>> 5eb10796ff23393e4580f9f4800a53b2bb9c16d4
       </Country>
     </Countries>
   </Good>
@@ -3747,9 +3802,15 @@
       <Country>
         <Country_Name>Congo, Democratic Republic of the</Country_Name>
         <Country_Region>Sub-Saharan Africa</Country_Region>
+<<<<<<< HEAD
         <Child_Labor>No</Child_Labor>
         <Forced_Labor>No</Forced_Labor>
         <Forced_Child_Labor>No</Forced_Child_Labor>
+=======
+        <Child_Labor>Yes</Child_Labor>
+        <Forced_Labor>Yes</Forced_Labor>
+        <Forced_Child_Labor>Yes</Forced_Child_Labor>
+>>>>>>> 5eb10796ff23393e4580f9f4800a53b2bb9c16d4
       </Country>
     </Countries>
   </Good>
