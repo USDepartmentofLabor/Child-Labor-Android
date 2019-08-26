@@ -67,7 +67,7 @@ public class MenuMain extends AppCompatActivity {
 
         ChildLaborReport.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/TDAMagazine.pdf"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/child_labor_reports/tda2017/ChildLaborReport.pdf"));
                 startActivity(intent);
                 AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "More Information Screen");
             }
@@ -78,7 +78,7 @@ public class MenuMain extends AppCompatActivity {
 
         ChildLaborListGoods.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/TVPRA_Report2016.pdf"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/ListofGoods.pdf"));
                 startActivity(intent);
                 AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "More Information Screen");
             }
@@ -99,7 +99,7 @@ public class MenuMain extends AppCompatActivity {
 
         ForcedChildLaborProducts.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/EO_Report_2014.pdf"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/EO_Report_2014.pdf"));
                 startActivity(intent);
                 AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "More Information Screen");
 
