@@ -162,6 +162,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 displayEnforcement((TextView) rootView.findViewById(R.id.criminalProsecutionsInitiatedTextView), enforcements.get("Criminal_Prosecutions"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.criminalConvictionsTextView), enforcements.get("Criminal_Convictions"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.criminalReferralMechanismTextView), enforcements.get("Criminal_Referral_Mechanism"));
+				displayEnforcement((TextView) rootView.findViewById(R.id.criminalPenaltiesforWFCLTextView), enforcements.get("Criminal_Penalties_for_WFCL"));
             }
         }
 
@@ -197,6 +198,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalProsecutionsInitiatedLinearLayout), enforcements.get("Criminal_Prosecutions"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalConvictionsLinearLayout), enforcements.get("Criminal_Convictions"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalReferralMechanismLinearLayout), enforcements.get("Criminal_Referral_Mechanism"));
+				displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalPenaltiesforWFCLLinearLayout), enforcements.get("Criminal_Penalties_for_WFCL"));
             }
         }
 
