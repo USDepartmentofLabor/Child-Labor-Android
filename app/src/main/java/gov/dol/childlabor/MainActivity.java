@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openBrowserILAB(View v) {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.dol.gov/ilab"));
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/agencies/ilab"));
         startActivity(browserIntent);
     }
 
