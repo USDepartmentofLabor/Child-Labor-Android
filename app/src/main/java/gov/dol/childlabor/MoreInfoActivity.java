@@ -75,13 +75,13 @@ public class MoreInfoActivity extends AppCompatActivity {
                         intent = new Intent(getApplicationContext(), MethodologyActivity.class);
                         break;
                     case "Child Labor Report":
-                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/child_labor_reports/tda2017/ChildLaborReport.pdf"));
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/agencies/ilab/resources/reports/child-labor/findings"));
                         break;
                     case "Child and Forced Labor List of Goods":
-                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/child_labor_reports/tda2017/ChildLaborReport.pdf"));
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/ListofGoods.pdf"));
                         break;
                     case "Forced Child Labor List of Products":
-                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/child_labor_reports/tda2017/ChildLaborReport.pdf"));
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/EO_Report_2014.pdf"));
                         break;
                     case "TDA FAQs":
                     case "TVPRA FAQs":
