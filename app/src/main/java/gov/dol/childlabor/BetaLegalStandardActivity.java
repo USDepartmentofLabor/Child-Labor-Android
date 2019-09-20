@@ -80,20 +80,14 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
 
     private void setFooter() {
         String footerText = "* Please note that a “Yes” indicates that the legal framework meets the international standard. \n\nPlease see the chapter text for more information regarding gaps in legal framework and suggested actions.";
-
-
-
             if (this.hasAgeFooter) {
                 if (this.hasStandardsFooter) footerText += "\n";
                 footerText += "\n‡ Age calculated based on available information";
             }
-
-
             TextView footerTextView = (TextView) findViewById(R.id.footerTextView);
+            footerTextView.setContentDescription(footerText);
             footerTextView.setVisibility(View.VISIBLE);
             footerTextView.setText(footerText);
-            footerTextView.setContentDescription(" ");
-
     }
 
     private void displayTerritories(LinearLayout layout, Country.TerritoryStandard standard) {

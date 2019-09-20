@@ -420,7 +420,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#dadada"
-            android:importantForAccessibility="no"
+            android:importantForAccessibility="yes"
             android:padding="20dp"
             android:visibility="gone" />
 

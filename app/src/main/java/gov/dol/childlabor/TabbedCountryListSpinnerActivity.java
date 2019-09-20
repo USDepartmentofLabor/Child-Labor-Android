@@ -234,6 +234,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                             if (countrycount != null) {
                                 countrycountTextView.setVisibility(View.VISIBLE);
                                 countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + query.trim());
+                                countrycountTextView.announceForAccessibility(String.valueOf(countrycount) + " results found for "  + query.trim());
                                 countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + query.trim());
                                 countrycountTextView.setFocusable(true);
                                 countrycountTextView.setFocusableInTouchMode(true);
@@ -254,6 +255,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                             if (countrycount != null) {
                                 countrycountTextView.setVisibility(View.VISIBLE);
                                 countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + query.trim());
+                                countrycountTextView.announceForAccessibility(String.valueOf(countrycount) + " results found for "  + query.trim());
                                 countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + query.trim());
                                 countrycountTextView.setFocusable(true);
                                 countrycountTextView.setFocusableInTouchMode(true);
@@ -269,7 +271,8 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
 
                            if (countrycount != null) {
                                countrycountTextView.setVisibility(View.VISIBLE);
-                                countrycountTextView.setText(String.valueOf(countrycount) + " results found for " + query.trim());
+                               countrycountTextView.setText(String.valueOf(countrycount) + " results found for " + query.trim());
+                               countrycountTextView.announceForAccessibility(String.valueOf(countrycount) + " results found for " + query.trim());
                                countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + query.trim());
                                countrycountTextView.setFocusable(true);
                                countrycountTextView.setFocusableInTouchMode(true);
@@ -479,6 +482,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                     if (countrycount != null) {
                         countrycountTextView.setVisibility(View.VISIBLE);
                         countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + searchQuery.trim());
+                        countrycountTextView.announceForAccessibility(String.valueOf(countrycount) + " results found for "  + searchQuery.trim());
                         countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + searchQuery.trim());
                         countrycountTextView.setFocusable(true);
                         countrycountTextView.setFocusableInTouchMode(true);
@@ -601,6 +605,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                     if (countrycount != null) {
                         countrycountTextView.setVisibility(View.VISIBLE);
                         countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + searchQuery.trim());
+                        countrycountTextView.announceForAccessibility(String.valueOf(countrycount) + " results found for "  + searchQuery.trim());
                         countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + searchQuery.trim());
                         countrycountTextView.setFocusable(true);
                         countrycountTextView.setFocusableInTouchMode(true);
