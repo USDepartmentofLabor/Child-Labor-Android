@@ -20,7 +20,8 @@
                 android:layout_height="37dp"
                 android:layout_alignParentRight="true"
                 android:layout_gravity="right"
-                android:background="@drawable/menuimage" />
+                android:background="@drawable/menuimage"
+                android:contentDescription="More Info"/>
 
 
         </android.support.v7.widget.Toolbar>

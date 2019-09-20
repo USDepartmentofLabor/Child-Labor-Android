@@ -51,7 +51,7 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
     private void setMultipleTerritoryValues(Hashtable<String, Country.TerritoryStandard> territoryStandards) {
         displayTerritories((LinearLayout) findViewById(R.id.minimumWorkLinearLayout), territoryStandards.get("Minimum_Work"));
         displayTerritories((LinearLayout) findViewById(R.id.minimumHazardWorkLinearLayout), territoryStandards.get("Minimum_Hazardous_Work"));
-        displayTerritories((LinearLayout) findViewById(R.id.compulsoryMilitaryLinearLayout), territoryStandards.get("Minimum_Compulsory_Military"));
+        // displayTerritories((LinearLayout) findViewById(R.id.compulsoryMilitaryLinearLayout), territoryStandards.get("Minimum_Compulsory_Military"));
         displayTerritories((LinearLayout) findViewById(R.id.voluntaryMilitaryLinearLayout), territoryStandards.get("Minumum_Voluntary_Military"));
         displayTerritories((LinearLayout) findViewById(R.id.nsCompulsoryMilitaryLinearLayout), territoryStandards.get("Minumum_Non_State_Military"));
         displayTerritories((LinearLayout) findViewById(R.id.typesHazardousWorkLinearLayout), territoryStandards.get("Types_Hazardous_Work"));
@@ -66,7 +66,7 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
     private void setSingleTerritoryValues(Hashtable<String, Country.Standard> standards) {
         displayStandard((TextView) findViewById(R.id.minimumWorkTextView), standards.get("Minimum_Work"));
         displayStandard((TextView) findViewById(R.id.minimumHazardWorkTextView), standards.get("Minimum_Hazardous_Work"));
-        displayStandard((TextView) findViewById(R.id.compulsoryMilitaryTextView), standards.get("Minimum_Compulsory_Military"));
+        // displayStandard((TextView) findViewById(R.id.compulsoryMilitaryTextView), standards.get("Minimum_Compulsory_Military"));
         displayStandard((TextView) findViewById(R.id.voluntaryMilitaryTextView), standards.get("Minumum_Voluntary_Military"));
         displayStandard((TextView) findViewById(R.id.nsCompulsoryMilitaryTextView), standards.get("Minumum_Non_State_Military"));
         displayStandard((TextView) findViewById(R.id.typesHazardousWorkTextView), standards.get("Types_Hazardous_Work"));
@@ -79,21 +79,15 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
     }
 
     private void setFooter() {
-        String footerText = "* Please note that this year, a “yes” indicates that the legal framework meets the international standard.  Last year, a “yes” indicated that the country had laws relevant to the international standard, even if they did not fully meet the standard. \n\nPlease see the chapter text for more information regarding gaps in legal framework and suggested actions";
-
-
-
+        String footerText = "* Please note that a “Yes” indicates that the legal framework meets the international standard. \n\nPlease see the chapter text for more information regarding gaps in legal framework and suggested actions.";
             if (this.hasAgeFooter) {
                 if (this.hasStandardsFooter) footerText += "\n";
                 footerText += "\n‡ Age calculated based on available information";
             }
-
-
             TextView footerTextView = (TextView) findViewById(R.id.footerTextView);
+            footerTextView.setContentDescription(footerText);
             footerTextView.setVisibility(View.VISIBLE);
             footerTextView.setText(footerText);
-            footerTextView.setContentDescription(" ");
-
     }
 
     private void displayTerritories(LinearLayout layout, Country.TerritoryStandard standard) {

@@ -25,14 +25,31 @@ public class SuggestedActionsActivity extends AppCompatActivity {
         if (country.getSuggestedActions().length > 0) {
             suggestedActionsLinearLayout.removeAllViews();
         }
-
+        Country.SuggestedAction[] sortedSuggestedAction = country.getSuggestedActions();
         for(Country.SuggestedAction suggestedAction : country.getSuggestedActions()) {
+            if (suggestedAction.section.equals("Legal Framework")) {
+                sortedSuggestedAction[0] = suggestedAction;
+            }
+            if (suggestedAction.section.equals("Enforcement")) {
+                sortedSuggestedAction[1] = suggestedAction;
+            }
+            if (suggestedAction.section.equals("Coordination")) {
+                sortedSuggestedAction[2] = suggestedAction;
+            }
+            if (suggestedAction.section.equals("Government Policies")) {
+                sortedSuggestedAction[3] = suggestedAction;
+            }
+            if (suggestedAction.section.equals("Social Programs")) {
+                sortedSuggestedAction[4] = suggestedAction;
+            }
+        }
+        for (Country.SuggestedAction suggestedAction : sortedSuggestedAction) {
             TextView header = (TextView) inflater.inflate(R.layout.suggested_actions_header, suggestedActionsLinearLayout, false);
             header.setText(suggestedAction.section);
             header.setContentDescription(suggestedAction.section + ", heading");
             suggestedActionsLinearLayout.addView(header);
 
-            for(String action : suggestedAction.actions) {
+            for (String action : suggestedAction.actions) {
                 TextView row = (TextView) inflater.inflate(R.layout.suggested_actions_row, suggestedActionsLinearLayout, false);
                 row.setText(action);
                 suggestedActionsLinearLayout.addView(row);
