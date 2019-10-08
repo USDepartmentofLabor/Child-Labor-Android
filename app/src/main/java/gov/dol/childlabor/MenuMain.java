@@ -67,7 +67,7 @@ public class MenuMain extends AppCompatActivity {
 
         ChildLaborReport.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/agencies/ilab/resources/reports/child-labor/findings"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/child_labor_reports/tda2018/ChildLaborReport.pdf"));
                 startActivity(intent);
                 AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "More Information Screen");
             }
