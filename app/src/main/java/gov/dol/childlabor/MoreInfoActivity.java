@@ -37,6 +37,10 @@ public class MoreInfoActivity extends AppCompatActivity {
                 setTitle("Reports");
                 items = new String[]{"Foreword", "Child Labor Report", "Child and Forced Labor List of Goods", "Forced Child Labor List of Products"};
                 break;
+            case R.id.action_reports:
+                setTitle("Magazine");
+                items = new String[]{"Sweat & Toil Magazine"};
+                break;
 /*            case R.id.action_fact_sheets:
                 setTitle("Fact Sheets");
                 items = new String[]{"An Intro to OCFT",};
@@ -74,15 +78,15 @@ public class MoreInfoActivity extends AppCompatActivity {
                     case "Methodology":
                         intent = new Intent(getApplicationContext(), MethodologyActivity.class);
                         break;
-                    case "Child Labor Report":
+                    case "Sweat & Toil Magazine":
                         intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/child_labor_reports/tda2018/ChildLaborReport.pdf"));
                         break;
-                    case "Child and Forced Labor List of Goods":
-                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/ListofGoods.pdf"));
-                        break;
-                    case "Forced Child Labor List of Products":
-                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/EO_Report_2014.pdf"));
-                        break;
+//                    case "Child and Forced Labor List of Goods":
+//                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/ListofGoods.pdf"));
+//                        break;
+//                    case "Forced Child Labor List of Products":
+//                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/EO_Report_2014.pdf"));
+//                        break;
                     case "TDA FAQs":
                     case "TVPRA FAQs":
                     case "EO FAQs":
