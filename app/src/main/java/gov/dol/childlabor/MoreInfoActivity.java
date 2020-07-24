@@ -35,11 +35,8 @@ public class MoreInfoActivity extends AppCompatActivity {
             default:
             case R.id.action_reports:
                 setTitle("Reports");
-                items = new String[]{"Foreword", "Child Labor Report", "Child and Forced Labor List of Goods", "Forced Child Labor List of Products"};
-                break;
-            case R.id.action_reports:
-                setTitle("Magazine");
-                items = new String[]{"Sweat & Toil Magazine"};
+//                items = new String[]{"Foreword", "Child Labor Report", "Child and Forced Labor List of Goods", "Forced Child Labor List of Products"};
+                items = new String[]{"Foreword", "Child Labor Report"};
                 break;
 /*            case R.id.action_fact_sheets:
                 setTitle("Fact Sheets");
@@ -78,7 +75,7 @@ public class MoreInfoActivity extends AppCompatActivity {
                     case "Methodology":
                         intent = new Intent(getApplicationContext(), MethodologyActivity.class);
                         break;
-                    case "Sweat & Toil Magazine":
+                    case "Child Labor Report":
                         intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/child_labor_reports/tda2018/ChildLaborReport.pdf"));
                         break;
 //                    case "Child and Forced Labor List of Goods":
