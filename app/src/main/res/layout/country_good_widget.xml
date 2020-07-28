@@ -11,10 +11,10 @@
         android:id="@+id/countryGoodImageView"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:paddingTop="10dp"
+        android:alpha=".5"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:alpha=".25" />
+        android:paddingTop="10dp"
+        android:paddingRight="10dp" />
 
     <TextView
         android:id="@+id/countryGoodTextView"

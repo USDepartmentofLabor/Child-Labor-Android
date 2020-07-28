@@ -6,13 +6,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
+        android:id="@+id/goodImageView"
         android:layout_width="50dp"
         android:layout_height="match_parent"
-        android:scaleType="centerInside"
         android:layout_gravity="center_vertical"
         android:layout_marginRight="10dp"
-        android:src="@drawable/icons_alcoholic_beverages"
-        android:id="@+id/goodImageView" />
+        android:alpha="1"
+        android:scaleType="centerInside"
+        android:src="@drawable/icons_alcoholic_beverages" />
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/goodTextView"

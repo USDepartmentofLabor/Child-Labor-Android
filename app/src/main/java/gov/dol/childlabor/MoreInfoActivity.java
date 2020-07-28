@@ -76,7 +76,7 @@ public class MoreInfoActivity extends AppCompatActivity {
                         intent = new Intent(getApplicationContext(), MethodologyActivity.class);
                         break;
                     case "Child Labor Report":
-                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/child_labor_reports/tda2018/ChildLaborReport.pdf"));
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/child_labor_reports/tda2019/SweatToil.pdf"));
                         break;
 //                    case "Child and Forced Labor List of Goods":
 //                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/ListofGoods.pdf"));
