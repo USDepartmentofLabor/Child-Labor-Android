@@ -841,9 +841,9 @@
       </Social_Programs>
     </Suggested_Actions>
     <Mechanisms>
-      <Program />
-      <Policy />
-      <Coordination />
+      <Program>Yes</Program>
+      <Policy>Yes</Policy>
+      <Coordination>No</Coordination>
     </Mechanisms>
   </Country>
   <Country>
@@ -1277,9 +1277,9 @@
       </Social_Programs>
     </Suggested_Actions>
     <Mechanisms>
-      <Policy />
-      <Program />
-      <Coordination />
+      <Program>Yes</Program>
+      <Policy>Yes</Policy>
+      <Coordination>Yes</Coordination>
     </Mechanisms>
   </Country>
   <Country>
@@ -17597,9 +17597,9 @@
       </Social_Programs>
     </Suggested_Actions>
     <Mechanisms>
-      <Program />
-      <Policy />
-      <Coordination />
+      <Program>NA</Program>
+      <Policy>NA</Policy>
+      <Coordination>NA</Coordination>
     </Mechanisms>
   </Country>
   <Country>
@@ -19362,9 +19362,9 @@
       </Social_Programs>
     </Suggested_Actions>
     <Mechanisms>
-      <Program />
-      <Policy />
-      <Coordination />
+      <Program>Yes</Program>
+      <Policy>Yes</Policy>
+      <Coordination>Yes</Coordination>
     </Mechanisms>
   </Country>
   <Country>
@@ -30764,9 +30764,9 @@
       </Social_Programs>
     </Suggested_Actions>
     <Mechanisms>
-      <Policy />
-      <Program />
-      <Coordination />
+      <Program>Yes</Program>
+      <Policy>No</Policy>
+      <Coordination>Yes</Coordination>
     </Mechanisms>
   </Country>
   <Country>
