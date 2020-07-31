@@ -67,22 +67,22 @@ public class MenuMain extends AppCompatActivity {
 
         ChildLaborReport.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/child_labor_reports/tda2018/ChildLaborReport.pdf"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/child_labor_reports/tda2019/SweatToil.pdf"));
                 startActivity(intent);
                 AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "More Information Screen");
             }
         });
 
 
-        TextView ChildLaborListGoods = (TextView) findViewById(R.id.ChildLaborListGoods);
-
-        ChildLaborListGoods.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/ListofGoods.pdf"));
-                startActivity(intent);
-                AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "More Information Screen");
-            }
-        });
+//        TextView ChildLaborListGoods = (TextView) findViewById(R.id.ChildLaborListGoods);
+//
+//        ChildLaborListGoods.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/ListofGoods.pdf"));
+//                startActivity(intent);
+//                AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "More Information Screen");
+//            }
+//        });
 
         TextView SecretaryForeword = (TextView) findViewById(R.id.SecretaryForeword);
 
@@ -95,16 +95,16 @@ public class MenuMain extends AppCompatActivity {
             }
         });
 
-        TextView ForcedChildLaborProducts = (TextView) findViewById(R.id.ForcedChildLaborProducts);
-
-        ForcedChildLaborProducts.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/EO_Report_2014.pdf"));
-                startActivity(intent);
-                AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "More Information Screen");
-
-            }
-        });
+//        TextView ForcedChildLaborProducts = (TextView) findViewById(R.id.ForcedChildLaborProducts);
+//
+//        ForcedChildLaborProducts.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/EO_Report_2014.pdf"));
+//                startActivity(intent);
+//                AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "More Information Screen");
+//
+//            }
+//        });
 
 
 

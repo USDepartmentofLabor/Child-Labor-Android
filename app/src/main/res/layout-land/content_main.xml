@@ -34,23 +34,23 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
         android:contentDescription="Open ILAP website in browser"
         android:onClick="openBrowserILAB"
         android:src="@drawable/ilab"
-        android:tint="#FFF" />
+        android:tint="#000000" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:contentDescription="Open Department of Labor website in browser"
         android:onClick="openBrowserDOL"
         android:src="@drawable/dol"
-        android:tint="#FFF" />
+        android:tint="#000000" />
 
 </RelativeLayout>

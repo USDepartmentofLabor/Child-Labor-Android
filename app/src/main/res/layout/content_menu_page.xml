@@ -61,39 +61,15 @@
 
         <TextView
             android:id="@+id/ChildLaborReport"
-            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:contentDescription="Child Labor Report link"
-            android:text="Child Labor Report"
-            android:textColor="#3d3d3d"
-            android:textSize="16sp"
-             />
-
-        <TextView
-            android:id="@+id/ChildLaborListGoods"
             android:clickable="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:contentDescription="Sweat And Toil Magazine link"
             android:paddingBottom="10dp"
-            android:contentDescription="Child and Forced Labor List of Goods link"
-            android:text="Child and Forced Labor List of Goods"
+            android:text="Sweat And Toil Magazine"
             android:textColor="#3d3d3d"
             android:textSize="16sp"
-             />
-
-        <TextView
-            android:id="@+id/ForcedChildLaborProducts"
-            android:clickable="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:contentDescription="Forced Child Labor List of Products link"
-            android:text="Forced Child Labor List of Products"
-            android:textColor="#3d3d3d"
-            android:textSize="16sp"
-             />
+            android:focusable="true" />
 
         <TextView
             android:id="@+id/textView14"
