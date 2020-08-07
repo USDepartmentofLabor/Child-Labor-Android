@@ -521,7 +521,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
 
             countCountries = 0;
             for(Country country : allCountries) {
-                if ("Asia & the Pacific".equals(country.getRegionHeader()))
+                if ("Asia and the Pacific".equals(country.getRegionHeader()))
                 {countCountries = countCountries + 1;}
 
             }
@@ -530,7 +530,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
 
             countCountries = 0;
             for(Country country : allCountries) {
-                if ("Europe & Eurasia".equals(country.getRegionHeader()))
+                if ("Europe and Eurasia".equals(country.getRegionHeader()))
                 {countCountries = countCountries + 1;}
 
             }
@@ -539,7 +539,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
 
             countCountries = 0;
             for(Country country : allCountries) {
-                if ("Latin America & the Caribbean".equals(country.getRegionHeader()))
+                if ("Latin America and the Caribbean".equals(country.getRegionHeader()))
                 {countCountries = countCountries + 1;}
 
             }
@@ -548,7 +548,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
 
             countCountries = 0;
             for(Country country : allCountries) {
-                if ("Middle East & North Africa".equals(country.getRegionHeader()))
+                if ("Middle East and North Africa".equals(country.getRegionHeader()))
                 {countCountries = countCountries + 1;}
 
             }
@@ -713,22 +713,22 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
 
             if (region.contains("Asia"))
             {
-                regionfilter = "Asia & the Pacific";
+                regionfilter = "Asia and the Pacific";
             }
 
             if (region.contains("Latin"))
             {
-                regionfilter = "Latin America & the Caribbean";
+                regionfilter = "Latin America and the Caribbean";
             }
 
             if (region.contains("Europe"))
             {
-                regionfilter = "Europe & Eurasia";
+                regionfilter = "Europe and Eurasia";
             }
 
             if (region.contains("Middle"))
             {
-                regionfilter = "Middle East & North Africa";
+                regionfilter = "Middle East and North Africa";
             }
 
             if (region.contains("Saharan"))
