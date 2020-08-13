@@ -518,15 +518,13 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 countCountries = countCountries + 1;
             }
             AllRegions = "All Regions" + " (" + countCountries + " countries total)";
-
             countCountries = 0;
             for(Country country : allCountries) {
-                if ("Asia and the Pacific".equals(country.getRegionHeader()))
+                if ("Indo-Pacific".equals(country.getRegionHeader()))
                 {countCountries = countCountries + 1;}
 
             }
-            Asia = "Asia & the Pacific" + " (" + countCountries + " countries total)";
-
+            Asia = "Indo-Pacific" + " (" + countCountries + " countries total)";
 
             countCountries = 0;
             for(Country country : allCountries) {
@@ -713,7 +711,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
 
             if (region.contains("Asia"))
             {
-                regionfilter = "Asia and the Pacific";
+                regionfilter = "Indo-Pacific";
             }
 
             if (region.contains("Latin"))

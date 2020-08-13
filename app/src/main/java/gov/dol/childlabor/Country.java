@@ -56,8 +56,8 @@ public class Country implements Serializable {
     }
 
     public String getRegion() {
-        if (region != null && region.equalsIgnoreCase("Asia & Pacific")) {
-            return "Asia & the Pacific";
+        if ((region != null) && region.equalsIgnoreCase("Indo-Pacific")) {
+            return "Indo-Pacific";
         }
         return region;
     }
