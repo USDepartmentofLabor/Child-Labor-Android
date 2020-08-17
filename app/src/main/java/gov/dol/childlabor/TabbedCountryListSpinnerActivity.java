@@ -504,7 +504,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
         protected void getRegionHeaderView(View rootView) {
 
             String AllRegions;
-            String Asia;
+            String Indo;
             String Europe;
             String Latin;
             String Middle;
@@ -524,7 +524,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 {countCountries = countCountries + 1;}
 
             }
-            Asia = "Indo-Pacific" + " (" + countCountries + " countries total)";
+            Indo = "Indo-Pacific" + " (" + countCountries + " countries total)";
 
             countCountries = 0;
             for(Country country : allCountries) {
@@ -563,7 +563,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             Spinner spinner = (Spinner) rootView.findViewById(R.id.listViewSpinner);
             //String[] items = {"All Regions", "Asia & the Pacific", "Europe & Eurasia", "Latin America & the Caribbean", "Middle East & North Africa", "Sub-Saharan Africa"};
 
-            String[] items = {AllRegions, Asia, Europe, Latin, Middle, Africa};
+            String[] items = {AllRegions, Indo, Europe, Latin, Middle, Africa};
             spinner.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.good_view_exploitation_spinner_row, R.id.exploitationSpinnerTextView, items) {
                 @Override
                 public View getView(int position, View convertView, ViewGroup parent) {
@@ -709,7 +709,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 return allCountries;
             }
 
-            if (region.contains("Asia"))
+            if (region.contains("Indo"))
             {
                 regionfilter = "Indo-Pacific";
             }
