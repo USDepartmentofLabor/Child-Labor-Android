@@ -246,62 +246,62 @@
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#000"
-                android:layout_weight="1"
-                android:text="Referral Mechanism Exists btwn Authorities and Social Services"
-                android:contentDescription="Referral Mechanism Exists between Authorities and Social Services"/>
-
-            <TextView
-                android:id="@+id/criminalReferralMechanismTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:layout_gravity="center_vertical"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Unavailable" />
-
-        </LinearLayout>
-
-        <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
             android:paddingLeft="20dp"
-            android:paddingRight="20dp">
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#000"
                 android:layout_weight="1"
-                android:text="Imposed penalties for violations related to the WFCL"
-                android:contentDescription="Imposed penalties for violations related to the WFCL"/>
+                android:contentDescription="Imposed Penalties for Violations Related to the WFCL"
+                android:text="Imposed Penalties for Violations Related to the WFCL"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000" />
 
             <TextView
                 android:id="@+id/imposedPenaltiesTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:gravity="right"
-                android:layout_gravity="center_vertical"
+                android:text="Unavailable"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="Referral Mechanism Exists between Authorities and Social Services"
+                android:text="Referral Mechanism Exists btwn Authorities and Social Services"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Unavailable" />
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/criminalReferralMechanismTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Unavailable"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
         </LinearLayout>
 

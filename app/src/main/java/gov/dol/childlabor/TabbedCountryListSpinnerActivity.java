@@ -504,7 +504,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
         protected void getRegionHeaderView(View rootView) {
 
             String AllRegions;
-            String Asia;
+            String Indo;
             String Europe;
             String Latin;
             String Middle;
@@ -518,19 +518,17 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 countCountries = countCountries + 1;
             }
             AllRegions = "All Regions" + " (" + countCountries + " countries total)";
-
             countCountries = 0;
             for(Country country : allCountries) {
-                if ("Asia & the Pacific".equals(country.getRegionHeader()))
+                if ("Indo-Pacific".equals(country.getRegionHeader()))
                 {countCountries = countCountries + 1;}
 
             }
-            Asia = "Asia & the Pacific" + " (" + countCountries + " countries total)";
-
+            Indo = "Indo-Pacific" + " (" + countCountries + " countries total)";
 
             countCountries = 0;
             for(Country country : allCountries) {
-                if ("Europe & Eurasia".equals(country.getRegionHeader()))
+                if ("Europe and Eurasia".equals(country.getRegionHeader()))
                 {countCountries = countCountries + 1;}
 
             }
@@ -539,7 +537,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
 
             countCountries = 0;
             for(Country country : allCountries) {
-                if ("Latin America & the Caribbean".equals(country.getRegionHeader()))
+                if ("Latin America and the Caribbean".equals(country.getRegionHeader()))
                 {countCountries = countCountries + 1;}
 
             }
@@ -548,7 +546,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
 
             countCountries = 0;
             for(Country country : allCountries) {
-                if ("Middle East & North Africa".equals(country.getRegionHeader()))
+                if ("Middle East and North Africa".equals(country.getRegionHeader()))
                 {countCountries = countCountries + 1;}
 
             }
@@ -565,7 +563,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             Spinner spinner = (Spinner) rootView.findViewById(R.id.listViewSpinner);
             //String[] items = {"All Regions", "Asia & the Pacific", "Europe & Eurasia", "Latin America & the Caribbean", "Middle East & North Africa", "Sub-Saharan Africa"};
 
-            String[] items = {AllRegions, Asia, Europe, Latin, Middle, Africa};
+            String[] items = {AllRegions, Indo, Europe, Latin, Middle, Africa};
             spinner.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.good_view_exploitation_spinner_row, R.id.exploitationSpinnerTextView, items) {
                 @Override
                 public View getView(int position, View convertView, ViewGroup parent) {
@@ -711,24 +709,24 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 return allCountries;
             }
 
-            if (region.contains("Asia"))
+            if (region.contains("Indo"))
             {
-                regionfilter = "Asia & the Pacific";
+                regionfilter = "Indo-Pacific";
             }
 
             if (region.contains("Latin"))
             {
-                regionfilter = "Latin America & the Caribbean";
+                regionfilter = "Latin America and the Caribbean";
             }
 
             if (region.contains("Europe"))
             {
-                regionfilter = "Europe & Eurasia";
+                regionfilter = "Europe and Eurasia";
             }
 
             if (region.contains("Middle"))
             {
-                regionfilter = "Middle East & North Africa";
+                regionfilter = "Middle East and North Africa";
             }
 
             if (region.contains("Saharan"))

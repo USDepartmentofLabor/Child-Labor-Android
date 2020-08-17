@@ -38,7 +38,7 @@
                     android:layout_height="160dp"
                     android:layout_alignParentTop="false"
                     android:layout_alignParentRight="false"
-                    android:alpha=".50"
+                    android:alpha="1"
                     android:scaleType="fitEnd"
                     android:src="@drawable/icons_alcoholic_beverages" />
 

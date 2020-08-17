@@ -277,25 +277,26 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#000"
-                android:layout_weight="1"
-                android:text="Referral Mechanism Exists btwn Authorities and Social Services"
-                android:contentDescription="Referral Mechanism Exists between Authorities and Social Services"/>
 
-        </LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000"
+            android:layout_weight="1"
+            android:text="Imposed Penalties for Violations Related to the WFCL"
+            android:contentDescription="Imposed Penalties for Violations Related to the WFCL"/>
 
-        <LinearLayout
-            android:id="@+id/criminalReferralMechanismLinearLayout"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/imposedPenaltiesLinearLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
-        </LinearLayout>
+    </LinearLayout>
 
         <View
             android:layout_width="match_parent"
@@ -317,13 +318,13 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="Imposed penalties for violations related to the WFCL"
-                android:contentDescription="Imposed penalties for violations related to the WFCL"/>
+                android:text="Referral Mechanism Exists btwn Authorities and Social Services"
+                android:contentDescription="Referral Mechanism Exists between Authorities and Social Services"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/imposedPenaltiesLinearLayout"
+            android:id="@+id/criminalReferralMechanismLinearLayout"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
