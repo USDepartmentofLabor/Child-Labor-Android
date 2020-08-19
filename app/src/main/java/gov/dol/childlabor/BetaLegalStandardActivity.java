@@ -51,7 +51,7 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
     private void setMultipleTerritoryValues(Hashtable<String, Country.TerritoryStandard> territoryStandards) {
         displayTerritories((LinearLayout) findViewById(R.id.minimumWorkLinearLayout), territoryStandards.get("Minimum_Work"));
         displayTerritories((LinearLayout) findViewById(R.id.minimumHazardWorkLinearLayout), territoryStandards.get("Minimum_Hazardous_Work"));
-        // displayTerritories((LinearLayout) findViewById(R.id.compulsoryMilitaryLinearLayout), territoryStandards.get("Minimum_Compulsory_Military"));
+        displayTerritories((LinearLayout) findViewById(R.id.compulsoryMilitaryLinearLayout), territoryStandards.get("Minimum_Compulsory_Military"));
         displayTerritories((LinearLayout) findViewById(R.id.voluntaryMilitaryLinearLayout), territoryStandards.get("Minumum_Voluntary_Military"));
         displayTerritories((LinearLayout) findViewById(R.id.nsCompulsoryMilitaryLinearLayout), territoryStandards.get("Minumum_Non_State_Military"));
         displayTerritories((LinearLayout) findViewById(R.id.typesHazardousWorkLinearLayout), territoryStandards.get("Types_Hazardous_Work"));
@@ -66,7 +66,7 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
     private void setSingleTerritoryValues(Hashtable<String, Country.Standard> standards) {
         displayStandard((TextView) findViewById(R.id.minimumWorkTextView), standards.get("Minimum_Work"));
         displayStandard((TextView) findViewById(R.id.minimumHazardWorkTextView), standards.get("Minimum_Hazardous_Work"));
-        // displayStandard((TextView) findViewById(R.id.compulsoryMilitaryTextView), standards.get("Minimum_Compulsory_Military"));
+        displayStandard((TextView) findViewById(R.id.compulsoryMilitaryTextView), standards.get("Minimum_Compulsory_Military"));
         displayStandard((TextView) findViewById(R.id.voluntaryMilitaryTextView), standards.get("Minumum_Voluntary_Military"));
         displayStandard((TextView) findViewById(R.id.nsCompulsoryMilitaryTextView), standards.get("Minumum_Non_State_Military"));
         displayStandard((TextView) findViewById(R.id.typesHazardousWorkTextView), standards.get("Types_Hazardous_Work"));
