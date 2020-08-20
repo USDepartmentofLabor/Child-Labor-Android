@@ -39,6 +39,9 @@ public class MechanismActivity extends AppCompatActivity {
             case "No":
                 view.setTextColor(Color.RED);
                 break;
+            case "NA":
+                view.setTextColor(Color.BLACK);
+                break;
         }
         view.setText(value);
     }

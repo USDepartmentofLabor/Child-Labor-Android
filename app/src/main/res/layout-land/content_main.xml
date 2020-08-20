@@ -40,7 +40,7 @@
         android:contentDescription="Open ILAP website in browser"
         android:onClick="openBrowserILAB"
         android:src="@drawable/ilab"
-        android:tint="#000000" />
+        android:tint="#FFFFFF" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -51,6 +51,6 @@
         android:contentDescription="Open Department of Labor website in browser"
         android:onClick="openBrowserDOL"
         android:src="@drawable/dol"
-        android:tint="#000000" />
+        android:tint="#FFFFFF" />
 
 </RelativeLayout>
