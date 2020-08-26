@@ -2,9 +2,11 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 29
+    // compileSdkVersion 30
     // buildToolsVersion "26.0.1"
-    buildToolsVersion "26.0.2"
+    buildToolsVersion "29.0.2"
+    // buildToolsVersion "30.0.1"
     // new line added fro error Execution failed for task ':app:lint'.
     lintOptions {
         abortOnError false
@@ -12,7 +14,8 @@ android {
     defaultConfig {
         applicationId "gov.dol.childlabor"
         minSdkVersion 16
-        targetSdkVersion 26
+        targetSdkVersion 29
+        // targetSdkVersion 30
         versionCode 6
         versionName "1.8"
     }
@@ -29,8 +32,10 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:appcompat-v7:28.0.0'
+    // compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:design:28.0.0'
+    // compile 'com.android.support:design:26.1.0'
     compile 'com.joanzapata.pdfview:android-pdfview:1.0.4@aar'
     compile 'se.emilsjolander:stickylistheaders:2.7.0'
     compile 'com.google.android.gms:play-services-analytics:8.1.0'
