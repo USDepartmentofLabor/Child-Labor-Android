@@ -2,8 +2,8 @@ package gov.dol.childlabor;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -12,7 +12,6 @@ import android.widget.TextView;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Arrays;
-import java.util.Hashtable;
 import java.util.Locale;
 
 public class StatisticsActivity extends AppCompatActivity {
@@ -123,7 +122,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMultiworking(territoryValueTextView1, "N/A", "5-14", "N/A");
+            setStatisticTextMultiworking(territoryValueTextView1, "Unavailable", "Unavailable", "Unavailable");
 
             layout.addView(territoryRow1);
 
@@ -137,7 +136,7 @@ public class StatisticsActivity extends AppCompatActivity {
             territoryNameTextView.setContentDescription("Federal");
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
-            setStatisticTextMultiworking(territoryValueTextView, ".098", "10-14", "2261704");
+            setStatisticTextMultiworking(territoryValueTextView, "Unknown", "5-14", "Unknown");
 
             layout.addView(territoryRow);
 
@@ -147,7 +146,7 @@ public class StatisticsActivity extends AppCompatActivity {
             territoryNameTextView1.setContentDescription("Punjab");
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
-            setStatisticTextMultiworking(territoryValueTextView1, ".124", "5-14", "N/A");
+            setStatisticTextMultiworking(territoryValueTextView1, ".124", "5-14", "Unknown");
 
             layout.addView(territoryRow1);
 
@@ -167,7 +166,7 @@ public class StatisticsActivity extends AppCompatActivity {
             territoryNameTextView3.setContentDescription("Sindh");
 
             TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
-            setStatisticTextMultiworking(territoryValueTextView3, ".215", "5-14", "N/A");
+            setStatisticTextMultiworking(territoryValueTextView3, ".215", "5-14", "Unknown");
 
             layout.addView(territoryRow3);
 
@@ -237,7 +236,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "N/A");
+            setStatisticTextMulti(territoryValueTextView1, "Unavailable");
 
             layout.addView(territoryRow1);
         }
@@ -251,7 +250,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
 			territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, ".694");
+            setStatisticTextMulti(territoryValueTextView, "");
 
             layout.addView(territoryRow);
 
@@ -262,7 +261,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
 			territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "N/A");
+            setStatisticTextMulti(territoryValueTextView1, "");
 
             layout.addView(territoryRow1);
 
@@ -284,7 +283,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
 			territoryValueTextView3.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView3, "N/A");
+            setStatisticTextMulti(territoryValueTextView3, "");
 
             layout.addView(territoryRow3);
 
@@ -354,7 +353,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "N/A");
+            setStatisticTextMulti(territoryValueTextView1, "Unavailable");
 
             layout.addView(territoryRow1);
 
@@ -369,7 +368,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
 			territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, ".109");
+            setStatisticTextMulti(territoryValueTextView, "");
 
             layout.addView(territoryRow);
 
@@ -380,7 +379,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
 			territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "N/A");
+            setStatisticTextMulti(territoryValueTextView1, "");
 
             layout.addView(territoryRow1);
 
@@ -401,7 +400,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
             territoryValueTextView3.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView3, "N/A");
+            setStatisticTextMulti(territoryValueTextView3, "");
 
             layout.addView(territoryRow3);
 
@@ -466,7 +465,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, ".049");
+            setStatisticTextMulti(territoryValueTextView, ".49");
 
             layout.addView(territoryRow);
 
@@ -477,7 +476,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "N/A");
+            setStatisticTextMulti(territoryValueTextView1, "Unavailable");
 
             layout.addView(territoryRow1);
 
@@ -493,7 +492,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, ".197");
+            setStatisticTextMulti(territoryValueTextView, "");
 
             layout.addView(territoryRow);
 
@@ -504,7 +503,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "N/A");
+            setStatisticTextMulti(territoryValueTextView1, "");
 
             layout.addView(territoryRow1);
 
@@ -525,7 +524,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
             territoryValueTextView3.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView3, "N/A");
+            setStatisticTextMulti(territoryValueTextView3, "");
 
             layout.addView(territoryRow3);
 
@@ -599,7 +598,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "N/A", "5-14");
+            setStatisticTextMulti(territoryValueTextView1, "Unavailable", "Unavailable");
 
             layout.addView(territoryRow1);
 
@@ -614,7 +613,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, ".78", "5-14");
+            setStatisticTextMulti(territoryValueTextView, "", "5-14");
 
             layout.addView(territoryRow);
 
@@ -625,7 +624,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, ".606", "5-14");
+            setStatisticTextMulti(territoryValueTextView1, ".771", "5-14");
 
             layout.addView(territoryRow1);
 
@@ -646,7 +645,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
             territoryValueTextView3.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView3, ".771", "5-14");
+            setStatisticTextMulti(territoryValueTextView3, ".606", "5-14");
 
             layout.addView(territoryRow3);
 
@@ -724,7 +723,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "N/A", "N/A");
+            setStatisticTextMulti(territoryValueTextView1, "", "");
 
             layout.addView(territoryRow1);
 
@@ -740,7 +739,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, ".008", "7-14");
+            setStatisticTextMulti(territoryValueTextView, "", "7-14");
 
             layout.addView(territoryRow);
 
@@ -836,7 +835,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, ".687");
+            setStatisticTextMulti(territoryValueTextView, ".724");
 
             layout.addView(territoryRow);
 
@@ -847,7 +846,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "N/A");
+            setStatisticTextMulti(territoryValueTextView1, "");
 
             layout.addView(territoryRow1);
 
@@ -862,7 +861,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, ".711");
+            setStatisticTextMulti(territoryValueTextView, ".737");
 
             layout.addView(territoryRow);
 
@@ -873,7 +872,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "N/A");
+            setStatisticTextMulti(territoryValueTextView1, "");
 
             layout.addView(territoryRow1);
 
@@ -894,7 +893,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
             territoryValueTextView3.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView3, "N/A");
+            setStatisticTextMulti(territoryValueTextView3, "");
 
             layout.addView(territoryRow3);
 
