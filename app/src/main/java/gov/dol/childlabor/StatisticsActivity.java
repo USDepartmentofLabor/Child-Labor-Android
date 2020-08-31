@@ -20,8 +20,8 @@ public class StatisticsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Country country = (Country) getIntent().getSerializableExtra("country");
-//        String[] MultiText = {"Somalia", "Pakistan","Tanzania"};
-        String[] MultiText = {"Pakistan","Tanzania"};
+        String[] MultiText = {"Somalia", "Pakistan","Tanzania"};
+//        String[] MultiText = {"Pakistan","Tanzania"};
 
 
         setContentView(R.layout.activity_statistics);
@@ -74,33 +74,33 @@ public class StatisticsActivity extends AppCompatActivity {
         LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
         TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView.setText("Federal");
-        territoryNameTextView.setContentDescription("Federal");
+        territoryNameTextView.setText("North East Zone");
+        territoryNameTextView.setContentDescription("North East Zone");
 
         TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMultiworking(territoryValueTextView, "Unknown", "5-14", "Unknown");
+        setStatisticTextMultiworking(territoryValueTextView, ".095", "5-14", "N/A");
 
         layout.addView(territoryRow);
 
         LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
         TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView1.setText("Puntland");
-        territoryNameTextView1.setContentDescription("Puntland");
+        territoryNameTextView1.setText("Somaliland");
+        territoryNameTextView1.setContentDescription("Somaliland");
 
         TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMultiworking(territoryValueTextView1, ".095", "5-14", "UnKnown");
+        setStatisticTextMultiworking(territoryValueTextView1, ".132", "10-14", "N/A");
 
         layout.addView(territoryRow1);
 
-        LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-        TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
-        territoryNameTextView2.setText("Somaliland");
-        territoryNameTextView2.setContentDescription("Somaliland");
-
-        TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMultiworking(territoryValueTextView2, ".132", "5-14", "Unknown");
-
-        layout.addView(territoryRow2);
+//        LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+//        TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+//        territoryNameTextView2.setText("Somaliland");
+//        territoryNameTextView2.setContentDescription("Somaliland");
+//
+//        TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+//        setStatisticTextMultiworking(territoryValueTextView2, ".132", "5-14", "Unknown");
+//
+//        layout.addView(territoryRow2);
        }
         if (cname.contains("Tanzania"))
         {
@@ -122,7 +122,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMultiworking(territoryValueTextView1, "Unavailable", "Unavailable", "Unavailable");
+            setStatisticTextMultiworking(territoryValueTextView1, "N/A", "N/A", "N/A");
 
             layout.addView(territoryRow1);
 
@@ -136,7 +136,7 @@ public class StatisticsActivity extends AppCompatActivity {
             territoryNameTextView.setContentDescription("Federal");
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
-            setStatisticTextMultiworking(territoryValueTextView, "Unknown", "5-14", "Unknown");
+            setStatisticTextMultiworking(territoryValueTextView, ".098", "10-14", "2261704");
 
             layout.addView(territoryRow);
 
@@ -146,7 +146,7 @@ public class StatisticsActivity extends AppCompatActivity {
             territoryNameTextView1.setContentDescription("Punjab");
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
-            setStatisticTextMultiworking(territoryValueTextView1, ".124", "5-14", "Unknown");
+            setStatisticTextMultiworking(territoryValueTextView1, ".124", "5-14", "N/A");
 
             layout.addView(territoryRow1);
 
@@ -166,7 +166,7 @@ public class StatisticsActivity extends AppCompatActivity {
             territoryNameTextView3.setContentDescription("Sindh");
 
             TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
-            setStatisticTextMultiworking(territoryValueTextView3, ".215", "5-14", "Unknown");
+            setStatisticTextMultiworking(territoryValueTextView3, ".215", "5-14", "N/A");
 
             layout.addView(territoryRow3);
 
@@ -188,33 +188,33 @@ public class StatisticsActivity extends AppCompatActivity {
             LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
             TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView.setText("Federal");
-            territoryNameTextView.setContentDescription("Federal");
+            territoryNameTextView.setText("All Territories");
+            territoryNameTextView.setContentDescription("All Territories");
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
-            setStatisticTextMulti(territoryValueTextView, "");
+            setStatisticTextMulti(territoryValueTextView, "N/A");
 
             layout.addView(territoryRow);
 
-            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView1.setText("Puntland");
-            territoryNameTextView1.setContentDescription("Puntland");
-
-            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
-            setStatisticTextMulti(territoryValueTextView1, "");
-
-            layout.addView(territoryRow1);
-
-            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView2.setText("Somaliland");
-            territoryNameTextView2.setContentDescription("Somaliland");
-
-            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
-            setStatisticTextMulti(territoryValueTextView2, "");
-
-            layout.addView(territoryRow2);
+//            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+//            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+//            territoryNameTextView1.setText("Puntland");
+//            territoryNameTextView1.setContentDescription("Puntland");
+//
+//            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+//            setStatisticTextMulti(territoryValueTextView1, "");
+//
+//            layout.addView(territoryRow1);
+//
+//            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+//            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+//            territoryNameTextView2.setText("Somaliland");
+//            territoryNameTextView2.setContentDescription("Somaliland");
+//
+//            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+//            setStatisticTextMulti(territoryValueTextView2, "");
+//
+//            layout.addView(territoryRow2);
         }
 
         if (cname.contains("Tanzania")) {
@@ -236,7 +236,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "Unavailable");
+            setStatisticTextMulti(territoryValueTextView1, "N/A");
 
             layout.addView(territoryRow1);
         }
@@ -250,7 +250,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
 			territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, "");
+            setStatisticTextMulti(territoryValueTextView, ".694");
 
             layout.addView(territoryRow);
 
@@ -261,7 +261,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
 			territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "");
+            setStatisticTextMulti(territoryValueTextView1, "N/A");
 
             layout.addView(territoryRow1);
 
@@ -283,7 +283,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
 			territoryValueTextView3.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView3, "");
+            setStatisticTextMulti(territoryValueTextView3, "N/A");
 
             layout.addView(territoryRow3);
 
@@ -305,33 +305,33 @@ public class StatisticsActivity extends AppCompatActivity {
             LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
             TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView.setText("Federal");
-            territoryNameTextView.setContentDescription("Federal");
+            territoryNameTextView.setText("All Territories");
+            territoryNameTextView.setContentDescription("All Territories");
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
-            setStatisticTextMulti(territoryValueTextView, "");
+            setStatisticTextMulti(territoryValueTextView, "N/A");
 
             layout.addView(territoryRow);
 
-            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView1.setText("Puntland");
-            territoryNameTextView1.setContentDescription("Puntland");
-
-            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
-            setStatisticTextMulti(territoryValueTextView1, "");
-
-            layout.addView(territoryRow1);
-
-            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView2.setText("Somaliland");
-            territoryNameTextView2.setContentDescription("Somaliland");
-
-            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
-            setStatisticTextMulti(territoryValueTextView2, "");
-
-            layout.addView(territoryRow2);
+//            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+//            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+//            territoryNameTextView1.setText("Puntland");
+//            territoryNameTextView1.setContentDescription("Puntland");
+//
+//            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+//            setStatisticTextMulti(territoryValueTextView1, "");
+//
+//            layout.addView(territoryRow1);
+//
+//            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+//            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+//            territoryNameTextView2.setText("Somaliland");
+//            territoryNameTextView2.setContentDescription("Somaliland");
+//
+//            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+//            setStatisticTextMulti(territoryValueTextView2, "");
+//
+//            layout.addView(territoryRow2);
         }
 
         if(cname.contains("Tanzania")) {
@@ -353,7 +353,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "Unavailable");
+            setStatisticTextMulti(territoryValueTextView1, "N/A");
 
             layout.addView(territoryRow1);
 
@@ -368,7 +368,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
 			territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, "");
+            setStatisticTextMulti(territoryValueTextView, ".109");
 
             layout.addView(territoryRow);
 
@@ -379,7 +379,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
 			territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "");
+            setStatisticTextMulti(territoryValueTextView1, "N/A");
 
             layout.addView(territoryRow1);
 
@@ -400,7 +400,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
             territoryValueTextView3.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView3, "");
+            setStatisticTextMulti(territoryValueTextView3, "N/A");
 
             layout.addView(territoryRow3);
 
@@ -423,36 +423,36 @@ public class StatisticsActivity extends AppCompatActivity {
             LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
             TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView.setText("Federal");
-            territoryNameTextView.setContentDescription("Federal");
+            territoryNameTextView.setText("All Territories");
+            territoryNameTextView.setContentDescription("All Territories");
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, "");
+            setStatisticTextMulti(territoryValueTextView, "N/A");
 
             layout.addView(territoryRow);
 
-            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView1.setText("Puntland");
-            territoryNameTextView1.setContentDescription("Puntland");
-
-            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
-            territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "");
-
-            layout.addView(territoryRow1);
-
-            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView2.setText("Somaliland");
-            territoryNameTextView2.setContentDescription("Somaliland");
-
-            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
-            territoryValueTextView2.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView2, "");
-
-            layout.addView(territoryRow2);
+//            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+//            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+//            territoryNameTextView1.setText("Puntland");
+//            territoryNameTextView1.setContentDescription("Puntland");
+//
+//            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+//            territoryValueTextView1.setTextColor(Color.BLACK);
+//            setStatisticTextMulti(territoryValueTextView1, "");
+//
+//            layout.addView(territoryRow1);
+//
+//            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+//            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+//            territoryNameTextView2.setText("Somaliland");
+//            territoryNameTextView2.setContentDescription("Somaliland");
+//
+//            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+//            territoryValueTextView2.setTextColor(Color.BLACK);
+//            setStatisticTextMulti(territoryValueTextView2, "");
+//
+//            layout.addView(territoryRow2);
         }
 
         if (cname.contains("Tanzania"))
@@ -476,7 +476,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "Unavailable");
+            setStatisticTextMulti(territoryValueTextView1, "N/A");
 
             layout.addView(territoryRow1);
 
@@ -492,7 +492,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, "");
+            setStatisticTextMulti(territoryValueTextView, ".197");
 
             layout.addView(territoryRow);
 
@@ -503,7 +503,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "");
+            setStatisticTextMulti(territoryValueTextView1, "N/A");
 
             layout.addView(territoryRow1);
 
@@ -524,7 +524,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
             territoryValueTextView3.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView3, "");
+            setStatisticTextMulti(territoryValueTextView3, "N/A");
 
             layout.addView(territoryRow3);
 
@@ -546,36 +546,36 @@ public class StatisticsActivity extends AppCompatActivity {
             LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
             TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView.setText("Federal");
-            territoryNameTextView.setContentDescription("Federal");
+            territoryNameTextView.setText("North East Zone");
+            territoryNameTextView.setContentDescription("North East Zone");
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, "", "5-14");
+            setStatisticTextMulti(territoryValueTextView, ".388", "5-14");
 
             layout.addView(territoryRow);
 
             LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
             TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView1.setText("Puntland");
-            territoryNameTextView1.setContentDescription("Puntland");
+            territoryNameTextView1.setText("Somaliland");
+            territoryNameTextView1.setContentDescription("Somaliland");
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, ".383", "5-14");
+            setStatisticTextMulti(territoryValueTextView1, ".442", "5-14");
 
             layout.addView(territoryRow1);
 
-            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView2.setText("Somaliland");
-            territoryNameTextView2.setContentDescription("Somaliland");
-
-            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
-            territoryValueTextView2.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView2, ".442", "5-14");
-
-            layout.addView(territoryRow2);
+//            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+//            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+//            territoryNameTextView2.setText("Somaliland");
+//            territoryNameTextView2.setContentDescription("Somaliland");
+//
+//            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+//            territoryValueTextView2.setTextColor(Color.BLACK);
+//            setStatisticTextMulti(territoryValueTextView2, ".442", "5-14");
+//
+//            layout.addView(territoryRow2);
         }
 
         if (cname.contains("Tanzania")) {
@@ -598,7 +598,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "Unavailable", "Unavailable");
+            setStatisticTextMulti(territoryValueTextView1, "N/A", "N/A");
 
             layout.addView(territoryRow1);
 
@@ -613,7 +613,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, "", "5-14");
+            setStatisticTextMulti(territoryValueTextView, ".78", "10-14");
 
             layout.addView(territoryRow);
 
@@ -624,7 +624,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, ".771", "5-14");
+            setStatisticTextMulti(territoryValueTextView1, ".606", "5-14");
 
             layout.addView(territoryRow1);
 
@@ -645,7 +645,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
             territoryValueTextView3.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView3, ".606", "5-14");
+            setStatisticTextMulti(territoryValueTextView3, ".771", "5-14");
 
             layout.addView(territoryRow3);
 
@@ -669,37 +669,37 @@ public class StatisticsActivity extends AppCompatActivity {
             LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
             TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView.setText("Federal");
-            territoryNameTextView.setContentDescription("Federal");
+            territoryNameTextView.setText("North East Zone");
+            territoryNameTextView.setContentDescription("North East Zone");
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, "", "7-14");
+            setStatisticTextMulti(territoryValueTextView, ".047", "7-14");
 
             layout.addView(territoryRow);
 
             LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
             TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView1.setText("Puntland");
-            territoryNameTextView1.setContentDescription("Puntland");
+            territoryNameTextView1.setText("Somaliland");
+            territoryNameTextView1.setContentDescription("Somaliland");
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, ".047", "7-14");
+            setStatisticTextMulti(territoryValueTextView1, ".066", "7-14");
 
             layout.addView(territoryRow1);
 
-            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView2.setText("Somaliland");
-            territoryNameTextView2.setContentDescription("Somaliland");
-
-            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
-            territoryValueTextView2.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView2, ".066", "7-14");
-
-
-            layout.addView(territoryRow2);
+//            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+//            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+//            territoryNameTextView2.setText("Somaliland");
+//            territoryNameTextView2.setContentDescription("Somaliland");
+//
+//            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+//            territoryValueTextView2.setTextColor(Color.BLACK);
+//            setStatisticTextMulti(territoryValueTextView2, ".066", "7-14");
+//
+//
+//            layout.addView(territoryRow2);
         }
 
         if (cname.contains("Tanzania"))
@@ -723,7 +723,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "", "");
+            setStatisticTextMulti(territoryValueTextView1, "N/A", "N/A");
 
             layout.addView(territoryRow1);
 
@@ -739,7 +739,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, "", "7-14");
+            setStatisticTextMulti(territoryValueTextView, ".008", "10-14");
 
             layout.addView(territoryRow);
 
@@ -794,36 +794,36 @@ public class StatisticsActivity extends AppCompatActivity {
             LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
             TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView.setText("Federal");
-            territoryNameTextView.setContentDescription("Federal");
+            territoryNameTextView.setText("All Territories");
+            territoryNameTextView.setContentDescription("All Territories");
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, "");
+            setStatisticTextMulti(territoryValueTextView, "Unavailable");
 
             layout.addView(territoryRow);
 
-            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView1.setText("Puntland");
-            territoryNameTextView1.setContentDescription("Puntland");
-
-            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
-            territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "");
-
-            layout.addView(territoryRow1);
-
-            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
-            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView2.setText("Somaliland");
-            territoryNameTextView2.setContentDescription("Somaliland");
-
-            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
-            territoryValueTextView2.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView2, "");
-
-            layout.addView(territoryRow2);
+//            LinearLayout territoryRow1 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+//            TextView territoryNameTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryNameTextView);
+//            territoryNameTextView1.setText("Puntland");
+//            territoryNameTextView1.setContentDescription("Puntland");
+//
+//            TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
+//            territoryValueTextView1.setTextColor(Color.BLACK);
+//            setStatisticTextMulti(territoryValueTextView1, "");
+//
+//            layout.addView(territoryRow1);
+//
+//            LinearLayout territoryRow2 = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+//            TextView territoryNameTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryNameTextView);
+//            territoryNameTextView2.setText("Somaliland");
+//            territoryNameTextView2.setContentDescription("Somaliland");
+//
+//            TextView territoryValueTextView2 = (TextView) territoryRow2.findViewById(R.id.territoryValueTextView);
+//            territoryValueTextView2.setTextColor(Color.BLACK);
+//            setStatisticTextMulti(territoryValueTextView2, "");
+//
+//            layout.addView(territoryRow2);
         }
 
         if (cname.contains("Tanzania")) {
@@ -835,7 +835,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, ".724");
+            setStatisticTextMulti(territoryValueTextView, ".687");
 
             layout.addView(territoryRow);
 
@@ -846,7 +846,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "");
+            setStatisticTextMulti(territoryValueTextView1, "N/A");
 
             layout.addView(territoryRow1);
 
@@ -861,7 +861,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, ".737");
+            setStatisticTextMulti(territoryValueTextView, ".711");
 
             layout.addView(territoryRow);
 
@@ -872,7 +872,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
             territoryValueTextView1.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView1, "");
+            setStatisticTextMulti(territoryValueTextView1, "N/A");
 
             layout.addView(territoryRow1);
 
@@ -893,7 +893,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView3 = (TextView) territoryRow3.findViewById(R.id.territoryValueTextView);
             territoryValueTextView3.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView3, "");
+            setStatisticTextMulti(territoryValueTextView3, "N/A");
 
             layout.addView(territoryRow3);
 
