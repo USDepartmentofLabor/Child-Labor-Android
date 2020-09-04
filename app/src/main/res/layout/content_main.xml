@@ -44,7 +44,7 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingBottom="10dp"
         android:src="@drawable/ilab"
-        android:tint="#000000" />
+        android:tint="#FFFFFF" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -56,8 +56,8 @@
         android:onClick="openBrowserDOL"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingBottom="10dp"
+        android:paddingBottom="5dp"
         android:src="@drawable/dol"
-        android:tint="#000000" />
+        android:tint="#FFFFFF" />
 
 </RelativeLayout>
