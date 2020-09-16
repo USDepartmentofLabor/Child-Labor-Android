@@ -48,36 +48,36 @@
             android:background="#dadada"
             android:contentDescription="Reports" />
 
-        <TextView
-            android:id="@+id/SecretaryForeword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:contentDescription="Foreword link"
-            android:paddingBottom="10dp"
-            android:text="Foreword"
-            android:textColor="#3d3d3d"
-            android:textSize="16sp" />
+<!--        <TextView-->
+<!--            android:id="@+id/SecretaryForeword"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:clickable="true"-->
+<!--            android:contentDescription="Foreword link"-->
+<!--            android:paddingBottom="10dp"-->
+<!--            android:text="Foreword"-->
+<!--            android:textColor="#3d3d3d"-->
+<!--            android:textSize="16sp" />-->
 
-        <TextView
-            android:id="@+id/ChildLaborReport"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:contentDescription="Sweat And Toil Magazine link"
-            android:paddingBottom="10dp"
-            android:text="Sweat And Toil Magazine"
-            android:textColor="#3d3d3d"
-            android:textSize="16sp"
-            android:focusable="true" />
+<!--        <TextView-->
+<!--            android:id="@+id/ChildLaborReport"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:clickable="true"-->
+<!--            android:contentDescription="Sweat And Toil Magazine link"-->
+<!--            android:paddingBottom="10dp"-->
+<!--            android:text="Sweat And Toil Magazine"-->
+<!--            android:textColor="#3d3d3d"-->
+<!--            android:textSize="16sp"-->
+<!--            android:focusable="true" />-->
 
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="#dadada"
-            android:contentDescription="Office of Child Labor, Forced Labor, and Human Trafficking" />
+<!--        <TextView-->
+<!--            android:id="@+id/textView14"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:background="#dadada"-->
+<!--            android:contentDescription="Office of Child Labor, Forced Labor, and Human Trafficking" />-->
 
 <!--        <TextView
             android:id="@+id/action_fact_sheets"
@@ -111,9 +111,7 @@
             android:textSize="16sp"
              />
 
-        <TextView
-            android:id="@+id/TVPRA"
-            android:clickable="true"
+        <TextViewid:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="TVPRA FAQs"
@@ -124,7 +122,9 @@
              />
 
         <TextView
-            android:id="@+id/EO"
+
+            android:id="@+id/TVPRA"
+            andro            android:id="@+id/EO"
             android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
