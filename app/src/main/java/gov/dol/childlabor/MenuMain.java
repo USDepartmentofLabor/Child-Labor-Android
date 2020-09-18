@@ -60,15 +60,15 @@ public class MenuMain extends AppCompatActivity {
         });*/
 
 
-        TextView ChildLaborReport = (TextView) findViewById(R.id.ChildLaborReport);
-
-        ChildLaborReport.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/child_labor_reports/tda2019/SweatToil.pdf"));
-                startActivity(intent);
-                AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "More Information Screen");
-            }
-        });
+//        TextView ChildLaborReport = (TextView) findViewById(R.id.ChildLaborReport);
+//
+//        ChildLaborReport.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/child_labor_reports/tda2019/SweatToil.pdf"));
+//                startActivity(intent);
+//                AppHelpers.trackScreenView((AnalyticsApplication) getApplication(), "More Information Screen");
+//            }
+//        });
 
 
 //        TextView ChildLaborListGoods = (TextView) findViewById(R.id.ChildLaborListGoods);
@@ -81,16 +81,16 @@ public class MenuMain extends AppCompatActivity {
 //            }
 //        });
 
-        TextView SecretaryForeword = (TextView) findViewById(R.id.SecretaryForeword);
-
-        SecretaryForeword.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), FactsheetActivity.class);
-                intent.putExtra("title", "Foreword");
-                startActivity(intent);
-
-            }
-        });
+//        TextView SecretaryForeword = (TextView) findViewById(R.id.SecretaryForeword);
+//
+//        SecretaryForeword.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), FactsheetActivity.class);
+//                intent.putExtra("title", "Foreword");
+//                startActivity(intent);
+//
+//            }
+//        });
 
 //        TextView ForcedChildLaborProducts = (TextView) findViewById(R.id.ForcedChildLaborProducts);
 //
