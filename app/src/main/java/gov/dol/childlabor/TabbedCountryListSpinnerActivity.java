@@ -206,7 +206,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
 
             if( searchstring.trim().equals("")) {
-                searchstring = "Filter Countries";
+                searchstring = "Filter Countries/Areas";
                 searchView.clearFocus();
             }
 
@@ -225,7 +225,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                         case 2:
                             searchstring = query.trim();
                             if( searchstring.trim().equals("")) {
-                                searchstring = "Filter Countries";
+                                searchstring = "Filter Countries/Areas";
                                 searchView.setQueryHint(searchstring);
                             }
                             selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
@@ -246,7 +246,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                         case 3:
                             searchstring = query.trim();
                             if( searchstring.trim().equals("")) {
-                                searchstring = "Filter Countries";
+                                searchstring = "Filter Countries/Areas";
                                 searchView.setQueryHint(searchstring);
                             }
                             selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
@@ -385,7 +385,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             for(Country country : allCountries) {
                 countCountries = countCountries + 1;
             }
-            All = "All Assessment Levels" + " (" + countCountries + " countries total)";
+            All = "All Assessment Levels" + " (" + countCountries + " countries/areas total)";
 
             countCountries = 0;
             for(Country country : allCountries) {
@@ -393,7 +393,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 {countCountries = countCountries + 1;}
 
             }
-            Significant = "Significant Advancement" + " (" + countCountries + " countries total)";
+            Significant = "Significant Advancement" + " (" + countCountries + " countries/areas total)";
 
 
             countCountries = 0;
@@ -402,7 +402,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 {countCountries = countCountries + 1;}
 
             }
-            Moderate = "Moderate Advancement" + " (" + countCountries + " countries total)";
+            Moderate = "Moderate Advancement" + " (" + countCountries + " countries/areas total)";
 
 
             countCountries = 0;
@@ -411,7 +411,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 {countCountries = countCountries + 1;}
 
             }
-            Minimal = "Minimal Advancement" + " (" + countCountries + " countries total)";
+            Minimal = "Minimal Advancement" + " (" + countCountries + " countries/areas total)";
 
 
             countCountries = 0;
@@ -420,7 +420,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 {countCountries = countCountries + 1;}
 
             }
-            NoAdvancement = "No Advancement" + " (" + countCountries + " countries total)";
+            NoAdvancement = "No Advancement" + " (" + countCountries + " countries/areas total)";
 
             countCountries = 0;
             for(Country country : allCountries) {
@@ -428,7 +428,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 {countCountries = countCountries + 1;}
 
             }
-            NoAssessment = "No Assessment" + " (" + countCountries + " countries total)";
+            NoAssessment = "No Assessment" + " (" + countCountries + " countries/areas total)";
 
             countCountries = 0;
             for(Country country : allCountries) {
@@ -436,7 +436,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 {countCountries = countCountries + 1;}
 
             }
-            NotCovered = "Not Covered in TDA Report" + " (" + countCountries + " countries total)";
+            NotCovered = "Not Covered in TDA Report" + " (" + countCountries + " countries/areas total)";
 
             Spinner spinner = (Spinner) rootView.findViewById(R.id.listViewSpinner);
             //String[] items = {"All Assessment Levels", "Significant Advancement", "Moderate Advancement", "Minimal Advancement", "No Advancement", "No Assessment", "Not Covered in TDA Report"};
@@ -516,14 +516,14 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             for(Country country : allCountries) {
                 countCountries = countCountries + 1;
             }
-            AllRegions = "All Regions" + " (" + countCountries + " countries total)";
+            AllRegions = "All Regions" + " (" + countCountries + " countries/areas total)";
             countCountries = 0;
             for(Country country : allCountries) {
                 if ("Indo-Pacific".equals(country.getRegionHeader()))
                 {countCountries = countCountries + 1;}
 
             }
-            Indo = "Indo-Pacific" + " (" + countCountries + " countries total)";
+            Indo = "Indo-Pacific" + " (" + countCountries + " countries/areas total)";
 
             countCountries = 0;
             for(Country country : allCountries) {
@@ -531,7 +531,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 {countCountries = countCountries + 1;}
 
             }
-            Europe = "Europe & Eurasia" + " (" + countCountries + " countries total)";
+            Europe = "Europe & Eurasia" + " (" + countCountries + " countries/areas total)";
 
 
             countCountries = 0;
@@ -540,7 +540,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 {countCountries = countCountries + 1;}
 
             }
-            Latin = "Latin America & the Caribbean" + " (" + countCountries + " countries total)";
+            Latin = "Latin America & the Caribbean" + " (" + countCountries + " countries/areas total)";
 
 
             countCountries = 0;
@@ -549,7 +549,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 {countCountries = countCountries + 1;}
 
             }
-            Middle = "Middle East & North Africa" + " (" + countCountries + " countries total)";
+            Middle = "Middle East & North Africa" + " (" + countCountries + " countries/areas total)";
 
             countCountries = 0;
             for(Country country : allCountries) {
@@ -557,7 +557,7 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 {countCountries = countCountries + 1;}
 
             }
-            Africa = "Sub-Saharan Africa" + " (" + countCountries + " countries total)";
+            Africa = "Sub-Saharan Africa" + " (" + countCountries + " countries/areas total)";
 
             Spinner spinner = (Spinner) rootView.findViewById(R.id.listViewSpinner);
             //String[] items = {"All Regions", "Asia & the Pacific", "Europe & Eurasia", "Latin America & the Caribbean", "Middle East & North Africa", "Sub-Saharan Africa"};

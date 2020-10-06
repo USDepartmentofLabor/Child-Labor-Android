@@ -30,6 +30,9 @@ public class FactsheetActivity extends AppCompatActivity {
             case "Foreword":
                 filename = "TDA-foreword-2017.pdf";
                 break;
+            case "Sweat And Toil Magazine":
+                filename = "Sweat-And-Toil-Magazine.pdf";
+                break;
             case "An Intro to OCFT":
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/default/files/documents/ilab/reports/child-labor/findings/OCFTBooklet.pdf"));
                 startActivity(intent);
