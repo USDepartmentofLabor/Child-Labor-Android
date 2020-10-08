@@ -46,30 +46,37 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="#dadada"
-            android:contentDescription="Reports" />
+            android:contentDescription="Report" />
 
-<!--        <TextView-->
-<!--            android:id="@+id/SecretaryForeword"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:clickable="true"-->
-<!--            android:contentDescription="Foreword link"-->
-<!--            android:paddingBottom="10dp"-->
-<!--            android:text="Foreword"-->
-<!--            android:textColor="#3d3d3d"-->
-<!--            android:textSize="16sp" />-->
+        <TextView
+            android:id="@+id/SecretaryForeword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="Foreword link"
+            android:paddingBottom="10dp"
+            android:text="Foreword"
+            android:textColor="#3d3d3d"
+            android:textSize="16sp" />
 
-<!--        <TextView-->
-<!--            android:id="@+id/ChildLaborReport"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:clickable="true"-->
-<!--            android:contentDescription="Sweat And Toil Magazine link"-->
-<!--            android:paddingBottom="10dp"-->
-<!--            android:text="Sweat And Toil Magazine"-->
-<!--            android:textColor="#3d3d3d"-->
-<!--            android:textSize="16sp"-->
-<!--            android:focusable="true" />-->
+        <TextView
+            android:id="@+id/SweatAndToilMagazine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="Sweat And Toil Magazine link"
+            android:paddingBottom="10dp"
+            android:text="Sweat And Toil Magazine"
+            android:textColor="#3d3d3d"
+            android:textSize="16sp"
+            android:focusable="true" />
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#dadada"
+            android:contentDescription="Report" />
 
 <!--        <TextView-->
 <!--            android:id="@+id/textView14"-->

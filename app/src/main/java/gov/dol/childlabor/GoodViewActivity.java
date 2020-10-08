@@ -134,9 +134,9 @@ public class GoodViewActivity extends AppCompatActivity {
 
                         TextView countryLabelTextView = (TextView) findViewById(R.id.countryLabelTextView);
                         if (countryGoods.size() == 1) {
-                            countryLabelTextView.setText("PRODUCED WITH " + exploitationType + " IN 1 COUNTRY");
+                            countryLabelTextView.setText("PRODUCED WITH " + exploitationType + " IN 1 COUNTRY/AREA");
                         } else {
-                            countryLabelTextView.setText("PRODUCED WITH " + exploitationType + " IN " + countryGoods.size() + " COUNTRIES");
+                            countryLabelTextView.setText("PRODUCED WITH " + exploitationType + " IN " + countryGoods.size() + " COUNTRIES/AREAS");
                         }
 
                         addCountries(countryGoods.toArray(new CountryGood[countryGoods.size()]));
