@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        String[] items = {"Countries", "Goods", "Exploitation Types"};
+        String[] items = {"Countries/Areas", "Goods", "Exploitation Types"};
         ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent;
                 switch (String.valueOf(parent.getItemAtPosition(position))) {
-                    case "Countries":
+                    case "Countries/Areas":
                     default:
                         intent = new Intent(getApplicationContext(), TabbedCountryListSpinnerActivity.class);
                         break;
