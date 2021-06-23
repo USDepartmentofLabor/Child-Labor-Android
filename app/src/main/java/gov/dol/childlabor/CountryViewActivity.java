@@ -3,8 +3,6 @@ package gov.dol.childlabor;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,7 +12,12 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import java.util.Arrays;
+
+import gov.dol.childlabor.activities.IlabProjectsActivity;
 
 public class CountryViewActivity extends AppCompatActivity {
 
@@ -108,8 +111,8 @@ public class CountryViewActivity extends AppCompatActivity {
             goodLinearLayout.addView(countryGoodWidget);
         }
 
-
-        String[] items = {"Suggested Actions", "Statistics", "International Conventions", "Legal Standards", "Enforcement", "Coordinating Mechanisms", "Report PDF", "Country Webpage"};
+        //Added new Item in Coutry Page for ILAB Projects
+        String[] items = {"Suggested Actions", "Statistics", "International Conventions", "Legal Standards", "Enforcement", "Coordinating Mechanisms", "Report PDF", "Country Webpage","ILAB Projects"};
         ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
 
         ListView listView = (ListView) findViewById(R.id.actionListView);
@@ -148,6 +151,10 @@ public class CountryViewActivity extends AppCompatActivity {
                     case "Country Webpage":
                         intent = new Intent(Intent.ACTION_VIEW, Uri.parse(urlname));
                         startActivity(intent);
+                        break;
+                    //Added new Action Item in Coutry Page for ILAB Projects
+                    case "ILAB Projects":
+                        intent = new Intent(getApplicationContext(), IlabProjectsActivity.class);
                         break;
                     case "Suggested Actions":
                     default:
