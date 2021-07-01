@@ -30,7 +30,8 @@ public class IlabProjectsActivity extends AppCompatActivity {
 
         LayoutInflater inflater = inflater = LayoutInflater.from(this);
         LinearLayout suggestedActionsLinearLayout = (LinearLayout) findViewById(R.id.suggestedActionsLinearLayout);
-
+        TextView noData = suggestedActionsLinearLayout.findViewById(R.id.no_data);
+        noData.setText("No Projects Available");
         Country country = (Country) getIntent().getSerializableExtra("country");
 
         if (country.getiLABProjects().size() > 0) {
