@@ -244,6 +244,20 @@
             <Policy>Yes</Policy>
             <Coordination>Yes</Coordination>
         </Mechanisms>
+        <ILAB_Projects>
+            <Project>
+                <Title> Sample Title, Its a very long sample title for ILAB Projects usually around hundred(100) characters long and link is below.</Title>
+                <Link>https://www.dol.gov/agencies/ilab/resources/reports/child-labor/afghanistan</Link>
+            </Project>
+            <Project>
+                <Title> Sample Title2, Its a very long sample title for ILAB Projects usually around hundred(100) characters long and link is below.</Title>
+                <Link>https://www.dol.gov/agencies/ilab/resources/reports/child-labor/afghanistan</Link>
+            </Project>
+            <Project>
+                <Title> Sample Title3, Its a very long sample title for ILAB Projects usually around hundred(100) characters long and link is below.</Title>
+                <Link>https://www.dol.gov/agencies/ilab/resources/reports/child-labor/afghanistan</Link>
+            </Project>
+        </ILAB_Projects>
     </Country>
     <Country>
         <Name>Albania</Name>

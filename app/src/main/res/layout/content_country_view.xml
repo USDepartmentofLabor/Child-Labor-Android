@@ -8,7 +8,7 @@
     tools:showIn="@layout/activity_country_view"
     tools:context="gov.dol.childlabor.CountryViewActivity">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingLeft="8dp"
@@ -117,13 +117,13 @@
                 <ListView
                     android:id="@+id/actionListView"
                     android:layout_width="match_parent"
-                    android:layout_height="380dp"
+                    android:layout_height="440dp"
                     android:layout_marginTop="10dp" />
 
             </LinearLayout>
 
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </RelativeLayout>
