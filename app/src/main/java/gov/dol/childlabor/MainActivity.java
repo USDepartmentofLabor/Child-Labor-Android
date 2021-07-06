@@ -3,20 +3,19 @@ package gov.dol.childlabor;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.view.View.OnClickListener;
-import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -105,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         }*/
         else if(id == R.id.action_toolkit) {
             Intent intent = new Intent(getApplicationContext(), FactsheetActivity.class);
-            intent.putExtra("title", "NEW: Comply Chain app");
+            intent.putExtra("title", "Comply Chain app");
             startActivity(intent);
         }
         else {
