@@ -218,7 +218,7 @@
         </activity>
         <activity
             android:name=".ToolKitActivity"
-            android:label="NEW: Tool Kit Businesses"
+            android:label="Comply Chain App"
             android:parentActivityName=".MoreInfoActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:launchMode="singleTop">
