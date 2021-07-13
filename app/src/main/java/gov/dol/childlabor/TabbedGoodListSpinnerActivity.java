@@ -1,25 +1,12 @@
 package gov.dol.childlabor;
 
 import android.content.Intent;
-
-import com.google.android.material.tabs.TabLayout;
-import androidx.core.view.MenuItemCompat;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -27,6 +14,18 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.MenuItemCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
@@ -223,6 +222,10 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                                 goodcountTextView.setVisibility(View.VISIBLE);
                                 goodcountTextView.setText(String.valueOf(goodcount) + " results found for " + query.trim());
                                 goodcountTextView.announceForAccessibility(String.valueOf(goodcount) + " results found for " + query.trim());
+                                goodcountTextView.setContentDescription(String.valueOf(goodcount) + " results found for "  + query.trim());
+                                goodcountTextView.setFocusable(true);
+                                goodcountTextView.setFocusableInTouchMode(true);
+
                             }
                             else
                             {
@@ -236,6 +239,9 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                                 goodcountTextView.setVisibility(View.VISIBLE);
                                 goodcountTextView.setText(String.valueOf(goodcount) + " results found for " + query.trim());
                                 goodcountTextView.announceForAccessibility(String.valueOf(goodcount) + " results found for " + query.trim());
+                                goodcountTextView.setContentDescription(String.valueOf(goodcount) + " results found for "  + query.trim());
+                                goodcountTextView.setFocusable(true);
+                                goodcountTextView.setFocusableInTouchMode(true);
                             }
                             else
                             {
