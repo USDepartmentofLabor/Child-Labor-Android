@@ -1,12 +1,12 @@
 package gov.dol.childlabor;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 
 public class MenuMain extends AppCompatActivity {
@@ -65,7 +65,7 @@ public class MenuMain extends AppCompatActivity {
         ChildLaborReport.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), FactsheetActivity.class);
-                intent.putExtra("title", "Sweat And Toil Magazine");
+                intent.putExtra("title", "Sweat & Toil Magazine");
                 startActivity(intent);
 
 //                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/sites/dolgov/files/ILAB/child_labor_reports/tda2019/SweatToil.pdf"));

@@ -108,6 +108,15 @@
                 android:value="gov.dol.childlabor.CountryViewActivity" />
         </activity>
         <activity
+            android:name=".activities.IlabProjectsActivity"
+            android:label="@string/title_activity_ilab_projects"
+            android:parentActivityName=".CountryViewActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.CountryViewActivity" />
+        </activity>
+        <activity
             android:name=".StatisticsActivity"
             android:label="@string/title_activity_statistics"
             android:parentActivityName=".CountryViewActivity"
@@ -209,7 +218,7 @@
         </activity>
         <activity
             android:name=".ToolKitActivity"
-            android:label="NEW: Tool Kit Businesses"
+            android:label="Comply Chain App"
             android:parentActivityName=".MoreInfoActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:launchMode="singleTop">

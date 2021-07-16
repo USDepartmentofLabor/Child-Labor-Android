@@ -2,12 +2,13 @@ package gov.dol.childlabor;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -943,6 +944,9 @@ public class StatisticsActivity extends AppCompatActivity {
         }
 
         view.setText(text);
+        if(view.getText().toString().startsWith("NA")||view.getText().toString().startsWith("N/A")){
+            view.setContentDescription("Not Available");
+        }
         view.setTextColor(Color.BLACK);
     }
 
@@ -956,6 +960,9 @@ public class StatisticsActivity extends AppCompatActivity {
         }
 
         view.setText(percent);
+        if(view.getText().toString().startsWith("NA")||view.getText().toString().startsWith("N/A")){
+            view.setContentDescription("Not Available");
+        }
         view.setTextColor(Color.BLACK);
     }
 
@@ -976,6 +983,9 @@ public class StatisticsActivity extends AppCompatActivity {
         }
 
         view.setText(text);
+        if(view.getText().toString().startsWith("NA")||view.getText().toString().startsWith("N/A")){
+            view.setContentDescription("Not Available");
+        }
         view.setTextColor(Color.BLACK);
     }
 
@@ -990,6 +1000,9 @@ public class StatisticsActivity extends AppCompatActivity {
         }
         TextView view = (TextView) findViewById(textViewId);
         view.setText(percent);
+        if(view.getText().toString().startsWith("NA")||view.getText().toString().startsWith("N/A")){
+            view.setContentDescription("Not Available");
+        }
         view.setTextColor(Color.BLACK);
     }
 
@@ -1011,6 +1024,9 @@ public class StatisticsActivity extends AppCompatActivity {
 
         TextView view = (TextView) findViewById(textViewId);
         view.setText(text);
+        if(view.getText().toString().startsWith("NA")||view.getText().toString().startsWith("N/A")){
+            view.setContentDescription("Not Available");
+        }
         view.setTextColor(Color.BLACK);
     }
 
@@ -1051,6 +1067,9 @@ public class StatisticsActivity extends AppCompatActivity {
 
         TextView view = (TextView) findViewById(textViewId);
         view.setText(text);
+        if(view.getText().toString().startsWith("NA")||view.getText().toString().startsWith("N/A")){
+            view.setContentDescription("Not Available");
+        }
         view.setTextColor(Color.BLACK);
     }
 

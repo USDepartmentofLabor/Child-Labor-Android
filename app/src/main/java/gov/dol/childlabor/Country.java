@@ -1,9 +1,11 @@
 package gov.dol.childlabor;
 
 import java.io.Serializable;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.List;
+
+import gov.dol.childlabor.models.Project;
 
 /**
  * Created by trjohnson on 10/21/2015.
@@ -24,6 +26,17 @@ public class Country implements Serializable {
     public String coordinationMechanism, policyMechanism, programMechanism;
     // public Hashtable<String, TerritoryStatistics> TerritoryStatistics = new
     // Hashtable<String, TerritoryStatistics>();
+
+    //TODO newly added field for iLabProjects below model class Project added
+    public List<Project> iLABProjects = new ArrayList<>();
+
+    public List<Project> getiLABProjects() {
+        return iLABProjects;
+    }
+
+    public void setiLABProjects(List<Project> iLABProjects) {
+        this.iLABProjects = iLABProjects;
+    }
 
     public Country(String name) {
         this.name = name;

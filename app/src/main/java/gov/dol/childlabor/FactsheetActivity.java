@@ -3,10 +3,11 @@ package gov.dol.childlabor;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.joanzapata.pdfview.PDFView;
 
@@ -30,7 +31,7 @@ public class FactsheetActivity extends AppCompatActivity {
             case "Foreword":
                 filename = "TDA-foreword-2017.pdf";
                 break;
-            case "Sweat And Toil Magazine":
+            case "Sweat & Toil Magazine":
                 filename = "Sweat-And-Toil-Magazine.pdf";
                 break;
             case "An Intro to OCFT":
@@ -60,7 +61,7 @@ public class FactsheetActivity extends AppCompatActivity {
                 break;
             case "NEW: Comply Chain app":
                 intent = new Intent(getApplicationContext(), ToolKitActivity.class);
-                intent.putExtra("title", "NEW: Comply Chain app");
+                intent.putExtra("title", "Comply Chain app");
                 startActivity(intent);
 /*                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dol.gov/ComplyChain"));
                 startActivity(intent);*/

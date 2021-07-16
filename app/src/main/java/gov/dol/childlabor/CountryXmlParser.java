@@ -14,6 +14,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Hashtable;
 
+import gov.dol.childlabor.models.Project;
+
 /**
  * Created by tru on 10/22/2015.
  */
@@ -28,7 +30,7 @@ public class CountryXmlParser {
     public static CountryXmlParser fromContext(Context context) {
         InputStream stream = null;
         try {
-            stream = context.getAssets().open("countries_2019.xml");
+            stream = context.getAssets().open("countries_2020.xml");
         }
         catch(IOException e) {
             e.printStackTrace();
@@ -171,6 +173,10 @@ public class CountryXmlParser {
                                 break;
                             case "Mechanisms":
                                 parseMechanisms(currentCountry, parser);
+                                break;
+                                //added ILAB PROJECTS Parse Logic
+                            case "ILAB_Projects":
+                                parseiLABProjects(currentCountry, parser);
                                 break;
                             default:
                                 skip(parser);
@@ -512,6 +518,49 @@ public class CountryXmlParser {
             }
             eventType = parser.next();
         }
+    }
+
+    private void parseiLABProjects(Country country, XmlPullParser parser) throws XmlPullParserException, IOException {
+        int eventType = parser.getEventType();
+        while(!(eventType == XmlPullParser.END_TAG && parser.getName().equals("ILAB_Projects"))) {
+            String name = null;
+            switch(eventType) {
+                case XmlPullParser.START_TAG:
+                    name = parser.getName();
+                    switch(name) {
+                        case "Project":
+                            Project project = parseProjects(country, parser);
+                            country.getiLABProjects().add(project);
+                            break;
+                    }
+                    break;
+            }
+            eventType = parser.next();
+        }
+    }
+    private Project parseProjects(Country country, XmlPullParser parser) throws XmlPullParserException, IOException {
+        int eventType = parser.getEventType();
+        String title = null;
+        String link = null;
+        while(!(eventType == XmlPullParser.END_TAG && parser.getName().equals("Project"))) {
+            String name = null;
+            switch(eventType) {
+                case XmlPullParser.START_TAG:
+                    name = parser.getName();
+                    switch(name) {
+                        case "Title":
+                            title = parser.nextText();
+                            break;
+                        case "Link":
+                            link = parser.nextText();
+                            break;
+                    }
+                    break;
+            }
+            eventType = parser.next();
+
+        }
+        return  new Project(title,link);
     }
 
     private void parseCountryStatistics(Country.Statistics statistics, XmlPullParser parser) throws XmlPullParserException, IOException {
