@@ -66,7 +66,7 @@
             android:clickable="true"
             android:contentDescription="Sweat And Toil Magazine link"
             android:paddingBottom="10dp"
-            android:text="Sweat And Toil Magazine"
+            android:text="Sweat &amp; Toil Magazine"
             android:textColor="#3d3d3d"
             android:textSize="16sp"
             android:focusable="true" />
@@ -167,9 +167,9 @@
             android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="NEW: Comply Chain app"
+            android:contentDescription="Comply Chain app"
             android:paddingBottom="10dp"
-            android:text="NEW: Comply Chain app"
+            android:text="Comply Chain app"
             android:textColor="#3d3d3d"
             android:textSize="16sp"
              />
