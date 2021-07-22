@@ -3,6 +3,7 @@ package gov.dol.childlabor.activities;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -42,7 +43,10 @@ public class IlabProjectsActivity extends AppCompatActivity {
             LinearLayout row = (LinearLayout) inflater.inflate(R.layout.project_row,suggestedActionsLinearLayout,false);
             TextView title = row.findViewById(R.id.project_title);
             TextView link = row.findViewById(R.id.project_link);
+            Linkify.addLinks(link,Linkify.WEB_URLS);
+
             title.setText(projects.get(i).getTitle());
+            link.setContentDescription("i lab project link for "+ projects.get(i).getTitle());
             link.setText(projects.get(i).getLink());
             link.setOnClickListener(view -> {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(((TextView)view).getText().toString()));
