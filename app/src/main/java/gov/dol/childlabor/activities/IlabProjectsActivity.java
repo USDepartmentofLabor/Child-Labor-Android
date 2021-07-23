@@ -3,6 +3,9 @@ package gov.dol.childlabor.activities;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.method.LinkMovementMethod;
+import android.text.style.UnderlineSpan;
 import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
@@ -47,9 +50,13 @@ public class IlabProjectsActivity extends AppCompatActivity {
 
             title.setText(projects.get(i).getTitle());
             link.setContentDescription("i lab project link for "+ projects.get(i).getTitle());
-            link.setText(projects.get(i).getLink());
+            link.setTag(projects.get(i).getLink());
+            SpannableString content = new SpannableString(projects.get(i).getTitle());
+            content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+            link.setMovementMethod(LinkMovementMethod.getInstance());
+            link.setText(content);
             link.setOnClickListener(view -> {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(((TextView)view).getText().toString()));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(((TextView)view).getTag().toString()));
                 startActivity(intent);
             });
             suggestedActionsLinearLayout.addView(row);
