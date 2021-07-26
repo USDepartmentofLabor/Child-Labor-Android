@@ -28,8 +28,6 @@
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:text="link"
-        android:contentDescription="ILAB Project Link"
-        android:clickable="true"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#0000EE" />
 
