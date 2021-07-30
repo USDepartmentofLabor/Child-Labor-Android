@@ -13,6 +13,7 @@
         android:paddingTop="10dp"
         android:paddingRight="5dp"
         android:paddingBottom="10dp"
+        android:visibility="gone"
         android:text="Hello title"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000" />
@@ -27,7 +28,6 @@
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:text="link"
-        android:clickable="true"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#0000EE" />
 

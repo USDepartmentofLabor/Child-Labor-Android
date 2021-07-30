@@ -2,14 +2,14 @@ package gov.dol.childlabor;
 
 import android.graphics.Color;
 import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import java.util.Arrays;
 import java.util.Hashtable;
@@ -118,7 +118,8 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
     }
 
     private void displayStandard(TextView view, Country.Standard standard) {
-        displayValue(view, standard.type, standard.value, standard.age, standard.calculatedAge, standard.conformsStandard);
+        if(standard!=null)
+            displayValue(view, standard.type, standard.value, standard.age, standard.calculatedAge, standard.conformsStandard);
     }
 
     private void displayValue(TextView view, String type, String standard, String age, String calculatedAgeString, String conformsStandardString) {

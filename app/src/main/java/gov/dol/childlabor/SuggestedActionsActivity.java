@@ -1,11 +1,12 @@
 package gov.dol.childlabor;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class SuggestedActionsActivity extends AppCompatActivity {
 
@@ -25,7 +26,7 @@ public class SuggestedActionsActivity extends AppCompatActivity {
         if (country.getSuggestedActions().length > 0) {
             suggestedActionsLinearLayout.removeAllViews();
         }
-        Country.SuggestedAction[] sortedSuggestedAction = country.getSuggestedActions();
+        /*Country.SuggestedAction[] sortedSuggestedAction = country.getSuggestedActions();
         for(Country.SuggestedAction suggestedAction : country.getSuggestedActions()) {
             if (suggestedAction.section.equals("Legal Framework")) {
                 sortedSuggestedAction[0] = suggestedAction;
@@ -42,8 +43,8 @@ public class SuggestedActionsActivity extends AppCompatActivity {
             if (suggestedAction.section.equals("Social Programs")) {
                 sortedSuggestedAction[4] = suggestedAction;
             }
-        }
-        for (Country.SuggestedAction suggestedAction : sortedSuggestedAction) {
+        }*/
+        for (Country.SuggestedAction suggestedAction : country.getSuggestedActions()) {
             TextView header = (TextView) inflater.inflate(R.layout.suggested_actions_header, suggestedActionsLinearLayout, false);
             header.setText(suggestedAction.section);
             header.setContentDescription(suggestedAction.section + ", heading");
