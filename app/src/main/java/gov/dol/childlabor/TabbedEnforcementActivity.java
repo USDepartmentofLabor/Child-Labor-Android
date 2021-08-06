@@ -211,21 +211,20 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
         }
 
         private void displayTerritories(LinearLayout layout, Country.TerritoryEnforcement enforcement) {
+            if(enforcement!=null && enforcement.territories!=null && enforcement.territories.size()!=0) {
+                for (Country.TerritoryValue value : enforcement.territories) {
+                    LinearLayout territoryRow = (LinearLayout) this.inflater.inflate(R.layout.territory_row, layout, false);
 
-            for (Country.TerritoryValue value : enforcement.territories) {
-                LinearLayout territoryRow = (LinearLayout) this.inflater.inflate(R.layout.territory_row, layout, false);
+                    TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+                    territoryNameTextView.setText(value.displayName);
+                    territoryNameTextView.setContentDescription(value.territory);
 
-                TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-                territoryNameTextView.setText(value.displayName);
-                territoryNameTextView.setContentDescription(value.territory);
+                    TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+                    displayValue(territoryValueTextView, enforcement.type, value.value);
 
-                TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
-                displayValue(territoryValueTextView, enforcement.type, value.value);
-
-                layout.addView(territoryRow);
-            }
-
-            if (enforcement.territories.size() == 0) {
+                    layout.addView(territoryRow);
+                }
+            }else {
                 LinearLayout territoryRow = (LinearLayout) this.inflater.inflate(R.layout.territory_row, layout, false);
 
                 TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
@@ -267,11 +266,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 String accessibleText = (!labelText.contains("*")) ? labelText : (labelText.replace("*", "") + ", the government does not publish this information");
 
                 view.setText(Html.fromHtml(labelText));
-                if(type.equals("Criminal_New_Law_Training")) {
-                    view.setContentDescription((labelText.startsWith("N/A")) ? "Not Applicable" : accessibleText);
-                }else{
-                    view.setContentDescription((labelText.startsWith("N/A")) ? "Not Available" : accessibleText);
-                }
+                view.setContentDescription((labelText.startsWith("N/A")) ? "Not Applicable" : accessibleText);
                 if (!labelText.startsWith("N/A") && !labelText.startsWith("Unavailable") && !labelText.startsWith("Unknown")) {
                     view.setTextColor(Color.BLACK);
                 }
