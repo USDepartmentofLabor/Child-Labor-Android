@@ -1,16 +1,6 @@
 package gov.dol.childlabor;
 
 import android.graphics.Color;
-import com.google.android.material.tabs.TabLayout;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -18,6 +8,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
 
 import java.text.NumberFormat;
 import java.util.Hashtable;
@@ -266,7 +267,11 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 String accessibleText = (!labelText.contains("*")) ? labelText : (labelText.replace("*", "") + ", the government does not publish this information");
 
                 view.setText(Html.fromHtml(labelText));
-                view.setContentDescription((labelText.startsWith("N/A")) ? "Not Available" : accessibleText);
+                if(type.equals("Criminal_New_Law_Training")) {
+                    view.setContentDescription((labelText.startsWith("N/A")) ? "Not Applicable" : accessibleText);
+                }else{
+                    view.setContentDescription((labelText.startsWith("N/A")) ? "Not Available" : accessibleText);
+                }
                 if (!labelText.startsWith("N/A") && !labelText.startsWith("Unavailable") && !labelText.startsWith("Unknown")) {
                     view.setTextColor(Color.BLACK);
                 }
