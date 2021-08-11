@@ -157,7 +157,7 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
 
         if (labelText != null && !labelText.isEmpty()) {
             view.setText(Html.fromHtml(labelText));
-            view.setContentDescription((accessibleText.startsWith("N/A")) ? "Not Applicable" : accessibleText);
+            view.setContentDescription((accessibleText.startsWith("N/A")) ? "Not Available" : accessibleText);
             if (labelText.startsWith("Yes") && conformsStandard) {
                 view.setTextColor(Color.parseColor("#007E17"));
             }

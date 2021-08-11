@@ -266,7 +266,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 String accessibleText = (!labelText.contains("*")) ? labelText : (labelText.replace("*", "") + ", the government does not publish this information");
 
                 view.setText(Html.fromHtml(labelText));
-                view.setContentDescription((labelText.startsWith("N/A")) ? "Not Applicable" : accessibleText);
+                view.setContentDescription((labelText.startsWith("N/A")) ? "Not Available" : accessibleText);
                 if (!labelText.startsWith("N/A") && !labelText.startsWith("Unavailable") && !labelText.startsWith("Unknown")) {
                     view.setTextColor(Color.BLACK);
                 }
