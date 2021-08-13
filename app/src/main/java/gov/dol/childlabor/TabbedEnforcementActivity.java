@@ -1,16 +1,6 @@
 package gov.dol.childlabor;
 
 import android.graphics.Color;
-import com.google.android.material.tabs.TabLayout;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -18,6 +8,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
 
 import java.text.NumberFormat;
 import java.util.Hashtable;
@@ -210,21 +211,20 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
         }
 
         private void displayTerritories(LinearLayout layout, Country.TerritoryEnforcement enforcement) {
+            if(enforcement!=null && enforcement.territories!=null && enforcement.territories.size()!=0) {
+                for (Country.TerritoryValue value : enforcement.territories) {
+                    LinearLayout territoryRow = (LinearLayout) this.inflater.inflate(R.layout.territory_row, layout, false);
 
-            for (Country.TerritoryValue value : enforcement.territories) {
-                LinearLayout territoryRow = (LinearLayout) this.inflater.inflate(R.layout.territory_row, layout, false);
+                    TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+                    territoryNameTextView.setText(value.displayName);
+                    territoryNameTextView.setContentDescription(value.territory);
 
-                TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-                territoryNameTextView.setText(value.displayName);
-                territoryNameTextView.setContentDescription(value.territory);
+                    TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+                    displayValue(territoryValueTextView, enforcement.type, value.value);
 
-                TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
-                displayValue(territoryValueTextView, enforcement.type, value.value);
-
-                layout.addView(territoryRow);
-            }
-
-            if (enforcement.territories.size() == 0) {
+                    layout.addView(territoryRow);
+                }
+            }else {
                 LinearLayout territoryRow = (LinearLayout) this.inflater.inflate(R.layout.territory_row, layout, false);
 
                 TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
@@ -266,7 +266,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 String accessibleText = (!labelText.contains("*")) ? labelText : (labelText.replace("*", "") + ", the government does not publish this information");
 
                 view.setText(Html.fromHtml(labelText));
-                view.setContentDescription((labelText.startsWith("N/A")) ? "Not Available" : accessibleText);
+                view.setContentDescription((labelText.startsWith("N/A")) ? "Not Applicable" : accessibleText);
                 if (!labelText.startsWith("N/A") && !labelText.startsWith("Unavailable") && !labelText.startsWith("Unknown")) {
                     view.setTextColor(Color.BLACK);
                 }
