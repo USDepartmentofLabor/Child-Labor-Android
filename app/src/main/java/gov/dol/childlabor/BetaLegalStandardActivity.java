@@ -90,21 +90,20 @@ public class BetaLegalStandardActivity extends AppCompatActivity {
     }
 
     private void displayTerritories(LinearLayout layout, Country.TerritoryStandard standard) {
+        if(standard!=null && standard.territories!=null && standard.territories.size() != 0) {
+            for (Country.TerritoryValue value : standard.territories) {
+                LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
-        for (Country.TerritoryValue value : standard.territories) {
-            LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
+                TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
+                territoryNameTextView.setText(value.displayName);
+                territoryNameTextView.setContentDescription(value.territory);
 
-            TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
-            territoryNameTextView.setText(value.displayName);
-            territoryNameTextView.setContentDescription(value.territory);
+                TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
+                displayValue(territoryValueTextView, standard.type, value.value, value.age, value.calculatedAge, value.conformsStandard);
 
-            TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
-            displayValue(territoryValueTextView, standard.type, value.value, value.age, value.calculatedAge, value.conformsStandard);
-
-            layout.addView(territoryRow);
-        }
-
-        if (standard.territories.size() == 0) {
+                layout.addView(territoryRow);
+            }
+        }else {
             LinearLayout territoryRow = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.territory_row, layout, false);
 
             TextView territoryNameTextView = (TextView) territoryRow.findViewById(R.id.territoryNameTextView);
