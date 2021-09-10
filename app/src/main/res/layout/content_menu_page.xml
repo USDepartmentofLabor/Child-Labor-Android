@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="#dadada"
-            android:contentDescription="Report" />
+            android:contentDescription=" " />
 
         <TextView
             android:id="@+id/SecretaryForeword"
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="#dadada"
-            android:contentDescription="Report" />
+            android:contentDescription=" " />
 
 <!--        <TextView-->
 <!--            android:id="@+id/textView14"-->
