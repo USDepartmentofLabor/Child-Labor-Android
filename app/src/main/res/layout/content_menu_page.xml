@@ -45,8 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="#dadada"
-            android:contentDescription=" " />
+            android:background="#dadada" />
 
         <TextView
             android:id="@+id/SecretaryForeword"
@@ -75,8 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="#dadada"
-            android:contentDescription=" " />
+            android:background="#dadada" />
 
 <!--        <TextView-->
 <!--            android:id="@+id/textView14"-->
