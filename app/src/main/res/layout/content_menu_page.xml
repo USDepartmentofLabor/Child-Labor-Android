@@ -175,6 +175,12 @@
             android:textSize="16sp"
              />
         <TextView
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#dadada" />
+        <TextView
             android:id="@+id/better_trade"
             android:clickable="true"
             android:layout_width="match_parent"
