@@ -1,6 +1,7 @@
 package gov.dol.childlabor;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -44,6 +45,15 @@ public class MenuMain extends AppCompatActivity {
         ComplyChain.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ToolKitActivity.class);
+                startActivity(intent);
+            }
+        });
+        TextView betterTrade = (TextView) findViewById(R.id.better_trade);
+
+        betterTrade.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://www.dol.gov/BetterTradeTool"));
                 startActivity(intent);
             }
         });

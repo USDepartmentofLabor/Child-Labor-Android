@@ -45,10 +45,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="#dadada"
-            android:contentDescription=" " />
+            android:background="#dadada" />
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/SecretaryForeword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,6 +60,7 @@
             android:textSize="16sp" />
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/SweatAndToilMagazine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,12 +72,12 @@
             android:textSize="16sp"
             android:focusable="true" />
         <TextView
+            android:visibility="gone"
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="#dadada"
-            android:contentDescription=" " />
+            android:background="#dadada" />
 
 <!--        <TextView-->
 <!--            android:id="@+id/textView14"-->
@@ -173,6 +174,23 @@
             android:textColor="#3d3d3d"
             android:textSize="16sp"
              />
+        <TextView
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#dadada" />
+        <TextView
+            android:id="@+id/better_trade"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="New: Better Trade Tool"
+            android:paddingBottom="10dp"
+            android:text="NEW: Better Trade Tool"
+            android:textColor="#3d3d3d"
+            android:textSize="16sp"
+            />
     </LinearLayout>
     </ScrollView>
 
