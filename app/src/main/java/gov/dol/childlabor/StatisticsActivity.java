@@ -918,7 +918,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
         if (percent != null && !percent.isEmpty()) {
             try {
-                percent = new DecimalFormat("#.#").format(Float.parseFloat(percent) * 100) + "%";
+                percent = new DecimalFormat("#.0").format(Float.parseFloat(percent) * 100) + "%";
             } catch (Exception ex) {
             }
 
@@ -955,7 +955,7 @@ public class StatisticsActivity extends AppCompatActivity {
             return;
         }
         try {
-            percent = new DecimalFormat("#.#").format(Float.parseFloat(percent) * 100) + "%";
+            percent = new DecimalFormat("#.0").format(Float.parseFloat(percent) * 100) + "%";
         } catch (Exception nfe) {
         }
 
@@ -973,7 +973,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
         if (percent != null && !percent.isEmpty()) {
             try {
-                percent = new DecimalFormat("#.#").format(Float.parseFloat(percent) * 100) + "%";
+                percent = new DecimalFormat("#.0").format(Float.parseFloat(percent) * 100) + "%";
             } catch (Exception nfe) {
             }
         }
@@ -995,7 +995,7 @@ public class StatisticsActivity extends AppCompatActivity {
             return;
         }
         try {
-            percent = new DecimalFormat("#.#").format(Float.parseFloat(percent) * 100) + "%";
+            percent = new DecimalFormat("#.0").format(Float.parseFloat(percent) * 100) + "%";
         } catch (Exception nfe) {
         }
         TextView view = (TextView) findViewById(textViewId);
@@ -1013,7 +1013,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
         if (percent != null && !percent.isEmpty()) {
             try {
-                percent = new DecimalFormat("#.#").format(Float.parseFloat(percent) * 100) + "%";
+                percent = new DecimalFormat("#.0").format(Float.parseFloat(percent) * 100) + "%";
             } catch (Exception nfe) {
             }
         }
@@ -1038,7 +1038,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
         if (percent != null && !percent.isEmpty()) {
             try {
-                percent = new DecimalFormat("#.#").format(Float.parseFloat(percent) * 100) + "%";
+                percent = new DecimalFormat("#.0").format(Float.parseFloat(percent) * 100) + "%";
             } catch (Exception ex) {
             }
 
