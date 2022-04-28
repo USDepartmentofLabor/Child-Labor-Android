@@ -21,6 +21,8 @@ import androidx.core.view.AccessibilityDelegateCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 
+import gov.dol.childlabor.charts.DataVisualizationActivity;
+
 public class MainActivity extends AppCompatActivity {
     TextView toolbarTextView;
 
@@ -45,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
-        String[] items = {"Countries/Areas", "Goods", "Exploitation Types"};
+        String[] items = {"Countries/Areas", "Goods", "Exploitation Types","Data Visualizations"};
         ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
@@ -84,6 +86,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case "Exploitation Types":
                         intent = new Intent(getApplicationContext(), ExploitationTypeListSpinnerActivity.class);
+                        break;
+                    case "Data Visualizations":
+                        intent = new Intent(getApplicationContext(), DataVisualizationActivity.class);
                         break;
                 }
 
