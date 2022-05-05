@@ -7,18 +7,185 @@
     tools:context=".charts.DataVisualizationActivity">
 
     <TextView
-        android:id="@+id/imageView3"
+        android:id="@+id/coal"
         android:layout_width="100dp"
         android:layout_height="100dp"
+
+        android:layout_marginStart="172dp"
+        android:layout_marginLeft="172dp"
+        android:layout_marginTop="500dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/colorPrimary"
         android:gravity="center"
-        android:text="GOLD"
-        
+        android:text="COAL"
         android:textColor="@color/white_opaque"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
         android:tint="@color/colorAccent"
+        app:layout_constraintStart_toEndOf="@+id/gold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rice"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="636dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/colorPrimary"
+        android:gravity="center"
+        android:text="RICE"
+        android:textColor="@color/white_opaque"
+        android:tint="@color/colorAccent"
+        app:layout_constraintStart_toEndOf="@+id/gold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/garments"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
+        android:layout_marginTop="648dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/colorPrimary"
+        android:gravity="center"
+        android:text="GARMENTS"
+        android:textColor="@color/white_opaque"
+        android:tint="@color/colorAccent"
+        app:layout_constraintStart_toEndOf="@+id/gold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cattle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="536dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/colorPrimary"
+        android:gravity="center"
+        android:text="CATTLE"
+        android:textColor="@color/white_opaque"
+        android:tint="@color/colorAccent"
+        app:layout_constraintStart_toEndOf="@+id/gold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fish"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
+        android:layout_marginTop="568dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/colorPrimary"
+        android:gravity="center"
+        android:text="FISH"
+        android:textColor="@color/white_opaque"
+        android:tint="@color/colorAccent"
+        app:layout_constraintStart_toEndOf="@+id/gold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cotton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_marginStart="188dp"
+        android:layout_marginLeft="188dp"
+        android:layout_marginTop="228dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/colorPrimary"
+        android:gravity="center"
+        android:text="COTTON"
+        android:textColor="@color/white_opaque"
+        android:tint="@color/colorAccent"
+        app:layout_constraintStart_toEndOf="@+id/gold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tobacco"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="560dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/colorPrimary"
+        android:gravity="center"
+        android:text="TOBACCO"
+        android:textColor="@color/white_opaque"
+        android:tint="@color/colorAccent"
+        app:layout_constraintStart_toEndOf="@+id/gold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coffee"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/colorPrimary"
+        android:gravity="center"
+        android:text="COFFEE"
+        android:textColor="@color/white_opaque"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sugar_cane"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292" />
+
+    <TextView
+        android:id="@+id/sugar_cane"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/yellow"
+        android:gravity="center"
+        android:text="SUGAR CANE"
+        android:textColor="@color/white_opaque"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.419"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/circle"/>
+        app:layout_constraintVertical_bias="0.305" />
+
+    <TextView
+        android:id="@+id/gold"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/colorPrimary"
+        android:gravity="center"
+        android:text="GOLD"
+        android:textColor="@color/white_opaque"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/bricks"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/colorPrimary"
+        android:gravity="center"
+        android:text="BRICKS"
+        android:textColor="@color/white_opaque"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gold"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
