@@ -1,5 +1,6 @@
 package gov.dol.childlabor;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,6 +16,9 @@ import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Locale;
 
+import gov.dol.childlabor.charts.HalfPieChartActivity;
+import gov.dol.childlabor.charts.PieChartActivity;
+
 public class StatisticsActivity extends AppCompatActivity {
     String cname;
     @Override
@@ -27,6 +31,8 @@ public class StatisticsActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_statistics);
 
+
+
         if (Arrays.asList(MultiText).contains(country.getName())) {
             setContentView(R.layout.activity_statistics_multi);
         }
@@ -36,6 +42,15 @@ public class StatisticsActivity extends AppCompatActivity {
 
 
         Country.Statistics statistics = country.statistics;
+
+        findViewById(R.id.open_analysis).setOnClickListener(view -> {
+            Intent intent = new Intent(this, PieChartActivity.class);
+            intent.putExtra("Country",country.getName());
+            intent.putExtra("Agriculture",statistics.agriculturePercent);
+            intent.putExtra("Services",statistics.servicesPercent);
+            intent.putExtra("Industry",statistics.industryPercent);
+            startActivity(intent);
+        });
 
         if (Arrays.asList(MultiText).contains(country.getName())) {
             cname = country.getName();
