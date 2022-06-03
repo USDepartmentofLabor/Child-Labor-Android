@@ -1,26 +1,15 @@
 package gov.dol.childlabor.charts;
 
-import android.Manifest;
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.WindowManager;
-import android.widget.SeekBar;
-import android.widget.SeekBar.OnSeekBarChangeListener;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
@@ -31,45 +20,33 @@ import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.formatter.PercentFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
-import com.github.mikephil.charting.interfaces.datasets.IDataSet;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.utils.MPPointF;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
+import gov.dol.childlabor.CountryGood;
+import gov.dol.childlabor.Good;
+import gov.dol.childlabor.GoodXmlParser;
 import gov.dol.childlabor.R;
 
-public class PieChartActivity extends AppCompatActivity implements
+public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         OnChartValueSelectedListener {
 
     private PieChart chart;
-    Float ag,se,in;
     String country = "Country";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+          //      WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_piechart_half);
 
-        setTitle("PieChartActivity");
-
-        country = getIntent().getStringExtra("Country");
-        String agriculture = getIntent().getStringExtra("Agriculture");
-        String services = getIntent().getStringExtra("Services");
-        String industry = getIntent().getStringExtra("Industry");
-        try {
-            ag = Float.parseFloat(agriculture);
-            se = Float.parseFloat(services);
-            in = Float.parseFloat(industry);
-        }catch (Exception e){
-            e.printStackTrace();
-            ag = .333f;
-            se = .333f;
-            in = .333f;
-        }
-
+        setTitle("Goods By Sector");
+        country = "Agriculture";
         chart = findViewById(R.id.chart1);
         chart.setUsePercentValues(true);
         chart.getDescription().setEnabled(false);
@@ -125,12 +102,31 @@ public class PieChartActivity extends AppCompatActivity implements
 
         // NOTE: The order of the entries when being added to the entries array determines their position around the center of
         // the chart.
+        GoodXmlParser gParser = GoodXmlParser.fromContext(this);
+        Map<String,Integer> map = new HashMap<>();
+        ArrayList<Good> goodListBySector = gParser.getGoodListNew("");
+        for (Good good :
+                goodListBySector) {
+            if (good.getSector().equals("Agriculture")) {
+                for(CountryGood country: good.getCountries()){
+                    //Log.e("Region",country.getCountryRegion());
+                    if(map.containsKey(country.getCountryRegion())){
+                        map.put(country.getCountryRegion(),map.get(country.getCountryRegion())+1);
+                    }else{
+                        map.put(country.getCountryRegion(),1);
+                    }
+                }
+            }
+        }
         ArrayList<PieEntry> values = new ArrayList<>();
-        values.add(new PieEntry(ag*100, "Agriculture"));
-        values.add(new PieEntry(se*100, "Services"));
-        values.add(new PieEntry(in*100, "Industry"));
+        map.remove("");
+        for (String key :
+                map.keySet()) {
+            values.add(new PieEntry(map.get(key), key));
+        }
 
-        PieDataSet dataSet = new PieDataSet(values, "Results");
+
+        PieDataSet dataSet = new PieDataSet(values, "Agriculture By Region");
 
         dataSet.setDrawIcons(false);
 
@@ -142,20 +138,20 @@ public class PieChartActivity extends AppCompatActivity implements
 
         ArrayList<Integer> colors = new ArrayList<>();
 
-        for (int c : ColorTemplate.VORDIPLOM_COLORS)
-            colors.add(c);
+        /*for (int c : ColorTemplate.VORDIPLOM_COLORS)
+            colors.add(c);*/
 
-        for (int c : ColorTemplate.JOYFUL_COLORS)
-            colors.add(c);
+        /*for (int c : ColorTemplate.JOYFUL_COLORS)
+            colors.add(c);*/
 
         for (int c : ColorTemplate.COLORFUL_COLORS)
             colors.add(c);
 
-        for (int c : ColorTemplate.LIBERTY_COLORS)
+        /*for (int c : ColorTemplate.LIBERTY_COLORS)
             colors.add(c);
 
         for (int c : ColorTemplate.PASTEL_COLORS)
-            colors.add(c);
+            colors.add(c);*/
 
         colors.add(ColorTemplate.getHoloBlue());
 
@@ -179,9 +175,9 @@ public class PieChartActivity extends AppCompatActivity implements
 
     private SpannableString generateCenterSpannableText() {
 
-        SpannableString s = new SpannableString(country+"\nWorking Statistics");
+        SpannableString s = new SpannableString(country+"\nBy Region");
         s.setSpan(new RelativeSizeSpan(1.7f), 0, country.length(), 0);
-        s.setSpan(new StyleSpan(Typeface.NORMAL), country.length(), s.length() - country.length()-1, 0);
+        s.setSpan(new StyleSpan(Typeface.NORMAL), country.length(), s.length() - country.length()+1, 0);
         //s.setSpan(new ForegroundColorSpan(Color.GRAY), 14, s.length() - 15, 0);
         //s.setSpan(new RelativeSizeSpan(.8f), 14, s.length() - 15, 0);
         //s.setSpan(new StyleSpan(Typeface.ITALIC), s.length() - 14, s.length(), 0);

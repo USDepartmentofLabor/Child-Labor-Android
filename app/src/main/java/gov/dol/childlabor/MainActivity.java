@@ -21,6 +21,7 @@ import androidx.core.view.AccessibilityDelegateCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 
+import gov.dol.childlabor.charts.ChartsListActivity;
 import gov.dol.childlabor.charts.DataVisualizationActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                         intent = new Intent(getApplicationContext(), ExploitationTypeListSpinnerActivity.class);
                         break;
                     case "Data Visualizations":
-                        intent = new Intent(getApplicationContext(), DataVisualizationActivity.class);
+                        intent = new Intent(getApplicationContext(), ChartsListActivity.class);
                         break;
                 }
 

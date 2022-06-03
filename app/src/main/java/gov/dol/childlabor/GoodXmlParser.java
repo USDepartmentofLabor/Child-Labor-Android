@@ -56,6 +56,27 @@ public class GoodXmlParser {
         return goods;
     }
 
+    public ArrayList<Good> getGoodListNew(String name) {
+        ArrayList<Good> goods = null;
+        try {
+            XmlPullParserFactory pullParserFactory;
+            pullParserFactory = XmlPullParserFactory.newInstance();
+            XmlPullParser parser = pullParserFactory.newPullParser();
+
+            parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
+            parser.setInput(stream, null);
+            goods = parseXMLByRegion(parser,name);
+        }
+        catch(XmlPullParserException e) {
+            e.printStackTrace();
+        }
+        catch(IOException e) {
+            e.printStackTrace();
+        }
+
+        return goods;
+    }
+
     public Good[] getGoodListBySector() {
         ArrayList<Good> goods = new ArrayList<Good>(Arrays.asList(getGoodList()));
 
@@ -111,6 +132,99 @@ public class GoodXmlParser {
         return goods.toArray(new Good[goods.size()]);
 
     }
+
+    public ArrayList<Good> parseXMLByRegion(XmlPullParser parser, String region) throws XmlPullParserException, IOException {
+        ArrayList<Good> goods = null;
+        int eventType = parser.getEventType();
+        Good currentGood = null;
+
+        while(eventType != XmlPullParser.END_DOCUMENT) {
+            String name = null;
+            switch(eventType) {
+                case XmlPullParser.START_DOCUMENT:
+                    goods = new ArrayList();
+                    break;
+                case XmlPullParser.START_TAG:
+                    name = parser.getName();
+                    if (name.equals("Good")) {
+                        currentGood = new Good("Good");
+                    } else if (currentGood != null) {
+                        switch(name) {
+                            case "Good_Name":
+                                currentGood.setName(parser.nextText());
+                                break;
+                            case "Good_Sector":
+                                currentGood.setSector(parser.nextText());
+                                break;
+                            case "Countries":
+                                currentGood.setCountries(parseCountriesByRegion(parser, currentGood.getName()));
+                                break;
+                            default:
+                                skip(parser);
+                        }
+                    }
+                    break;
+                case XmlPullParser.END_TAG:
+                    name = parser.getName();
+                    if (name.equals("Good") && currentGood != null && currentGood.getCountries().length > 0) {
+                        goods.add(currentGood);
+                    }
+            }
+            eventType = parser.next();
+        }
+
+        return goods;
+
+    }
+
+    private CountryGood[] parseCountriesByRegion(XmlPullParser parser, String goodName) throws XmlPullParserException, IOException {
+        ArrayList<CountryGood> countryGoods = new ArrayList<CountryGood>();
+
+        int eventType = parser.getEventType();
+        CountryGood currentCountryGood = null;
+
+        while(!(eventType == XmlPullParser.END_TAG && parser.getName().equals("Countries"))) {
+            String name = null;
+            switch(eventType) {
+                case XmlPullParser.START_TAG:
+                    name = parser.getName();
+                    if (name.equals("Country")) {
+                        currentCountryGood = new CountryGood();
+                        currentCountryGood.setGoodName(goodName);
+                    } else if (currentCountryGood != null) {
+                        switch(name) {
+                            case "Country_Name":
+                                currentCountryGood.setCountryName(parser.nextText());
+                                break;
+                            case "Country_Region":
+                                currentCountryGood.setCountryRegion(parser.nextText());
+                                break;
+                            case "Child_Labor":
+                                currentCountryGood.setChildLabor(parser.nextText().equals("Yes"));
+                                break;
+                            case "Forced_Labor":
+                                currentCountryGood.setForcedLabor(parser.nextText().equals("Yes"));
+                                break;
+                            case "Forced_Child_Labor":
+                                currentCountryGood.setForcedChildLabor(parser.nextText().equals("Yes"));
+                                break;
+                            default:
+                                skip(parser);
+                        }
+                    }
+                    break;
+                case XmlPullParser.END_TAG:
+                    name = parser.getName();
+                    if (name.equals("Country") && currentCountryGood != null) {
+                        countryGoods.add(currentCountryGood);
+                    }
+            }
+            eventType = parser.next();
+        }
+
+        return countryGoods.toArray(new CountryGood[countryGoods.size()]);
+    }
+
 
     private CountryGood[] parseCountries(XmlPullParser parser, String goodName) throws XmlPullParserException, IOException {
         ArrayList<CountryGood> countryGoods = new ArrayList<CountryGood>();
