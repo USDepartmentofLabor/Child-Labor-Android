@@ -52,7 +52,7 @@
                 android:id="@+id/piechart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pie chart"
+                android:text="Goods By Sector"
                 android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
                 app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
 

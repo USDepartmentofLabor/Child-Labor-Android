@@ -7,9 +7,12 @@ import android.text.SpannableString;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 import android.util.Log;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
@@ -38,12 +41,49 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
 
     private PieChart chart;
     String country = "Country";
+    TextView agriculture,manufacturing,mining,other;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
           //      WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_piechart_half);
+        setContentView(R.layout.activity_goods_by_sector);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        agriculture = findViewById(R.id.agri);
+        manufacturing = findViewById(R.id.manufacture);
+        mining = findViewById(R.id.mining);
+        other = findViewById(R.id.other);
+        agriculture.setOnClickListener(view -> {
+            resetColors();
+            agriculture.setBackgroundColor(getResources().getColor(R.color.orange));
+            setData("Agriculture");
+            country = "Agriculture";
+            chart.setCenterText(generateCenterSpannableText());
+        });
+        mining.setOnClickListener(view -> {
+            resetColors();
+            mining.setBackgroundColor(getResources().getColor(R.color.orange));
+            setData("Mining");
+            country = "Mining";
+            chart.setCenterText(generateCenterSpannableText());
+        });
+        manufacturing.setOnClickListener(view -> {
+            resetColors();
+            manufacturing.setBackgroundColor(getResources().getColor(R.color.orange));
+            setData("Manufacturing");
+            country = "Manufacturing";
+            chart.setCenterText(generateCenterSpannableText());
+        });
+        other.setOnClickListener(view -> {
+            resetColors();
+            other.setBackgroundColor(getResources().getColor(R.color.orange));
+            setData("Other");
+            country = "Other";
+            chart.setCenterText(generateCenterSpannableText());
+        });
 
         setTitle("Goods By Sector");
         country = "Agriculture";
@@ -94,10 +134,17 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         // entry label styling
         chart.setEntryLabelColor(Color.WHITE);
         chart.setEntryLabelTextSize(12f);
-        setData();
+        setData("Agriculture");
     }
 
-    private void setData() {
+    private void resetColors() {
+        agriculture.setBackground(null);
+        mining.setBackground(null);
+        other.setBackground(null);
+        manufacturing.setBackground(null);
+    }
+
+    private void setData(String sector) {
         //ArrayList<PieEntry> entries = new ArrayList<>();
 
         // NOTE: The order of the entries when being added to the entries array determines their position around the center of
@@ -107,7 +154,7 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         ArrayList<Good> goodListBySector = gParser.getGoodListNew("");
         for (Good good :
                 goodListBySector) {
-            if (good.getSector().equals("Agriculture")) {
+            if (good.getSector().equals(sector)) {
                 for(CountryGood country: good.getCountries()){
                     //Log.e("Region",country.getCountryRegion());
                     if(map.containsKey(country.getCountryRegion())){
@@ -177,7 +224,7 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
 
         SpannableString s = new SpannableString(country+"\nBy Region");
         s.setSpan(new RelativeSizeSpan(1.7f), 0, country.length(), 0);
-        s.setSpan(new StyleSpan(Typeface.NORMAL), country.length(), s.length() - country.length()+1, 0);
+        s.setSpan(new StyleSpan(Typeface.NORMAL), country.length(), s.length() - country.length()+5, 0);
         //s.setSpan(new ForegroundColorSpan(Color.GRAY), 14, s.length() - 15, 0);
         //s.setSpan(new RelativeSizeSpan(.8f), 14, s.length() - 15, 0);
         //s.setSpan(new StyleSpan(Typeface.ITALIC), s.length() - 14, s.length(), 0);
