@@ -56,6 +56,15 @@
                 android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
                 app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
+            <TextView
+                android:padding="20dp"
+                android:id="@+id/goods_by_region"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Goods By Region"
+                android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
         </LinearLayout>
 
     </ScrollView>

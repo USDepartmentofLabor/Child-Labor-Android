@@ -30,7 +30,17 @@ public class ChartsListActivity extends AppCompatActivity {
         findViewById(R.id.piechart).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ChartsListActivity.this,GoodsBySectorChartActivityNew.class));
+                Intent intent = new Intent(ChartsListActivity.this, GoodsBySectorChartActivityNew.class);
+                intent.putExtra("IS_GOODS_BY_REGION",false);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.goods_by_region).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ChartsListActivity.this, GoodsBySectorChartActivityNew.class);
+                intent.putExtra("IS_GOODS_BY_REGION",true);
+                startActivity(intent);
             }
         });
 

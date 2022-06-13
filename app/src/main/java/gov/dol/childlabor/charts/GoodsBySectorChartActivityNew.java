@@ -42,6 +42,7 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
     private PieChart chart;
     String country = "Country";
     TextView agriculture,manufacturing,mining,other;
+    boolean isGoodsByRegion = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +53,10 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        isGoodsByRegion = getIntent().getBooleanExtra("IS_GOODS_BY_REGION",false);
+        if(isGoodsByRegion){
+            findViewById(R.id.sector_group).setVisibility(View.GONE);
+        }
         agriculture = findViewById(R.id.agri);
         manufacturing = findViewById(R.id.manufacture);
         mining = findViewById(R.id.mining);
@@ -85,8 +90,13 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
             chart.setCenterText(generateCenterSpannableText());
         });
 
-        setTitle("Goods By Sector");
-        country = "Agriculture";
+        if(isGoodsByRegion){
+            setTitle("Goods By Region");
+            country = "All Categories";
+        }else {
+            setTitle("Goods By Sector");
+            country = "Agriculture";
+        }
         chart = findViewById(R.id.chart1);
         chart.setUsePercentValues(true);
         chart.getDescription().setEnabled(false);
@@ -154,13 +164,24 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         ArrayList<Good> goodListBySector = gParser.getGoodListNew("");
         for (Good good :
                 goodListBySector) {
-            if (good.getSector().equals(sector)) {
-                for(CountryGood country: good.getCountries()){
+            if(isGoodsByRegion){
+                for (CountryGood country : good.getCountries()) {
                     //Log.e("Region",country.getCountryRegion());
-                    if(map.containsKey(country.getCountryRegion())){
-                        map.put(country.getCountryRegion(),map.get(country.getCountryRegion())+1);
-                    }else{
-                        map.put(country.getCountryRegion(),1);
+                    if (map.containsKey(country.getCountryRegion())) {
+                        map.put(country.getCountryRegion(), map.get(country.getCountryRegion()) + 1);
+                    } else {
+                        map.put(country.getCountryRegion(), 1);
+                    }
+                }
+            }else {
+                if (good.getSector().equals(sector)) {
+                    for (CountryGood country : good.getCountries()) {
+                        //Log.e("Region",country.getCountryRegion());
+                        if (map.containsKey(country.getCountryRegion())) {
+                            map.put(country.getCountryRegion(), map.get(country.getCountryRegion()) + 1);
+                        } else {
+                            map.put(country.getCountryRegion(), 1);
+                        }
                     }
                 }
             }
