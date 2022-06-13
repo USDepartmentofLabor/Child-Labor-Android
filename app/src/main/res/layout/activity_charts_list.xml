@@ -44,7 +44,7 @@
                 android:id="@+id/proportional_chart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Proportional area chart"
+                android:text="Most common goods produced with exploited labor"
                 android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
                 app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
             <TextView
