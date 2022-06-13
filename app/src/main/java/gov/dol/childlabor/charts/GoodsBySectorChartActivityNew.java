@@ -22,6 +22,7 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.formatter.DefaultValueFormatter;
 import com.github.mikephil.charting.formatter.PercentFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
@@ -99,7 +100,7 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
             country = "Agriculture";
         }
         chart = findViewById(R.id.chart1);
-        chart.setUsePercentValues(true);
+        chart.setUsePercentValues(false);
         chart.getDescription().setEnabled(false);
         chart.setExtraOffsets(5, 10, 5, 5);
 
@@ -113,8 +114,8 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         chart.setTransparentCircleColor(Color.WHITE);
         chart.setTransparentCircleAlpha(110);
 
-        chart.setHoleRadius(58f);
-        chart.setTransparentCircleRadius(61f);
+        chart.setHoleRadius(50f);
+        chart.setTransparentCircleRadius(0f);
 
         chart.setDrawCenterText(true);
 
@@ -144,7 +145,8 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
 
         // entry label styling
         chart.setEntryLabelColor(Color.WHITE);
-        chart.setEntryLabelTextSize(12f);
+        chart.setEntryLabelTextSize(16f);
+        chart.setDrawEntryLabels(false);
         setData("Agriculture");
     }
 
@@ -195,7 +197,7 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         }
 
 
-        PieDataSet dataSet = new PieDataSet(values, "Agriculture By Region");
+        PieDataSet dataSet = new PieDataSet(values, country+" By Region");
 
         dataSet.setDrawIcons(false);
 
@@ -228,8 +230,8 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         //dataSet.setSelectionShift(0f);
 
         PieData data = new PieData(dataSet);
-        data.setValueFormatter(new PercentFormatter());
-        data.setValueTextSize(11f);
+        data.setValueFormatter(new DefaultValueFormatter(0));
+        data.setValueTextSize(14f);
         data.setValueTextColor(Color.WHITE);
         chart.setData(data);
 
