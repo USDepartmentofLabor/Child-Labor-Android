@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.util.Pair;
 import android.view.Gravity;
+import android.view.MenuItem;
 
 
 import java.util.ArrayList;
@@ -63,5 +64,15 @@ public class DataVisualizationActivity extends AppCompatActivity {
             layout.addView(bubbleView,value.intValue(),value.intValue());
         }
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

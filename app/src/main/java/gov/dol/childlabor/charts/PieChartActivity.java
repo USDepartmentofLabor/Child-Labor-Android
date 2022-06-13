@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
@@ -17,6 +18,7 @@ import android.text.style.StyleSpan;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
@@ -52,13 +54,24 @@ public class PieChartActivity extends AppCompatActivity implements
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_piechart_half);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        setTitle("PieChartActivity");
+        setTitle("Working Statistics");
 
         country = getIntent().getStringExtra("Country");
         String agriculture = getIntent().getStringExtra("Agriculture");
         String services = getIntent().getStringExtra("Services");
         String industry = getIntent().getStringExtra("Industry");
+        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        chart = findViewById(R.id.chart1);
         try {
             ag = Float.parseFloat(agriculture);
             se = Float.parseFloat(services);
@@ -68,9 +81,12 @@ public class PieChartActivity extends AppCompatActivity implements
             ag = .333f;
             se = .333f;
             in = .333f;
+            findViewById(R.id.toolbar_head).setVisibility(View.GONE);
+            chart.setVisibility(View.GONE);
+            findViewById(R.id.text).setVisibility(View.VISIBLE);
+            findViewById(R.id.back).setVisibility(View.VISIBLE);
         }
 
-        chart = findViewById(R.id.chart1);
         chart.setUsePercentValues(true);
         chart.getDescription().setEnabled(false);
         chart.setExtraOffsets(5, 10, 5, 5);
@@ -203,5 +219,14 @@ public class PieChartActivity extends AppCompatActivity implements
     public void onNothingSelected() {
         Log.i("PieChart", "nothing selected");
     }
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
