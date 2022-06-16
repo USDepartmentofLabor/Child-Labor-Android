@@ -257,7 +257,7 @@
         </activity>
         <activity
             android:name=".charts.ChartsListActivity"
-            android:label="Charts List"
+            android:label="Data Visualizations"
             android:launchMode="singleTop"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -277,7 +277,7 @@
         </activity>
         <activity
             android:name=".charts.GoodsBySectorChartActivityNew"
-            android:label="Charts List"
+            android:label="Data Visualizations"
             android:launchMode="singleTop"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
