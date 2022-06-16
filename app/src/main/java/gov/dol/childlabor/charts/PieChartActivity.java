@@ -101,8 +101,8 @@ public class PieChartActivity extends AppCompatActivity implements
         chart.setTransparentCircleColor(Color.WHITE);
         chart.setTransparentCircleAlpha(110);
 
-        chart.setHoleRadius(58f);
-        chart.setTransparentCircleRadius(61f);
+        chart.setHoleRadius(50f);
+        chart.setTransparentCircleRadius(0f);
 
         chart.setDrawCenterText(true);
 
@@ -133,6 +133,7 @@ public class PieChartActivity extends AppCompatActivity implements
         // entry label styling
         chart.setEntryLabelColor(Color.WHITE);
         chart.setEntryLabelTextSize(12f);
+        chart.setDrawEntryLabels(false);
         setData();
     }
 
@@ -146,7 +147,7 @@ public class PieChartActivity extends AppCompatActivity implements
         values.add(new PieEntry(se*100, "Services"));
         values.add(new PieEntry(in*100, "Industry"));
 
-        PieDataSet dataSet = new PieDataSet(values, "Results");
+        PieDataSet dataSet = new PieDataSet(values, "");
 
         dataSet.setDrawIcons(false);
 
@@ -158,20 +159,20 @@ public class PieChartActivity extends AppCompatActivity implements
 
         ArrayList<Integer> colors = new ArrayList<>();
 
-        for (int c : ColorTemplate.VORDIPLOM_COLORS)
+        /*for (int c : ColorTemplate.VORDIPLOM_COLORS)
             colors.add(c);
 
         for (int c : ColorTemplate.JOYFUL_COLORS)
-            colors.add(c);
+            colors.add(c);*/
 
         for (int c : ColorTemplate.COLORFUL_COLORS)
             colors.add(c);
 
-        for (int c : ColorTemplate.LIBERTY_COLORS)
+        /*for (int c : ColorTemplate.LIBERTY_COLORS)
             colors.add(c);
 
         for (int c : ColorTemplate.PASTEL_COLORS)
-            colors.add(c);
+            colors.add(c);*/
 
         colors.add(ColorTemplate.getHoloBlue());
 
