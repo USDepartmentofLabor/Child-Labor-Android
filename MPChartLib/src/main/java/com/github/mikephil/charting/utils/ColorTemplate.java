@@ -44,10 +44,14 @@ public class ColorTemplate {
             Color.rgb(191, 134, 134), Color.rgb(179, 48, 80)
     };
     public static final int[] COLORFUL_COLORS = {
-            Color.rgb(193, 37, 82), Color.rgb(255, 102, 0), Color.rgb(245, 199, 0),
-            Color.rgb(106, 150, 31), Color.rgb(179, 100, 53)
+            Color.rgb(57,89,122), Color.rgb(108,128,80), Color.rgb(245, 199, 0),
+            Color.rgb(218,141,58), Color.rgb(179, 100, 53)
     };
     public static final int[] VORDIPLOM_COLORS = {
+            Color.rgb(192, 255, 140), Color.rgb(255, 247, 140), Color.rgb(255, 208, 140),
+            Color.rgb(140, 234, 255), Color.rgb(255, 140, 157)
+    };
+    public static final int[] ORANGE = {
             Color.rgb(192, 255, 140), Color.rgb(255, 247, 140), Color.rgb(255, 208, 140),
             Color.rgb(140, 234, 255), Color.rgb(255, 140, 157)
     };

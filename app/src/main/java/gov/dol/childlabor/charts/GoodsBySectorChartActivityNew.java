@@ -1,28 +1,19 @@
 package gov.dol.childlabor.charts;
 
-import android.Manifest;
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
 import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.SeekBar;
-import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
@@ -31,63 +22,85 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.formatter.DefaultValueFormatter;
 import com.github.mikephil.charting.formatter.PercentFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
-import com.github.mikephil.charting.interfaces.datasets.IDataSet;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.utils.MPPointF;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
+import gov.dol.childlabor.CountryGood;
+import gov.dol.childlabor.Good;
+import gov.dol.childlabor.GoodXmlParser;
 import gov.dol.childlabor.R;
 
-public class PieChartActivity extends AppCompatActivity implements
+public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         OnChartValueSelectedListener {
 
     private PieChart chart;
-    Float ag,se,in;
     String country = "Country";
+    TextView agriculture,manufacturing,mining,other;
+    boolean isGoodsByRegion = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_piechart_half);
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+          //      WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_goods_by_sector);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        setTitle("Working Statistics");
-
-        country = getIntent().getStringExtra("Country");
-        String agriculture = getIntent().getStringExtra("Agriculture");
-        String services = getIntent().getStringExtra("Services");
-        String industry = getIntent().getStringExtra("Industry");
-        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
+        isGoodsByRegion = getIntent().getBooleanExtra("IS_GOODS_BY_REGION",false);
+        if(isGoodsByRegion){
+            findViewById(R.id.sector_group).setVisibility(View.GONE);
+        }
+        agriculture = findViewById(R.id.agri);
+        manufacturing = findViewById(R.id.manufacture);
+        mining = findViewById(R.id.mining);
+        other = findViewById(R.id.other);
+        agriculture.setOnClickListener(view -> {
+            resetColors();
+            agriculture.setBackgroundColor(getResources().getColor(R.color.orange));
+            setData("Agriculture");
+            country = "Agriculture";
+            chart.setCenterText(generateCenterSpannableText());
+        });
+        mining.setOnClickListener(view -> {
+            resetColors();
+            mining.setBackgroundColor(getResources().getColor(R.color.orange));
+            setData("Mining");
+            country = "Mining";
+            chart.setCenterText(generateCenterSpannableText());
+        });
+        manufacturing.setOnClickListener(view -> {
+            resetColors();
+            manufacturing.setBackgroundColor(getResources().getColor(R.color.orange));
+            setData("Manufacturing");
+            country = "Manufacturing";
+            chart.setCenterText(generateCenterSpannableText());
+        });
+        other.setOnClickListener(view -> {
+            resetColors();
+            other.setBackgroundColor(getResources().getColor(R.color.orange));
+            setData("Other");
+            country = "Other";
+            chart.setCenterText(generateCenterSpannableText());
         });
 
-        chart = findViewById(R.id.chart1);
-        try {
-            ag = Float.parseFloat(agriculture);
-            se = Float.parseFloat(services);
-            in = Float.parseFloat(industry);
-        }catch (Exception e){
-            e.printStackTrace();
-            ag = .333f;
-            se = .333f;
-            in = .333f;
-            findViewById(R.id.toolbar_head).setVisibility(View.GONE);
-            chart.setVisibility(View.GONE);
-            findViewById(R.id.text).setVisibility(View.VISIBLE);
-            findViewById(R.id.back).setVisibility(View.VISIBLE);
+        if(isGoodsByRegion){
+            setTitle("Goods By Region");
+            country = "All Categories";
+        }else {
+            setTitle("Goods By Sector");
+            country = "Agriculture";
         }
-
-        chart.setUsePercentValues(true);
+        chart = findViewById(R.id.chart1);
+        chart.setUsePercentValues(false);
         chart.getDescription().setEnabled(false);
         chart.setExtraOffsets(5, 10, 5, 5);
 
@@ -132,22 +145,59 @@ public class PieChartActivity extends AppCompatActivity implements
 
         // entry label styling
         chart.setEntryLabelColor(Color.WHITE);
-        chart.setEntryLabelTextSize(12f);
+        chart.setEntryLabelTextSize(16f);
         chart.setDrawEntryLabels(false);
-        setData();
+        setData("Agriculture");
     }
 
-    private void setData() {
+    private void resetColors() {
+        agriculture.setBackground(null);
+        mining.setBackground(null);
+        other.setBackground(null);
+        manufacturing.setBackground(null);
+    }
+
+    private void setData(String sector) {
         //ArrayList<PieEntry> entries = new ArrayList<>();
 
         // NOTE: The order of the entries when being added to the entries array determines their position around the center of
         // the chart.
+        GoodXmlParser gParser = GoodXmlParser.fromContext(this);
+        Map<String,Integer> map = new HashMap<>();
+        ArrayList<Good> goodListBySector = gParser.getGoodListNew("");
+        for (Good good :
+                goodListBySector) {
+            if(isGoodsByRegion){
+                for (CountryGood country : good.getCountries()) {
+                    //Log.e("Region",country.getCountryRegion());
+                    if (map.containsKey(country.getCountryRegion())) {
+                        map.put(country.getCountryRegion(), map.get(country.getCountryRegion()) + 1);
+                    } else {
+                        map.put(country.getCountryRegion(), 1);
+                    }
+                }
+            }else {
+                if (good.getSector().equals(sector)) {
+                    for (CountryGood country : good.getCountries()) {
+                        //Log.e("Region",country.getCountryRegion());
+                        if (map.containsKey(country.getCountryRegion())) {
+                            map.put(country.getCountryRegion(), map.get(country.getCountryRegion()) + 1);
+                        } else {
+                            map.put(country.getCountryRegion(), 1);
+                        }
+                    }
+                }
+            }
+        }
         ArrayList<PieEntry> values = new ArrayList<>();
-        values.add(new PieEntry(ag*100, "Agriculture"));
-        values.add(new PieEntry(se*100, "Services"));
-        values.add(new PieEntry(in*100, "Industry"));
+        map.remove("");
+        for (String key :
+                map.keySet()) {
+            values.add(new PieEntry(map.get(key), key));
+        }
 
-        PieDataSet dataSet = new PieDataSet(values, "");
+
+        PieDataSet dataSet = new PieDataSet(values, country+" By Region");
 
         dataSet.setDrawIcons(false);
 
@@ -160,9 +210,9 @@ public class PieChartActivity extends AppCompatActivity implements
         ArrayList<Integer> colors = new ArrayList<>();
 
         /*for (int c : ColorTemplate.VORDIPLOM_COLORS)
-            colors.add(c);
+            colors.add(c);*/
 
-        for (int c : ColorTemplate.JOYFUL_COLORS)
+        /*for (int c : ColorTemplate.JOYFUL_COLORS)
             colors.add(c);*/
 
         for (int c : ColorTemplate.COLORFUL_COLORS)
@@ -180,8 +230,8 @@ public class PieChartActivity extends AppCompatActivity implements
         //dataSet.setSelectionShift(0f);
 
         PieData data = new PieData(dataSet);
-        data.setValueFormatter(new PercentFormatter());
-        data.setValueTextSize(11f);
+        data.setValueFormatter(new DefaultValueFormatter(0));
+        data.setValueTextSize(14f);
         data.setValueTextColor(Color.WHITE);
         chart.setData(data);
 
@@ -196,9 +246,9 @@ public class PieChartActivity extends AppCompatActivity implements
 
     private SpannableString generateCenterSpannableText() {
 
-        SpannableString s = new SpannableString(country+"\nWorking Statistics");
+        SpannableString s = new SpannableString(country+"\nBy Region");
         s.setSpan(new RelativeSizeSpan(1.7f), 0, country.length(), 0);
-        s.setSpan(new StyleSpan(Typeface.NORMAL), country.length(), s.length() - country.length()-1, 0);
+        s.setSpan(new StyleSpan(Typeface.NORMAL), country.length(), s.length() - country.length()+5, 0);
         //s.setSpan(new ForegroundColorSpan(Color.GRAY), 14, s.length() - 15, 0);
         //s.setSpan(new RelativeSizeSpan(.8f), 14, s.length() - 15, 0);
         //s.setSpan(new StyleSpan(Typeface.ITALIC), s.length() - 14, s.length(), 0);
@@ -220,6 +270,7 @@ public class PieChartActivity extends AppCompatActivity implements
     public void onNothingSelected() {
         Log.i("PieChart", "nothing selected");
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -230,4 +281,5 @@ public class PieChartActivity extends AppCompatActivity implements
                 return super.onOptionsItemSelected(item);
         }
     }
+
 }

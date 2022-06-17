@@ -7,7 +7,7 @@ import java.io.Serializable;
  */
 public class CountryGood implements Serializable {
 
-    private String goodName, countryName;
+    private String goodName, countryName,countryRegion;
     private Boolean hasChildLabor, hasForcedLabor, hasForcedChildLabor;
 
     public CountryGood() {
@@ -54,4 +54,11 @@ public class CountryGood implements Serializable {
         this.hasForcedChildLabor = hasForcedChildLabor;
     }
 
+    public String getCountryRegion() {
+        return countryRegion;
+    }
+
+    public void setCountryRegion(String countryRegion) {
+        this.countryRegion = countryRegion;
+    }
 }
