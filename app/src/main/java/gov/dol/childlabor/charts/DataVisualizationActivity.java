@@ -1,6 +1,7 @@
 package gov.dol.childlabor.charts;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.util.Pair;
 import android.view.Gravity;
+import android.view.MenuItem;
 
 
 import java.util.ArrayList;
@@ -25,6 +27,9 @@ public class DataVisualizationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.proportional_area_chart);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         BubbleLayout layout = findViewById(R.id.bubble_layout);
         Map<String,Pair<Float,Integer>> labels = new HashMap<>();
         labels.put("GOLD",new Pair(2.4f,R.color.yellow));
@@ -59,5 +64,15 @@ public class DataVisualizationActivity extends AppCompatActivity {
             layout.addView(bubbleView,value.intValue(),value.intValue());
         }
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:orientation="vertical">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar_head"
+        android:layout_gravity="top"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_alignParentStart="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
 
     <com.github.mikephil.charting.charts.PieChart
+        android:layout_below="@+id/toolbar_head"
         android:id="@+id/chart1"
         android:layout_width="match_parent"
         android:layout_centerInParent="true"
@@ -13,8 +33,22 @@
 
 <TextView
     android:id="@+id/text"
+    android:visibility="gone"
     android:layout_centerInParent="true"
     android:layout_width="wrap_content"
+    android:text="No Data Available"
     android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/back"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:text="Go Back"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>
