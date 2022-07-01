@@ -285,6 +285,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="gov.dol.childlabor.MainActivity" />
         </activity>
+        <activity
+            android:name=".charts.AssessmentLevelsChart"
+            android:label="Data Visualizations"
+            android:launchMode="singleTop"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gov.dol.childlabor.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

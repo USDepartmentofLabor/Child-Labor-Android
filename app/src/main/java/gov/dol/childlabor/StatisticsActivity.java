@@ -45,12 +45,13 @@ public class StatisticsActivity extends AppCompatActivity {
 
         findViewById(R.id.open_analysis).setOnClickListener(view -> {
             Intent intent = new Intent(this, PieChartActivity.class);
-            intent.putExtra("Country",country.getName());
-            intent.putExtra("Agriculture",statistics.agriculturePercent);
-            intent.putExtra("Services",statistics.servicesPercent);
-            intent.putExtra("Industry",statistics.industryPercent);
+            intent.putExtra("Country", country.getName());
+            intent.putExtra("Agriculture", statistics.agriculturePercent);
+            intent.putExtra("Services", statistics.servicesPercent);
+            intent.putExtra("Industry", statistics.industryPercent);
             startActivity(intent);
         });
+
 
         if (Arrays.asList(MultiText).contains(country.getName())) {
             cname = country.getName();

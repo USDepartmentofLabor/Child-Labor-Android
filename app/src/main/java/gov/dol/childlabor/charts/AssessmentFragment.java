@@ -1,28 +1,15 @@
 package gov.dol.childlabor.charts;
 
-import android.Manifest;
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.RelativeSizeSpan;
-import android.text.style.StyleSpan;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.SeekBar;
-import android.widget.SeekBar.OnSeekBarChangeListener;
-import android.widget.TextView;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
@@ -31,69 +18,45 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
-import com.github.mikephil.charting.formatter.PercentFormatter;
+import com.github.mikephil.charting.formatter.DefaultValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
-import com.github.mikephil.charting.interfaces.datasets.IDataSet;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.utils.MPPointF;
 
+import java.io.Serializable;
 import java.util.ArrayList;
-
+import java.util.HashMap;
+import java.util.Map;
 import gov.dol.childlabor.R;
 
-public class PieChartActivity extends AppCompatActivity implements
+public class AssessmentFragment extends Fragment implements
         OnChartValueSelectedListener {
 
     private PieChart chart;
-    Float ag,se,in;
     String country = "Country";
+    boolean isGoodsByRegion = false;
+    boolean isAssesmentLevelsByRegion = false;
+
+    public static AssessmentFragment getInstance(Map<String, Integer> stringIntegerMap){
+        AssessmentFragment fragment = new AssessmentFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("DATA", (Serializable) stringIntegerMap);
+        fragment.setArguments(bundle);
+        return fragment;
+    }
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_piechart_half);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View rootView =  inflater.inflate(R.layout.activity_assessment_levels,container,false);
 
-        setTitle("Working Children Statistics");
-
-        country = getIntent().getStringExtra("Country");
-        String agriculture = getIntent().getStringExtra("Agriculture");
-        String services = getIntent().getStringExtra("Services");
-        String industry = getIntent().getStringExtra("Industry");
-        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
-
-        chart = findViewById(R.id.chart1);
-        try {
-            ag = Float.parseFloat(agriculture);
-            se = Float.parseFloat(services);
-            in = Float.parseFloat(industry);
-        }catch (Exception e){
-            e.printStackTrace();
-            ag = .333f;
-            se = .333f;
-            in = .333f;
-            findViewById(R.id.toolbar_head).setVisibility(View.GONE);
-            chart.setVisibility(View.GONE);
-            findViewById(R.id.text).setVisibility(View.VISIBLE);
-            findViewById(R.id.back).setVisibility(View.VISIBLE);
-        }
-
-        chart.setUsePercentValues(true);
+        chart = rootView.findViewById(R.id.chart1);
+        chart.setUsePercentValues(false);
         chart.getDescription().setEnabled(false);
-        chart.setExtraOffsets(5, 10, 5, 5);
+        chart.setExtraOffsets(5, 0, 5, 5);
 
         chart.setDragDecelerationFrictionCoef(0.95f);
 
-        //chart.setCenterText(generateCenterSpannableText());
+        chart.setCenterText("");
 
         chart.setDrawHoleEnabled(true);
         chart.setHoleColor(Color.WHITE);
@@ -120,7 +83,6 @@ public class PieChartActivity extends AppCompatActivity implements
 
         chart.animateY(1400, Easing.EaseInOutQuad);
         // chart.spin(2000, 0, 360);
-
         chart.setExtraBottomOffset(100);
         Legend l = chart.getLegend();
         l.setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
@@ -133,9 +95,10 @@ public class PieChartActivity extends AppCompatActivity implements
 
         // entry label styling
         chart.setEntryLabelColor(Color.WHITE);
-        chart.setEntryLabelTextSize(12f);
+        chart.setEntryLabelTextSize(16f);
         chart.setDrawEntryLabels(false);
         setData();
+        return rootView;
     }
 
     private void setData() {
@@ -143,10 +106,14 @@ public class PieChartActivity extends AppCompatActivity implements
 
         // NOTE: The order of the entries when being added to the entries array determines their position around the center of
         // the chart.
+        Map<String,Integer> map = (Map<String, Integer>) getArguments().getSerializable("DATA");
         ArrayList<PieEntry> values = new ArrayList<>();
-        values.add(new PieEntry(ag*100, "Agriculture"));
-        values.add(new PieEntry(se*100, "Services"));
-        values.add(new PieEntry(in*100, "Industry"));
+        map.remove("");
+        for (String key :
+                map.keySet()) {
+            values.add(new PieEntry(map.get(key), key));
+        }
+
 
         PieDataSet dataSet = new PieDataSet(values, "");
 
@@ -161,10 +128,10 @@ public class PieChartActivity extends AppCompatActivity implements
         ArrayList<Integer> colors = new ArrayList<>();
 
         /*for (int c : ColorTemplate.VORDIPLOM_COLORS)
-            colors.add(c);
+            colors.add(c);*/
 
         for (int c : ColorTemplate.JOYFUL_COLORS)
-            colors.add(c);*/
+            colors.add(c);
 
         for (int c : ColorTemplate.COLORFUL_COLORS)
             colors.add(c);
@@ -181,8 +148,8 @@ public class PieChartActivity extends AppCompatActivity implements
         //dataSet.setSelectionShift(0f);
 
         PieData data = new PieData(dataSet);
-        data.setValueFormatter(new PercentFormatter());
-        data.setValueTextSize(11f);
+        data.setValueFormatter(new DefaultValueFormatter(0));
+        data.setValueTextSize(14f);
         data.setValueTextColor(Color.WHITE);
         chart.setData(data);
 
@@ -191,22 +158,6 @@ public class PieChartActivity extends AppCompatActivity implements
 
         chart.invalidate();
     }
-
-
-
-
-    private SpannableString generateCenterSpannableText() {
-
-        SpannableString s = new SpannableString(country+"\nWorking Statistics");
-        s.setSpan(new RelativeSizeSpan(1.7f), 0, country.length(), 0);
-        s.setSpan(new StyleSpan(Typeface.NORMAL), country.length(), s.length() - country.length()-1, 0);
-        //s.setSpan(new ForegroundColorSpan(Color.GRAY), 14, s.length() - 15, 0);
-        //s.setSpan(new RelativeSizeSpan(.8f), 14, s.length() - 15, 0);
-        //s.setSpan(new StyleSpan(Typeface.ITALIC), s.length() - 14, s.length(), 0);
-        //s.setSpan(new ForegroundColorSpan(ColorTemplate.getHoloBlue()), s.length() - 14, s.length(), 0);
-        return s;
-    }
-
     @Override
     public void onValueSelected(Entry e, Highlight h) {
 
@@ -221,14 +172,5 @@ public class PieChartActivity extends AppCompatActivity implements
     public void onNothingSelected() {
         Log.i("PieChart", "nothing selected");
     }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
+
 }
