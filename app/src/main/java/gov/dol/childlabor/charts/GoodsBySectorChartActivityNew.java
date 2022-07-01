@@ -33,7 +33,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import gov.dol.childlabor.Country;
 import gov.dol.childlabor.CountryGood;
+import gov.dol.childlabor.CountryXmlParser;
 import gov.dol.childlabor.Good;
 import gov.dol.childlabor.GoodXmlParser;
 import gov.dol.childlabor.R;
@@ -45,6 +47,7 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
     String country = "Country";
     TextView agriculture,manufacturing,mining,other;
     boolean isGoodsByRegion = false;
+    boolean isAssesmentLevelsByRegion = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,7 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         isGoodsByRegion = getIntent().getBooleanExtra("IS_GOODS_BY_REGION",false);
+        isAssesmentLevelsByRegion = getIntent().getBooleanExtra("IS_ASSESSMENT_LEVELS_BY_REGION",false);
         if(isGoodsByRegion){
             findViewById(R.id.sector_group).setVisibility(View.GONE);
         }
@@ -95,6 +99,9 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         if(isGoodsByRegion){
             setTitle("Goods By Region");
             country = "All Categories";
+            if(isAssesmentLevelsByRegion){
+                setTitle("Assessment Levels By Region");
+            }
         }else {
             setTitle("Goods By Sector");
             country = "Agriculture";
@@ -117,7 +124,7 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         chart.setHoleRadius(50f);
         chart.setTransparentCircleRadius(0f);
 
-        chart.setDrawCenterText(true);
+        chart.setDrawCenterText(false);
 
         chart.setRotationAngle(0);
         // enable rotation of the chart by touch
@@ -134,14 +141,15 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         chart.animateY(1400, Easing.EaseInOutQuad);
         // chart.spin(2000, 0, 360);
 
+        chart.setExtraBottomOffset(100);
         Legend l = chart.getLegend();
-        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
-        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        l.setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
+        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.LEFT);
         l.setOrientation(Legend.LegendOrientation.VERTICAL);
         l.setDrawInside(false);
-        l.setXEntrySpace(7f);
+        l.setXEntrySpace(30f);
         l.setYEntrySpace(0f);
-        l.setYOffset(0f);
+        l.setYOffset(-20f);
 
         // entry label styling
         chart.setEntryLabelColor(Color.WHITE);
@@ -197,7 +205,7 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         }
 
 
-        PieDataSet dataSet = new PieDataSet(values, country+" By Region");
+        PieDataSet dataSet = new PieDataSet(values, "");
 
         dataSet.setDrawIcons(false);
 

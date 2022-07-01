@@ -116,7 +116,7 @@ public class HalfPieChartActivity extends AppCompatActivity {
         values.add(new PieEntry(se*100, "Services"));
         values.add(new PieEntry(in*100, "Industry"));
 
-        PieDataSet dataSet = new PieDataSet(values, "Working Statistics");
+        PieDataSet dataSet = new PieDataSet(values, "");
         dataSet.setSliceSpace(3f);
         dataSet.setSelectionShift(5f);
 
