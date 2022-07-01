@@ -44,7 +44,7 @@ public class ColorTemplate {
             Color.rgb(191, 134, 134), Color.rgb(179, 48, 80)
     };
     public static final int[] COLORFUL_COLORS = {
-            Color.rgb(57,89,122), Color.rgb(108,128,80), Color.rgb(245, 199, 0),
+            Color.rgb(108,128,80), Color.rgb(57,89,122), Color.rgb(245, 199, 0),
             Color.rgb(218,141,58), Color.rgb(179, 100, 53)
     };
     public static final int[] VORDIPLOM_COLORS = {

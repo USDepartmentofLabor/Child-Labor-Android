@@ -236,6 +236,18 @@
                 android:text="Data are from most recent year available. For more information, see Table 1 of the Report PDF."
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/open_analysis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Open Analysis"
+                android:background="#dadada" />
+
         </LinearLayout>
 
     </ScrollView>

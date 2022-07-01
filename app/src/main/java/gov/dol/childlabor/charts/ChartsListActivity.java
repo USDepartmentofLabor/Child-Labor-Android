@@ -44,6 +44,15 @@ public class ChartsListActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.assessment_levels).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ChartsListActivity.this, AssessmentLevelsChart.class);
+                intent.putExtra("IS_GOODS_BY_REGION",true);
+                intent.putExtra("IS_ASSESSMENT_LEVELS_BY_REGION",true);
+                startActivity(intent);
+            }
+        });
 
 
 
