@@ -26,7 +26,7 @@ public class AssessmentLevelsAdapter extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        return AssessmentFragment.getInstance(map.get(list.get(position)));
+        return AssessmentFragment.getInstance(map.get(list.get(position)),list.get(position));
     }
 
     @Override

@@ -30,6 +30,7 @@ import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.utils.MPPointF;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -69,12 +70,29 @@ public class AssessmentLevelsChart extends AppCompatActivity
             Country[] countryList = countryXmlParser.getCountryList();
             for (int i = 0; i < countryList.length; i++) {
                 if(map.containsKey(countryList[i].getRegion())){
-                    if(map.get(countryList[i].getRegion()).containsKey(countryList[i].getLevel())){
-                        int currentValue = map.get(countryList[i].getRegion()).get(countryList[i].getLevel());
-                        map.get(countryList[i].getRegion()).put(countryList[i].getLevel(),currentValue +1);
+                    if(countryList[i].getLevel().contains("Minimal Advancement")){
+                        if(map.get(countryList[i].getRegion()).containsKey("Minimal Advancement")){
+                            int currentValue = map.get(countryList[i].getRegion()).get("Minimal Advancement");
+                            map.get(countryList[i].getRegion()).put("Minimal Advancement",currentValue +1);
+                        }else{
+                            map.get(countryList[i].getRegion()).put("Minimal Advancement",1);
+                        }
+                    }else if(countryList[i].getLevel().contains("No Advancement")){
+                        if(map.get(countryList[i].getRegion()).containsKey("No Advancement")){
+                            int currentValue = map.get(countryList[i].getRegion()).get("No Advancement");
+                            map.get(countryList[i].getRegion()).put("No Advancement",currentValue +1);
+                        }else{
+                            map.get(countryList[i].getRegion()).put("No Advancement",1);
+                        }
                     }else{
-                        map.get(countryList[i].getRegion()).put(countryList[i].getLevel(),1);
+                        if(map.get(countryList[i].getRegion()).containsKey(countryList[i].getLevel())){
+                            int currentValue = map.get(countryList[i].getRegion()).get(countryList[i].getLevel());
+                            map.get(countryList[i].getRegion()).put(countryList[i].getLevel(),currentValue +1);
+                        }else{
+                            map.get(countryList[i].getRegion()).put(countryList[i].getLevel(),1);
+                        }
                     }
+
                 }else{
                     Map<String,Integer> innerData = new HashMap();
                     map.put(countryList[i].getRegion(),innerData);
@@ -85,6 +103,8 @@ public class AssessmentLevelsChart extends AppCompatActivity
 
         }
         viewPager = findViewById(R.id.view_pager);
+        TabLayout tabLayout = (TabLayout)findViewById(R.id.tab_layout);
+        tabLayout.setupWithViewPager(viewPager, true);
         viewPager.setAdapter(new AssessmentLevelsAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,map));
 
     }
