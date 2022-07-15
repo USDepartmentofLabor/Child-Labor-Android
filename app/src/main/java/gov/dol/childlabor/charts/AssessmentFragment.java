@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -38,17 +39,18 @@ public class AssessmentFragment extends Fragment implements
     boolean isGoodsByRegion = false;
     boolean isAssesmentLevelsByRegion = false;
 
-    public static AssessmentFragment getInstance(Map<String, Integer> stringIntegerMap){
+    public static AssessmentFragment getInstance(Map<String, Integer> stringIntegerMap,String title){
         AssessmentFragment fragment = new AssessmentFragment();
         Bundle bundle = new Bundle();
         bundle.putSerializable("DATA", (Serializable) stringIntegerMap);
+        bundle.putString("TITLE", title);
         fragment.setArguments(bundle);
         return fragment;
     }
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView =  inflater.inflate(R.layout.activity_assessment_levels,container,false);
-
+        ((TextView)rootView.findViewById(R.id.text)).setText("Advancement Level for "+getArguments().getString("TITLE"));
         chart = rootView.findViewById(R.id.chart1);
         chart.setUsePercentValues(false);
         chart.getDescription().setEnabled(false);
@@ -130,8 +132,6 @@ public class AssessmentFragment extends Fragment implements
         /*for (int c : ColorTemplate.VORDIPLOM_COLORS)
             colors.add(c);*/
 
-        for (int c : ColorTemplate.JOYFUL_COLORS)
-            colors.add(c);
 
         for (int c : ColorTemplate.COLORFUL_COLORS)
             colors.add(c);
@@ -155,7 +155,6 @@ public class AssessmentFragment extends Fragment implements
 
         // undo all highlights
         chart.highlightValues(null);
-
         chart.invalidate();
     }
     @Override
