@@ -30,7 +30,7 @@ public class CountryXmlParser {
     public static CountryXmlParser fromContext(Context context) {
         InputStream stream = null;
         try {
-            stream = context.getAssets().open("countries_2020.xml");
+            stream = context.getAssets().open("countries_2021.xml");
         }
         catch(IOException e) {
             e.printStackTrace();
