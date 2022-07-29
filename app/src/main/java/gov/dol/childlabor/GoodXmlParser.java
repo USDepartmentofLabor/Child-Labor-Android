@@ -27,7 +27,7 @@ public class GoodXmlParser {
     public static GoodXmlParser fromContext(Context context) {
         InputStream stream = null;
         try {
-            stream = context.getAssets().open("goods_2019.xml");
+            stream = context.getAssets().open("goods_2021.xml");
         }
         catch(IOException e) {
             e.printStackTrace();
