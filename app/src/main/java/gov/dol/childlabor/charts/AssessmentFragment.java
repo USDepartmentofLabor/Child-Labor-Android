@@ -27,7 +27,12 @@ import com.github.mikephil.charting.utils.MPPointF;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import gov.dol.childlabor.R;
 
@@ -108,12 +113,33 @@ public class AssessmentFragment extends Fragment implements
 
         // NOTE: The order of the entries when being added to the entries array determines their position around the center of
         // the chart.
-        Map<String,Integer> map = (Map<String, Integer>) getArguments().getSerializable("DATA");
+        Map<String,Integer> map = sortByValue((Map<String, Integer>) getArguments().getSerializable("DATA"));
         ArrayList<PieEntry> values = new ArrayList<>();
         map.remove("");
+        ArrayList<Integer> colors = new ArrayList<>();
         for (String key :
                 map.keySet()) {
             values.add(new PieEntry(map.get(key), key));
+            switch (key){
+                case "No Advancement":
+                    colors.add(Color.rgb(218,141,58));
+                    break;
+                case "Significant Advancement":
+                    colors.add(Color.rgb(168, 180, 64));
+                    break;
+                case "Moderate Advancement":
+                    colors.add(Color.rgb(57,89,122));
+                    break;
+                case "Minimal Advancement":
+                    colors.add(Color.rgb(179, 100, 53));
+                    break;
+                case "No Assessment":
+                    colors.add(Color.rgb(108,128,80));
+                    break;
+                default:
+                    colors.add(Color.rgb(255,0,0));
+            }
+
         }
 
 
@@ -127,15 +153,15 @@ public class AssessmentFragment extends Fragment implements
 
         // add a lot of colors
 
-        ArrayList<Integer> colors = new ArrayList<>();
+
 
         /*for (int c : ColorTemplate.VORDIPLOM_COLORS)
             colors.add(c);*/
 
 
-        for (int c : ColorTemplate.COLORFUL_COLORS)
+        /*for (int c : ColorTemplate.COLORFUL_COLORS)
             colors.add(c);
-
+*/
         /*for (int c : ColorTemplate.LIBERTY_COLORS)
             colors.add(c);
 
@@ -172,4 +198,27 @@ public class AssessmentFragment extends Fragment implements
         Log.i("PieChart", "nothing selected");
     }
 
+    // function to sort hashmap by values
+    private Map<String, Integer> sortByValue(Map<String, Integer> hm)
+    {
+        // Create a list from elements of HashMap
+        List<Map.Entry<String, Integer> > list =
+                new LinkedList<Map.Entry<String, Integer> >(hm.entrySet());
+
+        // Sort the list
+        Collections.sort(list, new Comparator<Map.Entry<String, Integer> >() {
+            public int compare(Map.Entry<String, Integer> o1,
+                               Map.Entry<String, Integer> o2)
+            {
+                return (o1.getValue()).compareTo(o2.getValue());
+            }
+        });
+
+        // put data from sorted list to hashmap
+        HashMap<String, Integer> temp = new LinkedHashMap<String, Integer>();
+        for (Map.Entry<String, Integer> aa : list) {
+            temp.put(aa.getKey(), aa.getValue());
+        }
+        return temp;
+    }
 }

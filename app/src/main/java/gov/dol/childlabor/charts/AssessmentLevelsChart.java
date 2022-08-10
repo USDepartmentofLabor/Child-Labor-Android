@@ -70,7 +70,10 @@ public class AssessmentLevelsChart extends AppCompatActivity
             Country[] countryList = countryXmlParser.getCountryList();
             for (int i = 0; i < countryList.length; i++) {
                 if(map.containsKey(countryList[i].getRegion())){
-                    if(countryList[i].getLevel().contains("Minimal Advancement")){
+                    Log.e("LEVEL" , countryList[i].getLevel() +" --->  "+i);
+                    if(countryList[i].getLevel().contains("Not Covered in TDA Report")){
+
+                    }else if(countryList[i].getLevel().contains("Minimal Advancement")){
                         if(map.get(countryList[i].getRegion()).containsKey("Minimal Advancement")){
                             int currentValue = map.get(countryList[i].getRegion()).get("Minimal Advancement");
                             map.get(countryList[i].getRegion()).put("Minimal Advancement",currentValue +1);
@@ -95,6 +98,16 @@ public class AssessmentLevelsChart extends AppCompatActivity
 
                 }else{
                     Map<String,Integer> innerData = new HashMap();
+                    Log.e("LEVEL" , countryList[i].getLevel() +" --->  "+i);
+                    if(countryList[i].getLevel().contains("Not Covered in TDA Report")){
+
+                    }else if(countryList[i].getLevel().contains("Minimal Advancement")){
+                        innerData.put("Minimal Advancement",1);
+                    }else if(countryList[i].getLevel().contains("No Advancement")){
+                        innerData.put("No Advancement",1);
+                    }else{
+                        innerData.put(countryList[i].getLevel(),1);
+                    }
                     map.put(countryList[i].getRegion(),innerData);
                 }
             }
