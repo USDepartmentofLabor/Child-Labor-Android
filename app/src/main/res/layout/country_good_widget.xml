@@ -104,15 +104,16 @@
         android:gravity="center">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/flag24" />
+            android:tint="@color/red"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/flag_24" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#F3CD05"
+            android:textColor="@color/red"
             android:contentDescription="Forced Labor"
             android:text="DL" />
 
