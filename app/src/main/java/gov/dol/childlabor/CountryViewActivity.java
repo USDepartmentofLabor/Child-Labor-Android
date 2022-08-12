@@ -95,6 +95,11 @@ public class CountryViewActivity extends AppCompatActivity {
                 row = (LinearLayout) countryGoodWidget.findViewById(R.id.childLaborLinearLayout);
                 row.setVisibility(View.VISIBLE);
                 contentDescription += ", Child Labor";
+            }else if(good.getHasDerivedLaborExploitation()){
+                row = (LinearLayout) countryGoodWidget.findViewById(R.id.derivedLaborLayout);
+                row.setVisibility(View.VISIBLE);
+                contentDescription += ", Derived Labor";
+
             }
             else {
                 row = (LinearLayout) countryGoodWidget.findViewById(R.id.childLaborLinearLayout);

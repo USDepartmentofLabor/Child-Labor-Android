@@ -44,8 +44,18 @@ public class ColorTemplate {
             Color.rgb(191, 134, 134), Color.rgb(179, 48, 80)
     };
     public static final int[] COLORFUL_COLORS = {
-            Color.rgb(108,128,80), Color.rgb(57,89,122), Color.rgb(245, 199, 0),
-            Color.rgb(218,141,58), Color.rgb(179, 100, 53)
+            //light green
+            Color.rgb(168, 207, 64),
+            //green
+            Color.rgb(108,128,80),
+            //yellow
+            Color.rgb(218,141,58),
+            //brown
+            Color.rgb(179, 100, 53),
+            //blue
+            Color.rgb(57,89,122),
+
+
     };
     public static final int[] VORDIPLOM_COLORS = {
             Color.rgb(192, 255, 140), Color.rgb(255, 247, 140), Color.rgb(255, 208, 140),
@@ -57,6 +67,10 @@ public class ColorTemplate {
     };
     public static final int[] MATERIAL_COLORS = {
             rgb("#2ecc71"), rgb("#f1c40f"), rgb("#e74c3c"), rgb("#3498db")
+    };
+    public static final int[] ASSESSMENT_COLORS = {
+             Color.rgb(254,194,49), Color.rgb(106,196,183),Color.rgb(63,81,163),
+            Color.rgb(202,31,65), Color.rgb(168,207,64)
     };
 
     /**
