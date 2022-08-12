@@ -108,6 +108,32 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/derivedExploitationLaborLinearLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            android:gravity="right">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/flag_24"
+                android:tint="@color/red"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/red"
+                android:contentDescription="Forced Labor"
+                android:text="DL" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

@@ -208,6 +208,12 @@ public class GoodXmlParser {
                             case "Forced_Child_Labor":
                                 currentCountryGood.setForcedChildLabor(parser.nextText().equals("Yes"));
                                 break;
+                            case "Derived_Labor_Exploitation":
+                                currentCountryGood.setHasDerivedLaborExploitation(parser.nextText().equals("Yes"));
+                                break;
+                            case "Derived_Country":
+                                currentCountryGood.setDerivedCountry(parser.nextText());
+                                break;
                             default:
                                 skip(parser);
                         }
@@ -253,6 +259,12 @@ public class GoodXmlParser {
                                 break;
                             case "Forced_Child_Labor":
                                 currentCountryGood.setForcedChildLabor(parser.nextText().equals("Yes"));
+                                break;
+                            case "Derived_Labor_Exploitation":
+                                currentCountryGood.setHasDerivedLaborExploitation(parser.nextText().equals("Yes"));
+                                break;
+                            case "Derived_Country":
+                                currentCountryGood.setDerivedCountry(parser.nextText());
                                 break;
                             default:
                                 skip(parser);

@@ -44,7 +44,7 @@ public class GoodViewActivity extends AppCompatActivity {
         goodImageView.setImageDrawable(AppHelpers.getGoodDrawable(this, good.getName()));
 
         Spinner spinner = (Spinner) findViewById(R.id.countryExploitationSpinner);
-        String[] items = {"All", "Child Labor", "Forced Labor", "Forced Child Labor"};
+        String[] items = {"All", "Child Labor", "Forced Labor", "Forced Child Labor","Derived Labor Exploitation"};
         spinner.setAdapter(new ArrayAdapter<String>(this, R.layout.good_view_exploitation_spinner_row, R.id.exploitationSpinnerTextView, items) {
             @Override
 
@@ -60,6 +60,7 @@ public class GoodViewActivity extends AppCompatActivity {
                 ImageView childLaborImageView = (ImageView) theView.findViewById(R.id.exploitationSpinnerChildLaborImageView);
                 ImageView forcedLaborImageView = (ImageView) theView.findViewById(R.id.exploitationSpinnerForcedLaborImageView);
                 ImageView forcedChildLaborImageView = (ImageView) theView.findViewById(R.id.exploitationSpinnerForcedChildLaborImageView);
+                ImageView derivedExploitationLaborImageView = (ImageView) theView.findViewById(R.id.derived_exploitation);
 
                 RelativeLayout.LayoutParams params;
                 try {
@@ -69,16 +70,30 @@ public class GoodViewActivity extends AppCompatActivity {
                             params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
                             forcedLaborImageView.setVisibility(View.GONE);
                             forcedChildLaborImageView.setVisibility(View.GONE);
+                            derivedExploitationLaborImageView.setVisibility(View.GONE);
                             break;
                         case "Forced Labor":
                             params = (RelativeLayout.LayoutParams) forcedLaborImageView.getLayoutParams();
                             params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
                             childLaborImageView.setVisibility(View.GONE);
                             forcedChildLaborImageView.setVisibility(View.GONE);
+                            derivedExploitationLaborImageView.setVisibility(View.GONE);
                             break;
                         case "Forced Child Labor":
+                            params = (RelativeLayout.LayoutParams) forcedChildLaborImageView.getLayoutParams();
+                            params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
                             childLaborImageView.setVisibility(View.GONE);
                             forcedLaborImageView.setVisibility(View.GONE);
+                            derivedExploitationLaborImageView.setVisibility(View.GONE);
+                            break;
+                        case "Derived Labor Exploitation":
+                            params = (RelativeLayout.LayoutParams) derivedExploitationLaborImageView.getLayoutParams();
+                            params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+                            childLaborImageView.setVisibility(View.GONE);
+                            forcedLaborImageView.setVisibility(View.GONE);
+                            forcedChildLaborImageView.setVisibility(View.GONE);
+
+                            break;
                     }
                 }
                 catch(Exception ex)
@@ -111,6 +126,8 @@ public class GoodViewActivity extends AppCompatActivity {
                                 countryGoods.add(countryGood);
                             } else if (position == 3 && countryGood.hasForcedChildLabor()) {
                                 countryGoods.add(countryGood);
+                            } else if (position == 4 && countryGood.getHasDerivedLaborExploitation()) {
+                                countryGoods.add(countryGood);
                             }
 /*                            else {
                                 countryGoods.add(countryGood);
@@ -127,6 +144,9 @@ public class GoodViewActivity extends AppCompatActivity {
                                 break;
                             case 3:
                                 exploitationType = "FORCED CHILD LABOR";
+                                break;
+                            case 4:
+                                exploitationType = "DERIVED EXPLOITATION CHILD LABOR";
                                 break;
                             default:
                                 exploitationType = "EXPLOITATIVE LABOR";
@@ -205,6 +225,12 @@ public class GoodViewActivity extends AppCompatActivity {
                 row = (LinearLayout) countryListWidget.findViewById(R.id.forcedLaborLinearLayout);
                 row.setVisibility(View.VISIBLE);
                 contentDescription += ", Forced Labor";
+            }
+
+            if(country.getHasDerivedLaborExploitation()){
+                row = (LinearLayout) countryListWidget.findViewById(R.id.derivedExploitationLaborLinearLayout);
+                row.setVisibility(View.VISIBLE);
+                contentDescription += ", Derived Exploitation Labor";
             }
 
             countryListWidget.setContentDescription(contentDescription + ", button");

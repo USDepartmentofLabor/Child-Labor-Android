@@ -126,6 +126,15 @@ public class Country implements Serializable {
         return countryGoods.toArray(new CountryGood[countryGoods.size()]);
     }
 
+    public CountryGood[] getDerivedExploitationLaborGoods() {
+        ArrayList<CountryGood> countryGoods = new ArrayList<CountryGood>();
+        for (CountryGood good : goods) {
+            if (good.getHasDerivedLaborExploitation())
+                countryGoods.add(good);
+        }
+        return countryGoods.toArray(new CountryGood[countryGoods.size()]);
+    }
+
     public SectionHeader getLevelHeader() {
         SectionHeader header;
         if (getLevel().startsWith("Significant Advancement")) {
