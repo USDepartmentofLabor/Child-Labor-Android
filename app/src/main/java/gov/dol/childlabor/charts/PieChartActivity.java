@@ -159,6 +159,9 @@ public class PieChartActivity extends AppCompatActivity implements
         // add a lot of colors
 
         ArrayList<Integer> colors = new ArrayList<>();
+        colors.add(Color.rgb(108,128,80));
+        colors.add(Color.rgb(57,89,122));
+        colors.add(Color.rgb(218,165,32));
 
         /*for (int c : ColorTemplate.VORDIPLOM_COLORS)
             colors.add(c);
@@ -166,8 +169,8 @@ public class PieChartActivity extends AppCompatActivity implements
         for (int c : ColorTemplate.JOYFUL_COLORS)
             colors.add(c);*/
 
-        for (int c : ColorTemplate.COLORFUL_COLORS)
-            colors.add(c);
+        /*for (int c : ColorTemplate.COLORFUL_COLORS)
+            colors.add(c);*/
 
         /*for (int c : ColorTemplate.LIBERTY_COLORS)
             colors.add(c);
@@ -175,7 +178,7 @@ public class PieChartActivity extends AppCompatActivity implements
         for (int c : ColorTemplate.PASTEL_COLORS)
             colors.add(c);*/
 
-        colors.add(ColorTemplate.getHoloBlue());
+        //colors.add(ColorTemplate.getHoloBlue());
 
         dataSet.setColors(colors);
         //dataSet.setSelectionShift(0f);
