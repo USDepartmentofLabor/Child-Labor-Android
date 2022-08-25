@@ -48,6 +48,7 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
     TextView agriculture,manufacturing,mining,other;
     boolean isGoodsByRegion = false;
     boolean isAssesmentLevelsByRegion = false;
+    private TextView hiddenContentDescription;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +57,7 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
           //      WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_goods_by_sector);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        hiddenContentDescription = findViewById(R.id.content_description);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         isGoodsByRegion = getIntent().getBooleanExtra("IS_GOODS_BY_REGION",false);
@@ -224,7 +226,11 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
             }
         }
 
-
+        StringBuffer buffer = new StringBuffer();
+        for (int i = 0; i < values.size(); i++) {
+            buffer.append((int)values.get(i).getValue() + ", " +values.get(i).getLabel() + ", ");
+        }
+        hiddenContentDescription.setContentDescription(buffer.toString());
         PieDataSet dataSet = new PieDataSet(values, "");
 
         dataSet.setDrawIcons(false);

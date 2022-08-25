@@ -16,6 +16,7 @@ import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
@@ -40,9 +41,7 @@ public class AssessmentFragment extends Fragment implements
         OnChartValueSelectedListener {
 
     private PieChart chart;
-    String country = "Country";
-    boolean isGoodsByRegion = false;
-    boolean isAssesmentLevelsByRegion = false;
+    private TextView hiddenContentDescription;
 
     public static AssessmentFragment getInstance(Map<String, Integer> stringIntegerMap,String title){
         AssessmentFragment fragment = new AssessmentFragment();
@@ -56,6 +55,7 @@ public class AssessmentFragment extends Fragment implements
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView =  inflater.inflate(R.layout.activity_assessment_levels,container,false);
         ((TextView)rootView.findViewById(R.id.text)).setText("Advancement Level for "+getArguments().getString("TITLE"));
+        hiddenContentDescription = ((TextView)rootView.findViewById(R.id.content_description));
         chart = rootView.findViewById(R.id.chart1);
         chart.setUsePercentValues(false);
         chart.getDescription().setEnabled(false);
@@ -171,6 +171,11 @@ public class AssessmentFragment extends Fragment implements
         colors.remove(null);
         colors.remove(null);
         colors.remove(null);
+        StringBuffer buffer = new StringBuffer();
+        for (int i = 0; i < values.size(); i++) {
+            buffer.append((int)values.get(i).getValue() + ", " +values.get(i).getLabel() + ", ");
+        }
+        hiddenContentDescription.setContentDescription(buffer.toString());
 
         PieDataSet dataSet = new PieDataSet(values, "");
 

@@ -48,12 +48,15 @@ public class PieChartActivity extends AppCompatActivity implements
     private PieChart chart;
     Float ag,se,in;
     String country = "Country";
+    private TextView hiddenContentDescription;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_piechart_half);
+        hiddenContentDescription = findViewById(R.id.content_description);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -148,6 +151,11 @@ public class PieChartActivity extends AppCompatActivity implements
         values.add(new PieEntry(se*100, "Services"));
         values.add(new PieEntry(in*100, "Industry"));
 
+        StringBuffer buffer = new StringBuffer();
+        for (int i = 0; i < values.size(); i++) {
+            buffer.append(values.get(i).getValue() + ", " +values.get(i).getLabel() + ", ");
+        }
+        hiddenContentDescription.setContentDescription(buffer.toString());
         PieDataSet dataSet = new PieDataSet(values, "");
 
         dataSet.setDrawIcons(false);
