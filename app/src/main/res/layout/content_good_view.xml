@@ -11,26 +11,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingLeft="8dp"
-        android:paddingRight="8dp"
         android:paddingTop="8dp"
+        android:paddingRight="8dp"
         android:paddingBottom="8dp">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical"
             android:paddingLeft="8dp"
-            android:paddingRight="8dp"
             android:paddingTop="8dp"
+            android:paddingRight="8dp"
             android:paddingBottom="8dp">
 
             <RelativeLayout
+                android:id="@+id/relativeLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:id="@+id/relativeLayout2"
-                android:nextFocusForward="@+id/countryExploitationSpinner"
-                android:accessibilityTraversalAfter="@+id/countryExploitationSpinner">
+                android:accessibilityTraversalAfter="@+id/countryExploitationSpinner"
+                android:nextFocusForward="@+id/countryExploitationSpinner">
 
                 <ImageView
                     android:id="@+id/goodImageView"
@@ -44,63 +44,63 @@
                     android:src="@drawable/icons_alcoholic_beverages" />
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/nameTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textSize="45sp"
-                        android:maxLines="2"
                         android:ellipsize="end"
-                        android:id="@+id/nameTextView" />
+                        android:maxLines="2"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="45sp" />
 
                     <TextView
+                        android:id="@+id/sectorTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textSize="25sp"
-                        android:id="@+id/sectorTextView" />
+                        android:textSize="25sp" />
 
                 </LinearLayout>
             </RelativeLayout>
 
             <TextView
+                android:id="@+id/spinnerLabelTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Exploitation Type"
                 android:contentDescription="Choose Exploitation Type"
-                android:id="@+id/spinnerLabelTextView" />
+                android:text="Exploitation Type"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <Spinner
+                android:id="@+id/countryExploitationSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp"
-                android:id="@+id/countryExploitationSpinner"
-                android:nextFocusForward="@+id/countryLabelTextView"
-                android:layout_centerHorizontal="true" />
+                android:nextFocusForward="@+id/countryLabelTextView" />
 
             <TextView
+                android:id="@+id/countryLabelTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
-                android:text="PRODUCED WITH EXPLOITATIVE LABOR IN 1 COUNTRY"
-                android:id="@+id/countryLabelTextView"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:layout_gravity="center_horizontal" />
+                android:text="PRODUCED WITH EXPLOITATIVE LABOR IN 1 COUNTRY" />
 
             <LinearLayout
                 android:id="@+id/goodCountryLinearLayout"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:divider="?android:attr/dividerHorizontal"
+                android:orientation="vertical"
                 android:showDividers="middle" />
 
         </LinearLayout>

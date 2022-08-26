@@ -30,6 +30,13 @@
         android:layout_width="match_parent"
         android:layout_centerInParent="true"
         android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/content_description"
+        android:layout_centerInParent="true"
+        android:text=""
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"/>
 
 <TextView
     android:id="@+id/text"

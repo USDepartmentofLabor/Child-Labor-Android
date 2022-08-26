@@ -105,7 +105,7 @@ public class StatisticsActivity extends AppCompatActivity {
         territoryNameTextView1.setContentDescription("Somaliland");
 
         TextView territoryValueTextView1 = (TextView) territoryRow1.findViewById(R.id.territoryValueTextView);
-        setStatisticTextMultiworking(territoryValueTextView1, ".132", "10-14", "Unavailable");
+        setStatisticTextMultiworking(territoryValueTextView1, ".132", "5-14", "Unavailable");
 
         layout.addView(territoryRow1);
 
@@ -568,7 +568,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, ".388", "5-14");
+            setStatisticTextMulti(territoryValueTextView, ".383", "5-14");
 
             layout.addView(territoryRow);
 
@@ -878,7 +878,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
             TextView territoryValueTextView = (TextView) territoryRow.findViewById(R.id.territoryValueTextView);
             territoryValueTextView.setTextColor(Color.BLACK);
-            setStatisticTextMulti(territoryValueTextView, ".711");
+            setStatisticTextMulti(territoryValueTextView, ".729");
 
             layout.addView(territoryRow);
 

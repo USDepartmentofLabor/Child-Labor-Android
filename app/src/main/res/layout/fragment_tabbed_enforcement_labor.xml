@@ -152,7 +152,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
                 android:layout_weight="1"
-                android:text="Inspectorate Authorized to Assess Penalties" />
+                android:text="Mechanism to Assess Civil Penalties" />
 
             <TextView
                 android:id="@+id/laborAssessPenaltiesTextView"

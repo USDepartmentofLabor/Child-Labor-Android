@@ -16,6 +16,7 @@ import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
@@ -40,9 +41,7 @@ public class AssessmentFragment extends Fragment implements
         OnChartValueSelectedListener {
 
     private PieChart chart;
-    String country = "Country";
-    boolean isGoodsByRegion = false;
-    boolean isAssesmentLevelsByRegion = false;
+    private TextView hiddenContentDescription;
 
     public static AssessmentFragment getInstance(Map<String, Integer> stringIntegerMap,String title){
         AssessmentFragment fragment = new AssessmentFragment();
@@ -56,6 +55,7 @@ public class AssessmentFragment extends Fragment implements
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView =  inflater.inflate(R.layout.activity_assessment_levels,container,false);
         ((TextView)rootView.findViewById(R.id.text)).setText("Advancement Level for "+getArguments().getString("TITLE"));
+        hiddenContentDescription = ((TextView)rootView.findViewById(R.id.content_description));
         chart = rootView.findViewById(R.id.chart1);
         chart.setUsePercentValues(false);
         chart.getDescription().setEnabled(false);
@@ -114,34 +114,68 @@ public class AssessmentFragment extends Fragment implements
         // NOTE: The order of the entries when being added to the entries array determines their position around the center of
         // the chart.
         Map<String,Integer> map = sortByValue((Map<String, Integer>) getArguments().getSerializable("DATA"));
-        ArrayList<PieEntry> values = new ArrayList<>();
+        ArrayList<PieEntry> values = new ArrayList<>(6);
+        values.add(null);
+        values.add(null);
+        values.add(null);
+        values.add(null);
+        values.add(null);
+        values.add(null);
         map.remove("");
         ArrayList<Integer> colors = new ArrayList<>();
+        colors.add(null);
+        colors.add(null);
+        colors.add(null);
+        colors.add(null);
+        colors.add(null);
+        colors.add(null);
         for (String key :
                 map.keySet()) {
-            values.add(new PieEntry(map.get(key), key));
             switch (key){
                 case "No Advancement":
-                    colors.add(Color.rgb(218,141,58));
+                    colors.add(3,Color.rgb(218,141,58));
+                    values.add(3,new PieEntry(map.get(key), key));
                     break;
                 case "Significant Advancement":
-                    colors.add(Color.rgb(168, 180, 64));
+                    colors.add(0,Color.rgb(218,165,32));
+                    values.add(0,new PieEntry(map.get(key), key));
                     break;
                 case "Moderate Advancement":
-                    colors.add(Color.rgb(57,89,122));
+                    colors.add(1,Color.rgb(57,89,122));
+                    values.add(1,new PieEntry(map.get(key), key));
                     break;
                 case "Minimal Advancement":
-                    colors.add(Color.rgb(179, 100, 53));
+                    colors.add(2,Color.rgb(179, 100, 53));
+                    values.add(2,new PieEntry(map.get(key), key));
                     break;
                 case "No Assessment":
-                    colors.add(Color.rgb(108,128,80));
+                    colors.add(4,Color.rgb(108,128,80));
+                    values.add(4,new PieEntry(map.get(key), key));
                     break;
                 default:
-                    colors.add(Color.rgb(255,0,0));
+                    colors.add(5,Color.rgb(255,0,0));
+                    values.add(5,new PieEntry(map.get(key), key));
             }
 
         }
+        values.remove(null);
+        values.remove(null);
+        values.remove(null);
+        values.remove(null);
+        values.remove(null);
+        values.remove(null);
 
+        colors.remove(null);
+        colors.remove(null);
+        colors.remove(null);
+        colors.remove(null);
+        colors.remove(null);
+        colors.remove(null);
+        StringBuffer buffer = new StringBuffer();
+        for (int i = 0; i < values.size(); i++) {
+            buffer.append((int)values.get(i).getValue() + ", " +values.get(i).getLabel() + ", ");
+        }
+        hiddenContentDescription.setContentDescription(buffer.toString());
 
         PieDataSet dataSet = new PieDataSet(values, "");
 
