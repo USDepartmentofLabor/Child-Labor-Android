@@ -48,6 +48,7 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
     TextView agriculture,manufacturing,mining,other;
     boolean isGoodsByRegion = false;
     boolean isAssesmentLevelsByRegion = false;
+    private TextView hiddenContentDescription;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +57,7 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
           //      WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_goods_by_sector);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        hiddenContentDescription = findViewById(R.id.content_description);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         isGoodsByRegion = getIntent().getBooleanExtra("IS_GOODS_BY_REGION",false);
@@ -199,12 +201,36 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         }
         ArrayList<PieEntry> values = new ArrayList<>();
         map.remove("");
+        ArrayList<Integer> colors = new ArrayList<>();
         for (String key :
                 map.keySet()) {
             values.add(new PieEntry(map.get(key), key));
+            switch (key){
+                case "Indo-Pacific":
+                    colors.add(Color.rgb(218,141,58));
+                    break;
+                case "Latin America and the Caribbean":
+                    colors.add(Color.rgb(218,165,32));
+                    break;
+                case "Middle East and North Africa":
+                    colors.add(Color.rgb(57,89,122));
+                    break;
+                case "Sub-Saharan Africa":
+                    colors.add(Color.rgb(179, 100, 53));
+                    break;
+                case "Europe and Eurasia":
+                    colors.add(Color.rgb(108,128,80));
+                    break;
+                default:
+                    colors.add(Color.rgb(255,0,0));
+            }
         }
 
-
+        StringBuffer buffer = new StringBuffer();
+        for (int i = 0; i < values.size(); i++) {
+            buffer.append((int)values.get(i).getValue() + ", " +values.get(i).getLabel() + ", ");
+        }
+        hiddenContentDescription.setContentDescription(buffer.toString());
         PieDataSet dataSet = new PieDataSet(values, "");
 
         dataSet.setDrawIcons(false);
@@ -215,7 +241,7 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
 
         // add a lot of colors
 
-        ArrayList<Integer> colors = new ArrayList<>();
+
 
         /*for (int c : ColorTemplate.VORDIPLOM_COLORS)
             colors.add(c);*/
@@ -223,8 +249,8 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         /*for (int c : ColorTemplate.JOYFUL_COLORS)
             colors.add(c);*/
 
-        for (int c : ColorTemplate.COLORFUL_COLORS)
-            colors.add(c);
+        /*for (int c : ColorTemplate.COLORFUL_COLORS)
+            colors.add(c);*/
 
         /*for (int c : ColorTemplate.LIBERTY_COLORS)
             colors.add(c);
@@ -232,7 +258,7 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
         for (int c : ColorTemplate.PASTEL_COLORS)
             colors.add(c);*/
 
-        colors.add(ColorTemplate.getHoloBlue());
+        //colors.add(ColorTemplate.getHoloBlue());
 
         dataSet.setColors(colors);
         //dataSet.setSelectionShift(0f);

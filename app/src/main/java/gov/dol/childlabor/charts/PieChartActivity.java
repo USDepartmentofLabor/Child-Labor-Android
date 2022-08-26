@@ -48,12 +48,15 @@ public class PieChartActivity extends AppCompatActivity implements
     private PieChart chart;
     Float ag,se,in;
     String country = "Country";
+    private TextView hiddenContentDescription;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_piechart_half);
+        hiddenContentDescription = findViewById(R.id.content_description);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -148,6 +151,11 @@ public class PieChartActivity extends AppCompatActivity implements
         values.add(new PieEntry(se*100, "Services"));
         values.add(new PieEntry(in*100, "Industry"));
 
+        StringBuffer buffer = new StringBuffer();
+        for (int i = 0; i < values.size(); i++) {
+            buffer.append(values.get(i).getValue() + ", " +values.get(i).getLabel() + ", ");
+        }
+        hiddenContentDescription.setContentDescription(buffer.toString());
         PieDataSet dataSet = new PieDataSet(values, "");
 
         dataSet.setDrawIcons(false);
@@ -159,6 +167,9 @@ public class PieChartActivity extends AppCompatActivity implements
         // add a lot of colors
 
         ArrayList<Integer> colors = new ArrayList<>();
+        colors.add(Color.rgb(108,128,80));
+        colors.add(Color.rgb(57,89,122));
+        colors.add(Color.rgb(218,165,32));
 
         /*for (int c : ColorTemplate.VORDIPLOM_COLORS)
             colors.add(c);
@@ -166,8 +177,8 @@ public class PieChartActivity extends AppCompatActivity implements
         for (int c : ColorTemplate.JOYFUL_COLORS)
             colors.add(c);*/
 
-        for (int c : ColorTemplate.COLORFUL_COLORS)
-            colors.add(c);
+        /*for (int c : ColorTemplate.COLORFUL_COLORS)
+            colors.add(c);*/
 
         /*for (int c : ColorTemplate.LIBERTY_COLORS)
             colors.add(c);
@@ -175,7 +186,7 @@ public class PieChartActivity extends AppCompatActivity implements
         for (int c : ColorTemplate.PASTEL_COLORS)
             colors.add(c);*/
 
-        colors.add(ColorTemplate.getHoloBlue());
+        //colors.add(ColorTemplate.getHoloBlue());
 
         dataSet.setColors(colors);
         //dataSet.setSelectionShift(0f);

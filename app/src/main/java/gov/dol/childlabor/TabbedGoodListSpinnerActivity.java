@@ -2,6 +2,7 @@ package gov.dol.childlabor;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -355,6 +356,8 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
             ArrayList<Good> goodList = new ArrayList<>();
             for(Good good : goods) {
                 String goodName = good.getName().replace("ô", "o").replace("ã", "a").replace("é", "e").replace("í", "i");
+                Log.e("Good Name",goodName);
+                goodName = goodName.replace("Açaí", "Acai");
                 if (goodName.toLowerCase().contains(query.trim().toLowerCase())) {
                     goodcount = goodcount + 1;
                     goodList.add(good);
@@ -467,10 +470,12 @@ public class TabbedGoodListSpinnerActivity extends AppCompatActivity {
                     ImageView childLaborImageView = (ImageView) theView.findViewById(R.id.exploitationSpinnerChildLaborImageView);
                     ImageView forcedLaborImageView = (ImageView) theView.findViewById(R.id.exploitationSpinnerForcedLaborImageView);
                     ImageView forcedChildLaborImageView = (ImageView) theView.findViewById(R.id.exploitationSpinnerForcedChildLaborImageView);
+                    ImageView derivedLabor = (ImageView) theView.findViewById(R.id.derived_exploitation);
 
                     childLaborImageView.setVisibility(View.GONE);
                     forcedLaborImageView.setVisibility(View.GONE);
                     forcedChildLaborImageView.setVisibility(View.GONE);
+                    derivedLabor.setVisibility(View.GONE);
 
                     return theView;
                 }
