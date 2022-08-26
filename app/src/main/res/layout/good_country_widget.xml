@@ -123,14 +123,14 @@
                 android:layout_height="18dp"
                 android:layout_gravity="right"
                 android:src="@drawable/flag_24"
-                android:tint="#000"/>
+                android:tint="@color/red"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="#000"
+                android:textColor="@color/red"
                 android:contentDescription="Forced Labor"
                 android:text="DL" />
 
