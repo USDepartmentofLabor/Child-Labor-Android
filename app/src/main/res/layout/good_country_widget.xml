@@ -8,10 +8,12 @@
 
     <ImageView
         android:layout_width="50dp"
-        android:layout_height="match_parent"
+        android:layout_height="35dp"
         android:scaleType="centerInside"
         android:layout_gravity="center_vertical"
         android:layout_marginRight="10dp"
+        android:padding="1dp"
+        android:background="@color/gray"
         android:id="@+id/countryFlagImageView" />
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -112,23 +114,23 @@
             android:id="@+id/derivedExploitationLaborLinearLayout"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:visibility="gone"
             android:gravity="right">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="right"
                 android:src="@drawable/flag_24"
-                android:tint="@color/red"/>
+                android:tint="#000"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:layout_gravity="right"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/red"
+                android:textColor="#000"
                 android:contentDescription="Forced Labor"
                 android:text="DL" />
 
