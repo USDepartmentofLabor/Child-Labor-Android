@@ -97,6 +97,8 @@ public class CountryViewActivity extends AppCompatActivity {
                 contentDescription += ", Child Labor";
             }else if(good.getHasDerivedLaborExploitation()){
                 row = (LinearLayout) countryGoodWidget.findViewById(R.id.derivedLaborLayout);
+                ImageView exploitationImageView = (ImageView) countryGoodWidget.findViewById(R.id.flag_image);
+                exploitationImageView.setImageDrawable(AppHelpers.getFlagDrawable(this, good.getDerivedCountry()));
                 row.setVisibility(View.VISIBLE);
                 contentDescription += ", Derived Labor";
 

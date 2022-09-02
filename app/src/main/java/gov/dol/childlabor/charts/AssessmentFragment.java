@@ -133,23 +133,23 @@ public class AssessmentFragment extends Fragment implements
                 map.keySet()) {
             switch (key){
                 case "No Advancement":
-                    colors.add(3,Color.rgb(218,141,58));
+                    colors.add(3,Color.rgb(255, 0, 0));
                     values.add(3,new PieEntry(map.get(key), key));
                     break;
                 case "Significant Advancement":
-                    colors.add(0,Color.rgb(218,165,32));
+                    colors.add(0,Color.rgb(0,100,0));
                     values.add(0,new PieEntry(map.get(key), key));
                     break;
                 case "Moderate Advancement":
-                    colors.add(1,Color.rgb(57,89,122));
+                    colors.add(1,Color.rgb(160,82,45));
                     values.add(1,new PieEntry(map.get(key), key));
                     break;
                 case "Minimal Advancement":
-                    colors.add(2,Color.rgb(179, 100, 53));
+                    colors.add(2,Color.rgb(218,141,58));
                     values.add(2,new PieEntry(map.get(key), key));
                     break;
                 case "No Assessment":
-                    colors.add(4,Color.rgb(108,128,80));
+                    colors.add(4,Color.rgb(0,0,255));
                     values.add(4,new PieEntry(map.get(key), key));
                     break;
                 default:
