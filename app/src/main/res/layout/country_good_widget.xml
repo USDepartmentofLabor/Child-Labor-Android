@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="80dp"
     android:layout_height="match_parent"
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
-    android:onClick="selectGoodWidget">
+    android:onClick="selectGoodWidget"
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/countryGoodImageView"
@@ -21,17 +21,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:ellipsize="end"
         android:singleLine="true"
-        android:ellipsize="end" />
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <LinearLayout
         android:id="@+id/childLaborLinearLayout"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -41,21 +41,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#0079d8"
             android:contentDescription="Child Labor"
-            android:text="CL" />
+            android:text="CL"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#0079d8" />
 
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/forceChildLaborLinearLayout"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -65,20 +65,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
             android:contentDescription="Forced Child Labor"
-            android:text="FCL" />
+            android:text="FCL"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/forcedLaborLinearLayout"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -88,38 +88,47 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#eb0027"
             android:contentDescription="Forced Labor"
-            android:text="FL" />
+            android:text="FL"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#eb0027" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/derivedLaborLayout"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <ImageView
-            android:tint="@color/red"
+            android:id="@+id/flag_image"
+            android:layout_width="24dp"
+            android:layout_height="15dp"
+            android:background="@color/gray"
+            android:gravity="right"
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/flag_24"
+            android:visibility="visible" />
+
+        <ImageView
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:src="@drawable/flag_24" />
+            android:src="@drawable/flag_24"
+            android:tint="@color/red" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/red"
             android:contentDescription="Forced Labor"
-            android:text="DL" />
+            android:text="DL"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/red" />
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>

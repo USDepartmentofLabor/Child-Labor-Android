@@ -454,10 +454,12 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                     ImageView childLaborImageView = (ImageView) theView.findViewById(R.id.exploitationSpinnerChildLaborImageView);
                     ImageView forcedLaborImageView = (ImageView) theView.findViewById(R.id.exploitationSpinnerForcedLaborImageView);
                     ImageView forcedChildLaborImageView = (ImageView) theView.findViewById(R.id.exploitationSpinnerForcedChildLaborImageView);
+                    ImageView derived_exploitation = (ImageView) theView.findViewById(R.id.derived_exploitation);
 
                     childLaborImageView.setVisibility(View.GONE);
                     forcedLaborImageView.setVisibility(View.GONE);
                     forcedChildLaborImageView.setVisibility(View.GONE);
+                    derived_exploitation.setVisibility(View.GONE);
 
                     return theView;
                 }
@@ -575,10 +577,13 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                     ImageView childLaborImageView = (ImageView) theView.findViewById(R.id.exploitationSpinnerChildLaborImageView);
                     ImageView forcedLaborImageView = (ImageView) theView.findViewById(R.id.exploitationSpinnerForcedLaborImageView);
                     ImageView forcedChildLaborImageView = (ImageView) theView.findViewById(R.id.exploitationSpinnerForcedChildLaborImageView);
+                    ImageView derived_exploitation = (ImageView) theView.findViewById(R.id.derived_exploitation);
 
                     childLaborImageView.setVisibility(View.GONE);
                     forcedLaborImageView.setVisibility(View.GONE);
                     forcedChildLaborImageView.setVisibility(View.GONE);
+                    derived_exploitation.setVisibility(View.GONE);
+
 
                     return theView;
                 }
