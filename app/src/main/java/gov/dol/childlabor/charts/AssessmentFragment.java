@@ -1,6 +1,7 @@
 package gov.dol.childlabor.charts;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -133,23 +134,33 @@ public class AssessmentFragment extends Fragment implements
                 map.keySet()) {
             switch (key){
                 case "No Advancement":
-                    colors.add(3,Color.rgb(218,141,58));
+                    colors.add(3,Color.rgb(202,
+                            31,
+                            65));
                     values.add(3,new PieEntry(map.get(key), key));
                     break;
                 case "Significant Advancement":
-                    colors.add(0,Color.rgb(218,165,32));
+                    colors.add(0,Color.rgb(51,
+                            128,
+                            116));
                     values.add(0,new PieEntry(map.get(key), key));
                     break;
                 case "Moderate Advancement":
-                    colors.add(1,Color.rgb(57,89,122));
+                    colors.add(1,Color.rgb(36,
+                            132,
+                            21));
                     values.add(1,new PieEntry(map.get(key), key));
                     break;
                 case "Minimal Advancement":
-                    colors.add(2,Color.rgb(179, 100, 53));
+                    colors.add(2,Color.rgb(63,
+                            81,
+                            163));
                     values.add(2,new PieEntry(map.get(key), key));
                     break;
                 case "No Assessment":
-                    colors.add(4,Color.rgb(108,128,80));
+                    colors.add(4,Color.rgb(126,
+                            105,
+                            165));
                     values.add(4,new PieEntry(map.get(key), key));
                     break;
                 default:
@@ -209,7 +220,8 @@ public class AssessmentFragment extends Fragment implements
 
         PieData data = new PieData(dataSet);
         data.setValueFormatter(new DefaultValueFormatter(0));
-        data.setValueTextSize(14f);
+        data.setValueTextSize(16f);
+        data.setValueTypeface(Typeface.DEFAULT_BOLD);
         data.setValueTextColor(Color.WHITE);
         chart.setData(data);
 
