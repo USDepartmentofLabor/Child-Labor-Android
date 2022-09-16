@@ -207,19 +207,29 @@ public class GoodsBySectorChartActivityNew extends AppCompatActivity implements
             values.add(new PieEntry(map.get(key), key));
             switch (key){
                 case "Indo-Pacific":
-                    colors.add(Color.rgb(218,141,58));
+                    colors.add(Color.rgb(63,
+                            81,
+                            163));
                     break;
                 case "Latin America and the Caribbean":
-                    colors.add(Color.rgb(218,165,32));
+                    colors.add(Color.rgb(126,
+                            105,
+                            165));
                     break;
                 case "Middle East and North Africa":
-                    colors.add(Color.rgb(57,89,122));
+                    colors.add(Color.rgb(36,
+                            132,
+                            21));
                     break;
                 case "Sub-Saharan Africa":
-                    colors.add(Color.rgb(179, 100, 53));
+                    colors.add(Color.rgb(51,
+                            128,
+                            116));
                     break;
                 case "Europe and Eurasia":
-                    colors.add(Color.rgb(108,128,80));
+                    colors.add(Color.rgb(202,
+                            31,
+                            65));
                     break;
                 default:
                     colors.add(Color.rgb(255,0,0));
