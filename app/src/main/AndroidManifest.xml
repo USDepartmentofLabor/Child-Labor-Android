@@ -14,18 +14,23 @@
         android:label="@string/app_name"
         android:largeHeap="true"
         android:supportsRtl="true"
+        android:enabled="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".TabbedCountryListActivity"
+            android:exported="false"
             android:label="@string/title_activity_tabbed_country_list"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -35,6 +40,7 @@
         </activity>
         <activity
             android:name=".CountryViewActivity"
+            android:exported="false"
             android:label="@string/title_activity_country_view"
             android:launchMode="singleTop"
             android:parentActivityName=".TabbedCountryListActivity"
@@ -45,6 +51,7 @@
         </activity>
         <activity
             android:name=".TabbedGoodListActivity"
+            android:exported="false"
             android:label="@string/title_activity_tabbed_good_list"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -54,6 +61,7 @@
         </activity>
         <activity
             android:name=".GoodViewActivity"
+            android:exported="false"
             android:label="@string/title_activity_good_view"
             android:parentActivityName=".TabbedGoodListActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -63,6 +71,7 @@
         </activity>
         <activity
             android:name=".TabbedExploitationTypeListActivity"
+            android:exported="false"
             android:label="@string/title_activity_tabbed_exploitation_type_list"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -72,6 +81,7 @@
         </activity>
         <activity
             android:name=".AboutActivity"
+            android:exported="false"
             android:label="@string/title_activity_about"
             android:parentActivityName=".MoreInfoActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -81,6 +91,7 @@
         </activity>
         <activity
             android:name=".MethodologyActivity"
+            android:exported="false"
             android:label="@string/title_activity_methodology"
             android:parentActivityName=".MoreInfoActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -90,6 +101,7 @@
         </activity>
         <activity
             android:name=".FactsheetActivity"
+            android:exported="false"
             android:label="@string/title_activity_factsheet"
             android:parentActivityName=".MoreInfoActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -99,6 +111,7 @@
         </activity>
         <activity
             android:name=".SuggestedActionsActivity"
+            android:exported="false"
             android:label="@string/title_activity_suggested_actions"
             android:parentActivityName=".CountryViewActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -108,6 +121,7 @@
         </activity>
         <activity
             android:name=".activities.IlabProjectsActivity"
+            android:exported="false"
             android:label="@string/title_activity_ilab_projects"
             android:parentActivityName=".CountryViewActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -117,6 +131,7 @@
         </activity>
         <activity
             android:name=".StatisticsActivity"
+            android:exported="false"
             android:label="@string/title_activity_statistics"
             android:parentActivityName=".CountryViewActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -126,6 +141,7 @@
         </activity>
         <activity
             android:name=".ConventionActivity"
+            android:exported="false"
             android:label="@string/title_activity_convention"
             android:parentActivityName=".CountryViewActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -135,6 +151,7 @@
         </activity>
         <activity
             android:name=".LegalStandardActivity"
+            android:exported="false"
             android:label="@string/title_activity_legal_standard"
             android:parentActivityName=".CountryViewActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -144,6 +161,7 @@
         </activity>
         <activity
             android:name=".FullReportActivity"
+            android:exported="false"
             android:label="@string/title_activity_full_report"
             android:parentActivityName=".CountryViewActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -153,6 +171,7 @@
         </activity>
         <activity
             android:name=".ExploitationTypeListSpinnerActivity"
+            android:exported="false"
             android:label="@string/title_activity_exploitation_type_list_spinner"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -162,6 +181,7 @@
         </activity>
         <activity
             android:name=".TabbedGoodListSpinnerActivity"
+            android:exported="false"
             android:label="@string/title_activity_tabbed_good_list_spinner"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -171,6 +191,7 @@
         </activity>
         <activity
             android:name=".TabbedCountryListSpinnerActivity"
+            android:exported="false"
             android:label="@string/title_activity_tabbed_country_list_spinner"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -180,6 +201,7 @@
         </activity>
         <activity
             android:name=".MechanismActivity"
+            android:exported="false"
             android:label="@string/title_activity_mechanism"
             android:parentActivityName=".CountryViewActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -189,6 +211,7 @@
         </activity>
         <activity
             android:name=".BetaLegalStandardActivity"
+            android:exported="false"
             android:label="@string/title_activity_beta_legal_standard"
             android:parentActivityName=".CountryViewActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -198,6 +221,7 @@
         </activity>
         <activity
             android:name=".TabbedEnforcementActivity"
+            android:exported="false"
             android:label="@string/title_activity_tabbed_enforcement"
             android:parentActivityName=".CountryViewActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -207,6 +231,7 @@
         </activity>
         <activity
             android:name=".MoreInfoActivity"
+            android:exported="false"
             android:label="@string/title_activity_more_info"
             android:launchMode="singleTop"
             android:parentActivityName=".MainActivity"
@@ -217,6 +242,7 @@
         </activity>
         <activity
             android:name=".ToolKitActivity"
+            android:exported="false"
             android:label="Comply Chain App"
             android:launchMode="singleTop"
             android:parentActivityName=".MoreInfoActivity"
@@ -227,6 +253,7 @@
         </activity>
         <activity
             android:name=".MenuMain"
+            android:exported="false"
             android:label="More Info"
             android:launchMode="singleTop"
             android:parentActivityName=".MainActivity"
@@ -237,6 +264,7 @@
         </activity>
         <activity
             android:name=".charts.HalfPieChartActivity"
+            android:exported="false"
             android:label="More Info"
             android:launchMode="singleTop"
             android:parentActivityName=".MainActivity"
@@ -247,6 +275,7 @@
         </activity>
         <activity
             android:name=".charts.PieChartActivity"
+            android:exported="false"
             android:label="More Info"
             android:launchMode="singleTop"
             android:parentActivityName=".MainActivity"
@@ -257,6 +286,7 @@
         </activity>
         <activity
             android:name=".charts.ChartsListActivity"
+            android:exported="false"
             android:label="Data Visualizations"
             android:launchMode="singleTop"
             android:parentActivityName=".MainActivity"
@@ -267,6 +297,7 @@
         </activity>
         <activity
             android:name=".charts.DataVisualizationActivity"
+            android:exported="false"
             android:label="Proportional Area Chart"
             android:launchMode="singleTop"
             android:parentActivityName=".MainActivity"
@@ -277,6 +308,7 @@
         </activity>
         <activity
             android:name=".charts.GoodsBySectorChartActivityNew"
+            android:exported="false"
             android:label="Data Visualizations"
             android:launchMode="singleTop"
             android:parentActivityName=".MainActivity"
@@ -287,6 +319,7 @@
         </activity>
         <activity
             android:name=".charts.AssessmentLevelsChart"
+            android:exported="false"
             android:label="Data Visualizations"
             android:launchMode="singleTop"
             android:parentActivityName=".MainActivity"
