@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -210,6 +211,10 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                 searchView.clearFocus();
             }
 
+            if (searchView != null) {
+                searchView.setInputType(InputType.TYPE_TEXT_VARIATION_PERSON_NAME);
+            }
+
 
             searchView.setQueryHint(searchstring);
             searchView.setIconified(false);
@@ -217,73 +222,75 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
             searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                 @Override
                 public boolean onQueryTextChange(String query) {
-                    searchQuery = query;
-                    TextView countrycountTextView = (TextView) getView().findViewById(R.id.countrycounttextview);
-                    Country[] countries;
-                    String selection;
-                    switch (sectionNumber) {
-                        case 2:
-                            searchstring = query.trim();
-                            if( searchstring.trim().equals("")) {
-                                searchstring = "Filter Countries/Areas";
-                                searchView.setQueryHint(searchstring);
-                            }
-                            selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
-                            countries = getCountriesBySearch(query, getCountriesByLevel(selection));
-                            if (countrycount != null) {
-                                countrycountTextView.setVisibility(View.VISIBLE);
-                                countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + query.trim());
-                                countrycountTextView.announceForAccessibility(String.valueOf(countrycount) + " results found for "  + query.trim());
-                                countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + query.trim());
-                                countrycountTextView.setFocusable(true);
-                                countrycountTextView.setFocusableInTouchMode(true);
-                            }
-                            else
-                            {
-                                countrycountTextView.setVisibility(View.GONE);
-                            }
-                            break;
-                        case 3:
-                            searchstring = query.trim();
-                            if( searchstring.trim().equals("")) {
-                                searchstring = "Filter Countries/Areas";
-                                searchView.setQueryHint(searchstring);
-                            }
-                            selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
-                            countries = getCountriesBySearch(query, getCountriesByRegion(selection));
-                            if (countrycount != null) {
-                                countrycountTextView.setVisibility(View.VISIBLE);
-                                countrycountTextView.setText(String.valueOf(countrycount) + " results found for "  + query.trim());
-                                countrycountTextView.announceForAccessibility(String.valueOf(countrycount) + " results found for "  + query.trim());
-                                countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + query.trim());
-                                countrycountTextView.setFocusable(true);
-                                countrycountTextView.setFocusableInTouchMode(true);
-                            }
-                            else
-                            {
-                                countrycountTextView.setVisibility(View.GONE);
-                            }
-                            break;
-                        default:
-                            searchstring = query.trim();
-                            countries = getCountriesBySearch(query);
+                    boolean check_alphabetOnly = query.matches("[a-zA-Z ]+");
+                    if (check_alphabetOnly) {
+                        searchQuery = query;
+                        TextView countrycountTextView = (TextView) getView().findViewById(R.id.countrycounttextview);
+                        Country[] countries;
+                        String selection;
+                        switch (sectionNumber) {
+                            case 2:
+                                searchstring = query.trim();
+                                if (searchstring.trim().equals("")) {
+                                    searchstring = "Filter Countries/Areas";
+                                    searchView.setQueryHint(searchstring);
+                                }
+                                selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
+                                countries = getCountriesBySearch(query, getCountriesByLevel(selection));
+                                if (countrycount != null) {
+                                    countrycountTextView.setVisibility(View.VISIBLE);
+                                    countrycountTextView.setText(String.valueOf(countrycount) + " results found for " + query.trim());
+                                    countrycountTextView.announceForAccessibility(String.valueOf(countrycount) + " results found for " + query.trim());
+                                    countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for " + query.trim());
+                                    countrycountTextView.setFocusable(true);
+                                    countrycountTextView.setFocusableInTouchMode(true);
+                                } else {
+                                    countrycountTextView.setVisibility(View.GONE);
+                                }
+                                break;
+                            case 3:
+                                searchstring = query.trim();
+                                if (searchstring.trim().equals("")) {
+                                    searchstring = "Filter Countries/Areas";
+                                    searchView.setQueryHint(searchstring);
+                                }
+                                selection = ((Spinner) getView().findViewById(R.id.listViewSpinner)).getSelectedItem().toString();
+                                countries = getCountriesBySearch(query, getCountriesByRegion(selection));
+                                if (countrycount != null) {
+                                    countrycountTextView.setVisibility(View.VISIBLE);
+                                    countrycountTextView.setText(String.valueOf(countrycount) + " results found for " + query.trim());
+                                    countrycountTextView.announceForAccessibility(String.valueOf(countrycount) + " results found for " + query.trim());
+                                    countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for " + query.trim());
+                                    countrycountTextView.setFocusable(true);
+                                    countrycountTextView.setFocusableInTouchMode(true);
+                                } else {
+                                    countrycountTextView.setVisibility(View.GONE);
+                                }
+                                break;
+                            default:
+                                searchstring = query.trim();
+                                countries = getCountriesBySearch(query);
 
-                           if (countrycount != null) {
-                               countrycountTextView.setVisibility(View.VISIBLE);
-                               countrycountTextView.setText(String.valueOf(countrycount) + " results found for " + query.trim());
-                               countrycountTextView.announceForAccessibility(String.valueOf(countrycount) + " results found for " + query.trim());
-                               countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for "  + query.trim());
-                               countrycountTextView.setFocusable(true);
-                               countrycountTextView.setFocusableInTouchMode(true);
-                           }
-                           else
-                            {
-                              countrycountTextView.setVisibility(View.GONE);
-                           }
+                                if (countrycount != null) {
+                                    countrycountTextView.setVisibility(View.VISIBLE);
+                                    countrycountTextView.setText(String.valueOf(countrycount) + " results found for " + query.trim());
+                                    countrycountTextView.announceForAccessibility(String.valueOf(countrycount) + " results found for " + query.trim());
+                                    countrycountTextView.setContentDescription(String.valueOf(countrycount) + " results found for " + query.trim());
+                                    countrycountTextView.setFocusable(true);
+                                    countrycountTextView.setFocusableInTouchMode(true);
+                                } else {
+                                    countrycountTextView.setVisibility(View.GONE);
+                                }
+                        }
+
+                        CountryListAdapter itemsAdapter = new CountryListAdapter(getActivity(), countries, 1);
+                        ListView listView = (ListView) getView().findViewById(R.id.listView);
+                        listView.setAdapter(itemsAdapter);
+                    }else{
+                        if( !searchQuery.trim().equals("")) {
+                            searchView.setQuery(searchQuery, false);
+                        }
                     }
-                    CountryListAdapter itemsAdapter = new CountryListAdapter(getActivity(), countries, 1);
-                    ListView listView = (ListView) getView().findViewById(R.id.listView);
-                    listView.setAdapter(itemsAdapter);
                     return false;
                 }
 

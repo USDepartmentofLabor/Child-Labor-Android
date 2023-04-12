@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
     <item android:id="@+id/search"
         android:title="Filter"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:icon="@android:drawable/ic_menu_search"
         app:showAsAction="always"
-        app:actionViewClass="android.widget.SearchView" />
+        app:actionViewClass="android.widget.SearchView"
+        />
 </menu>
