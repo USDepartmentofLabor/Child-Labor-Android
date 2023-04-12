@@ -43,7 +43,7 @@
         <TextView
             android:id="@+id/textView10"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="1dp"
             android:layout_marginBottom="10dp"
             android:background="#dadada" />
 
@@ -177,7 +177,7 @@
         <TextView
             android:visibility="visible"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="1dp"
             android:layout_marginBottom="10dp"
             android:background="#dadada" />
         <TextView
