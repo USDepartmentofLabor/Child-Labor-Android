@@ -296,9 +296,9 @@ public class Country implements Serializable {
         }
     }
 
-    class Enforcement implements Serializable {
-        String type;
-        String value;
+    public class Enforcement implements Serializable {
+        public String type;
+        public String value;
 
         public Enforcement(String type, String value) {
             this.type = type;
