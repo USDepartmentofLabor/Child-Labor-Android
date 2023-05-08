@@ -54,6 +54,16 @@ public class ChartsListActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.laborInspectorILO).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ChartsListActivity.this, AssessmentLevelsChart.class);
+                intent.putExtra("LABOR_INSPECTOR_MEET_ILO_BY_REGION",true);
+                //intent.putExtra("IS_ASSESSMENT_LEVELS_BY_REGION",true);
+                startActivity(intent);
+            }
+        });
+
 
 
     }
