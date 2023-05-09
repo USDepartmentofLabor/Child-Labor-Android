@@ -271,10 +271,10 @@ public class Country implements Serializable {
         }
     }
 
-    class TerritoryValue implements Serializable {
+   public class TerritoryValue implements Serializable {
         String territory;
         String displayName;
-        String value;
+        public String value;
         String age;
         String calculatedAge;
         String conformsStandard;
@@ -306,9 +306,9 @@ public class Country implements Serializable {
         }
     }
 
-    class TerritoryEnforcement implements Serializable {
+    public class TerritoryEnforcement implements Serializable {
         String type;
-        ArrayList<TerritoryValue> territories = new ArrayList<TerritoryValue>();
+        public ArrayList<TerritoryValue> territories = new ArrayList<TerritoryValue>();
 
         public TerritoryEnforcement(String type, ArrayList<TerritoryValue> territories) {
             this.type = type;
