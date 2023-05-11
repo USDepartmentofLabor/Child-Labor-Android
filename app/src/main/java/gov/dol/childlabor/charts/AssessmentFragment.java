@@ -180,13 +180,13 @@ public class AssessmentFragment extends Fragment implements
                             116));
                     values.add(0,new PieEntry(map.get(key), key));
                     break;
-                case "Unknown":
-                    colors.add(1,Color.rgb(36,
-                            132,
-                            21));
-                    values.add(1,new PieEntry(map.get(key), key));
-                    break;
                 case "N/A":
+                    colors.add(4,Color.rgb(126,
+                            105,
+                            165));
+                    values.add(4,new PieEntry(map.get(key), key));
+                    break;
+                case "Unknown":
                     colors.add(2,Color.rgb(63,
                             81,
                             163));
