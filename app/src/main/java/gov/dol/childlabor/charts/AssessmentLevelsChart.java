@@ -1,46 +1,22 @@
 package gov.dol.childlabor.charts;
 
-import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.text.SpannableString;
-import android.text.style.RelativeSizeSpan;
-import android.text.style.StyleSpan;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.components.Legend;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.PieData;
-import com.github.mikephil.charting.data.PieDataSet;
-import com.github.mikephil.charting.data.PieEntry;
-import com.github.mikephil.charting.formatter.DefaultValueFormatter;
-import com.github.mikephil.charting.highlight.Highlight;
-import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
-import com.github.mikephil.charting.utils.ColorTemplate;
-import com.github.mikephil.charting.utils.MPPointF;
 import com.google.android.material.tabs.TabLayout;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 import gov.dol.childlabor.Country;
-import gov.dol.childlabor.CountryGood;
 import gov.dol.childlabor.CountryXmlParser;
-import gov.dol.childlabor.Good;
-import gov.dol.childlabor.GoodXmlParser;
 import gov.dol.childlabor.R;
 
 public class AssessmentLevelsChart extends AppCompatActivity
@@ -50,7 +26,9 @@ public class AssessmentLevelsChart extends AppCompatActivity
     String country = "Country";
     boolean isGoodsByRegion = false;
     boolean isAssesmentLevelsByRegion = false;
+    boolean isLaborInspectorMeetILOByRegion = false;
     ViewPager viewPager;
+//    private Country.Enforcement labor_inspectors_intl_standards;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +41,13 @@ public class AssessmentLevelsChart extends AppCompatActivity
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         isGoodsByRegion = getIntent().getBooleanExtra("IS_GOODS_BY_REGION",false);
         isAssesmentLevelsByRegion = getIntent().getBooleanExtra("IS_ASSESSMENT_LEVELS_BY_REGION",false);
-        setTitle("Assessment Levels By Region");
+        isLaborInspectorMeetILOByRegion = getIntent().getBooleanExtra("LABOR_INSPECTOR_MEET_ILO_BY_REGION",false);
+
+        if (isLaborInspectorMeetILOByRegion) {
+            setTitle("Labor Inspector Meet ILO");
+        } else {
+            setTitle("Assessment Levels By Region");
+        }
         Map<String,Map<String,Integer>> map = new HashMap<>();
         if(isAssesmentLevelsByRegion){
             CountryXmlParser countryXmlParser = CountryXmlParser.fromContext(this);
@@ -114,6 +98,79 @@ public class AssessmentLevelsChart extends AppCompatActivity
             map.remove(null);
             Log.e("Data",map.toString());
 
+        } else if (isLaborInspectorMeetILOByRegion) {
+            CountryXmlParser countryXmlParser = CountryXmlParser.fromContext(this);
+            Country[] countryList = countryXmlParser.getCountryList();
+
+            for (int i = 0; i < countryList.length; i++) {
+                String labor_inspectors_intl_standards = "";
+                if (countryList[i].hasMultipleTerritories) {
+                    labor_inspectors_intl_standards = countryList[i].territoryEnforcements.get("Labor_Inspectors_Intl_Standards").territories.get(0).value;
+                } else {
+                    if (countryList[i].enforcements.get("Labor_Inspectors_Intl_Standards") != null) {
+                        labor_inspectors_intl_standards = countryList[i].enforcements.get("Labor_Inspectors_Intl_Standards").value.toString();
+                    }
+
+                }
+
+                Log.e("Data", String.valueOf(labor_inspectors_intl_standards));
+                if(map.containsKey(countryList[i].getRegion()) && labor_inspectors_intl_standards != null && labor_inspectors_intl_standards != "") {
+                    Map<String,Integer> innerData = new HashMap();
+                    String data = "";
+
+                    if (labor_inspectors_intl_standards.equals("Yes")) {
+                        if (map.get(countryList[i].getRegion()).containsKey("Yes")) {
+                            int currentValue = map.get(countryList[i].getRegion()).get("Yes");
+                            map.get(countryList[i].getRegion()).put("Yes",currentValue +1);
+                        }else{
+                            map.get(countryList[i].getRegion()).put("Yes",1);
+                        }
+                    } else if (labor_inspectors_intl_standards.equals("No")){
+                        if (map.get(countryList[i].getRegion()).containsKey("No")) {
+                            int currentValue = map.get(countryList[i].getRegion()).get("No");
+                            map.get(countryList[i].getRegion()).put("No",currentValue +1);
+                        }else{
+                            map.get(countryList[i].getRegion()).put("No",1);
+                        }
+                    } else if (labor_inspectors_intl_standards.equals("N/A")){
+                        if (map.get(countryList[i].getRegion()).containsKey("N/A")) {
+                            int currentValue = map.get(countryList[i].getRegion()).get("N/A");
+                            map.get(countryList[i].getRegion()).put("N/A",currentValue +1);
+                        }else{
+                            map.get(countryList[i].getRegion()).put("N/A",1);
+                        }
+                    } else if (labor_inspectors_intl_standards.equals("Unknown")){
+                        if (map.get(countryList[i].getRegion()).containsKey("Unknown")) {
+                            int currentValue = map.get(countryList[i].getRegion()).get("Unknown");
+                            map.get(countryList[i].getRegion()).put("Unknown",currentValue +1);
+                        }else{
+                            map.get(countryList[i].getRegion()).put("Unknown",1);
+                        }
+                    }
+                } else {
+                    if (labor_inspectors_intl_standards != null && labor_inspectors_intl_standards != "") {
+                        Map<String,Integer> innerData = new HashMap();
+                        Log.e("LEVEL" , countryList[i].getLevel() +" --->  "+i);
+                        if(labor_inspectors_intl_standards.equals("Yes")){
+                            innerData.put("Yes",1);
+                        }else if(labor_inspectors_intl_standards.equals("No")){
+                            innerData.put("No",1);
+                        }else if(labor_inspectors_intl_standards.equals("N/A")){
+                            innerData.put("N/A",1);
+                        }else if(labor_inspectors_intl_standards.equals("Unknown")){
+                            innerData.put("Unknown",1);
+                        }else{
+                            innerData.put(labor_inspectors_intl_standards,1);
+                        }
+                        map.put(countryList[i].getRegion(),innerData);
+                    } else {
+                        Log.e("LEVEL" , countryList[i].getLevel() +" --->  "+i);
+                    }
+
+                }
+            }
+            map.remove(null);
+            Log.e("Data",map.toString());
         }
         viewPager = findViewById(R.id.view_pager);
         TabLayout tabLayout = (TabLayout)findViewById(R.id.tab_layout);
