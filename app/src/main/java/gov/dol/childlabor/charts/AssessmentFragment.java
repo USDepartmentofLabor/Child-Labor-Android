@@ -43,7 +43,6 @@ public class AssessmentFragment extends Fragment implements
 
     private PieChart chart;
     private TextView hiddenContentDescription;
-
     public static AssessmentFragment getInstance(Map<String, Integer> stringIntegerMap,String title){
         AssessmentFragment fragment = new AssessmentFragment();
         Bundle bundle = new Bundle();
@@ -55,7 +54,12 @@ public class AssessmentFragment extends Fragment implements
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView =  inflater.inflate(R.layout.activity_assessment_levels,container,false);
-        ((TextView)rootView.findViewById(R.id.text)).setText("Advancement Level for "+getArguments().getString("TITLE"));
+        if (getActivity().getTitle().equals("Labor Inspector Meet ILO")) {
+            ((TextView)rootView.findViewById(R.id.text)).setText(getActivity().getTitle() + " "+getArguments().getString("TITLE"));
+        } else {
+            ((TextView)rootView.findViewById(R.id.text)).setText("Advancement Level for "+getArguments().getString("TITLE"));
+        }
+
         hiddenContentDescription = ((TextView)rootView.findViewById(R.id.content_description));
         chart = rootView.findViewById(R.id.chart1);
         chart.setUsePercentValues(false);
@@ -162,6 +166,31 @@ public class AssessmentFragment extends Fragment implements
                             105,
                             165));
                     values.add(4,new PieEntry(map.get(key), key));
+                    break;
+
+                case "No":
+                    colors.add(3,Color.rgb(202,
+                            31,
+                            65));
+                    values.add(3,new PieEntry(map.get(key), key));
+                    break;
+                case "Yes":
+                    colors.add(0,Color.rgb(51,
+                            128,
+                            116));
+                    values.add(0,new PieEntry(map.get(key), key));
+                    break;
+                case "N/A":
+                    colors.add(4,Color.rgb(126,
+                            105,
+                            165));
+                    values.add(4,new PieEntry(map.get(key), key));
+                    break;
+                case "Unknown":
+                    colors.add(2,Color.rgb(63,
+                            81,
+                            163));
+                    values.add(2,new PieEntry(map.get(key), key));
                     break;
                 default:
                     colors.add(5,Color.rgb(255,0,0));

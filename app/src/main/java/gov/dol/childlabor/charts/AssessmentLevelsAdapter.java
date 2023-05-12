@@ -20,7 +20,6 @@ public class AssessmentLevelsAdapter extends FragmentPagerAdapter {
         super(fm, behavior);
         this.map = map;
         this.list = new ArrayList<>(map.keySet());
-
     }
 
     @NonNull
