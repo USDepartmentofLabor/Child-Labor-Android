@@ -140,10 +140,10 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                // displayEnforcement((TextView) rootView.findViewById(R.id.laborDedicatedInspectorsTextView), enforcements.get("Dedicated_Labor_Inspectors"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborAssessPenaltiesTextView), enforcements.get("Authorized_Access_Penalties"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborInitialTrainingTextView), enforcements.get("Labor_New_Employee_Training"));
-                displayEnforcement((TextView) rootView.findViewById(R.id.laborNewLawsTextView), enforcements.get("Labor_New_Law_Training"));
-                displayEnforcement((TextView) rootView.findViewById(R.id.laborRefresherCoursesTextView), enforcements.get("Labor_Refresher_Courses"));
-                displayEnforcement((TextView) rootView.findViewById(R.id.laborInspectionsTextView), enforcements.get("Labor_Inspections"));
-                displayEnforcement((TextView) rootView.findViewById(R.id.laborWorksiteInspectionsTextView), enforcements.get("Labor_Worksite_Inspections"));
+                //displayEnforcement((TextView) rootView.findViewById(R.id.laborNewLawsTextView), enforcements.get("Labor_New_Law_Training"));
+                //displayEnforcement((TextView) rootView.findViewById(R.id.laborRefresherCoursesTextView), enforcements.get("Labor_Refresher_Courses"));
+                //displayEnforcement((TextView) rootView.findViewById(R.id.laborInspectionsTextView), enforcements.get("Labor_Inspections"));
+                //displayEnforcement((TextView) rootView.findViewById(R.id.laborWorksiteInspectionsTextView), enforcements.get("Labor_Worksite_Inspections"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborInspectorsMeetILOTextView), enforcements.get("Labor_Inspectors_Intl_Standards"));
                 // displayEnforcement((TextView) rootView.findViewById(R.id.laborDeskReviewsTextView), enforcements.get("Labor_Desk_Review_Inspections"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborViolationsFoundTextView), enforcements.get("Labor_Violations"));
@@ -157,11 +157,11 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborReferralMechanismTextView), enforcements.get("Labor_Referral_Mechanism"));
             }
             else {
-                displayEnforcement((TextView) rootView.findViewById(R.id.criminalInitialTrainingTextView), enforcements.get("Criminal_New_Employee_Training"));
-                displayEnforcement((TextView) rootView.findViewById(R.id.criminalNewLawTrainingTextView), enforcements.get("Criminal_New_Law_Training"));
-                displayEnforcement((TextView) rootView.findViewById(R.id.criminalRefresherCoursesTextView), enforcements.get("Criminal_Refresher_Courses"));
+                //displayEnforcement((TextView) rootView.findViewById(R.id.criminalInitialTrainingTextView), enforcements.get("Criminal_New_Employee_Training"));
+                //displayEnforcement((TextView) rootView.findViewById(R.id.criminalNewLawTrainingTextView), enforcements.get("Criminal_New_Law_Training"));
+                //displayEnforcement((TextView) rootView.findViewById(R.id.criminalRefresherCoursesTextView), enforcements.get("Criminal_Refresher_Courses"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.criminalInvestigationsTextView), enforcements.get("Criminal_Investigations"));
-                displayEnforcement((TextView) rootView.findViewById(R.id.criminalViolationsFoundTextView), enforcements.get("Criminal_Violations"));
+                //displayEnforcement((TextView) rootView.findViewById(R.id.criminalViolationsFoundTextView), enforcements.get("Criminal_Violations"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.criminalProsecutionsInitiatedTextView), enforcements.get("Criminal_Prosecutions"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.criminalConvictionsTextView), enforcements.get("Criminal_Convictions"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.criminalReferralMechanismTextView), enforcements.get("Criminal_Referral_Mechanism"));
@@ -195,7 +195,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
             else {
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalInitialTrainingLinearLayout), enforcements.get("Criminal_New_Employee_Training"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalNewLawTrainingLinearLayout), enforcements.get("Criminal_New_Law_Training"));
-                displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalRefresherCoursesLinearLayout), enforcements.get("Criminal_Refresher_Courses"));
+               // displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalRefresherCoursesLinearLayout), enforcements.get("Criminal_Refresher_Courses"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalInvestigationsLinearLayout), enforcements.get("Criminal_Investigations"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalViolationsFoundLinearLayout), enforcements.get("Criminal_Violations"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalProsecutionsInitiatedLinearLayout), enforcements.get("Criminal_Prosecutions"));
