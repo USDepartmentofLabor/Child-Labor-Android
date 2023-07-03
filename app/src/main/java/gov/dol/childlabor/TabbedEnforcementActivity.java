@@ -3,6 +3,7 @@ package gov.dol.childlabor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -143,7 +144,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 //displayEnforcement((TextView) rootView.findViewById(R.id.laborNewLawsTextView), enforcements.get("Labor_New_Law_Training"));
                 //displayEnforcement((TextView) rootView.findViewById(R.id.laborRefresherCoursesTextView), enforcements.get("Labor_Refresher_Courses"));
                 //displayEnforcement((TextView) rootView.findViewById(R.id.laborInspectionsTextView), enforcements.get("Labor_Inspections"));
-                //displayEnforcement((TextView) rootView.findViewById(R.id.laborWorksiteInspectionsTextView), enforcements.get("Labor_Worksite_Inspections"));
+                displayEnforcement((TextView) rootView.findViewById(R.id.laborWorksiteInspectionsTextView), enforcements.get("Labor_Inspections"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborInspectorsMeetILOTextView), enforcements.get("Labor_Inspectors_Intl_Standards"));
                 // displayEnforcement((TextView) rootView.findViewById(R.id.laborDeskReviewsTextView), enforcements.get("Labor_Desk_Review_Inspections"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborViolationsFoundTextView), enforcements.get("Labor_Violations"));
@@ -157,7 +158,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 displayEnforcement((TextView) rootView.findViewById(R.id.laborReferralMechanismTextView), enforcements.get("Labor_Referral_Mechanism"));
             }
             else {
-                //displayEnforcement((TextView) rootView.findViewById(R.id.criminalInitialTrainingTextView), enforcements.get("Criminal_New_Employee_Training"));
+                displayEnforcement((TextView) rootView.findViewById(R.id.criminalInitialTrainingTextView), enforcements.get("Criminal_New_Employee_Training"));
                 //displayEnforcement((TextView) rootView.findViewById(R.id.criminalNewLawTrainingTextView), enforcements.get("Criminal_New_Law_Training"));
                 //displayEnforcement((TextView) rootView.findViewById(R.id.criminalRefresherCoursesTextView), enforcements.get("Criminal_Refresher_Courses"));
                 displayEnforcement((TextView) rootView.findViewById(R.id.criminalInvestigationsTextView), enforcements.get("Criminal_Investigations"));
@@ -179,7 +180,7 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborNewLawsLinearLayout), enforcements.get("Labor_New_Law_Training"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborRefresherCoursesLinearLayout), enforcements.get("Labor_Refresher_Courses"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborInspectionsLinearLayout), enforcements.get("Labor_Inspections"));
-                displayTerritories((LinearLayout) rootView.findViewById(R.id.laborWorksiteInspectionsLinearLayout), enforcements.get("Labor_Worksite_Inspections"));
+                displayTerritories((LinearLayout) rootView.findViewById(R.id.laborWorksiteInspectionsLinearLayout), enforcements.get("Labor_Inspections"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborInspectorsMeetILOLinearLayout), enforcements.get("Labor_Inspectors_Intl_Standards"));
                 //displayTerritories((LinearLayout) rootView.findViewById(R.id.laborDeskReviewsLinearLayout), enforcements.get("Labor_Desk_Review_Inspections"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborViolationsFoundLinearLayout), enforcements.get("Labor_Violations"));
@@ -207,7 +208,12 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
 
 
         private void displayEnforcement(TextView view, Country.Enforcement enforcement) {
-            displayValue(view, enforcement.type, enforcement.value);
+            if (enforcement != null) {
+                displayValue(view, enforcement.type, enforcement.value);
+            }
+
+
+
         }
 
         private void displayTerritories(LinearLayout layout, Country.TerritoryEnforcement enforcement) {
