@@ -44,7 +44,7 @@ public class AssessmentLevelsChart extends AppCompatActivity
         isLaborInspectorMeetILOByRegion = getIntent().getBooleanExtra("LABOR_INSPECTOR_MEET_ILO_BY_REGION",false);
 
         if (isLaborInspectorMeetILOByRegion) {
-            setTitle("Labor Inspector Meet ILO");
+            setTitle("ILO Rec for Labor Inspectors Met");
         } else {
             setTitle("Assessment Levels By Region");
         }
