@@ -170,7 +170,7 @@
             android:layout_height="wrap_content"
             android:contentDescription="Comply Chain app"
             android:paddingBottom="10dp"
-            android:text="Comply Chain app"
+            android:text="Comply Chain"
             android:textColor="#3d3d3d"
             android:textSize="16sp"
              />
@@ -185,9 +185,9 @@
             android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="New: Better Trade Tool"
+            android:contentDescription="Better Trade Tool"
             android:paddingBottom="10dp"
-            android:text="NEW: Better Trade Tool"
+            android:text="Better Trade Tool"
             android:textColor="#3d3d3d"
             android:textSize="16sp"
             />

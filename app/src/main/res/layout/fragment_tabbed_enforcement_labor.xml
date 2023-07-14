@@ -175,7 +175,8 @@
             android:textAllCaps="true"
             android:text="Training for Labor Inspectors:"
             android:background="#dadada"
-            android:contentDescription="Training for Labor Inspectors, heading" />
+            android:contentDescription="Training for Labor Inspectors, heading"
+            android:visibility="gone"/>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -184,7 +185,8 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:paddingLeft="20dp"
-            android:paddingRight="20dp">
+            android:paddingRight="20dp"
+            android:visibility="visible">
 
             <TextView
                 android:layout_width="0dp"
@@ -345,7 +347,8 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:paddingLeft="20dp"
-            android:paddingRight="20dp">
+            android:paddingRight="20dp"
+            android:visibility="gone">
 
         </LinearLayout>
 

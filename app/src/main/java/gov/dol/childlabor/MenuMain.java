@@ -44,7 +44,10 @@ public class MenuMain extends AppCompatActivity {
 
         ComplyChain.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ToolKitActivity.class);
+//                Intent intent = new Intent(getApplicationContext(), ToolKitActivity.class);
+//                startActivity(intent);
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://www.dol.gov/ilab/complychain/"));//"market://details?id=gov.dol.complychain"));
                 startActivity(intent);
             }
         });

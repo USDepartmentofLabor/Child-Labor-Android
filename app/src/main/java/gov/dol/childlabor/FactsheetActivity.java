@@ -59,7 +59,7 @@ public class FactsheetActivity extends AppCompatActivity {
             case "EO FAQs":
                 filename = "FAQs-EO.pdf";
                 break;
-            case "NEW: Comply Chain app":
+            case "Comply Chain":
                 intent = new Intent(getApplicationContext(), ToolKitActivity.class);
                 intent.putExtra("title", "Comply Chain app");
                 startActivity(intent);
