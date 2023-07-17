@@ -25,7 +25,7 @@ public class StatisticsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Country country = (Country) getIntent().getSerializableExtra("country");
-        String[] MultiText = {"Somalia", "Pakistan","Tanzania"};
+        String[] MultiText = {};//{"Somalia", "Pakistan","Tanzania"};
 //        String[] MultiText = {"Pakistan","Tanzania"};
 
 
