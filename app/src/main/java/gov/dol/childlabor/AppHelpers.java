@@ -66,7 +66,7 @@ public class AppHelpers {
 
     public static String getFormattedString(String string) {
         return string.replace(" ", "_").replace("-", "_").replace("/", "_").replace("ô", "o").replace("ã", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("á", "a")
-                .replace("(", "").replace(")", "").replace(",", "").replace("'", "").replace("`", "").replace(".", "").replace("ç", "c").toLowerCase();
+                .replace("(", "").replace(")", "").replace(",", "").replace("'", "").replace("`", "").replace(".", "").replace("ç", "c").toLowerCase().replace("ü", "u").toLowerCase();
     }
 
     public static void trackScreenView(AnalyticsApplication application, String screenName) {
