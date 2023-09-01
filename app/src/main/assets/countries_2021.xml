@@ -7365,7 +7365,6 @@
                     <Name>Not applicable</Name>
                 </Action>
             </Government_Policies>
-
             <Social_Programs>
                 <Action>
                     <Name>Expand efforts to improve education access for all children, especially those in rural and marginalized urban environments, including by ensuring adequate transportation to school, improving school infrastructure, and addressing violence affecting school attendance.</Name>
@@ -8371,7 +8370,7 @@
         <Mechanisms>
             <Program>N/A</Program>
             <Policy>N/A</Policy>
-            <Coordination>NA</Coordination>
+            <Coordination>N/A</Coordination>
         </Mechanisms>
     </Country>
     <Country>
@@ -9276,7 +9275,7 @@
         <Mechanisms>
             <Program>N/A</Program>
             <Policy>N/A</Policy>
-            <Coordination>NA</Coordination>
+            <Coordination>N/A</Coordination>
         </Mechanisms>
     </Country>
     <Country>
@@ -20075,9 +20074,9 @@
             </Social_Programs>
         </Suggested_Actions>
         <Mechanisms>
-            <Program>NA</Program>
-            <Policy>NA</Policy>
-            <Coordination>NA</Coordination>
+            <Program>N/A</Program>
+            <Policy>N/A</Policy>
+            <Coordination>N/A</Coordination>
         </Mechanisms>
     </Country>
     <Country>
@@ -26980,7 +26979,7 @@
         <Name>Somalia</Name>
         <Webpage>https://www.dol.gov/agencies/ilab/resources/reports/child-labor/somalia</Webpage>
         <Region>Sub-Saharan Africa</Region>
-        <Multiple_Territories>No</Multiple_Territories>
+        <Multiple_Territories>Yes</Multiple_Territories>
         <Advancement_Level>Minimal Advancement – Efforts Made but Continued Practice that Delayed Advancement</Advancement_Level>
         <Description>In 2022, Somalia is receiving an assessment of minimal advancement. The Somali police force participated in trainings conducted by the United Nations Office on Drugs and Crime with the goal of increasing anti-trafficking efforts. Somaliland, which has self-declared independence from Somalia but is not recognized by any country, also criminalized human trafficking for the purposes of commercial sexual exploitation. However, despite new initiatives to address child labor, Somalia is receiving an assessment of minimal advancement because it continued to implement practices that delay advancement to eliminate child labor. During the reporting period, there is evidence that federal and state security forces continued to recruit and use children in armed conflict, in violation of national law. In other cases, government security forces detained children for suspected association with armed groups, in some cases subjecting them to lengthy interrogations and coerced confessions. In addition, the government did not conduct worksite inspections in 2022. Children in Somalia are subjected to the worst forms of child labor, including in armed conflict. Children also perform dangerous tasks in street work. Somali laws do not criminally prohibit child labor trafficking, commercial sexual exploitation, or the recruitment of children by non-state armed groups. Furthermore, the government did not provide complete information on its criminal law enforcement efforts to address the worst forms of child labor for inclusion in this report.</Description>
         <Goods />
@@ -27016,100 +27015,274 @@
         </Conventions>
         <Legal_Standards>
             <Free_Public_Education>
-                <Standard>Yes</Standard>
-                <Age>N/A</Age>
-                <Calculated_Age>No</Calculated_Age>
-                <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Standard>Yes</Standard>
+                    <Age>N/A</Age>
+                    <Calculated_Age>No</Calculated_Age>
+                    <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+                </Territory>
             </Free_Public_Education>
             <Minimum_Work>
-                <Standard>Yes</Standard>
-                <Age>15</Age>
-                <Calculated_Age>No</Calculated_Age>
-                <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Standard>Yes</Standard>
+                    <Age>15</Age>
+                    <Calculated_Age>No</Calculated_Age>
+                    <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+                </Territory>
             </Minimum_Work>
             <Minimum_Hazardous_Work>
-                <Standard>Yes</Standard>
-                <Age>18</Age>
-                <Calculated_Age>No</Calculated_Age>
-                <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Standard>Yes</Standard>
+                    <Age>18</Age>
+                    <Calculated_Age>No</Calculated_Age>
+                    <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+                </Territory>
             </Minimum_Hazardous_Work>
             <Types_Hazardous_Work>
-                <Standard>No</Standard>
-                <Age>N/A</Age>
-                <Calculated_Age>No</Calculated_Age>
-                <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Standard>No</Standard>
+                    <Age>N/A</Age>
+                    <Calculated_Age>No</Calculated_Age>
+                    <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
+                </Territory>
             </Types_Hazardous_Work>
             <Prohibition_Forced_Labor>
-                <Standard>Yes</Standard>
-                <Age>N/A</Age>
-                <Calculated_Age>No</Calculated_Age>
-                <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Standard>Yes</Standard>
+                    <Age>N/A</Age>
+                    <Calculated_Age>No</Calculated_Age>
+                    <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+                </Territory>
             </Prohibition_Forced_Labor>
             <Prohibition_Child_Trafficking>
-                <Standard>No</Standard>
-                <Age>N/A</Age>
-                <Calculated_Age>No</Calculated_Age>
-                <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Standard>No</Standard>
+                    <Age>N/A</Age>
+                    <Calculated_Age>No</Calculated_Age>
+                    <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
+                </Territory>
             </Prohibition_Child_Trafficking>
             <Prohibition_CSEC>
-                <Standard>No</Standard>
-                <Age>N/A</Age>
-                <Calculated_Age>No</Calculated_Age>
-                <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Standard>No</Standard>
+                    <Age>N/A</Age>
+                    <Calculated_Age>No</Calculated_Age>
+                    <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
+                </Territory>
             </Prohibition_CSEC>
             <Prohibition_Illicit_Activities>
-                <Standard>No</Standard>
-                <Age>N/A</Age>
-                <Calculated_Age>No</Calculated_Age>
-                <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Standard>No</Standard>
+                    <Age>N/A</Age>
+                    <Calculated_Age>No</Calculated_Age>
+                    <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
+                </Territory>
             </Prohibition_Illicit_Activities>
             <Minimum_Compulsory_Military>
-                <Standard>Yes</Standard>
-                <Age>N/A</Age>
-                <Calculated_Age>No</Calculated_Age>
-                <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Standard>Yes</Standard>
+                    <Age>N/A</Age>
+                    <Calculated_Age>No</Calculated_Age>
+                    <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+                </Territory>
             </Minimum_Compulsory_Military>
             <Minumum_Voluntary_Military>
-                <Standard>Yes</Standard>
-                <Age>18</Age>
-                <Calculated_Age>No</Calculated_Age>
-                <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Standard>Yes</Standard>
+                    <Age>18</Age>
+                    <Calculated_Age>No</Calculated_Age>
+                    <Conforms_To_Intl_Standard>Yes</Conforms_To_Intl_Standard>
+                </Territory>
             </Minumum_Voluntary_Military>
             <Minumum_Non_State_Military>
-                <Standard>No</Standard>
-                <Age>N/A</Age>
-                <Calculated_Age>No</Calculated_Age>
-                <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Standard>No</Standard>
+                    <Age>N/A</Age>
+                    <Calculated_Age>No</Calculated_Age>
+                    <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
+                </Territory>
             </Minumum_Non_State_Military>
             <Compulsory_Education>
-                <Standard>No</Standard>
-                <Age>14</Age>
-                <Calculated_Age>No</Calculated_Age>
-                <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Standard>No</Standard>
+                    <Age>14</Age>
+                    <Calculated_Age>No</Calculated_Age>
+                    <Conforms_To_Intl_Standard>No</Conforms_To_Intl_Standard>
+                </Territory>
             </Compulsory_Education>
         </Legal_Standards>
         <Enforcements>
-            <Labor_Funding>0</Labor_Funding>
-            <Labor_Inspectors>35</Labor_Inspectors>
-            <Authorized_Access_Penalties>Yes</Authorized_Access_Penalties>
-            <Labor_New_Employee_Training>Unknown </Labor_New_Employee_Training>
-            <Labor_Inspections>0</Labor_Inspections>
-            <Labor_Violations>N/A</Labor_Violations>
-            <Labor_Penalties_Imposed>N/A</Labor_Penalties_Imposed>
-            <Labor_Penalties_Collected>N/A</Labor_Penalties_Collected>
-            <Labor_Routine_Inspections_Conducted>Unknown </Labor_Routine_Inspections_Conducted>
-            <Labor_Routine_Inspections_Targeted>Unknown </Labor_Routine_Inspections_Targeted>
-            <Labor_Unannounced_Inspections_Premitted>Yes</Labor_Unannounced_Inspections_Premitted>
-            <Labor_Unannounced_Inspections_Conducted>Unknown </Labor_Unannounced_Inspections_Conducted>
-            <Labor_Complaint_Mechanism>Yes</Labor_Complaint_Mechanism>
-            <Labor_Referral_Mechanism>No</Labor_Referral_Mechanism>
-            <Labor_Inspectors_Intl_Standards>No</Labor_Inspectors_Intl_Standards>
-            <Criminal_New_Employee_Training>Unknown </Criminal_New_Employee_Training>
-            <Criminal_Investigations>Unknown </Criminal_Investigations>
-            <Criminal_Prosecutions>0</Criminal_Prosecutions>
-            <Criminal_Convictions>0</Criminal_Convictions>
-            <Criminal_Referral_Mechanism>Yes</Criminal_Referral_Mechanism>
-            <Criminal_Penalties_for_WFCL>No</Criminal_Penalties_for_WFCL>
+            <Labor_Funding>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>0</Enforcement>
+                </Territory>
+            </Labor_Funding>
+            <Labor_Inspectors>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>35</Enforcement>
+                </Territory>
+            </Labor_Inspectors>
+            <Authorized_Access_Penalties>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>Yes</Enforcement>
+                </Territory>
+            </Authorized_Access_Penalties>
+            <Labor_New_Employee_Training>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>Unknown </Enforcement>
+                </Territory>
+            </Labor_New_Employee_Training>
+            <Labor_Inspections>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>0</Enforcement>
+                </Territory>
+            </Labor_Inspections>
+            <Labor_Violations>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>N/A</Enforcement>
+                </Territory>
+            </Labor_Violations>
+            <Labor_Penalties_Imposed>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>N/A</Enforcement>
+                </Territory>
+            </Labor_Penalties_Imposed>
+            <Labor_Penalties_Collected>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>N/A</Enforcement>
+                </Territory>
+            </Labor_Penalties_Collected>
+            <Labor_Routine_Inspections_Conducted>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>Unknown </Enforcement>
+                </Territory>
+            </Labor_Routine_Inspections_Conducted>
+            <Labor_Routine_Inspections_Targeted>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>Unknown </Enforcement>
+                </Territory>
+            </Labor_Routine_Inspections_Targeted>
+            <Labor_Unannounced_Inspections_Premitted>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>Yes</Enforcement>
+                </Territory>
+            </Labor_Unannounced_Inspections_Premitted>
+            <Labor_Unannounced_Inspections_Conducted>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>Unknown </Enforcement>
+                </Territory>
+            </Labor_Unannounced_Inspections_Conducted>
+            <Labor_Complaint_Mechanism>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>Yes </Enforcement>
+                </Territory>
+            </Labor_Complaint_Mechanism>
+            <Labor_Referral_Mechanism>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>No </Enforcement>
+                </Territory>
+            </Labor_Referral_Mechanism>
+            <Labor_Inspectors_Intl_Standards>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>No</Enforcement>
+                </Territory>
+            </Labor_Inspectors_Intl_Standards>
+            <Criminal_New_Employee_Training>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>Unknown </Enforcement>
+                </Territory>
+            </Criminal_New_Employee_Training>
+            <Criminal_Investigations>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>Unknown </Enforcement>
+                </Territory>
+            </Criminal_Investigations>
+            <Criminal_Prosecutions>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>0</Enforcement>
+                </Territory>
+            </Criminal_Prosecutions>
+            <Criminal_Convictions>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>0</Enforcement>
+                </Territory>
+            </Criminal_Convictions>
+            <Criminal_Referral_Mechanism>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>Yes</Enforcement>
+                </Territory>
+            </Criminal_Referral_Mechanism>
+            <Criminal_Penalties_for_WFCL>
+                <Territory>
+                    <Territory_Name>All Territories</Territory_Name>
+                    <Territory_Display_Name>All Territories</Territory_Display_Name>
+                    <Enforcement>No </Enforcement>
+                </Territory>
+            </Criminal_Penalties_for_WFCL>
         </Enforcements>
         <Suggested_Actions>
             <Legal_Framework>
@@ -29591,7 +29764,7 @@
         <Mechanisms>
             <Program>N/A</Program>
             <Policy>N/A</Policy>
-            <Coordination>NA</Coordination>
+            <Coordination>N/A</Coordination>
         </Mechanisms>
     </Country>
     <Country>
@@ -32340,7 +32513,7 @@
         <Mechanisms>
             <Policy>N/A</Policy>
             <Program>Yes</Program>
-            <Coordination>NA</Coordination>
+            <Coordination>N/A</Coordination>
         </Mechanisms>
         <ILAB_Projects>
             <Project>
