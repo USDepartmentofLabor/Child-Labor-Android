@@ -177,8 +177,8 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                // displayTerritories((LinearLayout) rootView.findViewById(R.id.laborDedicatedInspectorsLinearLayout), enforcements.get("Dedicated_Labor_Inspectors"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborAssessPenaltiesLinearLayout), enforcements.get("Authorized_Access_Penalties"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborInitialTrainingLinearLayout), enforcements.get("Labor_New_Employee_Training"));
-                displayTerritories((LinearLayout) rootView.findViewById(R.id.laborNewLawsLinearLayout), enforcements.get("Labor_New_Law_Training"));
-                displayTerritories((LinearLayout) rootView.findViewById(R.id.laborRefresherCoursesLinearLayout), enforcements.get("Labor_Refresher_Courses"));
+//                displayTerritories((LinearLayout) rootView.findViewById(R.id.laborNewLawsLinearLayout), enforcements.get("Labor_New_Law_Training"));
+//                displayTerritories((LinearLayout) rootView.findViewById(R.id.laborRefresherCoursesLinearLayout), enforcements.get("Labor_Refresher_Courses"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborInspectionsLinearLayout), enforcements.get("Labor_Inspections"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborWorksiteInspectionsLinearLayout), enforcements.get("Labor_Inspections"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborInspectorsMeetILOLinearLayout), enforcements.get("Labor_Inspectors_Intl_Standards"));
@@ -195,10 +195,10 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
             }
             else {
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalInitialTrainingLinearLayout), enforcements.get("Criminal_New_Employee_Training"));
-                displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalNewLawTrainingLinearLayout), enforcements.get("Criminal_New_Law_Training"));
+                //displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalNewLawTrainingLinearLayout), enforcements.get("Criminal_New_Law_Training"));
                // displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalRefresherCoursesLinearLayout), enforcements.get("Criminal_Refresher_Courses"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalInvestigationsLinearLayout), enforcements.get("Criminal_Investigations"));
-                displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalViolationsFoundLinearLayout), enforcements.get("Criminal_Violations"));
+                //displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalViolationsFoundLinearLayout), enforcements.get("Criminal_Violations"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalProsecutionsInitiatedLinearLayout), enforcements.get("Criminal_Prosecutions"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalConvictionsLinearLayout), enforcements.get("Criminal_Convictions"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.criminalReferralMechanismLinearLayout), enforcements.get("Criminal_Referral_Mechanism"));
