@@ -287,8 +287,13 @@ public class TabbedCountryListSpinnerActivity extends AppCompatActivity {
                         ListView listView = (ListView) getView().findViewById(R.id.listView);
                         listView.setAdapter(itemsAdapter);
                     }else{
+                        searchQuery = query;
                         if( !searchQuery.trim().equals("")) {
                             searchView.setQuery(searchQuery, false);
+                        } else {
+                            CountryListAdapter itemsAdapter = new CountryListAdapter(getActivity(), getCountriesBySearch(""), 1);
+                            ListView list = (ListView) getView().findViewById(R.id.listView);
+                            list.setAdapter(itemsAdapter);
                         }
                     }
                     return false;

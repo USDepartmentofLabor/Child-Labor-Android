@@ -119,7 +119,7 @@ public class CountryViewActivity extends AppCompatActivity {
         }
 
         //Added new Item in Coutry Page for ILAB Projects
-        String[] items = {"Suggested Actions", "Statistics", "International Conventions", "Legal Standards", "Enforcement", "Coordinating Mechanisms", "Report PDF", "Country Webpage","ILAB Projects"};
+        String[] items = {"Suggested Actions", "Statistics", "International Conventions", "Legal Standards", "Enforcement", "Coordinating Mechanisms", "Country Webpage","ILAB Projects"};
         ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
 
         ListView listView = (ListView) findViewById(R.id.actionListView);
@@ -152,9 +152,9 @@ public class CountryViewActivity extends AppCompatActivity {
                     case "Coordinating Mechanisms":
                         intent = new Intent(getApplicationContext(), MechanismActivity.class);
                         break;
-                    case "Report PDF":
-                        intent = new Intent(getApplicationContext(), FullReportActivity.class);
-                        break;
+//                    case "Report PDF":
+//                        intent = new Intent(getApplicationContext(), FullReportActivity.class);
+//                        break;
                     case "Country Webpage":
                         intent = new Intent(Intent.ACTION_VIEW, Uri.parse(urlname));
                         startActivity(intent);

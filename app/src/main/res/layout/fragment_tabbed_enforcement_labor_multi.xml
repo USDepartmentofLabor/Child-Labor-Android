@@ -193,6 +193,7 @@
 
         </LinearLayout>
 
+
         <LinearLayout
             android:id="@+id/laborAssessPenaltiesLinearLayout"
             android:orientation="vertical"
@@ -201,17 +202,10 @@
 
 
         </LinearLayout>
-
-        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            android:text="Training for labor inspectors:"
-            android:background="#dadada"
-            android:contentDescription="Training for labor inspectors, heading" />
+            android:layout_height="1dp"
+            android:background="#dadada" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -240,6 +234,19 @@
 
 
         </LinearLayout>
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:text="Training for labor inspectors:"
+            android:background="#dadada"
+            android:visibility="gone"
+            android:contentDescription="Training for labor inspectors, heading" />
+
+
 
         <View
             android:layout_width="match_parent"
@@ -253,7 +260,8 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:paddingLeft="20dp"
-            android:paddingRight="20dp">
+            android:paddingRight="20dp"
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="0dp"
@@ -286,7 +294,8 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:paddingLeft="20dp"
-            android:paddingRight="20dp">
+            android:paddingRight="20dp"
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="0dp"
@@ -342,7 +351,8 @@
             android:id="@+id/laborInspectionsLinearLayout"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:visibility="gone">
 
 
         </LinearLayout>
@@ -350,7 +360,8 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#dadada" />
+            android:background="#dadada"
+            android:visibility="gone"/>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -359,7 +370,8 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:paddingLeft="20dp"
-            android:paddingRight="20dp">
+            android:paddingRight="20dp"
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="0dp"
