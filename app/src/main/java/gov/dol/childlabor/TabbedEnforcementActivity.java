@@ -179,8 +179,8 @@ public class TabbedEnforcementActivity extends AppCompatActivity {
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborInitialTrainingLinearLayout), enforcements.get("Labor_New_Employee_Training"));
 //                displayTerritories((LinearLayout) rootView.findViewById(R.id.laborNewLawsLinearLayout), enforcements.get("Labor_New_Law_Training"));
 //                displayTerritories((LinearLayout) rootView.findViewById(R.id.laborRefresherCoursesLinearLayout), enforcements.get("Labor_Refresher_Courses"));
-                displayTerritories((LinearLayout) rootView.findViewById(R.id.laborInspectionsLinearLayout), enforcements.get("Labor_Inspections"));
-                displayTerritories((LinearLayout) rootView.findViewById(R.id.laborWorksiteInspectionsLinearLayout), enforcements.get("Labor_Inspections"));
+                //displayTerritories((LinearLayout) rootView.findViewById(R.id.laborInspectionsLinearLayout), enforcements.get("Labor_Inspections"));
+                displayTerritories((LinearLayout) rootView.findViewById(R.id.laborWorksiteInspectionsLinearLayout), enforcements.get("Labor_Worksite_Inspections"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborInspectorsMeetILOLinearLayout), enforcements.get("Labor_Inspectors_Intl_Standards"));
                 //displayTerritories((LinearLayout) rootView.findViewById(R.id.laborDeskReviewsLinearLayout), enforcements.get("Labor_Desk_Review_Inspections"));
                 displayTerritories((LinearLayout) rootView.findViewById(R.id.laborViolationsFoundLinearLayout), enforcements.get("Labor_Violations"));
