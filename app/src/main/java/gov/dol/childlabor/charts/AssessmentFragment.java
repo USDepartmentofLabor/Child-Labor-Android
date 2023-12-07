@@ -54,7 +54,7 @@ public class AssessmentFragment extends Fragment implements
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView =  inflater.inflate(R.layout.activity_assessment_levels,container,false);
-        if (getActivity().getTitle().equals("ILO Rec for Labor Inspectors Met")) {
+        if (getActivity().getTitle().equals("Adequate Number of Labor Inspectors")) {
             ((TextView)rootView.findViewById(R.id.text)).setText(getActivity().getTitle() + "-"+getArguments().getString("TITLE"));
         } else {
             ((TextView)rootView.findViewById(R.id.text)).setText("Advancement Level for "+getArguments().getString("TITLE"));
