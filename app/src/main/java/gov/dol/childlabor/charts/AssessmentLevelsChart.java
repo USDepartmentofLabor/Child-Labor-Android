@@ -1,11 +1,20 @@
 package gov.dol.childlabor.charts;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.AccessibilityDelegateCompat;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
@@ -28,8 +37,10 @@ public class AssessmentLevelsChart extends AppCompatActivity
     boolean isAssesmentLevelsByRegion = false;
     boolean isLaborInspectorMeetILOByRegion = false;
     ViewPager viewPager;
+    TextView toolbarTextView;
 //    private Country.Enforcement labor_inspectors_intl_standards;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,16 +48,23 @@ public class AssessmentLevelsChart extends AppCompatActivity
           //      WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.assessment_chart_pager);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        findViewById(R.id.toolbar_back_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+        toolbarTextView = toolbar.findViewById(R.id.toolbar_title_details);
         isGoodsByRegion = getIntent().getBooleanExtra("IS_GOODS_BY_REGION",false);
         isAssesmentLevelsByRegion = getIntent().getBooleanExtra("IS_ASSESSMENT_LEVELS_BY_REGION",false);
         isLaborInspectorMeetILOByRegion = getIntent().getBooleanExtra("LABOR_INSPECTOR_MEET_ILO_BY_REGION",false);
 
         if (isLaborInspectorMeetILOByRegion) {
-            setTitle("ILO Rec for Labor Inspectors Met");
+            setTitle("Adequate Number of Labor Inspectors"); // Need this as its checked in AssessmentFragment
+            toolbarTextView.setText("Adequate Number of Labor Inspectors");
         } else {
-            setTitle("Assessment Levels By Region");
+            toolbarTextView.setText("Assessment Levels By Region");
         }
         Map<String,Map<String,Integer>> map = new HashMap<>();
         if(isAssesmentLevelsByRegion){
