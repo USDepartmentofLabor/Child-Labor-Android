@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 33
 //     buildToolsVersion "26.0.1"
-    buildToolsVersion "30.0.2"
     // new line added fro error Execution failed for task ':app:lint'.
     lintOptions {
         abortOnError false
@@ -39,9 +38,9 @@ dependencies {
     implementation 'com.google.android.material:material:1.6.0'
     implementation 'com.joanzapata.pdfview:android-pdfview:1.0.4@aar'
     implementation 'se.emilsjolander:stickylistheaders:2.7.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
     implementation 'io.karim:materialtabs:2.0.2'
-    implementation project(':MPChartLib')
     implementation 'com.google.maps.android:android-maps-utils:2.2.3'
     implementation 'com.google.android.gms:play-services-analytics:18.0.2'
     implementation 'com.android.support:multidex:1.0.3'
